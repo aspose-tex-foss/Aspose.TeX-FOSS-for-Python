@@ -1,0 +1,18 @@
+% E2E canonical fixture #4 — rules.
+% Rule-then-paragraph patterns covering the v6.1 sentinel path
+% (\hrule resets _prev_depth to the §679 sentinel so no spurious interline
+% glue is inserted before the following paragraph). A \beginsection-style
+% idiom (rule above a heading line) plus a mid-body rule pin both the
+% rule-first and mid-page arms of PageBuilder.contribute(RuleNode).
+\hsize=4in
+\vsize=120pt
+\nopagenumbers
+\hrule
+\noindent First paragraph after the leading rule.
+\par
+\noindent Second paragraph before the mid-body rule.
+\par
+\hrule
+\noindent Third paragraph after the mid-body rule.
+\par
+\bye

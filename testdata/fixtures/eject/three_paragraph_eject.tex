@@ -1,0 +1,15 @@
+% / regression fixture.
+% Three short paragraphs followed by a forced page break (\eject), then a
+% single \bye-terminated trailing page. With in force, \eject is
+% \par\penalty-10000 with NO implicit \vfil; the body box is stretched to
+% \vsize via NORMAL parskip stretch only, so paragraph baselines distribute
+% (with a high but finite glue-set ratio). Used by
+% tests/test_interpreter_integration.py::test_eject_distributes_paragraphs
+% to check that our DVI y-coordinates stay within 1 pt of the MiKTeX baseline.
+\vsize=300pt
+\noindent Para1\par
+\noindent Para2\par
+\noindent Para3\par
+\eject
+\noindent Final\par
+\bye

@@ -1,0 +1,16 @@
+% E2E canonical fixture #3 — multipage.
+% Enough paragraphs in a short body to force >=2 NATURAL page breaks
+% (no \eject). Pins page-builder break decisions and the per-page folio
+% (headline/footline via plain.tex \pageno). Each paragraph is a single
+% short line so the break count is governed purely by \vsize accounting.
+\hsize=4in
+\vsize=72pt
+\noindent Paragraph one.\par
+\noindent Paragraph two.\par
+\noindent Paragraph three.\par
+\noindent Paragraph four.\par
+\noindent Paragraph five.\par
+\noindent Paragraph six.\par
+\noindent Paragraph seven.\par
+\noindent Paragraph eight.\par
+\bye

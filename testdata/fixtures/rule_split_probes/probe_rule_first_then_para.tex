@@ -1,0 +1,25 @@
+% split probe #1 — rule-first, two paragraphs, \eject.
+%
+% Isolates: post-rule interline-glue insertion when `_first_box_on_page`
+% transitions True -> False through the rule-first arm of
+% PageBuilder.contribute(RuleNode). Two paragraphs are required so the
+% body has a NORMAL-order parskip stretch source; the underfull-page
+% glue_set then distributes the shortage and EXPOSES the spurious 5.056
+% pt interline glue inserted by the broken HlistNode arm of contribute()
+% after the rule.
+%
+% Pre-fix expected: para-1 baseline shifts ~+2.528 pt vs MiKTeX (visible
+% because shortage is distributed across the single NORMAL parskip).
+% Para-2 baseline lands clean (the shortage absorbs the spurious glue).
+% Post-fix expected: both baselines match MiKTeX within glue_set rounding
+% (<= 100 sp) because _prev_depth = ignore_depth suppresses the spurious
+% interline, restoring the MiKTeX shortage and ratio.
+\vsize=120pt
+\hsize=4in
+\hrule
+\noindent First paragraph after the rule.
+\par
+\noindent Second paragraph.
+\par
+\eject
+\bye

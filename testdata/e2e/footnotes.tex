@@ -1,0 +1,12 @@
+% E2E canonical fixture #5 (optional) — footnotes.
+% \footnote*{...} -> \insert\footins path. Pins the footnote separator
+% rule (\footnoterule, a 0.4pt = 26214 sp rule) and the footnote text
+% landing below the body on the same page ( AC-5/AC-6 regression).
+\hsize=4in
+\vsize=8.9in
+\nopagenumbers
+\noindent First paragraph before the footnote.\footnote*{A short note.}
+\par
+\noindent Second paragraph keeps the body non-empty.
+\par
+\bye

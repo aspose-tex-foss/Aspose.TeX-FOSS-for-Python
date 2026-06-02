@@ -1,0 +1,15 @@
+% E2E fixture — narrow-column paragraph wrapping.
+% Same body text as paragraph.tex but at \hsize=3in so the line-breaker is
+% forced to honour the column width for break selection.
+% Before the fix our engine ignored \hsize and produced the fixed wide-column
+% break at every width; this fixture pins the width-sensitive break path
+% against the MiKTeX baseline regenerated at 3in.
+\hsize=3in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps
+over the lazy dog. The quick brown fox jumps over the lazy dog. Pack my
+box with five dozen liquor jugs.
+\par
+\bye

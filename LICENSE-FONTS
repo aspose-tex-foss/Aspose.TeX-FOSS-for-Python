@@ -1,0 +1,11 @@
+Font Licenses
+=============
+
+This file will contain the license texts for bundled font files when they are
+added to the package.
+
+The Computer Modern font family (TFM files and glyph data) is distributed
+under the LaTeX Project Public License (LPPL) and/or the SIL Open Font
+License (OFL), depending on the specific files included.
+
+Full license texts will be added here when fonts are bundled in a future task.

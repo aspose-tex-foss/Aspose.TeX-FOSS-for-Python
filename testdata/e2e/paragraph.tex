@@ -1,0 +1,20 @@
+% E2E canonical fixture #2 — paragraph.
+% Multi-line paragraph wrapping on one page, no forced eject.
+% Pins the line-breaker + interline (baselineskip) glue + parskip:
+% the paragraph wraps to several lines whose baselines stack at a
+% constant baselineskip, and the page stays single.
+%
+% NOTE: \hsize is the default plain-TeX 6.5in here on purpose. At narrower
+% \hsize our line-breaker diverges from MiKTeX (it does not honour \hsize
+% for break selection) — tracked as a follow-up surfaced by . At
+% 6.5in the natural breaks coincide with MiKTeX, so this fixture is a true
+% baseline match and a durable regression pin for the wider-column path.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps
+over the lazy dog. The quick brown fox jumps over the lazy dog. Pack my
+box with five dozen liquor jugs.
+\par
+\bye

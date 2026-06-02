@@ -1,0 +1,25 @@
+% split probe #2 — paragraph, mid-page rule, two paragraphs, \eject.
+%
+% Isolates: mid-page rule arm of PageBuilder.contribute(RuleNode), which
+% per TeX:The Program §679 must write _prev_depth = ignore_depth so the
+% next box's interline-glue prelude is suppressed. Two post-rule
+% paragraphs ensure the body has NORMAL-order parskip stretch sources;
+% the glue_set then distributes the shortage and EXPOSES the spurious
+% post-rule interline glue as a visible baseline drift.
+%
+% Pre-fix expected: post-rule "Second" baseline drifts ~+2.528 pt vs
+% MiKTeX (one parskip absorbs the extra 5.056 pt at ratio = 5.056/2 =
+% 2.528). "Third" baseline absorbs the rest.
+% Post-fix expected: all baselines match MiKTeX within glue_set rounding
+% (<= 100 sp).
+\vsize=180pt
+\hsize=4in
+\noindent First paragraph above the rule.
+\par
+\hrule
+\noindent Second paragraph after the rule.
+\par
+\noindent Third paragraph.
+\par
+\eject
+\bye

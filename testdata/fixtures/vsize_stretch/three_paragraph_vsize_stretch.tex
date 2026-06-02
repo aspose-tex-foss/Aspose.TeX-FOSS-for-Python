@@ -1,0 +1,11 @@
+% AC-7 / regression fixture.
+% Three paragraphs in a 300pt-tall body; trailing \vfill from \bye stretches
+% the remaining vertical space so the three first-line baselines stack at
+% topskip + n*baselineskip from the body top. Used by
+% tests/test_interpreter_output_routine.py::test_vfil_vsize_distributes_body
+% to check that our DVI y-coordinates stay within 1 pt of the MiKTeX baseline.
+\vsize=300pt
+\noindent Para1\par
+\noindent Para2\par
+\noindent Para3\par
+\bye

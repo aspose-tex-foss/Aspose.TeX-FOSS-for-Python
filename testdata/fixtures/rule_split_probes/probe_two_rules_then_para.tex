@@ -1,0 +1,26 @@
+% split probe #3 — paragraph, two consecutive mid-page rules,
+% two paragraphs, \eject.
+%
+% Isolates: consecutive rule contributions in mid-page arm. Each rule
+% must independently write _prev_depth = ignore_depth; the second rule
+% does NOT trigger interline glue against the first (rules themselves
+% never run §1078 prelude — they go through §679). Two post-rule
+% paragraphs ensure stretch shortage exposes any spurious interline glue.
+%
+% Pre-fix expected: post-rule "Second" baseline drifts ~+2.528 pt (one
+% parskip absorbs the extra 5.056 pt at the body's NORMAL ratio).
+% Post-fix expected: all baselines match MiKTeX within glue_set rounding
+% (<= 100 sp). This probe additionally pins that consecutive rules do
+% not compound the drift (no double interline glue between rules).
+\vsize=180pt
+\hsize=4in
+\noindent First paragraph above the rules.
+\par
+\hrule
+\hrule
+\noindent Second paragraph after the rules.
+\par
+\noindent Third paragraph.
+\par
+\eject
+\bye
