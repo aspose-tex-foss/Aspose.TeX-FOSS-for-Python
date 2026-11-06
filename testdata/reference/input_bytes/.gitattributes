@@ -1,0 +1,3 @@
+# Preserve the independent source's exact bytes and recorded SHA256.
+sample-1.tex -text -diff
+sample-1.dvi -text

@@ -1,0 +1,22 @@
+% thematic fixture (b) — display-math families in sequence.
+% Pins the plain.tex display-alignment family macros used one after another,
+% each in its own $$...$$ and separated by running text: \eqalign,
+% \eqalignno, \displaylines, \cases.  All four build a \halign/\ialign grid at
+% \displaystyle (some via \displ@y's \everycr interline machinery), so their
+% row/column positions must byte-compare to MiKTeX within the
+% tolerance (+/-0.5pt V / +/-0.1pt H).
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+An aligned system
+$$\eqalign{x &= y + z\cr a &= b\cr}$$
+with a numbered pair
+$$\eqalignno{u &= v + w&(1)\cr p &= q&(2)\cr}$$
+and two centred lines
+$$\displaylines{r = s + t\cr m = n\cr}$$
+and a cases construct
+$$f(x)=\cases{0&if $x<0$\cr 1&if $x\ge0$\cr}$$
+close the sequence.
+\par
+\bye

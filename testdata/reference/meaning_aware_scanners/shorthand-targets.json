@@ -1,0 +1,671 @@
+{
+  "reference": "Fresh MiKTeX TeX 24.4, plain; 2026-10-15",
+  "rows": [
+    {
+      "name": "chardef_direct",
+      "body": "\\catcode`?=13\\def?{B}\\chardef?=65 \\noindent ?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "chardef_local",
+      "body": "\\catcode`?=13\\def?{B}{\\chardef?=65 \\noindent ?}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[macro:->B]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "chardef_global",
+      "body": "\\catcode`?=13\\def?{B}{\\global\\chardef?=65 \\noindent ?}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\char\"41]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\char\"41]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "mathchardef_direct",
+      "body": "\\catcode`?=13\\def?{B}\\mathchardef?=\"7141 \\noindent $?$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "mathchardef_local",
+      "body": "\\catcode`?=13\\def?{B}{\\mathchardef?=\"7141 \\noindent $?$}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[macro:->B]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "mathchardef_global",
+      "body": "\\catcode`?=13\\def?{B}{\\global\\mathchardef?=\"7141 \\noindent $?$}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\mathchar\"7141]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\mathchar\"7141]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "countdef_direct",
+      "body": "\\catcode`?=13\\def?{B}\\countdef?=1 \\noindent ?=7\\message{[\\the\\count1]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[7]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "countdef_local",
+      "body": "\\catcode`?=13\\def?{B}{\\countdef?=1 \\noindent ?=7\\message{[\\the\\count1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[7]",
+        "[macro:->B]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[7]",
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "countdef_global",
+      "body": "\\catcode`?=13\\def?{B}{\\global\\countdef?=1 \\noindent ?=7\\message{[\\the\\count1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[7]",
+        "[\\count1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[7]",
+        "[\\count1]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "dimendef_direct",
+      "body": "\\catcode`?=13\\def?{B}\\dimendef?=1 \\noindent ?=2pt\\message{[\\the\\dimen1]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "dimendef_local",
+      "body": "\\catcode`?=13\\def?{B}{\\dimendef?=1 \\noindent ?=2pt\\message{[\\the\\dimen1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0pt]",
+        "[macro:->B]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0pt]",
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "dimendef_global",
+      "body": "\\catcode`?=13\\def?{B}{\\global\\dimendef?=1 \\noindent ?=2pt\\message{[\\the\\dimen1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0pt]",
+        "[\\dimen1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0pt]",
+        "[\\dimen1]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "skipdef_direct",
+      "body": "\\catcode`?=13\\def?{B}\\skipdef?=1 \\noindent ?=2pt\\message{[\\the\\skip1]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "skipdef_local",
+      "body": "\\catcode`?=13\\def?{B}{\\skipdef?=1 \\noindent ?=2pt\\message{[\\the\\skip1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0pt]",
+        "[macro:->B]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0pt]",
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "skipdef_global",
+      "body": "\\catcode`?=13\\def?{B}{\\global\\skipdef?=1 \\noindent ?=2pt\\message{[\\the\\skip1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0pt]",
+        "[\\skip1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0pt]",
+        "[\\skip1]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "muskipdef_direct",
+      "body": "\\catcode`?=13\\def?{B}\\muskipdef?=1 \\noindent ?=2mu\\message{[\\the\\muskip1]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "muskipdef_local",
+      "body": "\\catcode`?=13\\def?{B}{\\muskipdef?=1 \\noindent ?=2mu\\message{[\\the\\muskip1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0mu]",
+        "[macro:->B]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0mu]",
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "muskipdef_global",
+      "body": "\\catcode`?=13\\def?{B}{\\global\\muskipdef?=1 \\noindent ?=2mu\\message{[\\the\\muskip1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[2.0mu]",
+        "[\\muskip1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[2.0mu]",
+        "[\\muskip1]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "toksdef_direct",
+      "body": "\\catcode`?=13\\def?{B}\\toksdef?=1 \\noindent ?={A}\\message{[\\the\\toks1]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[A]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[A]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "toksdef_local",
+      "body": "\\catcode`?=13\\def?{B}{\\toksdef?=1 \\noindent ?={A}\\message{[\\the\\toks1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[A]",
+        "[macro:->B]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[A]",
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "toksdef_global",
+      "body": "\\catcode`?=13\\def?{B}{\\global\\toksdef?=1 \\noindent ?={A}\\message{[\\the\\toks1]}}\\message{[\\meaning?]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[A]",
+        "[\\toks1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[A]",
+        "[\\toks1]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "control_symbol_separate",
+      "body": "\\catcode`?=13\\chardef\\?=66\\chardef?=65\\noindent?\\?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "raw_macro_target",
+      "body": "\\catcode`?=13\\def?{Z}\\chardef?=65\\noindent?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "global_replaces_local_owner",
+      "body": "\\catcode`?=13\\def?{B}{\\countdef?=1\\global\\chardef?=65}\\noindent?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    }
+  ]
+}

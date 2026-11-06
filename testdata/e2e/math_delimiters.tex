@@ -1,0 +1,33 @@
+% E2E canonical fixture — variable-size delimiters and
+% large operators (cascade #4).
+%
+% Exercises the two constructs that alter the math glyph stream:
+%   * a tall \left( ... \over ... \right) around a fraction — rule-19
+%     delimiter sizing (TeX:The Program §762): the parens grow to span the
+%     two-line fraction (var_delimiter §706-710, §B).
+%   * a display $$\sum_{i=1}^{n}$$ — large-operator size switch (the display
+%     \sum successor glyph) with limits set above/below (make_op §749-750,
+%     App G rule 13, §E).
+%
+% The glyph stream + positions byte-compare to MiKTeX-pdfTeX 4.19 (ground
+% truth) within the tolerance (+/-0.5pt V / +/-0.1pt H), via the
+% shared DVI-walker harness in tests/test_e2e_dvi_baseline.py (AC-7).
+%
+% NOTE on \big-family: AC-2 (\bigl/\Bigl growth via the real plain.tex
+% \big macros) is DEFERRED to — those macros expand to a nested
+% \hbox{$\left(\vbox..\right.$} the math-field scanner cannot execute, so a
+% \bigl( would NOT byte-match MiKTeX here.  This fixture therefore proves the
+% delivered \left/\right rule-19 + large-op leg only; the \bigl( fixed-size
+% check rides on.
+%
+% Under the bundled plain.tex format the math families (\textfont0..3), the
+% \over macro, \left/\right, and the \sum \mathop (with \limits default in
+% display) are all set up.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+The sized fraction $\left(a+b\over c+d\right)$ spans two lines.
+\par
+$$\sum_{i=1}^{n}$$
+\bye

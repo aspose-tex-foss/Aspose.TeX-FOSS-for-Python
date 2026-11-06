@@ -1,0 +1,217 @@
+{
+  "reference": "MiKTeX TeX 24.4; 2026-10-15; original architecture HEAD 3b6c8946; developer rerun recorded separately",
+  "rows": [
+    {
+      "name": "global_font_no_local",
+      "body": "\\rm{\\noindent\\accent19\\global\\tenit A}\\message{[\\the\\font]}f",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            102,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\tenit ]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            102,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\tenit ]"
+      ],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "global_font_baseline_no_local",
+      "body": "\\rm{\\global\\tenit}\\message{[\\the\\font]}\\noindent f",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\tenit ]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\tenit ]"
+      ],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "global_font_after_local",
+      "body": "\\rm{\\tenit\\noindent\\accent19\\global\\tensl A}\\message{[\\the\\font]}f",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            82379,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            102,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\tensl ]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            82379,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            102,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\tensl ]"
+      ],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "global_font_baseline",
+      "body": "\\rm{\\tenit\\global\\tensl}\\message{[\\the\\font]}\\noindent f",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\tensl ]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\tensl ]"
+      ],
+      "ours_error": null,
+      "matches": true
+    }
+  ]
+}

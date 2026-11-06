@@ -1,0 +1,7 @@
+%: original accent font, assignment owners and unboxed copy.
+\noindent\hbox{\accent19\count1=1 o}\quad
+\hbox{\accent19\it A}\quad\hbox{\sl\accent19 A}\par
+\setbox1=\hbox{\accent19 i}
+\noindent\copy1\unhcopy1\box1\par
+\halign{#\hfil\cr\accent19 A\cr\accent19\it o\cr}
+\bye

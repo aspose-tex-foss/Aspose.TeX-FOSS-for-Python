@@ -1,0 +1,2250 @@
+{
+  "paragraph": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\noindent A\\insert100{\\hbox{I}}B\\par C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "outer_hbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox{A\\insert100{\\hbox{I}}B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "internal_hbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\vbox{\\hbox{A\\insert100{\\hbox{I}}B}C}\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          67,
+          1310720,
+          1234260
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          67,
+          1310720,
+          1234260
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "deferred_hbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox\\bgroup A\\insert100{\\hbox{I}}B\\egroup C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "stored": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox{A\\insert100{\\hbox{I}}B}\\box0 C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "stored_deferred": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox\\bgroup A\\insert100{\\hbox{I}}B\\egroup\\copy0 C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "nested": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox{A\\hbox{B\\insert100{\\hbox{I}}C}D}E\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ],
+        [
+          69,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ],
+        [
+          69,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "running_hbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\noindent A\\hbox{B\\insert100{\\hbox{I}}C}D\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "math_hbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\noindent $a+\\hbox{B\\insert100{\\hbox{I}}C}$D\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          43,
+          492048,
+          655360
+        ],
+        [
+          66,
+          1147406,
+          655360
+        ],
+        [
+          67,
+          1611621,
+          655360
+        ],
+        [
+          68,
+          2084937,
+          655360
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          43,
+          492048,
+          655360
+        ],
+        [
+          66,
+          1147406,
+          655360
+        ],
+        [
+          67,
+          1611621,
+          655360
+        ],
+        [
+          68,
+          2084937,
+          655360
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "edef": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\edef\\x{\\hbox{A\\insert100{\\hbox{I}}B}}\\message{[defined]}\\x C\\bye",
+    "exit": 0,
+    "messages": [
+      "[defined]",
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[defined]",
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "alignment": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\halign{#\\cr A\\insert100{\\hbox{I}}B\\cr}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "footnote_centerline": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\centerline{A\\footnote*{Note}B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          14751223,
+          655360
+        ],
+        [
+          42,
+          15242744,
+          655360
+        ],
+        [
+          66,
+          15570425,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          14751223,
+          655360
+        ],
+        [
+          42,
+          15242744,
+          655360
+        ],
+        [
+          66,
+          15570425,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "footnote_running_hbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\noindent\\hbox{A\\footnote*{Note}B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          42,
+          491521,
+          655360
+        ],
+        [
+          66,
+          819202,
+          655360
+        ],
+        [
+          67,
+          1283417,
+          655360
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          42,
+          491521,
+          655360
+        ],
+        [
+          66,
+          819202,
+          655360
+        ],
+        [
+          67,
+          1283417,
+          655360
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "footnote_nested": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\centerline{A\\hbox{B\\footnote*{Note}C}D}E\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          14264254,
+          655360
+        ],
+        [
+          66,
+          14755775,
+          655360
+        ],
+        [
+          42,
+          15219990,
+          655360
+        ],
+        [
+          67,
+          15547671,
+          655360
+        ],
+        [
+          68,
+          16020987,
+          655360
+        ],
+        [
+          69,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          14264254,
+          655360
+        ],
+        [
+          66,
+          14755775,
+          655360
+        ],
+        [
+          42,
+          15219990,
+          655360
+        ],
+        [
+          67,
+          15547671,
+          655360
+        ],
+        [
+          68,
+          16020987,
+          655360
+        ],
+        [
+          69,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "mark_outer": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox{A\\mark{M}B}C\\par\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=M]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=M]"
+    ],
+    "exact": true
+  },
+  "mark_paragraph": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\noindent A\\mark{M}B\\par C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=M]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=M]"
+    ],
+    "exact": true
+  },
+  "mark_stored": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox{A\\mark{M}B}\\box0 C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "adjust_outer": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox{A\\vadjust{\\kern5pt\\hbox{V}}B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1430868
+        ],
+        [
+          67,
+          1310720,
+          2217300
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1430868
+        ],
+        [
+          67,
+          1310720,
+          2217300
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "adjust_internal": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\vbox{\\hbox{A\\vadjust{\\kern5pt\\hbox{V}}B}C}\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          86,
+          0,
+          1223336
+        ],
+        [
+          67,
+          1310720,
+          2009768
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          86,
+          0,
+          1223336
+        ],
+        [
+          67,
+          1310720,
+          2009768
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "adjust_stored": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox{A\\vadjust{\\kern5pt\\hbox{V}}B}\\box0 C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "mixed": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox{A\\mark{M}\\insert100{\\hbox{I}}\\vadjust{\\kern5pt\\hbox{V}}\\mark{N}B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=N]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1430868
+        ],
+        [
+          67,
+          1310720,
+          2217300
+        ],
+        [
+          73,
+          0,
+          2665128
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1430868
+        ],
+        [
+          67,
+          1310720,
+          2217300
+        ],
+        [
+          73,
+          0,
+          2665128
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=N]"
+    ],
+    "exact": true
+  },
+  "unhbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox{A\\mark{M}\\insert100{\\hbox{I}}\\vadjust{\\hbox{V}}B}\\hbox{\\unhbox0}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=M]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ],
+        [
+          73,
+          0,
+          2337448
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ],
+        [
+          73,
+          0,
+          2337448
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=M]"
+    ],
+    "exact": true
+  },
+  "mover": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\moveleft2pt\\hbox{A\\insert100{\\hbox{I}}\\vadjust{\\hbox{V}}B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          -131072,
+          655360
+        ],
+        [
+          66,
+          360449,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ],
+        [
+          73,
+          0,
+          2337448
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          -131072,
+          655360
+        ],
+        [
+          66,
+          360449,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ],
+        [
+          73,
+          0,
+          2337448
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "to_spread": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox to40pt{A\\insert100{\\hbox{I}}\\hfil B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          2157225,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          2157225,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ],
+        [
+          73,
+          0,
+          1889620
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "spread": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox spread10pt{A\\vadjust{\\hbox{V}}\\hfil B}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          1146881,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          1146881,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "mark_nested": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox{A\\hbox{B\\mark{hidden}C}\\mark{seen}D}E\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=seen,bot=seen]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ],
+        [
+          69,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ],
+        [
+          69,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=seen,bot=seen]"
+    ],
+    "exact": true
+  },
+  "mark_internal": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\vbox{\\hbox{A\\mark{hidden}B}C}D\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          67,
+          1310720,
+          1234260
+        ],
+        [
+          68,
+          1310720,
+          2020692
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          67,
+          1310720,
+          1234260
+        ],
+        [
+          68,
+          1310720,
+          2020692
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "mark_deferred": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox\\bgroup A\\mark{M}B\\egroup C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=M]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=M]"
+    ],
+    "exact": true
+  },
+  "mark_running_hbox": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\noindent A\\hbox{B\\mark{hidden}C}D\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "mixed_deferred": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\hbox\\bgroup A\\mark{M}\\insert100{\\hbox{I}}\\vadjust{\\kern5pt\\hbox{V}}\\mark{N}B\\egroup C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=N]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1430868
+        ],
+        [
+          67,
+          1310720,
+          2217300
+        ],
+        [
+          73,
+          0,
+          2665128
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1430868
+        ],
+        [
+          67,
+          1310720,
+          2217300
+        ],
+        [
+          73,
+          0,
+          2665128
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=N]"
+    ],
+    "exact": true
+  },
+  "internal_deferred": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\vbox\\bgroup\\hbox\\bgroup A\\insert100{\\hbox{I}}\\vadjust{\\hbox{V}}B\\egroup C\\egroup D\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          86,
+          0,
+          895656
+        ],
+        [
+          67,
+          1310720,
+          1682088
+        ],
+        [
+          68,
+          1310720,
+          2468520
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          447828
+        ],
+        [
+          66,
+          491521,
+          447828
+        ],
+        [
+          86,
+          0,
+          895656
+        ],
+        [
+          67,
+          1310720,
+          1682088
+        ],
+        [
+          68,
+          1310720,
+          2468520
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "stored_internal": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\vbox{\\hbox{A\\insert100{\\hbox{I}}\\vadjust{\\hbox{V}}B}C}\\unvbox0 D\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ],
+        [
+          68,
+          1310720,
+          2337448
+        ],
+        [
+          73,
+          0,
+          2785276
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          67,
+          1310720,
+          1889620
+        ],
+        [
+          68,
+          1310720,
+          2337448
+        ],
+        [
+          73,
+          0,
+          2785276
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "reused_copy": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox{A\\insert100{\\hbox{I}}\\mark{hidden}\\vadjust{\\hbox{V}}B}\\copy0\\copy0 C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          65,
+          0,
+          1441792
+        ],
+        [
+          66,
+          491521,
+          1441792
+        ],
+        [
+          67,
+          1310720,
+          2228224
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          65,
+          0,
+          1441792
+        ],
+        [
+          66,
+          491521,
+          1441792
+        ],
+        [
+          67,
+          1310720,
+          2228224
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "mover_copy": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox{A\\insert100{\\hbox{I}}\\mark{hidden}\\vadjust{\\hbox{V}}B}\\moveleft2pt\\copy0 C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=,bot=]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          -131072,
+          655360
+        ],
+        [
+          66,
+          360449,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          -131072,
+          655360
+        ],
+        [
+          66,
+          360449,
+          655360
+        ],
+        [
+          67,
+          1310720,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=,bot=]"
+    ],
+    "exact": true
+  },
+  "unhcopy": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\setbox0=\\hbox{A\\insert100{\\hbox{I}}\\mark{M}\\vadjust{\\hbox{V}}B}\\hbox{\\unhcopy0}\\hbox{\\unhcopy0}C\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=M]",
+      "[first=M,bot=M]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          65,
+          0,
+          1889620
+        ],
+        [
+          66,
+          491521,
+          1889620
+        ],
+        [
+          86,
+          0,
+          2337448
+        ],
+        [
+          67,
+          1310720,
+          3123880
+        ],
+        [
+          73,
+          0,
+          3571708
+        ]
+      ],
+      [
+        [
+          73,
+          0,
+          1103188
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          86,
+          0,
+          1103188
+        ],
+        [
+          65,
+          0,
+          1889620
+        ],
+        [
+          66,
+          491521,
+          1889620
+        ],
+        [
+          86,
+          0,
+          2337448
+        ],
+        [
+          67,
+          1310720,
+          3123880
+        ],
+        [
+          73,
+          0,
+          3571708
+        ]
+      ],
+      [
+        [
+          73,
+          0,
+          1103188
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=M]",
+      "[first=M,bot=M]"
+    ],
+    "exact": true
+  },
+  "page_boundary": {
+    "source": "\\output={\\shipout\\vbox{\\unvbox255\\unvbox100}\\message{[first=\\firstmark,bot=\\botmark]}}\\vsize=30pt\\hbox{A}\\hbox{B\\insert100{\\hbox{I}}\\mark{M}\\vadjust{\\hbox{V}}}\\hbox{C}\\hbox{D}\\bye",
+    "exit": 0,
+    "messages": [
+      "[first=M,bot=M]",
+      "[first=M,bot=M]"
+    ],
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          0,
+          1441792
+        ],
+        [
+          86,
+          0,
+          1889620
+        ],
+        [
+          73,
+          0,
+          2337448
+        ]
+      ],
+      [
+        [
+          67,
+          0,
+          655360
+        ],
+        [
+          68,
+          0,
+          1441792
+        ]
+      ]
+    ],
+    "ours": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          0,
+          1441792
+        ],
+        [
+          86,
+          0,
+          1889620
+        ],
+        [
+          73,
+          0,
+          2337448
+        ]
+      ],
+      [
+        [
+          67,
+          0,
+          655360
+        ],
+        [
+          68,
+          0,
+          1441792
+        ]
+      ]
+    ],
+    "our_messages": [
+      "[first=M,bot=M]",
+      "[first=M,bot=M]"
+    ],
+    "exact": true
+  }
+}

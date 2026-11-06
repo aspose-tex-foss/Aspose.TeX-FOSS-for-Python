@@ -1,0 +1,73 @@
+% Definitions
+\tracingonline=1
+\showboxbreadth=100
+\parskip=0pt
+\def\afterpar{\vskip 15pt}
+\def\beforepar{\vskip 5pt}
+\font\bfsxt=cmbx10 at 16pt
+\font\bftw=cmbx10 at 12pt
+\font\slten=cmsl10
+\font\bf=cmbx10
+\def\fn#1#2{\footnote{\rm$^{#1}$}{#2}}
+\def\header#1#2{{\centerline{\bfsxt #1}\vskip 10pt\centerline{by \slten #2}}}
+\def\section#1{\afterpar{\bftw #1}\beforepar}
+\def\cs#1{{$\tt \backslash$\tt #1}}
+\def\ref#1{{\bf (#1)}}
+\def\leftcb{$\tt\{$}
+\def\rightcb{$\tt\}$}
+%%%%%%%%%%%%%%%%%%
+
+\header{The world of \TeX. What is what. FAQ.\fn{1}{\rm This article is typeset by Aspose.TeX.}}{Aleksey Kolodyazhnyy, Aspose Pty Ltd}
+
+\vskip 10pt
+\section{What \TeX\ is NOT.}
+
+TeX is definitely not a format at all.
+
+\section{What \TeX\ IS.}
+
+Well, that is the question, as Hamlet\fn{2}{The character in W. Shakespeare's "The Tragical Historie of Hamlet, Prince of Denmarke".} said.
+Let's try to answer it as simply as possible.
+
+Imagine that we have a language consisting of two elementary commands (called {\it control sequences}), or {\it primitives}, \cs{a} and \cs{b}. And in this language we can write programs for documents (books, articles, etc.) typesetting. Let's call this language \ref{L1}. In order for these programs to be executed in a certain way, we have a certain engine that interprets the commands of this language.
+
+Now let's assume that when writing a typesetting program for some document, we found that the sequence \cs{a} \cs{b} \cs{a} occurs quite frequently. And also assume that in our language there is another primitive \cs{def}, which allows you to define subroutines, or macros. Let's call this language \ref{L2}. Under these circumstances, we can define the {\it macro} \cs{def}\cs{c}\leftcb\cs{a} \cs{b} \cs{a}\rightcb\ at the beginning of the program, and replace each occurrence of the subsequence, both for better readability and reduction.
+
+Now, if we want to typeset another document, in whose program this command subsequence also occurs frequently, we will have to define this macro again. But let's assume that our engine is able to load the macro \cs{c} into its internal state, and then save that state as a binary file (a {\it dump}), which will then be automatically loaded ("over" the command set of language \ref{L2}) before processing the typesetting programs of each document where the macro \cs{c} is required. We will call the set of primitives extended by the \cs{c} macro a {\it format}. So our format is a {\it macro extension} of our primitive low-level language \ref{L2}.
+
+It happened that Donald E. Knuth, defined a language similar to \ref{L2}, but with a much wider set of primitives, which he called \TeX. He also created an engine that understood (and still does) \TeX\ language. He called it \TeX\ too.
+
+Happily, those were not the only things he did. He also proposed the macro extension, or format, he called the {\it plain} \TeX, which made programs writing more convenient. The \TeX's initial set of primitives is sometimes called Vir\TeX\ (``Vir'' for ``virgin'), and is, formally, a format also.
+
+So, on one hand, \TeX\ IS a programming language. And on the other hand, it IS an interpreter engine that understands that language. And on the third hand, \TeX\ is a more general term meaning a typesetting system in whole.
+
+\section{What Aspose.\TeX\ and Object \TeX\ are.}
+
+Now let's consider the output format.
+
+The original \TeX\ was able of outputting files in {\it DVI} (DeVice Independent) format only. It happened that DVI format doesn't define metrics of a media on which a file is going to be printed --- the page size and the position of the top left corner of the entire page content. Once we decide to make the \TeX engine capable of outputting files, say, in PDF format, we have to define such metrics. Thus, we must include new primitives into original \TeX\ engine's set. And that would be an extension of the engine itself.
+
+That's what {\it Object \TeX} is. Again, on one hand, it's a programming language with Vir\TeX's set of primitives, expanded with new primitives inspired by new output requirements. On the other hand, it's an extended \TeX\ engine that understands new primitives as well. And on the third hand, Object \TeX\ is a new typesetting system in whole.
+
+There's the fourth hand. The Object TeX format is also a format based on the plain \TeX\ and containing definitions that involve new primitives, e.g., assign default values to media metrics.
+
+And Aspose.\TeX\ is just an API of the Object \TeX\ system.
+
+\section{Why new \TeX\ is Object.}
+
+So why did we use ``Object'' in the name of the system? The reason is that the actual output of the engine is not a destination format itself, but some intermediate {\it object} model which is then converted into a destination format.
+
+\section{What a \TeX\ file is.}
+
+Technically, any file can be a \TeX\ file. It doesn't even need to have the {\it .tex} extension. A \TeX\ engine reads input byte by byte trying to recognize commands it knows (i.e., which are in its internal state). It just reports errors about unrecognized commands. But if we expect to see something like nicely typeset document, the input should follow \TeX's syntax and, ideally, contain only commands known to the engine.
+
+
+
+
+
+
+
+
+%TODO: explanations on what La\TeX\ IS.
+
+\end

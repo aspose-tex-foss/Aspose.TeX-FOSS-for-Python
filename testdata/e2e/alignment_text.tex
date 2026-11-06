@@ -1,0 +1,15 @@
+% E2E canonical fixture — text-mode \halign interline glue.
+% Pins the §807 fin_align inter-row \baselineskip interline glue: a
+% multi-row text \halign must space its row baselines by \baselineskip, matching
+% MiKTeX within the tolerance (+/-0.5pt V / +/-0.1pt H).  This is the
+% pure-text leg of the interline-glue fix — no math, no \vcenter, no delimiter
+% growth — so the row baselines are the only thing under test.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\normalbaselines
+\halign{#\hfil&\quad#\hfil\cr
+  one&two\cr
+  three&four\cr
+  five&six\cr}
+\bye

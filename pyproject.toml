@@ -4,30 +4,36 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aspose-tex"
-version = "26.5"
+version = "26.11"
 description = "Pure-Python TeX/LaTeX processing library"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
 classifiers = [
- "Development Status :: 2 - Pre-Alpha",
- "License :: OSI Approved :: MIT License",
- "Programming Language :: Python :: 3",
- "Programming Language :: Python :: 3.10",
- "Programming Language :: Python :: 3.11",
- "Programming Language :: Python :: 3.12",
- "Programming Language :: Python :: 3.13",
- "Topic :: Text Processing :: Markup :: LaTeX",
- "Typing :: Typed",
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Text Processing :: Markup :: LaTeX",
+    "Typing :: Typed",
 ]
+
+[project.scripts]
+aspose-tex = "aspose_tex.cli:main"
 
 [project.optional-dependencies]
 dev = [
- "pytest>=7.4",
- "ruff>=0.4",
- "build>=1.2",
- "twine>=5.0",
- "tomli>=2.0; python_version < '3.11'",
+    "pytest>=7.4",
+    "ruff>=0.4",
+    "build>=1.2",
+    "twine>=5.0",
+    "tomli>=2.0; python_version < '3.11'",
+]
+mcp = [
+    "mcp>=1.0",
 ]
 
 [tool.setuptools.packages.find]
@@ -47,15 +53,15 @@ line-length = 120
 
 [tool.ruff.lint]
 select = [
- "E", # pycodestyle errors
- "W", # pycodestyle warnings
- "F", # pyflakes
- "I", # isort
- "N", # pep8-naming
- "UP", # pyupgrade
- "B", # flake8-bugbear
- "SIM", # flake8-simplify
- "RUF", # ruff-specific
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific
 ]
 
 [tool.ruff.lint.pydocstyle]

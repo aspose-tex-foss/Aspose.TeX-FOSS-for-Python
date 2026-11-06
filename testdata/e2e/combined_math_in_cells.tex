@@ -1,0 +1,16 @@
+% thematic fixture (a) — math inside \halign cells.
+% Pins the historically weakest cross-construct seam (,
+%): a text \halign whose cells contain inline $...$ math.
+% Each cell routes its $...$ through the math branch inside the alignment
+% v-template, so the column atoms (Ord/Bin/Rel spacing) AND the row baselines
+% (§807 interline glue) must byte-compare to MiKTeX within the
+% tolerance (+/-0.5pt V / +/-0.1pt H).
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\normalbaselines
+\halign{$#$\hfil&\quad$#$\hfil\cr
+  a+b&x=y\cr
+  c-d&\alpha\beta\cr
+  e+f&z=w\cr}
+\bye

@@ -1,0 +1,916 @@
+{
+  "capture_nonshipping": {
+    "source": "\\hsize=3in \\vsize=1.5in \\hyphenpenalty=10000 \\output={\\ifnum\\outputpenalty=-12345 \\global\\setbox9\\vbox{\\unvbox255}\\else\\plainoutput\\fi}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\\par\\penalty-12345 \\unvbox9 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\\par Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\\par\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiut1",
+      "aliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.2"
+    ],
+    "ours": [],
+    "ours_count0": [
+      2,
+      3
+    ],
+    "ours_text": [
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiut2",
+      "aliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.3"
+    ],
+    "error": null,
+    "match": false
+  },
+  "two_pass_holdinginserts": {
+    "source": "\\hsize=4in \\vsize=2in \\hyphenpenalty=10000 \\holdinginserts=1\n\\output={\\ifnum\\holdinginserts>0 \\global\\holdinginserts=0\n  \\unvbox255 \\penalty\\outputpenalty\n  \\else \\message{[\\the\\insertpenalties]}\\plainoutput \\global\\holdinginserts=1 \\fi}\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nNote here.\\footnote*{A footnote.}\n\\par\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n$$a=b$$ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\\par\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\\par\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Notehere.*Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.a=b*Afootnote.1",
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.2"
+    ],
+    "ours": [],
+    "ours_count0": [
+      2,
+      4
+    ],
+    "ours_text": [
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Notehere.*Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.a=b*Afootnote.2",
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.4"
+    ],
+    "error": null,
+    "match": false
+  },
+  "plain_three_pages": {
+    "source": "A\\vfill\\eject B\\vfill\\eject C\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2,
+      3
+    ],
+    "miktex_text": [
+      "A1",
+      "B2",
+      "C3"
+    ],
+    "ours": [],
+    "ours_count0": [
+      1,
+      2,
+      3
+    ],
+    "ours_text": [
+      "A1",
+      "B2",
+      "C3"
+    ],
+    "error": null,
+    "match": true
+  },
+  "plain_negative_pageno": {
+    "source": "\\pageno=-1 A\\vfill\\eject B\\vfill\\eject C\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      -1,
+      -2,
+      -3
+    ],
+    "miktex_text": [
+      "Ai",
+      "Bii",
+      "Ciii"
+    ],
+    "ours": [],
+    "ours_count0": [
+      -1,
+      0,
+      1
+    ],
+    "ours_text": [
+      "Ai",
+      "B0",
+      "C1"
+    ],
+    "error": null,
+    "match": false
+  },
+  "plain_user_jump": {
+    "source": "A\\vfill\\eject \\pageno=10 B\\vfill\\eject C\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      10,
+      11
+    ],
+    "miktex_text": [
+      "A1",
+      "B10",
+      "C11"
+    ],
+    "ours": [],
+    "ours_count0": [
+      1,
+      10,
+      11
+    ],
+    "ours_text": [
+      "A1",
+      "B10",
+      "C11"
+    ],
+    "error": null,
+    "match": true
+  },
+  "user_no_advance": {
+    "source": "\\output={\\shipout\\box255}A\\vfill\\eject B\\vfill\\eject C\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      1,
+      1
+    ],
+    "miktex_text": [
+      "A",
+      "B",
+      "C"
+    ],
+    "ours": [],
+    "ours_count0": [
+      1,
+      2,
+      3
+    ],
+    "ours_text": [
+      "A",
+      "B",
+      "C"
+    ],
+    "error": null,
+    "match": false
+  },
+  "user_advance_by_ten": {
+    "source": "\\output={\\shipout\\box255 \\global\\advance\\pageno by 10 }A\\vfill\\eject B\\vfill\\eject C\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      11,
+      21
+    ],
+    "miktex_text": [
+      "A",
+      "B",
+      "C"
+    ],
+    "ours": [],
+    "ours_count0": [
+      1,
+      2,
+      3
+    ],
+    "ours_text": [
+      "A",
+      "B",
+      "C"
+    ],
+    "error": null,
+    "match": false
+  },
+  "user_local_advance": {
+    "source": "\\output={\\shipout\\box255 \\advance\\pageno by 1 \\message{R[in=\\the\\pageno]}}A\\vfill\\eject\\message{R[out=\\the\\pageno]}B\n\\bye\n",
+    "miktex": [
+      "R[in=2]",
+      "R[out=1]",
+      "R[in=2]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      1
+    ],
+    "miktex_text": [
+      "A",
+      "B"
+    ],
+    "ours": [
+      "R[in=2]",
+      "R[out=2]",
+      "R[in=3]"
+    ],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "A",
+      "B"
+    ],
+    "error": null,
+    "match": false
+  },
+  "user_two_shipouts": {
+    "source": "\\output={\\shipout\\box255 \\global\\advance\\pageno 1 \\shipout\\hbox{x}\\global\\advance\\pageno 1 }A\\vfill\\eject B\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "miktex_text": [
+      "A",
+      "x",
+      "B",
+      "x"
+    ],
+    "ours": [],
+    "ours_count0": [
+      1,
+      2,
+      2,
+      3
+    ],
+    "ours_text": [
+      "A",
+      "x",
+      "B",
+      "x"
+    ],
+    "error": null,
+    "match": false
+  },
+  "user_discard_advance": {
+    "source": "\\output={\\ifnum\\outputpenalty=-12345 \\global\\setbox1\\box255 \\global\\advance\\pageno 1 \\else\\plainoutput\\fi}A\\par\\penalty-12345 \\message{R[\\the\\pageno]}B\n\\bye\n",
+    "miktex": [
+      "R[2]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      2
+    ],
+    "miktex_text": [
+      "B2"
+    ],
+    "ours": [
+      "R[2]"
+    ],
+    "ours_count0": [
+      2
+    ],
+    "ours_text": [
+      "B2"
+    ],
+    "error": null,
+    "match": true
+  },
+  "pageno_in_output": {
+    "source": "\\output={\\message{R[pre=\\the\\pageno]}\\plainoutput\\message{R[post=\\the\\pageno]}}A\\vfill\\eject\\message{R[after=\\the\\pageno]}B\n\\bye\n",
+    "miktex": [
+      "R[pre=1]",
+      "R[post=2]",
+      "R[after=2]",
+      "R[pre=2]",
+      "R[post=3]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "A1",
+      "B2"
+    ],
+    "ours": [
+      "R[pre=1]",
+      "R[post=2]",
+      "R[after=2]",
+      "R[pre=2]",
+      "R[post=3]"
+    ],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "A1",
+      "B2"
+    ],
+    "error": null,
+    "match": true
+  },
+  "direct_shipout": {
+    "source": "\\shipout\\hbox{A}\\shipout\\hbox{B}\\message{R[\\the\\pageno]}C\n\\bye\n",
+    "miktex": [
+      "R[1]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      1,
+      1
+    ],
+    "miktex_text": [
+      "A",
+      "B",
+      "C1"
+    ],
+    "ours": [
+      "R[1]"
+    ],
+    "ours_count0": [
+      1,
+      1,
+      1
+    ],
+    "ours_text": [
+      "A",
+      "B",
+      "C1"
+    ],
+    "error": null,
+    "match": true
+  },
+  "count1_shipout": {
+    "source": "\\output={\\global\\count1=\\pageno \\shipout\\box255 \\global\\advance\\pageno 1 }A\\vfill\\eject B\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "A",
+      "B"
+    ],
+    "ours": [],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "A",
+      "B"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mark_topmark_after_first": {
+    "source": "\\hbox{}\\mark{A}\\eject\\message{R[\\topmark]}\n\\bye\n",
+    "miktex": [
+      "R[]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "1"
+    ],
+    "ours": [
+      "R[A]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "1"
+    ],
+    "error": null,
+    "match": false
+  },
+  "mark_all_after_first": {
+    "source": "\\hbox{}\\mark{A}\\eject\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\n\\bye\n",
+    "miktex": [
+      "R[2::A:A]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "1"
+    ],
+    "ours": [
+      "R[2:A::]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "1"
+    ],
+    "error": null,
+    "match": false
+  },
+  "mark_all_after_two": {
+    "source": "\\hbox{}\\mark{A}\\mark{B}\\eject\\hbox{}\\eject\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\n\\bye\n",
+    "miktex": [
+      "R[3:B:B:B]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "1",
+      "2"
+    ],
+    "ours": [
+      "R[3:B::]"
+    ],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "1",
+      "2"
+    ],
+    "error": null,
+    "match": false
+  },
+  "mark_in_output": {
+    "source": "\\output={\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\\plainoutput}\\hbox{}\\mark{A}\\mark{B}\\eject \\hbox{}\\eject \\hbox{}\\mark{C}\\eject \\hbox{}\n\\bye\n",
+    "miktex": [
+      "R[1::A:B]",
+      "R[2:B:B:B]",
+      "R[3:B:C:C]",
+      "R[4:C:C:C]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "miktex_text": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "ours": [
+      "R[1::A:B]",
+      "R[2:B:B:B]",
+      "R[3:B:C:C]",
+      "R[4:C:C:C]"
+    ],
+    "ours_count0": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "ours_text": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mark_unmarked_first": {
+    "source": "\\output={\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\\plainoutput}\\hbox{}\\eject\\hbox{}\\mark{A}\n\\bye\n",
+    "miktex": [
+      "R[1:::]",
+      "R[2::A:A]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "1",
+      "2"
+    ],
+    "ours": [
+      "R[1:::]",
+      "R[2::A:A]"
+    ],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "1",
+      "2"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mark_before_any_page": {
+    "source": "\\mark{A}\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\\hbox{}\n\\bye\n",
+    "miktex": [
+      "R[1:::]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "1"
+    ],
+    "ours": [
+      "R[1:::]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "1"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mark_held_over": {
+    "source": "\\output={\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\\plainoutput}\\hbox{}\\mark{A}\\penalty-10000 \\mark{B}\\hbox{}\\mark{C}\n\\bye\n",
+    "miktex": [
+      "R[1::A:A]",
+      "R[2:A:B:C]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "1",
+      "2"
+    ],
+    "ours": [
+      "R[1::A:A]",
+      "R[2:A:B:C]"
+    ],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "1",
+      "2"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mark_nonshipping": {
+    "source": "\\output={\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\\ifnum\\outputpenalty=-12345 \\unvbox255 \\penalty-10001 \\else\\plainoutput\\fi}\\hbox{}\\mark{A}\\penalty-12345 \\hbox{}\\mark{B}\n\\bye\n",
+    "miktex": [
+      "R[1::A:A]",
+      "R[1:A:A:A]",
+      "R[2:A:B:B]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "1",
+      "2"
+    ],
+    "ours": [
+      "R[1::A:A]",
+      "R[2:A:A:A]",
+      "R[3:A:B:B]"
+    ],
+    "ours_count0": [
+      2,
+      3
+    ],
+    "ours_text": [
+      "2",
+      "3"
+    ],
+    "error": null,
+    "match": false
+  },
+  "mark_two_pass_hold": {
+    "source": "\\holdinginserts=1 \\output={\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\\ifnum\\holdinginserts>0 \\global\\holdinginserts=0 \\unvbox255 \\penalty\\outputpenalty \\else\\plainoutput\\global\\holdinginserts=1 \\fi}\\hbox{}\\mark{A}\\mark{B}\\eject\\hbox{}\\mark{C}\n\\bye\n",
+    "miktex": [
+      "R[1::A:B]",
+      "R[1:B:A:B]",
+      "R[2:B:C:C]",
+      "R[2:C:C:C]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "1",
+      "2"
+    ],
+    "ours": [
+      "R[1::A:B]",
+      "R[2:B:A:B]",
+      "R[3:B:C:C]",
+      "R[4:C:C:C]"
+    ],
+    "ours_count0": [
+      2,
+      4
+    ],
+    "ours_text": [
+      "2",
+      "4"
+    ],
+    "error": null,
+    "match": false
+  },
+  "mark_split_persists": {
+    "source": "\\setbox1\\vbox{\\hbox{}\\mark{S}\\hbox{}\\mark{T}}\\setbox2\\vsplit1 to 100pt \\hbox{}\\mark{A}\\eject\\message{R[\\splitfirstmark:\\splitbotmark]}\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\n\\bye\n",
+    "miktex": [
+      "R[S:T]",
+      "R[2::A:A]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "1"
+    ],
+    "ours": [
+      "R[S:T]",
+      "R[2:A::]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "1"
+    ],
+    "error": null,
+    "match": false
+  },
+  "ctx_paragraph": {
+    "source": "x\\mark{A} y\\par\\eject\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\n\\bye\n",
+    "miktex": [
+      "R[2::A:A]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "xy1"
+    ],
+    "ours": [
+      "R[2:A::]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "xy1"
+    ],
+    "error": null,
+    "match": false
+  },
+  "ctx_hbox": {
+    "source": "\\hbox{\\mark{A}}\\eject\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\n\\bye\n",
+    "miktex": [
+      "R[2::A:A]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "1"
+    ],
+    "ours": [
+      "R[2:A::]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "1"
+    ],
+    "error": null,
+    "match": false
+  },
+  "ctx_vbox": {
+    "source": "\\vbox{\\hbox{}\\mark{A}}\\eject\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\n\\bye\n",
+    "miktex": [
+      "R[2:::]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "1"
+    ],
+    "ours": [
+      "R[2:::]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "1"
+    ],
+    "error": null,
+    "match": true
+  },
+  "ctx_math": {
+    "source": "$x\\mark{A}$\\par\\eject\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\n\\bye\n",
+    "miktex": [
+      "R[2::A:A]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "x1"
+    ],
+    "ours": [
+      "R[2:A::]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "x1"
+    ],
+    "error": null,
+    "match": false
+  },
+  "ctx_edef": {
+    "source": "\\hbox{}\\mark{A}\\eject\\hbox{}\\mark{B}\\eject\\edef\\x{\\topmark/\\botmark}\\message{R[\\meaning\\x]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->A/B]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "1",
+      "2"
+    ],
+    "ours": [
+      "R[macro:->B/]"
+    ],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "1",
+      "2"
+    ],
+    "error": null,
+    "match": false
+  },
+  "deadcycles_assignment": {
+    "source": "\\output={\\setbox0\\box255 \\deadcycles=0 \\global\\advance\\pageno 1 }A\\vfill\\eject B\\vfill\\eject\\message{R[\\the\\pageno]}\n\\bye\n",
+    "miktex": [
+      "R[3]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [],
+    "miktex_text": [],
+    "ours": [],
+    "ours_count0": [],
+    "ours_text": [],
+    "error": "EngineError: \\deadcycles is read-only",
+    "match": false
+  },
+  "mark_empty_first": {
+    "source": "\\output={\\message{R[\\firstmark|\\botmark]}\\plainoutput}\\hbox{}\\mark{}\\mark{X}\n\\bye\n",
+    "miktex": [
+      "R[|X]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1
+    ],
+    "miktex_text": [
+      "1"
+    ],
+    "ours": [
+      "R[|X]"
+    ],
+    "ours_count0": [
+      1
+    ],
+    "ours_text": [
+      "1"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mark_empty_bot_inherits": {
+    "source": "\\output={\\message{R[\\the\\pageno:\\topmark:\\firstmark:\\botmark]}\\plainoutput}\\hbox{}\\mark{A}\\mark{}\\eject\\hbox{}\n\\bye\n",
+    "miktex": [
+      "R[1::A:]",
+      "R[2:::]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2
+    ],
+    "miktex_text": [
+      "1",
+      "2"
+    ],
+    "ours": [
+      "R[1::A:]",
+      "R[2:::]"
+    ],
+    "ours_count0": [
+      1,
+      2
+    ],
+    "ours_text": [
+      "1",
+      "2"
+    ],
+    "error": null,
+    "match": true
+  },
+  "capture_nonshipping_full": {
+    "source": "\\hsize=3in \\vsize=1.5in \\hyphenpenalty=10000 \\output={\\ifnum\\outputpenalty=-12345 \\global\\setbox9\\vbox{\\unvbox255}\\else\\plainoutput\\fi}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\par\\penalty-12345 \\unvbox9 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\par Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\par\n\\bye\n",
+    "miktex": [],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2,
+      3
+    ],
+    "miktex_text": [
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Duisauteiruredolorinreprehenderitinvoluptatevelitessecillumdoloreeufugiatnullapariatur.Excepteursintoccaecatcupidatatnonproident,suntinculpaquio\u000eciadeseruntmollitanimidestlaborum.1",
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Duisauteiruredolorinreprehenderitinvoluptatevelitessecillumdoloreeufugiatnullapariatur.Excepteursintoccaecatcupidatatnonproident,suntinculpaquio\u000eciadeseruntmollitanimidestlaborum.2",
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Duisauteiruredolorinreprehenderitinvoluptatevelitessecillumdoloreeufugiatnullapariatur.Excepteursintoccaecatcupidatatnonproident,suntinculpaquio\u000eciadeseruntmollitanimidestlaborum.3"
+    ],
+    "ours": [],
+    "ours_count0": [
+      2,
+      3,
+      4
+    ],
+    "ours_text": [
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Duisauteiruredolorinreprehenderitinvoluptatevelitessecillumdoloreeufugiatnullapariatur.Excepteursintoccaecatcupidatatnonproident,suntinculpaquio\u000eciadeseruntmollitanimidestlaborum.2",
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Duisauteiruredolorinreprehenderitinvoluptatevelitessecillumdoloreeufugiatnullapariatur.Excepteursintoccaecatcupidatatnonproident,suntinculpaquio\u000eciadeseruntmollitanimidestlaborum.3",
+      "Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.Duisauteiruredolorinreprehenderitinvoluptatevelitessecillumdoloreeufugiatnullapariatur.Excepteursintoccaecatcupidatatnonproident,suntinculpaquio\u000eciadeseruntmollitanimidestlaborum.4"
+    ],
+    "error": null,
+    "match": false
+  },
+  "plain_group_fire": {
+    "source": "{A\\vfill\\eject B\\vfill\\eject}\\message{R[\\the\\pageno]}C\n\\bye\n",
+    "miktex": [
+      "R[3]"
+    ],
+    "miktex_errors": [],
+    "miktex_count0": [
+      1,
+      2,
+      3
+    ],
+    "miktex_text": [
+      "A1",
+      "B2",
+      "C3"
+    ],
+    "ours": [
+      "R[3]"
+    ],
+    "ours_count0": [
+      1,
+      2,
+      3
+    ],
+    "ours_text": [
+      "A1",
+      "B2",
+      "C3"
+    ],
+    "error": null,
+    "match": true
+  }
+}

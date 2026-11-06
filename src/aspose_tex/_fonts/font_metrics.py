@@ -3,12 +3,12 @@
 See for design rationale and lig/kern program decoding.
 
 char_info word layout (big-endian uint32):
- bits 31-24: width_index
- bits 23-20: height_index
- bits 19-16: depth_index
- bits 15-10: italic_index
- bits 9- 8: tag (0=normal, 1=lig/kern, 2=chain, 3=extensible)
- bits 7- 0: remainder
+  bits 31-24: width_index
+  bits 23-20: height_index
+  bits 19-16: depth_index
+  bits 15-10: italic_index
+  bits  9- 8: tag   (0=normal, 1=lig/kern, 2=chain, 3=extensible)
+  bits  7- 0: remainder
 """
 from __future__ import annotations
 
@@ -20,267 +20,338 @@ from aspose_tex.exceptions import FontError
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class CharMetrics:
- """Character metrics for one glyph, in scaled points.
+    """Character metrics for one glyph, in scaled points.
 
- Attributes:
- width: Advance width (always >= 0).
- height: Height above baseline (>= 0).
- depth: Depth below baseline (>= 0).
- italic: Italic correction (>= 0).
- """
+    Attributes:
+        width:  Advance width (always >= 0).
+        height: Height above baseline (>= 0).
+        depth:  Depth below baseline (>= 0).
+        italic: Italic correction (>= 0).
+    """
 
- width: int
- height: int
- depth: int
- italic: int
+    width: int
+    height: int
+    depth: int
+    italic: int
 
 
 class FontMetrics:
- """Scaled font metrics at a specific output size.
+    """Scaled font metrics at a specific output size.
 
- Takes an immutable TfmData and a target size (in sp), and converts
- all fix_word values on demand using: sp = fix_word * at_size_sp >> 20.
+    Takes an immutable TfmData and a target size (in sp), and converts
+    all fix_word values on demand using: sp = fix_word * at_size_sp >> 20.
 
- fontdimen values can be overridden via set_fontdimen() (used by the
- \\fontdimen assignment primitive).
+    fontdimen values can be overridden via set_fontdimen() (used by the
+    \\fontdimen assignment primitive).
 
- Example::
+    Example::
 
- metrics = FontMetrics(tfm, at_sp=10 * 65536)
- w = metrics.char_metrics(ord("A")).width
- kern = metrics.kern(ord("A"), ord("V")) # int | None
- lig = metrics.ligature(ord("f"), ord("i")) # int | None (replacement code)
- space = metrics.fontdimen(2) # interword space in sp
- """
+        metrics = FontMetrics(tfm, at_sp=10 * 65536)
+        w = metrics.char_metrics(ord("A")).width
+        kern = metrics.kern(ord("A"), ord("V"))   # int | None
+        lig  = metrics.ligature(ord("f"), ord("i"))  # int | None  (replacement code)
+        space = metrics.fontdimen(2)               # interword space in sp
+    """
 
- __slots__ = (
- "_at_sp",
- "_fontdimen_overrides",
- "_tfm",
- "_tfm_name",
- "hyphenchar",
- "skewchar",
- )
+    __slots__ = (
+        "_at_sp",
+        "_fontdimen_overrides",
+        "_tfm",
+        "_tfm_name",
+        "hyphenchar",
+        "skewchar",
+    )
 
- def __init__(self, tfm: TfmData, at_sp: int, tfm_name: str = "") -> None:
- """
- Args:
- tfm: Parsed TFM data (immutable).
- at_sp: Requested font size in scaled points.
- tfm_name: TFM file stem (e.g. ``"cmr10"``). Used by DVI backend.
- """
- self._tfm = tfm
- self._at_sp = at_sp
- self._tfm_name = tfm_name
- self._fontdimen_overrides: dict[int, int] = {}
- self.hyphenchar = -1
- self.skewchar = -1
+    def __init__(self, tfm: TfmData, at_sp: int, tfm_name: str = "") -> None:
+        """
+        Args:
+            tfm:      Parsed TFM data (immutable).
+            at_sp:    Requested font size in scaled points.
+            tfm_name: TFM file stem (e.g. ``"cmr10"``).  Used by DVI backend.
+        """
+        self._tfm = tfm
+        self._at_sp = at_sp
+        self._tfm_name = tfm_name
+        self._fontdimen_overrides: dict[int, int] = {}
+        self.hyphenchar = -1
+        self.skewchar = -1
 
- # ------------------------------------------------------------------
- # Size properties
- # ------------------------------------------------------------------
+    # ------------------------------------------------------------------
+    # Size properties
+    # ------------------------------------------------------------------
 
- @property
- def design_size_sp(self) -> int:
- """Design size from the TFM file in scaled points."""
- return self._tfm.design_size_sp
+    @property
+    def design_size_sp(self) -> int:
+        """Design size from the TFM file in scaled points."""
+        return self._tfm.design_size_sp
 
- @property
- def at_size_sp(self) -> int:
- """Actual requested size in scaled points."""
- return self._at_sp
+    @property
+    def at_size_sp(self) -> int:
+        """Actual requested size in scaled points."""
+        return self._at_sp
 
- @property
- def tfm_name(self) -> str:
- """TFM file stem (without extension), e.g. ``"cmr10"``."""
- return self._tfm_name
+    @property
+    def tfm_name(self) -> str:
+        """TFM file stem (without extension), e.g. ``"cmr10"``."""
+        return self._tfm_name
 
- @property
- def checksum(self) -> int:
- """TFM checksum (unsigned 32-bit) for DVI fnt_def."""
- return self._tfm.checksum
+    @property
+    def checksum(self) -> int:
+        """TFM checksum (unsigned 32-bit) for DVI fnt_def."""
+        return self._tfm.checksum
 
- # ------------------------------------------------------------------
- # Character metrics
- # ------------------------------------------------------------------
+    @property
+    def param_count(self) -> int:
+        """Number of intrinsic ``\\fontdimen`` parameters in the TFM.
 
- def has_char(self, code: int) -> bool:
- """Return True if code is in bc..ec and its width_index != 0.
+        This reflects the TFM's intrinsic parameter array length (the math
+        symbol/extension-font validity gate of §C reads it).  Overrides
+        installed via :meth:`set_fontdimen` to out-of-range indices do NOT grow
+        this count — they live in the override dict, and out-of-range reads
+        still return 0 per the :meth:`fontdimen` contract.
+        """
+        return len(self._tfm.params_fw)
 
- A width_index of 0 means the character does not exist in this font
- (TeX convention).
+    # ------------------------------------------------------------------
+    # Character metrics
+    # ------------------------------------------------------------------
 
- Args:
- code: Character code 0-255.
- """
- tfm = self._tfm
- if code < tfm.bc or code > tfm.ec:
- return False
- word = tfm.char_info[code - tfm.bc]
- width_index = (word >> 24) & 0xFF
- return width_index != 0
+    def has_char(self, code: int) -> bool:
+        """Return True if code is in bc..ec and its width_index != 0.
 
- def char_metrics(self, code: int) -> CharMetrics:
- """Return scaled metrics for character code.
+        A width_index of 0 means the character does not exist in this font
+        (TeX convention).
 
- Args:
- code: Character code 0-255.
+        Args:
+            code: Character code 0-255.
+        """
+        tfm = self._tfm
+        if code < tfm.bc or code > tfm.ec:
+            return False
+        word = tfm.char_info[code - tfm.bc]
+        width_index = (word >> 24) & 0xFF
+        return width_index != 0
 
- Returns:
- CharMetrics with all fields in scaled points.
+    def next_larger(self, code: int) -> int | None:
+        """Return the next-larger glyph in *code*'s size chain, or None.
 
- Raises:
- FontError: If code not in bc..ec.
+        TeX TFM ``tag == 2`` ("list" / chain) marks a glyph that has a larger
+        successor whose code is the ``remainder`` byte; the chain is walked by
+        ``make_math_accent`` (TeX:The Program §738) and ``var_delimiter`` (§706)
+        to fit an accent / delimiter to a target width or size.  Returns
+        ``None`` when *code* is absent or not a chain head.
 
- Example::
+        Args:
+            code: Character code 0-255.
+        """
+        tfm = self._tfm
+        if code < tfm.bc or code > tfm.ec:
+            return None
+        word = tfm.char_info[code - tfm.bc]
+        if (word >> 24) & 0xFF == 0:  # width_index 0 → char absent
+            return None
+        tag = (word >> 8) & 0x03
+        if tag != 2:  # not a list/chain head
+            return None
+        return word & 0xFF  # remainder = next-larger char code
 
- cm = metrics.char_metrics(65) # 'A'
- """
- tfm = self._tfm
- if code < tfm.bc or code > tfm.ec:
- raise FontError(
- f"character code {code} not in font range bc={tfm.bc}..ec={tfm.ec}"
- )
- word = tfm.char_info[code - tfm.bc]
- wi = (word >> 24) & 0xFF
- hi = (word >> 20) & 0x0F
- di = (word >> 16) & 0x0F
- ii = (word >> 10) & 0x3F
- at = self._at_sp
- return CharMetrics(
- width=tfm.widths_fw[wi] * at >> 20,
- height=tfm.heights_fw[hi] * at >> 20,
- depth=tfm.depths_fw[di] * at >> 20,
- italic=tfm.italics_fw[ii] * at >> 20,
- )
+    def extensible_recipe(self, code: int) -> tuple[int, int, int, int] | None:
+        """Return the (top, mid, bot, rep) extensible recipe for *code*, or None.
 
- # ------------------------------------------------------------------
- # Kerning & ligatures (lig_kern program decoding)
- # ------------------------------------------------------------------
+        TeX TFM ``tag == 3`` marks an extensible character whose ``remainder``
+        byte indexes the ``exten`` table; the four bytes of that word are the
+        top / middle / bottom / repeatable piece char codes (0 = absent piece).
+        ``var_delimiter`` (TeX:The Program §714) stacks these pieces to build a
+        delimiter taller than the largest discrete glyph in the size chain.
+        Returns ``None`` when *code* is absent or not an extensible char.  This
+        is the ``tag == 3`` counterpart to :meth:`next_larger` (``tag == 2``);
+        a glyph is at most one of the two.
 
- def kern(self, code1: int, code2: int) -> int | None:
- """Return kern amount between code1 and code2 in sp, or None.
+        Args:
+            code: Character code 0-255.
+        """
+        tfm = self._tfm
+        if code < tfm.bc or code > tfm.ec:
+            return None
+        word = tfm.char_info[code - tfm.bc]
+        if (word >> 24) & 0xFF == 0:  # width_index 0 → char absent
+            return None
+        tag = (word >> 8) & 0x03
+        if tag != 3:  # not an extensible char
+            return None
+        recipe = tfm.exten[word & 0xFF]  # remainder indexes the exten table
+        return (
+            (recipe >> 24) & 0xFF,  # top
+            (recipe >> 16) & 0xFF,  # mid
+            (recipe >> 8) & 0xFF,   # bot
+            recipe & 0xFF,          # rep
+        )
 
- A negative value means the characters are pulled closer together.
- Implements op_byte >= 128 path of the lig/kern program.
+    def char_metrics(self, code: int) -> CharMetrics:
+        """Return scaled metrics for character code.
 
- Args:
- code1: Left character code.
- code2: Right character code.
+        Args:
+            code: Character code 0-255.
 
- Returns:
- Kern amount in scaled points, or None if no kern entry.
- """
- result = self._walk_lig_kern(code1, code2)
- if result is None:
- return None
- kind, value = result
- if kind == "kern":
- return value
- return None
+        Returns:
+            CharMetrics with all fields in scaled points.
 
- def ligature(self, code1: int, code2: int) -> int | None:
- """Return replacement character code if code1+code2 is a ligature.
+        Raises:
+            FontError: If code not in bc..ec.
 
- Implements only the /LIG/ type (op_byte == 0): both input characters
- are consumed and replaced by the remainder character. Other ligature
- types (LIG/, /LIG/>, etc.) are NOT supported in M1 — return None.
+        Example::
 
- Args:
- code1: Left character code.
- code2: Right character code.
+            cm = metrics.char_metrics(65)  # 'A'
+        """
+        tfm = self._tfm
+        if code < tfm.bc or code > tfm.ec:
+            raise FontError(
+                f"character code {code} not in font range bc={tfm.bc}..ec={tfm.ec}"
+            )
+        word = tfm.char_info[code - tfm.bc]
+        wi = (word >> 24) & 0xFF
+        hi = (word >> 20) & 0x0F
+        di = (word >> 16) & 0x0F
+        ii = (word >> 10) & 0x3F
+        at = self._at_sp
+        return CharMetrics(
+            width=tfm.widths_fw[wi] * at >> 20,
+            height=tfm.heights_fw[hi] * at >> 20,
+            depth=tfm.depths_fw[di] * at >> 20,
+            italic=tfm.italics_fw[ii] * at >> 20,
+        )
 
- Returns:
- Replacement character code, or None if no matching ligature.
- """
- result = self._walk_lig_kern(code1, code2)
- if result is None:
- return None
- kind, value = result
- if kind == "lig":
- return value
- return None
+    # ------------------------------------------------------------------
+    # Kerning & ligatures (lig_kern program decoding)
+    # ------------------------------------------------------------------
 
- def _walk_lig_kern(self, code1: int, code2: int) -> tuple[str, int] | None:
- """Walk the lig/kern program for code1 looking for code2.
+    def kern(self, code1: int, code2: int) -> int | None:
+        """Return kern amount between code1 and code2 in sp, or None.
 
- Returns:
- ("kern", kern_sp) if a kern entry is found,
- ("lig", replacement_code) if a /LIG/ entry is found,
- None if code1 has no lig/kern program or no entry for code2.
- """
- tfm = self._tfm
- if code1 < tfm.bc or code1 > tfm.ec:
- return None
+        A negative value means the characters are pulled closer together.
+        Implements op_byte >= 128 path of the lig/kern program.
 
- word = tfm.char_info[code1 - tfm.bc]
- tag = (word >> 8) & 0x03 # bits 9..8
- if tag != 1:
- return None
- start = word & 0xFF # bits 7..0 = remainder
+        Args:
+            code1: Left character code.
+            code2: Right character code.
 
- lk = tfm.lig_kern
- # Handle skip_byte == 255 redirect on the first instruction.
- if start < len(lk):
- first = lk[start]
- if (first >> 24) & 0xFF == 255:
- start = ((first >> 8) & 0xFF) * 256 + (first & 0xFF)
+        Returns:
+            Kern amount in scaled points, or None if no kern entry.
+        """
+        result = self._walk_lig_kern(code1, code2)
+        if result is None:
+            return None
+        kind, value = result
+        if kind == "kern":
+            return value
+        return None
 
- i = start
- while i < len(lk):
- instr = lk[i]
- skip = (instr >> 24) & 0xFF
- next_char = (instr >> 16) & 0xFF
- op_byte = (instr >> 8) & 0xFF
- remainder = instr & 0xFF
+    def ligature(self, code1: int, code2: int) -> int | None:
+        """Return replacement character code if code1+code2 is a ligature.
 
- if next_char == code2:
- if op_byte >= 128:
- # Kern entry
- kern_index = (op_byte - 128) * 256 + remainder
- kern_sp = tfm.kerns_fw[kern_index] * self._at_sp >> 20
- return ("kern", kern_sp)
- if op_byte == 0:
- # /LIG/ — both chars consumed, replaced by remainder
- return ("lig", remainder)
- # Other ligature type — not supported in M1
- return None
+        Implements only the /LIG/ type (op_byte == 0): both input characters
+        are consumed and replaced by the remainder character.  Other ligature
+        types (LIG/, /LIG/>, etc.) are NOT supported in M1 — return None.
 
- if skip >= 128:
- break
- i += skip + 1
+        Args:
+            code1: Left character code.
+            code2: Right character code.
 
- return None
+        Returns:
+            Replacement character code, or None if no matching ligature.
+        """
+        result = self._walk_lig_kern(code1, code2)
+        if result is None:
+            return None
+        kind, value = result
+        if kind == "lig":
+            return value
+        return None
 
- # ------------------------------------------------------------------
- # fontdimen
- # ------------------------------------------------------------------
+    def _walk_lig_kern(self, code1: int, code2: int) -> tuple[str, int] | None:
+        """Walk the lig/kern program for code1 looking for code2.
 
- def fontdimen(self, index: int) -> int:
- """Return fontdimen parameter at 1-based index, in scaled points.
+        Returns:
+            ("kern", kern_sp) if a kern entry is found,
+            ("lig", replacement_code) if a /LIG/ entry is found,
+            None if code1 has no lig/kern program or no entry for code2.
+        """
+        tfm = self._tfm
+        if code1 < tfm.bc or code1 > tfm.ec:
+            return None
 
- Overridden values (set via set_fontdimen) take precedence.
- Returns 0 if index is out of range.
+        word = tfm.char_info[code1 - tfm.bc]
+        tag = (word >> 8) & 0x03   # bits 9..8
+        if tag != 1:
+            return None
+        start = word & 0xFF        # bits 7..0 = remainder
 
- Standard indices:
- 1 = slant per pt, 2 = interword space, 3 = space stretch,
- 4 = space shrink, 5 = x-height, 6 = quad width, 7 = extra space.
+        lk = tfm.lig_kern
+        # Handle skip_byte == 255 redirect on the first instruction.
+        if start < len(lk):
+            first = lk[start]
+            if (first >> 24) & 0xFF == 255:
+                start = ((first >> 8) & 0xFF) * 256 + (first & 0xFF)
 
- Args:
- index: 1-based parameter index.
- """
- if index in self._fontdimen_overrides:
- return self._fontdimen_overrides[index]
- params = self._tfm.params_fw
- if index < 1 or index > len(params):
- return 0
- return params[index - 1] * self._at_sp >> 20
+        i = start
+        while i < len(lk):
+            instr = lk[i]
+            skip = (instr >> 24) & 0xFF
+            next_char = (instr >> 16) & 0xFF
+            op_byte = (instr >> 8) & 0xFF
+            remainder = instr & 0xFF
 
- def set_fontdimen(self, index: int, value_sp: int) -> None:
- """Override fontdimen parameter (called by \\fontdimen assignment).
+            if next_char == code2:
+                if op_byte >= 128:
+                    # Kern entry
+                    kern_index = (op_byte - 128) * 256 + remainder
+                    kern_sp = tfm.kerns_fw[kern_index] * self._at_sp >> 20
+                    return ("kern", kern_sp)
+                if op_byte == 0:
+                    # /LIG/ — both chars consumed, replaced by remainder
+                    return ("lig", remainder)
+                # Other ligature type — not supported in M1
+                return None
 
- Args:
- index: 1-based parameter index.
- value_sp: New value in scaled points.
- """
- self._fontdimen_overrides[index] = value_sp
+            if skip >= 128:
+                break
+            i += skip + 1
+
+        return None
+
+    # ------------------------------------------------------------------
+    # fontdimen
+    # ------------------------------------------------------------------
+
+    def fontdimen(self, index: int) -> int:
+        """Return fontdimen parameter at 1-based index, in scaled points.
+
+        Overridden values (set via set_fontdimen) take precedence.
+        Returns 0 if index is out of range.
+        Slant (index 1) is size-independent; parameters 2 onward scale with the font.
+
+        Standard indices:
+            1 = slant per pt, 2 = interword space, 3 = space stretch,
+            4 = space shrink, 5 = x-height, 6 = quad width, 7 = extra space.
+
+        Args:
+            index: 1-based parameter index.
+        """
+        if index in self._fontdimen_overrides:
+            return self._fontdimen_overrides[index]
+        params = self._tfm.params_fw
+        if index < 1 or index > len(params):
+            return 0
+        # TeX §575: slant is a pure 16-bit fraction, independent of at-size.
+        if index == 1:
+            return params[0] >> 4
+        return params[index - 1] * self._at_sp >> 20
+
+    def set_fontdimen(self, index: int, value_sp: int) -> None:
+        """Override fontdimen parameter (called by \\fontdimen assignment).
+
+        Args:
+            index:    1-based parameter index.
+            value_sp: New value in scaled points.
+        """
+        self._fontdimen_overrides[index] = value_sp

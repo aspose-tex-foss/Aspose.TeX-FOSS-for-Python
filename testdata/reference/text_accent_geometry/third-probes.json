@@ -1,0 +1,2977 @@
+{
+  "reference": "MiKTeX TeX 24.4; 2026-10-15; original architecture HEAD 3b6c8946; developer rerun recorded separately",
+  "rows": [
+    {
+      "name": "review_active_distinct_ifx",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?=\\a\\let!=\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent\\accent19?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_same_ifx",
+      "body": "\\catcode`?=13\\chardef\\a=65\\let?=\\a\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent\\accent19?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_font_ifx",
+      "body": "\\catcode`?=13\\let?=\\tenit\\ifx?\\tenit\\message{[equal]}\\else\\message{[different]}\\fi\\noindent\\accent19?A",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_meaning",
+      "body": "\\catcode`?=13\\chardef\\a=65\\let?=\\a\\message{[\\meaning?]}\\noindent\\accent19?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\char\"41]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\char\"41]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_font_meaning",
+      "body": "\\catcode`?=13\\let?=\\tenit\\message{[\\meaning?]}\\noindent\\accent19?A",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[select font cmti10]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[select font cmti10]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_copy",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let?=\\a\\let!=?\\chardef\\a=66\\noindent\\hbox{\\accent19!}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_local_restore",
+      "body": "\\catcode`?=13\\chardef\\a=65\\let?=\\a{\\chardef\\a=66\\let?=\\a\\noindent\\accent19?}\\noindent\\accent19?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            68267,
+            489700
+          ],
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            19,
+            546135,
+            489700
+          ],
+          [
+            65,
+            464215,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            68267,
+            489700
+          ],
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            19,
+            546135,
+            489700
+          ],
+          [
+            65,
+            464215,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_global_retain",
+      "body": "\\catcode`?=13\\chardef\\a=65\\chardef\\b=66\\let?=\\a{\\let?=\\b\\global\\let?=\\a}\\noindent\\accent19?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_edef",
+      "body": "\\catcode`?=13\\chardef\\a=65\\let?=\\a\\edef\\b{?}\\chardef\\a=66\\noindent\\accent19\\b",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_fontdimen_reader",
+      "body": "\\catcode`?=13\\let?=\\tenit\\message{[\\the\\fontdimen5?]}\\noindent\\accent19?A",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[4.30554pt]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[4.30554pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_active_ifx_base",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?=\\a\\let!=\\b\\noindent\\accent19\\ifx?! A\\else B\\fi",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            68267,
+            489700
+          ],
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            68267,
+            489700
+          ],
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_chardef_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=65\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_chardef_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=65\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_chardef_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=65\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\char\"41]",
+        "[\\char\"41]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\char\"41]",
+        "[\\char\"41]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_chardef_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_chardef_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_chardef_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\char\"41]",
+        "[\\char\"42]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\char\"41]",
+        "[\\char\"42]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_register_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\countdef\\a=1\\countdef\\b=1\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_register_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\countdef\\a=1\\countdef\\b=1\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_register_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\countdef\\a=1\\countdef\\b=1\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\count1]",
+        "[\\count1]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\count1]",
+        "[\\count1]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_register_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\countdef\\a=1\\countdef\\b=2\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_register_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\countdef\\a=1\\countdef\\b=2\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_register_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\countdef\\a=1\\countdef\\b=2\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\count1]",
+        "[\\count2]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\count1]",
+        "[\\count2]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_font_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\tenit\\let\\b\\tenit\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_font_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\tenit\\let\\b\\tenit\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_font_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\tenit\\let\\b\\tenit\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[select font cmti10]",
+        "[select font cmti10]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[select font cmti10]",
+        "[select font cmti10]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_font_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\tenit\\let\\b\\tenrm\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_font_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\tenit\\let\\b\\tenrm\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_font_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\tenit\\let\\b\\tenrm\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[select font cmti10]",
+        "[select font cmr10]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[select font cmti10]",
+        "[select font cmr10]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_builtin_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\relax\\let\\b\\relax\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_builtin_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\relax\\let\\b\\relax\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_builtin_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\relax\\let\\b\\relax\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\relax]",
+        "[\\relax]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\relax]",
+        "[\\relax]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_builtin_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\relax\\let\\b\\par\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_builtin_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\relax\\let\\b\\par\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_builtin_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\relax\\let\\b\\par\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\relax]",
+        "[\\par]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\relax]",
+        "[\\par]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_undefined_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\undefinedA\\let\\b\\undefinedB\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_undefined_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\undefinedA\\let\\b\\undefinedB\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_undefined_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\let\\a\\undefinedA\\let\\b\\undefinedB\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[undefined]",
+        "[undefined]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[undefined]",
+        "[undefined]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_bound_undefined",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let\\b\\undefinedB\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_bound_undefined",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let\\b\\undefinedB\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_bound_undefined",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let\\b\\undefinedB\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\char\"41]",
+        "[undefined]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\char\"41]",
+        "[undefined]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_macro_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\def\\a{A}\\def\\b{A}\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_macro_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\def\\a{A}\\def\\b{A}\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_macro_same",
+      "body": "\\catcode`?=13\\catcode`!=13\\def\\a{A}\\def\\b{A}\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[macro:->A]",
+        "[macro:->A]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[macro:->A]",
+        "[macro:->A]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifx_macro_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\def\\a{A}\\def\\b{B}\\let?\\a\\let!\\b\\ifx?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "source_macro_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\def\\a{A}\\def\\b{B}\\let?\\a\\let!\\b\\ifx?\\a\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "meaning_macro_different",
+      "body": "\\catcode`?=13\\catcode`!=13\\def\\a{A}\\def\\b{B}\\let?\\a\\let!\\b\\message{[\\meaning?]}\\message{[\\meaning!]}\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[macro:->A]",
+        "[macro:->B]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[macro:->A]",
+        "[macro:->B]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "if_unprotected",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?\\a\\let!\\b\\if?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "if_protected",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?\\a\\let!\\b\\if\\noexpand?\\noexpand!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifcat_unprotected",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?\\a\\let!\\b\\ifcat?!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "ifcat_protected",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?\\a\\let!\\b\\ifcat\\noexpand?\\noexpand!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "protected_owner_execution",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let?\\a\\noindent\\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "protected_owner_category",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let?\\a\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "protected_owner_vs_macro_category",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let?\\a\\def!{A}\\ifcat\\noexpand?\\noexpand!\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "protected_macro_execution",
+      "body": "\\catcode`?=13\\catcode`!=13\\def?{A}\\noindent\\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "protected_owner_math",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let?\\a\\noindent $\\noexpand?$ x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            709974,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            709974,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "protected_macro_math",
+      "body": "\\catcode`?=13\\catcode`!=13\\def?{A}\\noindent $\\noexpand?$ x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "protected_font_math",
+      "body": "\\catcode`?=13\\catcode`!=13\\let?\\tenit\\noindent $\\noexpand?$ A",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "macro_precedence",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\let?\\a\\def?{X}\\message{[\\meaning?]}\\noindent?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            88,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[macro:->X]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            88,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[macro:->X]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "frozen_builtin_precedence",
+      "body": "\\catcode`?=13\\catcode`!=13\\let?\\relax\\chardef\\relax=65\\message{[\\meaning?]}\\ifx?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\relax]",
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\relax]",
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "math_active_chardef",
+      "body": "\\mathcode`?=\"8000{\\catcode`?=13\\chardef\\a=65\\global\\let?\\a}\\noindent $?$ ",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "math_active_register",
+      "body": "\\mathcode`?=\"8000{\\catcode`?=13\\countdef\\a=1\\global\\let?\\a}\\noindent $\\count1=2 ?=7 A$ ",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "math_active_font",
+      "body": "\\mathcode`?=\"8000{\\catcode`?=13\\global\\let?\\tenit}\\noindent $?$ A",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    }
+  ]
+}

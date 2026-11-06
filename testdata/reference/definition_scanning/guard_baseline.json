@@ -1,0 +1,595 @@
+{
+  "shadow_font": {
+    "source": "\\let\\definefont=\\font\\definefont\\font=cmr17 \\message{R[\\fontname\\font/\\the\\font]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\font ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\font ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "shadow_textfont": {
+    "source": "\\font\\textfont=cmr17 \\message{R[\\fontname\\textfont/\\the\\textfont]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\textfont ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\textfont ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "shadow_scriptfont": {
+    "source": "\\font\\scriptfont=cmr17 \\message{R[\\fontname\\scriptfont/\\the\\scriptfont]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\scriptfont ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\scriptfont ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "shadow_fontdimen": {
+    "source": "\\font\\fontdimen=cmr17 \\message{R[\\fontname\\fontdimen/\\the\\fontdimen]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\fontdimen ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\fontdimen ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "alias_shadow_font": {
+    "source": "\\let\\currentreader=\\font\\font\\font=cmr17 \\message{R[\\fontname\\currentreader/\\fontname\\font]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "frozen_current_rebound": {
+    "source": "\\let\\currentreader=\\font\\font\\font=cmr17 \\edef\\saved{\\the\\currentreader}\\message{R[\\fontname\\saved]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "punctuation_id": {
+    "source": "\\font\\!=cmr10 \\edef\\saved{\\the\\!}\\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\! /\\!]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\! /\\!]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "empty_id": {
+    "source": "\\expandafter\\font\\csname\\endcsname=cmr10 \\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\FONT /\\FONT]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\FONT /\\FONT]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_alias_accent": {
+    "source": "\\font\\qa=cmr17 \\let\\qb=\\qa{\\font\\qa=cmr7 }\\setbox0=\\hbox{\\qb\\accent19 a}\\message{R[\\the\\wd0/\\fontname\\qb]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[7.92491pt/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7.92491pt/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_local_current_globaldefs": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=1 \\qa}\\message{R[\\fontname\\font]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_negative_selection": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=-1 \\global\\qa}\\message{R[\\fontname\\font]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "family_after_global_local": {
+    "source": "\\font\\qa=cmr17 {\\textfont0=\\qa{\\globaldefs=1 \\textfont0=\\tenrm}\\textfont0=\\qa}\\message{R[\\fontname\\textfont0]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_let_after_global_local": {
+    "source": "\\font\\qa=cmr17 {\\let\\qb=\\qa{\\globaldefs=1 \\let\\qb=\\tenrm}\\let\\qb=\\qa}\\message{R[\\fontname\\qb]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "suppress_futurelet_prefix": {
+    "source": "\\count5=0 {\\globaldefs=-1 \\global\\futurelet\\qa\\relax X\\count5=8}\\message{R[\\meaning\\qa/\\the\\count5]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[undefined/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[undefined/0]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "global_everymath": {
+    "source": "\\fam=0 {\\globaldefs=1 \\everymath{\\fam=2} $a$}\\message{R[\\the\\fam]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_xdef_frozen": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=-1 \\xdef\\saved{\\the\\qa}}\\message{R[\\meaning\\saved]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[undefined]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_globaldefs_self": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=1 \\font\\qb=cmr7 \\globaldefs=-1 \\global\\font\\qb=cmr17 }\\message{R[\\fontname\\qb/\\the\\globaldefs]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr7/-1]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7/-1]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "fontname_catcodes": {
+    "source": "\\font\\qa=cmr10 at12pt \\edef\\saved{\\fontname\\qa}\\message{R[\\meaning\\saved]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->cmr10 at 12.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->cmr10 at 12.0pt]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_existing": {
+    "source": "\\font\\qa=cmr7 {\\globaldefs=-1 \\global\\font\\qa=cmr17 }\\message{R[\\fontname\\qa]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_new": {
+    "source": "{\\globaldefs=-1 \\global\\font\\qa=cmr17 }\\message{R[\\meaning\\qa]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[undefined]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_no_prefix": {
+    "source": "\\font\\qa=cmr7 {\\globaldefs=-1 \\font\\qa=cmr17 }\\message{R[\\fontname\\qa]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_local_override": {
+    "source": "\\font\\qa=cmr10 {\\font\\qa=cmr7 \\globaldefs=-1 \\global\\font\\qa=cmr17 }\\message{R[\\fontname\\qa]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "punctuation_id_current": {
+    "source": "\\font\\!=cmr10 \\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\! ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\! ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "active_font_alias": {
+    "source": "\\catcode`!=13 \\let!=\\tenrm\\message{R[\\fontname!/\\the!]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10/\\tenrm ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/\\tenrm ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "active_frozen_font": {
+    "source": "\\font\\qa=cmr17 \\edef\\saved{\\the\\qa}\\catcode`!=13 \\expandafter\\let\\expandafter!\\saved\\font\\qa=cmr7 \\message{R[\\fontname!/\\the!]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\qa ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\qa ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "active_current_primitive": {
+    "source": "\\catcode`!=13 \\let!=\\font\\font\\font=cmr17 \\message{R[\\fontname!/\\fontname\\font]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "family_primitive_after_shadow": {
+    "source": "\\let\\family=\\scriptscriptfont\\font\\scriptscriptfont=cmr17 \\message{R[\\fontname\\scriptscriptfont/\\fontname\\family0]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/cmr5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/cmr5]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "punctuation_selected_rebound": {
+    "source": "\\font\\!=cmr17 \\!\\edef\\saved{\\the\\font}\\font\\!=cmr7 \\message{R[\\fontname\\saved/\\meaning\\saved/\\fontname\\!]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/macro:->\\! /cmr7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/macro:->\\! /cmr7]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "empty_renamed_selector": {
+    "source": "\\expandafter\\font\\csname\\endcsname=cmr10 \\edef\\saved{\\the\\font}\\font\\qa=cmr10 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\qa /\\qa]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\qa /\\qa]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "fontname_primitive_shadow": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\message{R[\\reader\\fontname/\\the\\fontname]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\fontname ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "font_reader_macro_operand": {
+    "source": "\\font\\qa=cmr17 \\def\\operand{\\qa}\\message{R[\\fontname\\operand/\\the\\fontdimen2\\operand]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/5.21661pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/5.21661pt]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "fontname_direct": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\fontname\\setbox0=\\hbox{a}\\message{R[\\the\\wd0/\\reader\\font]}\n\\bye\n",
+    "miktex": [
+      "R[7.92491pt/cmr17]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "\\setbox is not a font",
+    "match": false
+  },
+  "fontname_hbox": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\setbox0=\\hbox{\\fontname a}\\message{R[\\the\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[7.92491pt]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_vbox": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\setbox0=\\vbox{\\fontname\\noindent a\\par}\\message{R[\\the\\ht0/\\the\\dp0]}\n\\bye\n",
+    "miktex": [
+      "R[7.43889pt/0.0pt]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "\\noindent is not a font",
+    "match": false
+  },
+  "fontname_math": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\setbox0=\\hbox{$\\fontname a$}\\message{R[\\the\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[5.28589pt]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_alignment": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\setbox0=\\vbox{\\halign{#\\cr\\fontname a\\cr}}\\message{R[\\the\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[7.92491pt]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_edef": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\edef\\value{\\reader\\fontname/\\the\\fontname}\\message{R[\\meaning\\value]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->cmr17/\\fontname ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_message": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\message{R[\\fontname/\\reader\\fontname/\\the\\fontname]}\n\\bye\n",
+    "miktex": [
+      "R[\\fontname /cmr17/\\fontname ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_fontdimen": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\fontdimen2\\fontname=3pt \\message{R[\\the\\fontdimen2\\fontname/\\reader\\fontname]}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt/cmr17]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_alias": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\let\\select=\\fontname\\font\\fontname=cmr7\\message{R[\\reader\\select/\\reader\\fontname/\\the\\select]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/cmr7/\\fontname ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_frozen": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\edef\\select{\\the\\fontname}\\font\\fontname=cmr7\\message{R[\\reader\\select/\\reader\\fontname/\\meaning\\select]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/cmr7/macro:->\\fontname ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "'NoneType' object has no attribute 'catcode'",
+    "match": false
+  },
+  "fontname_scope": {
+    "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 {\\font\\fontname=cmr7\\message{R[\\reader\\fontname]}}\\message{R[\\reader\\fontname]}\n\\bye\n",
+    "miktex": [
+      "R[cmr7]",
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "expandable_font_number": {
+    "source": "\\font\\number=cmr17\\message{R[\\fontname\\number/\\the\\number]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\number ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Number expected",
+    "match": false
+  },
+  "expandable_font_romannumeral": {
+    "source": "\\font\\romannumeral=cmr17\\message{R[\\fontname\\romannumeral/\\the\\romannumeral]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\romannumeral ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Number expected",
+    "match": false
+  },
+  "expandable_font_string": {
+    "source": "\\font\\string=cmr17\\message{R[\\fontname\\string/\\the\\string]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\string ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "expandable_font_meaning": {
+    "source": "\\font\\meaning=cmr17\\message{R[\\fontname\\meaning/\\the\\meaning]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\meaning ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "expandable_font_the": {
+    "source": "\\font\\the=cmr17\\message{R[\\fontname\\the/\\the\\the]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\the \\the ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "\\the: cannot take the value of a character token",
+    "match": false
+  },
+  "expandable_font_csname": {
+    "source": "\\font\\csname=cmr17\\message{R[\\fontname\\csname/\\the\\csname]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\csname ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "\\csname: missing \\endcsname",
+    "match": false
+  },
+  "expandable_font_iftrue": {
+    "source": "\\font\\iftrue=cmr17\\message{R[\\fontname\\iftrue/\\the\\iftrue]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\iftrue ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "expandable_font_expandafter": {
+    "source": "\\font\\expandafter=cmr17\\message{R[\\fontname\\expandafter/\\the\\expandafter]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\expandafter ]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "\\the: cannot take the value of a character token",
+    "match": false
+  },
+  "fontname_constant": {
+    "source": "\\let\\reader=\\fontname\\chardef\\fontname=65\\setbox0=\\hbox{\\fontname}\\message{R[\\the\\fontname/\\the\\wd0/\\reader\\font]}\n\\bye\n",
+    "miktex": [
+      "R[65/7.50002pt/cmr10]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_register": {
+    "source": "\\let\\reader=\\fontname\\countdef\\fontname=9\\fontname=27\\message{R[\\the\\fontname/\\reader\\font]}\n\\bye\n",
+    "miktex": [
+      "R[27/cmr10]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Missing font identifier",
+    "match": false
+  },
+  "fontname_macro": {
+    "source": "\\let\\reader=\\fontname\\def\\fontname{\\tenrm}\\message{R[\\reader\\fontname]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  }
+}

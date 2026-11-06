@@ -1,0 +1,208 @@
+[
+  {
+    "name": "hfilneg_paragraph",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\noindent A\\hfil\\hfilneg\\hfil\\break B\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          0,
+          1441792
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./hfilneg_paragraph.tex\n(hfilneg_paragraph.tex [1] )\nOutput written on hfilneg_paragraph.dvi (1 page, 204 bytes).\n"
+  },
+  {
+    "name": "negative_fil_hbox_control",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\hbox to100pt{A\\hfil\\hskip0pt plus-1fil B\\hfil}\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./negative_fil_hbox_control.tex\n(negative_fil_hbox_control.tex [1] )\nOutput written on negative_fil_hbox_control.dvi (1 page, 196 bytes).\n"
+  },
+  {
+    "name": "hfilneg_vbox",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\vbox{\\leftskip0pt plus1fil\\rightskip0pt plus1fil\\noindent A\\hfilneg\\hfilneg\\break B\\par}\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          3686400,
+          447828
+        ],
+        [
+          66,
+          2466702,
+          2020692
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./hfilneg_vbox.tex\n(hfilneg_vbox.tex [1] )\nOutput written on hfilneg_vbox.dvi (1 page, 220 bytes).\n"
+  },
+  {
+    "name": "hfilneg_read",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\noindent A\\hfilneg\\edef\\a{\\the\\lastskip}\\message{[GLUE=\\a]}\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./hfilneg_read.tex\n(hfilneg_read.tex [GLUE=0.0pt plus -1.0fil] [1] )\nOutput written on hfilneg_read.dvi (1 page, 196 bytes).\n"
+  },
+  {
+    "name": "hfilneg_math",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\noindent $a\\hfil\\hfilneg b$\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          98,
+          346416,
+          655360
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./hfilneg_math.tex\n(hfilneg_math.tex [1] )\nOutput written on hfilneg_math.dvi (1 page, 200 bytes).\n"
+  },
+  {
+    "name": "hfilneg_display",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 $$a\\hfil\\hfilneg b$$\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          97,
+          3618323,
+          1441792
+        ],
+        [
+          98,
+          3964739,
+          1441792
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./hfilneg_display.tex\n(hfilneg_display.tex [1] )\nOutput written on hfilneg_display.dvi (1 page, 208 bytes).\n"
+  },
+  {
+    "name": "explicit_cancellation",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\leftskip0pt plus1fil\\rightskip0pt plus1fil\\noindent A\\hskip0pt plus-1fil\\hskip0pt plus-1fil\\break B\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          3686400,
+          655360
+        ],
+        [
+          66,
+          2466702,
+          2228224
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./explicit_cancellation.tex\n(explicit_cancellation.tex [1] )\nOutput written on explicit_cancellation.dvi (1 page, 212 bytes).\n"
+  },
+  {
+    "name": "ordinary_equal_cost",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\noindent A\\hfil\\ B\\hfil\\ C\\hfil\\ D\\hfil\\ E\\hfil\\ F\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          1371401,
+          655360
+        ],
+        [
+          67,
+          2715497,
+          655360
+        ],
+        [
+          68,
+          4068693,
+          655360
+        ],
+        [
+          69,
+          5449196,
+          655360
+        ],
+        [
+          70,
+          6775087,
+          655360
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./ordinary_equal_cost.tex\n(ordinary_equal_cost.tex [1] )\nOutput written on ordinary_equal_cost.dvi (1 page, 212 bytes).\n"
+  },
+  {
+    "name": "direct_side_stretch",
+    "source": "\\nopagenumbers\\hsize120pt\\parindent0pt\\hyphenchar\\font=-1 \\hsize40pt\\rightskip0pt plus1fil\\noindent A\\hskip10pt B\\hskip10pt C\\hskip10pt D\\hskip10pt E\\hskip10pt F\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          1146881,
+          655360
+        ],
+        [
+          67,
+          0,
+          1441792
+        ],
+        [
+          68,
+          1128676,
+          1441792
+        ],
+        [
+          69,
+          0,
+          2228224
+        ],
+        [
+          70,
+          1101370,
+          2228224
+        ]
+      ]
+    ],
+    "log": "This is mikTeX, Version 3.141592653 (MiKTeX 24.4) (preloaded format=tex 2026.4.12)  16 OCT 2026 15:58\n restricted \\write18 enabled.\n %&-line parsing enabled.\n**./direct_side_stretch.tex\n(direct_side_stretch.tex [1] )\nOutput written on direct_side_stretch.dvi (1 page, 224 bytes).\n"
+  }
+]

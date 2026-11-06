@@ -1,0 +1,15 @@
+% E2E canonical fixture — display math (cascade #4).
+%
+% Exercises the display after_math branch (TeX:The Program §1199-§1206):
+% a STANDALONE-paragraph display (§F.2 boundary) centred in
+% \displaywidth, an \over fraction at display style, and an \eqno number set
+% flush right.  The glyph stream + positions byte-compare to MiKTeX-pdfTeX 4.19
+% within the tolerance (+/-0.5pt V / +/-0.1pt H).
+%
+% Under the bundled plain.tex format the math families (\textfont0..3) and the
+% \over macro are set up; \eqno is a display-math primitive.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+$$x = {a+b\over c}\eqno(1)$$
+\bye

@@ -1,0 +1,17 @@
+% E2E canonical fixture — inline math.
+% Exercises the mlist_to_hlist core: mixed Ord/Bin/Rel atom spacing
+% (the 8x8 math-spacing table) and Greek \mathchardef symbols, so the glyph
+% stream + inter-atom spacing byte-compare to MiKTeX within the
+% tolerance (+/-0.5pt V / +/-0.1pt H).
+%
+% Under the bundled plain.tex format the math families (\textfont0..3),
+% \mathcode for + and = (Bin / Rel), and \alpha/\beta (\mathchardef symbols)
+% are all set up, so $x+y=z$ and $\alpha\beta$ render with real glyphs and
+% the medmuskip-around-Bin / thickmuskip-around-Rel spacing TeX inserts.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+The identity $x+y=z$ holds, and $\alpha\beta$ are Greek letters.
+\par
+\bye

@@ -1,0 +1,195 @@
+{
+  "reference": "MiKTeX TeX 24.4; 2026-10-15; original architecture HEAD 3b6c8946; developer rerun recorded separately",
+  "rows": [
+    {
+      "name": "redefined_char",
+      "body": "\\chardef\\char=65\\noindent\\hbox{\\accent19\\char}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "alias_char_primitive",
+      "body": "\\let\\c\\char\\def\\char{B}\\noindent\\hbox{\\accent19\\c65}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "prefix_relax",
+      "body": "\\noindent\\hbox{\\accent19\\global\\relax\\count1=1 A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1.1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "prefix_eof",
+      "body": "\\noindent\\hbox{\\accent19\\global}",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use a prefix with `end-group character }'.",
+      "ours_error": "You can't use a prefix with this command",
+      "matches": false
+    },
+    {
+      "name": "prefix_nonassignment",
+      "body": "\\noindent\\hbox{\\accent19\\global\\message{stop}A}",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use a prefix with `\\message'.",
+      "ours_error": "You can't use a prefix with this command",
+      "matches": false
+    },
+    {
+      "name": "prefix_wrong_assignment",
+      "body": "\\noindent\\hbox{\\accent19\\long\\count1=1 A}",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use `\\long' or `\\outer' with `\\count'.",
+      "ours_error": "You can't use a prefix with this command",
+      "matches": false
+    },
+    {
+      "name": "setbox_alias_forbidden",
+      "body": "\\let\\s\\setbox\\noindent\\hbox{\\accent19\\s1=\\hbox{o}A}",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! Improper \\setbox.",
+      "ours_error": "Improper \\setbox in \\accent",
+      "matches": false
+    }
+  ]
+}

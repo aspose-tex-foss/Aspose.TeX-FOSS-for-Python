@@ -319,19 +319,21 @@ The primary entry point is `TeXJob`, which combines an `InputSource`, an `Output
 
 - This is a Pre-Alpha release: the core engine and public API are under active development, and
   interfaces may change between releases.
-- The default `load_format="plain"` option (`TeXOptions`) does not yet fully load Knuth's Plain
-  TeX macro cascade in this milestone — every example above passes `load_format=False` for a
-  runnable, from-primitives document.
-- Math-mode content (`$...$`, `$$...$$`) is parsed through a shell surface but not laid out — no
-  math atoms, fractions, or radicals reach the page.
-- Table alignment (`\halign`, `\valign`) is registered but not implemented — invoking either
-  raises `NotImplementedError`.
-- Automatic hyphenation is not active: `\patterns` and `\hyphenation` are parsed and discarded,
-  and the bundled `hyphenation/` pattern directory is currently empty; `\hyphenchar` and the
-  hyphenation-penalty parameters are supported but have no pattern data to apply.
-- Named file-stream I/O (`\openin`, `\openout`, `\closein`, `\closeout`, `\read`) raises
-  `NotImplementedError` — only `\write 16` (message log), `\write -1` (silent log), `\message`,
-  and `\errmessage` are implemented; `\ifeof` always evaluates false.
+- Plain TeX is the supported format. The default `load_format="plain"` option (`TeXOptions`) loads
+  Knuth's macros from the bundled `plain.tex`, with its output routine, footnotes, and inserts.
+  The examples above pass `load_format=False` to run a document from primitives alone; leave it
+  out to use the plain macros.
+- LaTeX and the e-TeX and pdfTeX extensions are not implemented yet. `\documentclass`,
+  `\numexpr`, `\pdfoutput`, and similar commands raise `EngineError`.
+- `\special` is not implemented and raises `EngineError` as an undefined control sequence.
+- Automatic hyphenation needs the plain format, which loads the bundled US-English patterns from
+  `format/hyphen.tex`. With `load_format=False` no patterns are loaded. Other languages are added
+  the TeX way: a format file on `extra_format_paths` sets `\language` and runs `\patterns` and
+  `\hyphenation`. The bundled `hyphenation/` directory is reserved and empty.
+- Named file-stream I/O (`\openin`, `\openout`, `\closein`, `\closeout`, `\read`, and `\write` to
+  streams 0 through 15) raises `NotImplementedError` — only `\write 16` (message log), `\write -1`
+  (silent log), `\message`, and `\errmessage` are implemented; `\ifeof` always evaluates false.
+  `\write` takes effect at once, not at shipout.
 
 These limitations don't apply to
 [Aspose.TeX for Python — Enterprise Edition](https://products.aspose.com/tex/python-net/), which
@@ -346,7 +348,7 @@ pip install -e ".[dev]"
 pytest
 ```
 
-68 test modules cover the tokenizer, macro expander, box and page builder, font subsystem, and
+About 180 test modules cover the tokenizer, macro expander, box and page builder, font subsystem, and
 each output writer, including an automated end-to-end suite that compiles fixture documents
 through the public `TeXJob` API and compares the result against committed MiKTeX-generated DVI
 baselines — semantically (page count, glyph stream, line and rule positions, font metadata), not

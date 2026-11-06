@@ -1,0 +1,1172 @@
+{
+  "nested_group_depth": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{{\\prevdepth=5pt}\\message{[depth=\\the\\prevdepth]}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[depth=5.0pt]",
+        "[dims=364090,740920,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            740920
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unexpected token CharToken(char='{', catcode=<Catcode.BEGIN_GROUP: 1>)"
+    },
+    "exact": false
+  },
+  "running_paragraph": {
+    "source": "\\nopagenumbers \\noindent Before\\par\\halign{#\\cr a\\cr\\noalign{\\hbox{M}\\message{[depth=\\the\\prevdepth]}}b\\cr}\\noindent After\\bye",
+    "ref": {
+      "messages": [
+        "[depth=0.0pt]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            101,
+            464215,
+            655360
+          ],
+          [
+            102,
+            755486,
+            655360
+          ],
+          [
+            111,
+            955736,
+            655360
+          ],
+          [
+            114,
+            1283417,
+            655360
+          ],
+          [
+            101,
+            1540100,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ],
+          [
+            77,
+            0,
+            2228224
+          ],
+          [
+            98,
+            0,
+            3014656
+          ],
+          [
+            65,
+            0,
+            3801088
+          ],
+          [
+            102,
+            491521,
+            3801088
+          ],
+          [
+            116,
+            691771,
+            3801088
+          ],
+          [
+            101,
+            946634,
+            3801088
+          ],
+          [
+            114,
+            1237905,
+            3801088
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\hbox"
+    },
+    "exact": false
+  },
+  "hbox": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\vbox{\\halign{#\\cr a\\cr\\noalign{\\hbox{M}}b\\cr}}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=600748,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\hbox"
+    },
+    "exact": false
+  },
+  "vbox": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\vbox{\\hbox{M}}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=600748,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\vbox"
+    },
+    "exact": false
+  },
+  "edef_message": {
+    "source": "\\nopagenumbers \\edef\\saved{\\noalign{\\kern2pt}}\\def\\expected{\\noalign{\\kern2pt}}\\ifx\\saved\\expected\\message{[saved=yes]}\\else\\message{[saved=no]}\\fi\\setbox0\\vbox{\\halign{#\\cr a\\cr\\saved b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[saved=yes]",
+        "[dims=364090,1199672,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1199672
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[saved=yes]",
+        "[dims=364090,1199672,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1199672
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "inside_math": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{$\\vcenter{\\halign{#\\cr a\\cr\\noalign{\\hbox{M}}b\\cr}}$}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=600748,1091356,763676]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\hbox"
+    },
+    "exact": false
+  },
+  "display": {
+    "source": "\\nopagenumbers \\noindent Before\\par$$\\halign{#\\cr a\\cr\\noalign{\\hbox{M}}b\\cr}$$\\noindent After\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            101,
+            464215,
+            655360
+          ],
+          [
+            102,
+            755486,
+            655360
+          ],
+          [
+            111,
+            955736,
+            655360
+          ],
+          [
+            114,
+            1283417,
+            655360
+          ],
+          [
+            101,
+            1540100,
+            655360
+          ],
+          [
+            97,
+            0,
+            3014656
+          ],
+          [
+            77,
+            0,
+            3801088
+          ],
+          [
+            98,
+            0,
+            4587520
+          ],
+          [
+            65,
+            0,
+            6160384
+          ],
+          [
+            102,
+            491521,
+            6160384
+          ],
+          [
+            116,
+            691771,
+            6160384
+          ],
+          [
+            101,
+            946634,
+            6160384
+          ],
+          [
+            114,
+            1237905,
+            6160384
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\hbox"
+    },
+    "exact": false
+  },
+  "paragraph_noalign": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\hsize=40pt\\noindent alpha beta gamma\\par}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=2621440,2641464,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            97,
+            0,
+            1068600
+          ],
+          [
+            108,
+            327681,
+            1068600
+          ],
+          [
+            112,
+            509726,
+            1068600
+          ],
+          [
+            104,
+            873816,
+            1068600
+          ],
+          [
+            97,
+            1237906,
+            1068600
+          ],
+          [
+            98,
+            1711222,
+            1068600
+          ],
+          [
+            101,
+            2093517,
+            1068600
+          ],
+          [
+            116,
+            2384788,
+            1068600
+          ],
+          [
+            97,
+            2639651,
+            1068600
+          ],
+          [
+            103,
+            0,
+            1855032
+          ],
+          [
+            97,
+            327681,
+            1855032
+          ],
+          [
+            109,
+            655362,
+            1855032
+          ],
+          [
+            109,
+            1201497,
+            1855032
+          ],
+          [
+            97,
+            1747632,
+            1855032
+          ],
+          [
+            98,
+            0,
+            2641464
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\noindent"
+    },
+    "exact": false
+  },
+  "implicit_par": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\noindent middle}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=30785863,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1068600
+          ],
+          [
+            105,
+            546135,
+            1068600
+          ],
+          [
+            100,
+            728180,
+            1068600
+          ],
+          [
+            100,
+            1092270,
+            1068600
+          ],
+          [
+            108,
+            1456360,
+            1068600
+          ],
+          [
+            101,
+            1638405,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\noindent"
+    },
+    "exact": false
+  },
+  "unvbox": {
+    "source": "\\nopagenumbers \\setbox2\\vbox{\\hbox{M}\\kern2pt}\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\unvbox2}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=600748,1647500,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            729996
+          ],
+          [
+            98,
+            0,
+            1647500
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\unvbox"
+    },
+    "exact": false
+  },
+  "mark_insert": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\mark{MARK}\\insert100{\\hbox{NOTE}}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=364090,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1068600
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\mark"
+    },
+    "exact": false
+  },
+  "aftergroup": {
+    "source": "\\nopagenumbers \\def\\later{\\message{[after=yes]}}\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{{\\aftergroup\\later\\count0=7}\\message{[count=\\the\\count0]}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[after=yes]",
+        "[count=1]",
+        "[dims=364090,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1068600
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unexpected token CharToken(char='{', catcode=<Catcode.BEGIN_GROUP: 1>)"
+    },
+    "exact": false
+  },
+  "rule_depth_order": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{{\\prevdepth=5pt}\\hrule\\prevdepth=7pt\\message{[depth=\\the\\prevdepth]}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[depth=7.0pt]",
+        "[dims=364090,829029,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            829029
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unexpected token CharToken(char='{', catcode=<Catcode.BEGIN_GROUP: 1>)"
+    },
+    "exact": false
+  },
+  "tail": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\kern3pt{\\message{[tail=\\the\\lastkern]}}\\unkern\\hbox{M}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=3.0pt]",
+        "[dims=600748,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unexpected token CharToken(char='{', catcode=<Catcode.BEGIN_GROUP: 1>)"
+    },
+    "exact": false
+  },
+  "nested_align": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\halign{#\\cr M\\cr\\noalign{\\prevdepth=5pt}}\\message{[depth=\\the\\prevdepth]}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[depth=5.0pt]",
+        "[dims=600748,1527352,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1527352
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\halign"
+    },
+    "exact": false
+  },
+  "noalign_valign": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\valign{#\\cr\\hbox{A}\\cr\\noalign{{\\kern2pt}\\hbox{M}}\\hbox{B}\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=1687556,447828,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            77,
+            622593,
+            655360
+          ],
+          [
+            66,
+            1223341,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unexpected token CharToken(char='{', catcode=<Catcode.BEGIN_GROUP: 1>)"
+    },
+    "exact": false
+  },
+  "valign_wrong_prevdepth": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\valign{#\\cr\\hbox{A}\\cr\\noalign{\\prevdepth=5pt}\\hbox{B}\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=2412096,447828,127431]"
+      ],
+      "errors": [
+        "You can't use `\\prevdepth' in restricted horizontal mode."
+      ],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            61,
+            491521,
+            655360
+          ],
+          [
+            53,
+            1001247,
+            655360
+          ],
+          [
+            112,
+            1328928,
+            655360
+          ],
+          [
+            116,
+            1693018,
+            655360
+          ],
+          [
+            66,
+            1947881,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\prevdepth"
+    },
+    "exact": false
+  },
+  "everycr": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\everycr{\\noalign{{\\message{[every=yes]}}\\hbox{M}}}\\halign{#\\cr a\\cr b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[every=yes]",
+        "[every=yes]",
+        "[every=yes]",
+        "[dims=600748,3593556,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            77,
+            0,
+            447828
+          ],
+          [
+            97,
+            0,
+            1234260
+          ],
+          [
+            77,
+            0,
+            2020692
+          ],
+          [
+            98,
+            0,
+            2807124
+          ],
+          [
+            77,
+            0,
+            3593556
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unexpected token CharToken(char='{', catcode=<Catcode.BEGIN_GROUP: 1>)"
+    },
+    "exact": false
+  },
+  "previous_row_lastbox": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\setbox2=\\lastbox\\ifvoid2\\message{[tail=void]}\\else\\message{[tail=box]}\\fi}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=void]",
+        "[dims=364090,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1068600
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\setbox"
+    },
+    "exact": false
+  },
+  "previous_noalign_tail": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\kern3pt}\\noalign{\\message{[tail=\\the\\lastkern]}\\unkern}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=3.0pt]",
+        "[dims=364090,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1068600
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\message"
+    },
+    "exact": false
+  },
+  "previous_noalign_lastbox": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\hbox{M}}\\noalign{\\setbox2=\\lastbox\\ifvoid2\\message{[tail=void]}\\else\\message{[tail=box]}\\fi}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=box]",
+        "[dims=364090,1407204,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1407204
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\noalign: unsupported token \\hbox"
+    },
+    "exact": false
+  },
+  "span_positive": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#\\cr a\\cr\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=131072,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=327681,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "span_negative": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#\\cr a\\cr\\omit\\span\\kern-30pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=0,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=327681,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "span_real_last": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#\\cr a&\\kern-5pt\\cr\\omit\\span\\kern20pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=1310720,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=1310720,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "span_order_a": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#&#\\cr a\\cr\\omit\\span\\kern20pt\\cr\\omit\\span\\omit\\span\\kern10pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=655360,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=1310720,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "span_order_b": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#&#\\cr a\\cr\\omit\\span\\omit\\span\\kern10pt\\cr\\omit\\span\\kern20pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=655360,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=1638399,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "span_tabskip": {
+    "source": "\\nopagenumbers \\tabskip=3pt\\setbox0\\vbox{\\halign{#&#\\cr a\\cr\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=524288,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            282168
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=917505,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            282168
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "span_unused_first": {
+    "source": "\\nopagenumbers \\tabskip=3pt\\setbox0\\vbox{\\halign{#&#\\cr \\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=524288,0,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        []
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=589824,0,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        []
+      ]
+    },
+    "exact": false
+  },
+  "span_unused_middle": {
+    "source": "\\nopagenumbers \\tabskip=3pt\\setbox0\\vbox{\\halign{#&#&#\\cr a\\cr\\omit\\span\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=524288,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            282168
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=1114113,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            282168
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "span_valign": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\valign{#&#\\cr\\kern5pt\\cr\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=0,131072,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        []
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=0,327680,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        []
+      ]
+    },
+    "exact": false
+  }
+}

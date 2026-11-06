@@ -1,0 +1,815 @@
+{
+  "owner_table_tex422": {
+    "source": "\\nopagenumbers \\hsize=4in\n\\halign{#\\hfil\\quad&\\hfil#\\quad&#\\hfil\\cr\n\\multispan3\\hfil Table heading\\hfil\\cr\n\\noalign{\\smallskip\\hrule\\smallskip}\nAlpha&12&first row\\cr\nBeta&345&second\\cr\n\\noalign{\\medskip}\nGamma&6&third row text\\cr}\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            84,
+            2288759,
+            655360
+          ],
+          [
+            97,
+            2707461,
+            655360
+          ],
+          [
+            98,
+            3035142,
+            655360
+          ],
+          [
+            108,
+            3399232,
+            655360
+          ],
+          [
+            101,
+            3581277,
+            655360
+          ],
+          [
+            104,
+            4091001,
+            655360
+          ],
+          [
+            101,
+            4455091,
+            655360
+          ],
+          [
+            97,
+            4746362,
+            655360
+          ],
+          [
+            100,
+            5074043,
+            655360
+          ],
+          [
+            105,
+            5438133,
+            655360
+          ],
+          [
+            110,
+            5620178,
+            655360
+          ],
+          [
+            103,
+            5984268,
+            655360
+          ],
+          [
+            65,
+            0,
+            1657332
+          ],
+          [
+            108,
+            491521,
+            1657332
+          ],
+          [
+            112,
+            673566,
+            1657332
+          ],
+          [
+            104,
+            1037656,
+            1657332
+          ],
+          [
+            97,
+            1401746,
+            1657332
+          ],
+          [
+            49,
+            3244950,
+            1657332
+          ],
+          [
+            50,
+            3572631,
+            1657332
+          ],
+          [
+            12,
+            4555673,
+            1657332
+          ],
+          [
+            114,
+            4919763,
+            1657332
+          ],
+          [
+            115,
+            5176446,
+            1657332
+          ],
+          [
+            116,
+            5434949,
+            1657332
+          ],
+          [
+            114,
+            5908265,
+            1657332
+          ],
+          [
+            111,
+            6164948,
+            1657332
+          ],
+          [
+            119,
+            6474424,
+            1657332
+          ],
+          [
+            66,
+            0,
+            2443764
+          ],
+          [
+            101,
+            464215,
+            2443764
+          ],
+          [
+            116,
+            755486,
+            2443764
+          ],
+          [
+            97,
+            1010349,
+            2443764
+          ],
+          [
+            51,
+            2917269,
+            2443764
+          ],
+          [
+            52,
+            3244950,
+            2443764
+          ],
+          [
+            53,
+            3572631,
+            2443764
+          ],
+          [
+            115,
+            4555673,
+            2443764
+          ],
+          [
+            101,
+            4814176,
+            2443764
+          ],
+          [
+            99,
+            5105447,
+            2443764
+          ],
+          [
+            111,
+            5396718,
+            2443764
+          ],
+          [
+            110,
+            5724399,
+            2443764
+          ],
+          [
+            100,
+            6088489,
+            2443764
+          ],
+          [
+            71,
+            0,
+            3623412
+          ],
+          [
+            97,
+            514276,
+            3623412
+          ],
+          [
+            109,
+            841957,
+            3623412
+          ],
+          [
+            109,
+            1388092,
+            3623412
+          ],
+          [
+            97,
+            1934227,
+            3623412
+          ],
+          [
+            54,
+            3572631,
+            3623412
+          ],
+          [
+            116,
+            4555673,
+            3623412
+          ],
+          [
+            104,
+            4810536,
+            3623412
+          ],
+          [
+            105,
+            5174626,
+            3623412
+          ],
+          [
+            114,
+            5356671,
+            3623412
+          ],
+          [
+            100,
+            5613354,
+            3623412
+          ],
+          [
+            114,
+            6195897,
+            3623412
+          ],
+          [
+            111,
+            6452580,
+            3623412
+          ],
+          [
+            119,
+            6762056,
+            3623412
+          ],
+          [
+            116,
+            7453825,
+            3623412
+          ],
+          [
+            101,
+            7708688,
+            3623412
+          ],
+          [
+            120,
+            7999959,
+            3623412
+          ],
+          [
+            116,
+            8345845,
+            3623412
+          ]
+        ]
+      ],
+      "rules": [
+        [
+          [
+            0,
+            1005613,
+            26214,
+            8600708
+          ]
+        ]
+      ]
+    }
+  },
+  "three_tail_groups": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\vskip3pt}\\noalign{\\message{[tail=\\the\\lastskip]}\\unskip\\penalty77}\\noalign{\\message{[tail=\\the\\lastpenalty]}\\unpenalty\\kern2pt}\\noalign{\\message{[tail=\\the\\lastkern]}\\unkern}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=3.0pt]",
+        "[tail=77]",
+        "[tail=2.0pt]",
+        "[dims=364090,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            98,
+            0,
+            1068600
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "remove_then_box": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\hbox{g}}\\noalign{\\setbox2=\\lastbox\\message{[depth=\\the\\prevdepth]}\\hbox{M}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[depth=1.94444pt]",
+        "[dims=600748,2231865,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1445433
+          ],
+          [
+            98,
+            0,
+            2231865
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "aliases": {
+    "source": "\\nopagenumbers \\let\\na\\noalign\\let\\pd\\prevdepth\\let\\hb\\hbox\\setbox0\\vbox{\\halign{#\\cr a\\cr\\na{{\\pd=5pt}\\message{[depth=\\the\\pd]}\\hb{M}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[depth=5.0pt]",
+        "[dims=600748,1527352,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            740920
+          ],
+          [
+            98,
+            0,
+            1527352
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "assignments": {
+    "source": "\\nopagenumbers \\count9=1\\def\\done{\\message{[after=yes]}}\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\afterassignment\\done\\count9=7\\global\\count8=9\\aftergroup\\done\\hbox{M}}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\message{[count=\\the\\count9,\\the\\count8]}\\bye",
+    "ref": {
+      "messages": [
+        "[after=yes]",
+        "[after=yes]",
+        "[dims=600748,1855032,0]",
+        "[count=1,9]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "deferred": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\setbox2=\\hbox{M}\\box2\\setbox3=\\vbox{\\hbox{N}}\\box3}b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=600748,2641464,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            77,
+            0,
+            1068600
+          ],
+          [
+            78,
+            0,
+            1855032
+          ],
+          [
+            98,
+            0,
+            2641464
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "display_indent": {
+    "source": "\\nopagenumbers \\noindent Before\\par$$\\displayindent=20pt\\halign{#\\cr a\\cr\\noalign{\\hbox{M}}b\\cr}$$\\noindent After\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            101,
+            464215,
+            655360
+          ],
+          [
+            102,
+            755486,
+            655360
+          ],
+          [
+            111,
+            955736,
+            655360
+          ],
+          [
+            114,
+            1283417,
+            655360
+          ],
+          [
+            101,
+            1540100,
+            655360
+          ],
+          [
+            97,
+            1310720,
+            3014656
+          ],
+          [
+            77,
+            0,
+            3801088
+          ],
+          [
+            98,
+            1310720,
+            4587520
+          ],
+          [
+            65,
+            0,
+            6160384
+          ],
+          [
+            102,
+            491521,
+            6160384
+          ],
+          [
+            116,
+            691771,
+            6160384
+          ],
+          [
+            101,
+            946634,
+            6160384
+          ],
+          [
+            114,
+            1237905,
+            6160384
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "valign_math_groups": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\valign{#\\cr\\hbox{A}\\cr\\noalign{{\\hskip2pt}$x+y$\\setbox2=\\hbox{M}\\box2}\\hbox{B}\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=3207926,447828,127431]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            622593,
+            655360
+          ],
+          [
+            43,
+            1142781,
+            655360
+          ],
+          [
+            121,
+            1798139,
+            655360
+          ],
+          [
+            77,
+            2142963,
+            655360
+          ],
+          [
+            66,
+            2743711,
+            655360
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "valign_tails": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\valign{#\\cr\\hbox{A}\\cr\\noalign{\\kern3pt}\\noalign{\\message{[tail=\\the\\lastkern]}\\unkern\\hbox{M}}\\noalign{\\setbox2=\\lastbox}\\hbox{B}\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=3.0pt]",
+        "[dims=955736,447828,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_duplicate": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign {#&#\\cr a\\cr\\omit\\span\\kern2pt\\cr\\omit\\span\\kern4pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=262144,1855032,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_negative_real": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign {#&#\\cr \\kern-5pt&\\kern-3pt\\cr\\omit\\span\\kern-2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=0,786432,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        []
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_zero_real": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign {#&#\\cr a&\\kern0pt\\cr\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=327681,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_negative_tabskip": {
+    "source": "\\nopagenumbers \\tabskip=-3pt\\setbox0\\vbox{\\halign {#&#\\cr a\\cr\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=0,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            -196608,
+            282168
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_flexible": {
+    "source": "\\nopagenumbers \\tabskip=3pt plus 1fil minus 2pt\\setbox0\\vbox{\\halign to 40pt{#&#\\cr a\\cr\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=2621440,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            895659,
+            282168
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_spread": {
+    "source": "\\nopagenumbers \\tabskip=3pt plus 1fil\\setbox0\\vbox{\\halign spread 10pt{#&#\\cr \\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=1179648,0,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        []
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_unused_last": {
+    "source": "\\nopagenumbers \\tabskip=3pt plus 1fil\\setbox0\\vbox{\\halign {#&#&#\\cr a\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=720897,282168,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            655360
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_repeat": {
+    "source": "\\nopagenumbers \\tabskip=3pt\\setbox0\\vbox{\\halign {#&&#\\cr a&b&c\\cr\\omit\\span\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=1769474,1241543,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            455111
+          ],
+          [
+            98,
+            720897,
+            455111
+          ],
+          [
+            99,
+            1281595,
+            455111
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "span_overlap": {
+    "source": "\\nopagenumbers \\tabskip=1pt\\setbox0\\vbox{\\halign {#&#&#\\cr a&\\omit\\span\\kern-10pt\\cr\\omit\\span\\omit\\span\\kern2pt\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=262144,1068600,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            65536,
+            282168
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  }
+}

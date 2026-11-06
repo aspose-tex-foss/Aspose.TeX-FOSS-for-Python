@@ -1,8 +1,8 @@
 % This is the plain TeX format that's described in The TeXbook.
 % N.B.: A version number is defined at the very end of this file;
-% please change that number whenever the file is modified!
+%       please change that number whenever the file is modified!
 % And don't modify the file unless you change its name:
-% Everybody's "plain.tex" file should be the same, worldwide.
+%       Everybody's "plain.tex" file should be the same, worldwide.
 
 % Unlimited copying and redistribution of this file are permitted as long
 % as this file is not modified. Modifications are permitted, but only if
@@ -37,7 +37,7 @@
 
 % Here is a list of the characters that have been specially catcoded:
 \def\dospecials{\do\ \do\\\do\{\do\}\do\$\do\&%
- \do\#\do\^\do\^^K\do\_\do\^^A\do\%\do\~}
+  \do\#\do\^\do\^^K\do\_\do\^^A\do\%\do\~}
 % (not counting ascii null, tab, linefeed, formfeed, return, delete)
 % Each symbol in the list is preceded by \do, which can be defined
 % if you want to do something to every item in the list.
@@ -153,29 +153,29 @@
 
 % When a register is used only temporarily, it need not be allocated;
 % grouping can be used, making the value previously in the register return
-% after the close of the group. The main use of these macros is for
+% after the close of the group.  The main use of these macros is for
 % registers that are defined by one macro and used by others, possibly at
-% different nesting levels. All such registers should be defined through
+% different nesting levels.  All such registers should be defined through
 % these macros; otherwise conflicts may occur, especially when two or more
 % macro packages are being used at once.
 
 % The following counters are reserved:
-% 0 to 9 page numbering
-% 10 count allocation
-% 11 dimen allocation
-% 12 skip allocation
-% 13 muskip allocation
-% 14 box allocation
-% 15 toks allocation
-% 16 read file allocation
-% 17 write file allocation
-% 18 math family allocation
-% 19 language allocation
-% 20 insert allocation
-% 21 the most recently allocated number
-% 22 constant -1
-% New counters are allocated starting with 23, 24, etc. Other registers are
-% allocated starting with 10. This leaves 0 through 9 for the user to play
+%   0 to 9  page numbering
+%       10  count allocation
+%       11  dimen allocation
+%       12  skip allocation
+%       13  muskip allocation
+%       14  box allocation
+%       15  toks allocation
+%       16  read file allocation
+%       17  write file allocation
+%       18  math family allocation
+%       19  language allocation
+%       20  insert allocation
+%       21  the most recently allocated number
+%       22  constant -1
+% New counters are allocated starting with 23, 24, etc.  Other registers are
+% allocated starting with 10.  This leaves 0 through 9 for the user to play
 % with safely, except that counts 0 to 9 are considered to be the page and
 % subpage numbers (since they are displayed during output). In this scheme,
 % \count 10 always contains the number of the highest-numbered counter that
@@ -235,20 +235,20 @@
 \outer\def\newfam{\alloc@8\fam\chardef\sixt@@n}
 \outer\def\newlanguage{\alloc@9\language\chardef\@cclvi}
 \def\alloc@#1#2#3#4#5{\global\advance\count1#1by\@ne
- \ch@ck#1#4#2% make sure there's still room
- \allocationnumber=\count1#1%
- \global#3#5=\allocationnumber
- \wlog{\string#5=\string#2\the\allocationnumber}}
+  \ch@ck#1#4#2% make sure there's still room
+  \allocationnumber=\count1#1%
+  \global#3#5=\allocationnumber
+  \wlog{\string#5=\string#2\the\allocationnumber}}
 \outer\def\newinsert#1{\global\advance\insc@unt by\m@ne
- \ch@ck0\insc@unt\count
- \ch@ck1\insc@unt\dimen
- \ch@ck2\insc@unt\skip
- \ch@ck4\insc@unt\box
- \allocationnumber=\insc@unt
- \global\chardef#1=\allocationnumber
- \wlog{\string#1=\string\insert\the\allocationnumber}}
+  \ch@ck0\insc@unt\count
+  \ch@ck1\insc@unt\dimen
+  \ch@ck2\insc@unt\skip
+  \ch@ck4\insc@unt\box
+  \allocationnumber=\insc@unt
+  \global\chardef#1=\allocationnumber
+  \wlog{\string#1=\string\insert\the\allocationnumber}}
 \def\ch@ck#1#2#3{\ifnum\count1#1<#2%
- \else\errmessage{No room for a new #3}\fi}
+  \else\errmessage{No room for a new #3}\fi}
 
 % Here are some examples of allocation.
 \newdimen\maxdimen \maxdimen=16383.99999pt % the largest legal <dimen>
@@ -262,11 +262,11 @@
 % And here's a different sort of allocation:
 % For example, \newif\iffoo creates \footrue, \foofalse to go with \iffoo.
 \outer\def\newif#1{\count@\escapechar \escapechar\m@ne
- \expandafter\expandafter\expandafter
- \def\@if#1{true}{\let#1=\iftrue}%
- \expandafter\expandafter\expandafter
- \def\@if#1{false}{\let#1=\iffalse}%
- \@if#1{false}\escapechar\count@} % the condition starts out false
+  \expandafter\expandafter\expandafter
+   \def\@if#1{true}{\let#1=\iftrue}%
+  \expandafter\expandafter\expandafter
+   \def\@if#1{false}{\let#1=\iffalse}%
+  \@if#1{false}\escapechar\count@} % the condition starts out false
 \def\@if#1#2{\csname\expandafter\if@\string#1#2\endcsname}
 {\uccode`1=`i \uccode`2=`f \uppercase{\gdef\if@12{}}} % `if' is required
 
@@ -495,12 +495,12 @@
 \message{macros,}
 
 \def\frenchspacing{\sfcode`\.\@m \sfcode`\?\@m \sfcode`\!\@m
- \sfcode`\:\@m \sfcode`\;\@m \sfcode`\,\@m}
+  \sfcode`\:\@m \sfcode`\;\@m \sfcode`\,\@m}
 \def\nonfrenchspacing{\sfcode`\.3000\sfcode`\?3000\sfcode`\!3000%
- \sfcode`\:2000\sfcode`\;1500\sfcode`\,1250 }
+  \sfcode`\:2000\sfcode`\;1500\sfcode`\,1250 }
 
 \def\normalbaselines{\lineskip\normallineskip
- \baselineskip\normalbaselineskip \lineskiplimit\normallineskiplimit}
+  \baselineskip\normalbaselineskip \lineskiplimit\normallineskiplimit}
 
 \def\^^M{\ } % control <return> = control <space>
 \def\^^I{\ } % same for <tab>
@@ -519,8 +519,8 @@
 % In \obeylines, we say `\let^^M=\par' instead of `\def^^M{\par}'
 % since this allows, for example, `\let\par=\cr \obeylines \halign{...'
 {\catcode`\^^M=\active % these lines must end with %
- \gdef\obeylines{\catcode`\^^M\active \let^^M\par}%
- \global\let^^M\par} % this is in case ^^M appears in a \write
+  \gdef\obeylines{\catcode`\^^M\active \let^^M\par}%
+  \global\let^^M\par} % this is in case ^^M appears in a \write
 \def\obeyspaces{\catcode`\ \active}
 {\obeyspaces\global\let =\space}
 
@@ -542,15 +542,15 @@
 
 \def\nointerlineskip{\prevdepth-1000\p@}
 \def\offinterlineskip{\baselineskip-1000\p@
- \lineskip\z@ \lineskiplimit\maxdimen}
+  \lineskip\z@ \lineskiplimit\maxdimen}
 
 \def\topglue{\nointerlineskip\vglue-\topskip\vglue} % for top of page
 \def\vglue{\afterassignment\vgl@\skip@=}
 \def\vgl@{\par \dimen@\prevdepth \hrule height\z@
- \nobreak\vskip\skip@ \prevdepth\dimen@}
+  \nobreak\vskip\skip@ \prevdepth\dimen@}
 \def\hglue{\afterassignment\hgl@\skip@=}
 \def\hgl@{\leavevmode \count@\spacefactor \vrule width\z@
- \nobreak\hskip\skip@ \spacefactor\count@}
+  \nobreak\hskip\skip@ \spacefactor\count@}
 
 \def~{\penalty\@M \ } % tie
 \def\slash{/\penalty\exhyphenpenalty} % a `/' that acts like a `-'
@@ -566,11 +566,11 @@
 
 \def\removelastskip{\ifdim\lastskip=\z@\else\vskip-\lastskip\fi}
 \def\smallbreak{\par\ifdim\lastskip<\smallskipamount
- \removelastskip\penalty-50\smallskip\fi}
+  \removelastskip\penalty-50\smallskip\fi}
 \def\medbreak{\par\ifdim\lastskip<\medskipamount
- \removelastskip\penalty-100\medskip\fi}
+  \removelastskip\penalty-100\medskip\fi}
 \def\bigbreak{\par\ifdim\lastskip<\bigskipamount
- \removelastskip\penalty-200\bigskip\fi}
+  \removelastskip\penalty-200\bigskip\fi}
 
 \def\line{\hbox to\hsize}
 \def\leftline#1{\line{#1\hss}}
@@ -582,7 +582,7 @@
 
 \def\m@th{\mathsurround\z@}
 \def\underbar#1{$\setbox\z@\hbox{#1}\dp\z@\z@
- \m@th \underline{\box\z@}$}
+  \m@th \underline{\box\z@}$}
 
 \newbox\strutbox
 \setbox\strutbox=\hbox{\vrule height8.5pt depth3.5pt width\z@}
@@ -592,7 +592,7 @@
 \def\ialign{\everycr{}\tabskip\z@skip\halign} % initialized \halign
 \newcount\mscount
 \def\multispan#1{\omit \mscount#1\relax
- \loop\ifnum\mscount>\@ne \sp@n\repeat}
+  \loop\ifnum\mscount>\@ne \sp@n\repeat}
 \def\sp@n{\span\omit\advance\mscount\m@ne}
 
 \newif\ifus@ \newif\if@cr
@@ -602,47 +602,47 @@
 \def\settabs{\setbox\tabs\null \futurelet\next\sett@b}
 \let\+=\relax % in case this file is being read in twice
 \def\sett@b{\ifx\next\+\def\nxt{\afterassignment\s@tt@b\let\nxt}%
- \else\let\nxt\s@tcols\fi \let\next\relax \nxt}
+  \else\let\nxt\s@tcols\fi \let\next\relax \nxt}
 \def\s@tt@b{\let\nxt\relax \us@false\m@ketabbox}
 \def\tabalign{\us@true\m@ketabbox} % non-\outer version of \+
 \outer\def\+{\tabalign}
 \def\s@tcols#1\columns{\count@#1\dimen@\hsize
- \loop\ifnum\count@>\z@ \@nother \repeat}
+  \loop\ifnum\count@>\z@ \@nother \repeat}
 \def\@nother{\dimen@ii\dimen@ \divide\dimen@ii\count@
- \setbox\tabs\hbox{\hbox to\dimen@ii{}\unhbox\tabs}%
- \advance\dimen@-\dimen@ii \advance\count@\m@ne}
+  \setbox\tabs\hbox{\hbox to\dimen@ii{}\unhbox\tabs}%
+  \advance\dimen@-\dimen@ii \advance\count@\m@ne}
 
 \def\m@ketabbox{\begingroup
- \global\setbox\tabsyet\copy\tabs
- \global\setbox\tabsdone\null
- \def\cr{\@crtrue\crcr\egroup\egroup
- \ifus@\unvbox\z@\lastbox\fi\endgroup
- \setbox\tabs\hbox{\unhbox\tabsyet\unhbox\tabsdone}}%
- \setbox\z@\vbox\bgroup\@crfalse
- \ialign\bgroup&\t@bbox##\t@bb@x\crcr}
+  \global\setbox\tabsyet\copy\tabs
+  \global\setbox\tabsdone\null
+  \def\cr{\@crtrue\crcr\egroup\egroup
+    \ifus@\unvbox\z@\lastbox\fi\endgroup
+    \setbox\tabs\hbox{\unhbox\tabsyet\unhbox\tabsdone}}%
+  \setbox\z@\vbox\bgroup\@crfalse
+    \ialign\bgroup&\t@bbox##\t@bb@x\crcr}
 
 \def\t@bbox{\setbox\z@\hbox\bgroup}
 \def\t@bb@x{\if@cr\egroup % now \box\z@ holds the column
- \else\hss\egroup \global\setbox\tabsyet\hbox{\unhbox\tabsyet
- \global\setbox\@ne\lastbox}% now \box\@ne holds its size
- \ifvoid\@ne\global\setbox\@ne\hbox to\wd\z@{}%
- \else\setbox\z@\hbox to\wd\@ne{\unhbox\z@}\fi
- \global\setbox\tabsdone\hbox{\box\@ne\unhbox\tabsdone}\fi
- \box\z@}
+  \else\hss\egroup \global\setbox\tabsyet\hbox{\unhbox\tabsyet
+      \global\setbox\@ne\lastbox}% now \box\@ne holds its size
+    \ifvoid\@ne\global\setbox\@ne\hbox to\wd\z@{}%
+    \else\setbox\z@\hbox to\wd\@ne{\unhbox\z@}\fi
+    \global\setbox\tabsdone\hbox{\box\@ne\unhbox\tabsdone}\fi
+  \box\z@}
 
 \def\hang{\hangindent\parindent}
 \def\textindent#1{\indent\llap{#1\enspace}\ignorespaces}
 \def\item{\par\hang\textindent}
 \def\itemitem{\par\indent \hangindent2\parindent \textindent}
 \def\narrower{\advance\leftskip\parindent
- \advance\rightskip\parindent}
+  \advance\rightskip\parindent}
 
 \outer\def\beginsection#1\par{\vskip\z@ plus.3\vsize\penalty-250
- \vskip\z@ plus-.3\vsize\bigskip\vskip\parskip
- \message{#1}\leftline{\bf#1}\nobreak\smallskip\noindent}
+  \vskip\z@ plus-.3\vsize\bigskip\vskip\parskip
+  \message{#1}\leftline{\bf#1}\nobreak\smallskip\noindent}
 \outer\def\proclaim #1. #2\par{\medbreak
- \noindent{\bf#1.\enspace}{\sl#2\par}%
- \ifdim\lastskip<\medskipamount \removelastskip\penalty55\medskip\fi}
+  \noindent{\bf#1.\enspace}{\sl#2\par}%
+  \ifdim\lastskip<\medskipamount \removelastskip\penalty55\medskip\fi}
 
 \def\raggedright{\rightskip\z@ plus2em \spaceskip.3333em \xspaceskip.5em\relax}
 \def\ttraggedright{\tt\rightskip\z@ plus2em\relax} % for use with \tt only
@@ -666,10 +666,10 @@
 \def\leavevmode{\unhbox\voidb@x} % begins a paragraph, if necessary
 \def\_{\leavevmode \kern.06em \vbox{\hrule width.3em}}
 \def\AA{\leavevmode\setbox0\hbox{!}\dimen@\ht0\advance\dimen@-1ex%
- \rlap{\raise.67\dimen@\hbox{\char'27}}A}
+  \rlap{\raise.67\dimen@\hbox{\char'27}}A}
 
 \def\mathhexbox#1#2#3{\leavevmode
- \hbox{$\m@th \mathchar"#1#2#3$}}
+  \hbox{$\m@th \mathchar"#1#2#3$}}
 \def\dag{\mathhexbox279}
 \def\ddag{\mathhexbox27A}
 \def\S{\mathhexbox278}
@@ -677,16 +677,16 @@
 \def\Orb{\mathhexbox20D}
 
 \def\oalign#1{\leavevmode\vtop{\baselineskip\z@skip \lineskip.25ex%
- \ialign{##\crcr#1\crcr}}} \def\o@lign{\lineskiplimit\z@ \oalign}
+  \ialign{##\crcr#1\crcr}}} \def\o@lign{\lineskiplimit\z@ \oalign}
 \def\ooalign{\lineskiplimit-\maxdimen \oalign} % chars over each other
 {\catcode`p=12 \catcode`t=12 \gdef\\#1pt{#1}} \let\getf@ctor=\\
 \def\sh@ft#1{\dimen@#1\kern\expandafter\getf@ctor\the\fontdimen1\font
- \dimen@} % kern by #1 times the current slant
+  \dimen@} % kern by #1 times the current slant
 \def\d#1{{\o@lign{\relax#1\crcr\hidewidth\sh@ft{-1ex}.\hidewidth}}}
 \def\b#1{{\o@lign{\relax#1\crcr\hidewidth\sh@ft{-3ex}%
- \vbox to.2ex{\hbox{\char22}\vss}\hidewidth}}}
+    \vbox to.2ex{\hbox{\char22}\vss}\hidewidth}}}
 \def\c#1{{\setbox\z@\hbox{#1}\ifdim\ht\z@=1ex\accent24 #1%
- \else\ooalign{\unhbox\z@\crcr\hidewidth\char24\hidewidth}\fi}}
+  \else\ooalign{\unhbox\z@\crcr\hidewidth\char24\hidewidth}\fi}}
 \def\copyright{{\ooalign{\hfil\raise.07ex\hbox{c}\hfil\crcr\Orb}}}
 
 \def\dots{\relax\ifmmode\ldots\else$\m@th\ldots\,$\fi}
@@ -707,19 +707,19 @@
 \def\hrulefill{\leaders\hrule\hfill}
 \def\dotfill{\cleaders\hbox{$\m@th \mkern1.5mu.\mkern1.5mu$}\hfill}
 \def\rightarrowfill{$\m@th\smash-\mkern-7mu%
- \cleaders\hbox{$\mkern-2mu\smash-\mkern-2mu$}\hfill
- \mkern-7mu\mathord\rightarrow$}
+  \cleaders\hbox{$\mkern-2mu\smash-\mkern-2mu$}\hfill
+  \mkern-7mu\mathord\rightarrow$}
 \def\leftarrowfill{$\m@th\mathord\leftarrow\mkern-7mu%
- \cleaders\hbox{$\mkern-2mu\smash-\mkern-2mu$}\hfill
- \mkern-7mu\smash-$}
+  \cleaders\hbox{$\mkern-2mu\smash-\mkern-2mu$}\hfill
+  \mkern-7mu\smash-$}
 \mathchardef\braceld="37A \mathchardef\bracerd="37B
 \mathchardef\bracelu="37C \mathchardef\braceru="37D
 \def\downbracefill{$\m@th \setbox\z@\hbox{$\braceld$}%
- \braceld\leaders\vrule height\ht\z@ depth\z@\hfill\braceru
- \bracelu\leaders\vrule height\ht\z@ depth\z@\hfill\bracerd$}
+  \braceld\leaders\vrule height\ht\z@ depth\z@\hfill\braceru
+  \bracelu\leaders\vrule height\ht\z@ depth\z@\hfill\bracerd$}
 \def\upbracefill{$\m@th \setbox\z@\hbox{$\braceld$}%
- \bracelu\leaders\vrule height\ht\z@ depth\z@\hfill\bracerd
- \braceld\leaders\vrule height\ht\z@ depth\z@\hfill\braceru$}
+  \bracelu\leaders\vrule height\ht\z@ depth\z@\hfill\bracerd
+  \braceld\leaders\vrule height\ht\z@ depth\z@\hfill\braceru$}
 
 \outer\def\bye{\par\vfill\supereject\end}
 
@@ -735,7 +735,7 @@
 {\catcode`\'=\active \gdef'{^\bgroup\prim@s}}
 \def\prim@s{\prime\futurelet\next\pr@m@s}
 \def\pr@m@s{\ifx'\next\let\nxt\pr@@@s \else\ifx^\next\let\nxt\pr@@@t
- \else\let\nxt\egroup\fi\fi \nxt}
+  \else\let\nxt\egroup\fi\fi \nxt}
 \def\pr@@@s#1{\prim@s} \def\pr@@@t#1#2{#2\egroup}
 {\catcode`\^^Z=\active \gdef^^Z{\not=}} % ^^Z is like \ne in math
 
@@ -799,9 +799,9 @@
 \mathchardef\top="023E
 \mathchardef\bot="023F
 \def\angle{{\vbox{\ialign{$\m@th\scriptstyle##$\crcr
- \not\mathrel{\mkern14mu}\crcr
- \noalign{\nointerlineskip}
- \mkern2.5mu\leaders\hrule height.34pt\hfill\mkern2.5mu\crcr}}}}
+      \not\mathrel{\mkern14mu}\crcr
+      \noalign{\nointerlineskip}
+      \mkern2.5mu\leaders\hrule height.34pt\hfill\mkern2.5mu\crcr}}}}
 \mathchardef\triangle="0234
 \mathchardef\forall="0238
 \mathchardef\exists="0239
@@ -932,9 +932,9 @@
 \def\ldots{\mathinner{\ldotp\ldotp\ldotp}}
 \def\cdots{\mathinner{\cdotp\cdotp\cdotp}}
 \def\vdots{\vbox{\baselineskip4\p@ \lineskiplimit\z@
- \kern6\p@\hbox{.}\hbox{.}\hbox{.}}}
+    \kern6\p@\hbox{.}\hbox{.}\hbox{.}}}
 \def\ddots{\mathinner{\mkern1mu\raise7\p@\vbox{\kern7\p@\hbox{.}}\mkern2mu
- \raise4\p@\hbox{.}\mkern2mu\raise\p@\hbox{.}\mkern1mu}}
+    \raise4\p@\hbox{.}\mkern2mu\raise\p@\hbox{.}\mkern1mu}}
 
 \def\acute{\mathaccent"7013 }
 \def\grave{\mathaccent"7012 }
@@ -949,19 +949,19 @@
 \def\widetilde{\mathaccent"0365 }
 \def\widehat{\mathaccent"0362 }
 \def\overrightarrow#1{\vbox{\m@th\ialign{##\crcr
- \rightarrowfill\crcr\noalign{\kern-\p@\nointerlineskip}
- $\hfil\displaystyle{#1}\hfil$\crcr}}}
+      \rightarrowfill\crcr\noalign{\kern-\p@\nointerlineskip}
+      $\hfil\displaystyle{#1}\hfil$\crcr}}}
 \def\overleftarrow#1{\vbox{\m@th\ialign{##\crcr
- \leftarrowfill\crcr\noalign{\kern-\p@\nointerlineskip}
- $\hfil\displaystyle{#1}\hfil$\crcr}}}
+      \leftarrowfill\crcr\noalign{\kern-\p@\nointerlineskip}
+      $\hfil\displaystyle{#1}\hfil$\crcr}}}
 \def\overbrace#1{\mathop{\vbox{\m@th\ialign{##\crcr\noalign{\kern3\p@}
- \downbracefill\crcr\noalign{\kern3\p@\nointerlineskip}
- $\hfil\displaystyle{#1}\hfil$\crcr}}}\limits}
+      \downbracefill\crcr\noalign{\kern3\p@\nointerlineskip}
+      $\hfil\displaystyle{#1}\hfil$\crcr}}}\limits}
 \def\underbrace#1{\mathop{\vtop{\m@th\ialign{##\crcr
- $\hfil\displaystyle{#1}\hfil$\crcr\noalign{\kern3\p@\nointerlineskip}
- \upbracefill\crcr\noalign{\kern3\p@}}}}\limits}
+      $\hfil\displaystyle{#1}\hfil$\crcr\noalign{\kern3\p@\nointerlineskip}
+      \upbracefill\crcr\noalign{\kern3\p@}}}}\limits}
 \def\skew#1#2#3{{\muskip\z@#1mu\divide\muskip\z@\tw@ \mkern\muskip\z@
- #2{\mkern-\muskip\z@{#3}\mkern\muskip\z@}\mkern-\muskip\z@}{}}
+    #2{\mkern-\muskip\z@{#3}\mkern\muskip\z@}\mkern-\muskip\z@}{}}
 
 \def\lmoustache{\delimiter"437A340 } % top from (, bottom from )
 \def\rmoustache{\delimiter"537B341 } % top from ), bottom from (
@@ -1013,41 +1013,41 @@
 \def\sqrt{\radical"270370 }
 
 \def\mathpalette#1#2{\mathchoice{#1\displaystyle{#2}}%
- {#1\textstyle{#2}}{#1\scriptstyle{#2}}{#1\scriptscriptstyle{#2}}}
+  {#1\textstyle{#2}}{#1\scriptstyle{#2}}{#1\scriptscriptstyle{#2}}}
 \newbox\rootbox
 \def\root#1\of{\setbox\rootbox
- \hbox{$\m@th\scriptscriptstyle{#1}$}\mathpalette\r@@t}
+  \hbox{$\m@th\scriptscriptstyle{#1}$}\mathpalette\r@@t}
 \def\r@@t#1#2{\setbox\z@\hbox{$\m@th#1\sqrt{#2}$}\dimen@\ht\z@
- \advance\dimen@-\dp\z@
- \mkern5mu\raise.6\dimen@\copy\rootbox \mkern-10mu\box\z@}
+  \advance\dimen@-\dp\z@
+  \mkern5mu\raise.6\dimen@\copy\rootbox \mkern-10mu\box\z@}
 \newif\ifv@ \newif\ifh@
 \def\vphantom{\v@true\h@false\ph@nt}
 \def\hphantom{\v@false\h@true\ph@nt}
 \def\phantom{\v@true\h@true\ph@nt}
 \def\ph@nt{\ifmmode\def\next{\mathpalette\mathph@nt}%
- \else\let\next\makeph@nt\fi\next}
+  \else\let\next\makeph@nt\fi\next}
 \def\makeph@nt#1{\setbox\z@\hbox{#1}\finph@nt}
 \def\mathph@nt#1#2{\setbox\z@\hbox{$\m@th#1{#2}$}\finph@nt}
 \def\finph@nt{\setbox\tw@\null
- \ifv@ \ht\tw@\ht\z@ \dp\tw@\dp\z@\fi
- \ifh@ \wd\tw@\wd\z@\fi \box\tw@}
+  \ifv@ \ht\tw@\ht\z@ \dp\tw@\dp\z@\fi
+  \ifh@ \wd\tw@\wd\z@\fi \box\tw@}
 \def\mathstrut{\vphantom(}
 \def\smash{\relax % \relax, in case this comes first in \halign
- \ifmmode\def\next{\mathpalette\mathsm@sh}\else\let\next\makesm@sh
- \fi\next}
+  \ifmmode\def\next{\mathpalette\mathsm@sh}\else\let\next\makesm@sh
+  \fi\next}
 \def\makesm@sh#1{\setbox\z@\hbox{#1}\finsm@sh}
 \def\mathsm@sh#1#2{\setbox\z@\hbox{$\m@th#1{#2}$}\finsm@sh}
 \def\finsm@sh{\ht\z@\z@ \dp\z@\z@ \box\z@}
 
 \def\cong{\mathrel{\mathpalette\@vereq\sim}} % congruence sign
 \def\@vereq#1#2{\lower.5\p@\vbox{\lineskiplimit\maxdimen\lineskip-.5\p@
- \ialign{$\m@th#1\hfil##\hfil$\crcr#2\crcr=\crcr}}}
+    \ialign{$\m@th#1\hfil##\hfil$\crcr#2\crcr=\crcr}}}
 \def\notin{\mathrel{\mathpalette\c@ncel\in}}
 \def\c@ncel#1#2{\m@th\ooalign{$\hfil#1\mkern1mu/\hfil$\crcr$#1#2$}}
 \def\rightleftharpoons{\mathrel{\mathpalette\rlh@{}}}
 \def\rlh@#1{\vcenter{\m@th\hbox{\ooalign{\raise2pt
- \hbox{$#1\rightharpoonup$}\crcr
- $#1\leftharpoondown$}}}}
+          \hbox{$#1\rightharpoonup$}\crcr
+        $#1\leftharpoondown$}}}}
 \def\buildrel#1\over#2{\mathrel{\mathop{\kern\z@#2}\limits^{#1}}}
 \def\doteq{\buildrel\textstyle.\over=}
 
@@ -1085,57 +1085,57 @@
 \def\deg{\mathop{\rm deg}\nolimits}
 
 \def\bmod{\nonscript\mskip-\medmuskip\mkern5mu
- \mathbin{\rm mod}\penalty900\mkern5mu\nonscript\mskip-\medmuskip}
+  \mathbin{\rm mod}\penalty900\mkern5mu\nonscript\mskip-\medmuskip}
 \def\pmod#1{\allowbreak\mkern18mu({\rm mod}\,\,#1)}
 
 \def\cases#1{\left\{\,\vcenter{\normalbaselines\m@th
- \ialign{$##\hfil$&\quad##\hfil\crcr#1\crcr}}\right.}
+    \ialign{$##\hfil$&\quad##\hfil\crcr#1\crcr}}\right.}
 \def\matrix#1{\null\,\vcenter{\normalbaselines\m@th
- \ialign{\hfil$##$\hfil&&\quad\hfil$##$\hfil\crcr
- \mathstrut\crcr\noalign{\kern-\baselineskip}
- #1\crcr\mathstrut\crcr\noalign{\kern-\baselineskip}}}\,}
+    \ialign{\hfil$##$\hfil&&\quad\hfil$##$\hfil\crcr
+      \mathstrut\crcr\noalign{\kern-\baselineskip}
+      #1\crcr\mathstrut\crcr\noalign{\kern-\baselineskip}}}\,}
 \def\pmatrix#1{\left(\matrix{#1}\right)}
 \newdimen\p@renwd
 \setbox0=\hbox{\tenex B} \p@renwd=\wd0 % width of the big left (
 \def\bordermatrix#1{\begingroup \m@th
- \setbox\z@\vbox{\def\cr{\crcr\noalign{\kern2\p@\global\let\cr\endline}}%
- \ialign{$##$\hfil\kern2\p@\kern\p@renwd&\thinspace\hfil$##$\hfil
- &&\quad\hfil$##$\hfil\crcr
- \omit\strut\hfil\crcr\noalign{\kern-\baselineskip}%
- #1\crcr\omit\strut\cr}}%
- \setbox\tw@\vbox{\unvcopy\z@\global\setbox\@ne\lastbox}%
- \setbox\tw@\hbox{\unhbox\@ne\unskip\global\setbox\@ne\lastbox}%
- \setbox\tw@\hbox{$\kern\wd\@ne\kern-\p@renwd\left(\kern-\wd\@ne
- \global\setbox\@ne\vbox{\box\@ne\kern2\p@}%
- \vcenter{\kern-\ht\@ne\unvbox\z@\kern-\baselineskip}\,\right)$}%
- \null\;\vbox{\kern\ht\@ne\box\tw@}\endgroup}
+  \setbox\z@\vbox{\def\cr{\crcr\noalign{\kern2\p@\global\let\cr\endline}}%
+    \ialign{$##$\hfil\kern2\p@\kern\p@renwd&\thinspace\hfil$##$\hfil
+      &&\quad\hfil$##$\hfil\crcr
+      \omit\strut\hfil\crcr\noalign{\kern-\baselineskip}%
+      #1\crcr\omit\strut\cr}}%
+  \setbox\tw@\vbox{\unvcopy\z@\global\setbox\@ne\lastbox}%
+  \setbox\tw@\hbox{\unhbox\@ne\unskip\global\setbox\@ne\lastbox}%
+  \setbox\tw@\hbox{$\kern\wd\@ne\kern-\p@renwd\left(\kern-\wd\@ne
+    \global\setbox\@ne\vbox{\box\@ne\kern2\p@}%
+    \vcenter{\kern-\ht\@ne\unvbox\z@\kern-\baselineskip}\,\right)$}%
+  \null\;\vbox{\kern\ht\@ne\box\tw@}\endgroup}
 
 \def\openup{\afterassignment\@penup\dimen@=}
 \def\@penup{\advance\lineskip\dimen@
- \advance\baselineskip\dimen@
- \advance\lineskiplimit\dimen@}
+  \advance\baselineskip\dimen@
+  \advance\lineskiplimit\dimen@}
 \def\eqalign#1{\null\,\vcenter{\openup\jot\m@th
- \ialign{\strut\hfil$\displaystyle{##}$&$\displaystyle{{}##}$\hfil
- \crcr#1\crcr}}\,}
+  \ialign{\strut\hfil$\displaystyle{##}$&$\displaystyle{{}##}$\hfil
+      \crcr#1\crcr}}\,}
 \newif\ifdt@p
 \def\displ@y{\global\dt@ptrue\openup\jot\m@th
- \everycr{\noalign{\ifdt@p \global\dt@pfalse \ifdim\prevdepth>-1000\p@
- \vskip-\lineskiplimit \vskip\normallineskiplimit \fi
- \else \penalty\interdisplaylinepenalty \fi}}}
+  \everycr{\noalign{\ifdt@p \global\dt@pfalse \ifdim\prevdepth>-1000\p@
+      \vskip-\lineskiplimit \vskip\normallineskiplimit \fi
+      \else \penalty\interdisplaylinepenalty \fi}}}
 \def\@lign{\tabskip\z@skip\everycr{}} % restore inside \displ@y
 \def\displaylines#1{\displ@y \tabskip\z@skip
- \halign{\hbox to\displaywidth{$\@lign\hfil\displaystyle##\hfil$}\crcr
- #1\crcr}}
+  \halign{\hbox to\displaywidth{$\@lign\hfil\displaystyle##\hfil$}\crcr
+    #1\crcr}}
 \def\eqalignno#1{\displ@y \tabskip\centering
- \halign to\displaywidth{\hfil$\@lign\displaystyle{##}$\tabskip\z@skip
- &$\@lign\displaystyle{{}##}$\hfil\tabskip\centering
- &\llap{$\@lign##$}\tabskip\z@skip\crcr
- #1\crcr}}
+  \halign to\displaywidth{\hfil$\@lign\displaystyle{##}$\tabskip\z@skip
+    &$\@lign\displaystyle{{}##}$\hfil\tabskip\centering
+    &\llap{$\@lign##$}\tabskip\z@skip\crcr
+    #1\crcr}}
 \def\leqalignno#1{\displ@y \tabskip\centering
- \halign to\displaywidth{\hfil$\@lign\displaystyle{##}$\tabskip\z@skip
- &$\@lign\displaystyle{{}##}$\hfil\tabskip\centering
- &\kern-\displaywidth\rlap{$\@lign##$}\tabskip\displaywidth\crcr
- #1\crcr}}
+  \halign to\displaywidth{\hfil$\@lign\displaystyle{##}$\tabskip\z@skip
+    &$\@lign\displaystyle{{}##}$\hfil\tabskip\centering
+    &\kern-\displaywidth\rlap{$\@lign##$}\tabskip\displaywidth\crcr
+    #1\crcr}}
 
 % Definitions related to output
 
@@ -1144,27 +1144,27 @@
 \countdef\pageno=0 \pageno=1 % first page is number 1
 \newtoks\headline \headline={\hfil} % headline is normally blank
 \newtoks\footline \footline={\hss\tenrm\folio\hss}
- % footline is normally a centered page number in font \tenrm
+  % footline is normally a centered page number in font \tenrm
 \newif\ifr@ggedbottom
 \def\raggedbottom{\topskip 10\p@ plus60\p@ \r@ggedbottomtrue}
 \def\normalbottom{\topskip 10\p@ \r@ggedbottomfalse} % undoes \raggedbottom
 \def\folio{\ifnum\pageno<\z@ \romannumeral-\pageno \else\number\pageno \fi}
 \def\nopagenumbers{\footline{\hfil}} % blank out the footline
 \def\advancepageno{\ifnum\pageno<\z@ \global\advance\pageno\m@ne
- \else\global\advance\pageno\@ne \fi} % increase |pageno|
+  \else\global\advance\pageno\@ne \fi} % increase |pageno|
 
 \newinsert\footins
 \def\footnote#1{\let\@sf\empty % parameter #2 (the text) is read later
- \ifhmode\edef\@sf{\spacefactor\the\spacefactor}\/\fi
- #1\@sf\vfootnote{#1}}
+  \ifhmode\edef\@sf{\spacefactor\the\spacefactor}\/\fi
+  #1\@sf\vfootnote{#1}}
 \def\vfootnote#1{\insert\footins\bgroup
- \interlinepenalty\interfootnotelinepenalty
- \splittopskip\ht\strutbox % top baseline for broken footnotes
- \splitmaxdepth\dp\strutbox \floatingpenalty\@MM
- \leftskip\z@skip \rightskip\z@skip \spaceskip\z@skip \xspaceskip\z@skip
- \textindent{#1}\footstrut\futurelet\next\fo@t}
+  \interlinepenalty\interfootnotelinepenalty
+  \splittopskip\ht\strutbox % top baseline for broken footnotes
+  \splitmaxdepth\dp\strutbox \floatingpenalty\@MM
+  \leftskip\z@skip \rightskip\z@skip \spaceskip\z@skip \xspaceskip\z@skip
+  \textindent{#1}\footstrut\futurelet\next\fo@t}
 \def\fo@t{\ifcat\bgroup\noexpand\next \let\next\f@@t
- \else\let\next\f@t\fi \next}
+  \else\let\next\f@t\fi \next}
 \def\f@@t{\bgroup\aftergroup\@foot\let\next}
 \def\f@t#1{#1\@foot}
 \def\@foot{\strut\egroup}
@@ -1183,37 +1183,37 @@
 \dimen\topins=\maxdimen % no limit per page
 \def\@ins{\par\begingroup\setbox\z@\vbox\bgroup} % start a \vbox
 \def\endinsert{\egroup % finish the \vbox
- \if@mid \dimen@\ht\z@ \advance\dimen@\dp\z@ \advance\dimen@12\p@
- \advance\dimen@\pagetotal \advance\dimen@-\pageshrink
- \ifdim\dimen@>\pagegoal\@midfalse\p@gefalse\fi\fi
- \if@mid \bigskip\box\z@\bigbreak
- \else\insert\topins{\penalty100 % floating insertion
- \splittopskip\z@skip
- \splitmaxdepth\maxdimen \floatingpenalty\z@
- \ifp@ge \dimen@\dp\z@
- \vbox to\vsize{\unvbox\z@\kern-\dimen@}% depth is zero
- \else \box\z@\nobreak\bigskip\fi}\fi\endgroup}
+  \if@mid \dimen@\ht\z@ \advance\dimen@\dp\z@ \advance\dimen@12\p@
+    \advance\dimen@\pagetotal \advance\dimen@-\pageshrink
+    \ifdim\dimen@>\pagegoal\@midfalse\p@gefalse\fi\fi
+  \if@mid \bigskip\box\z@\bigbreak
+  \else\insert\topins{\penalty100 % floating insertion
+    \splittopskip\z@skip
+    \splitmaxdepth\maxdimen \floatingpenalty\z@
+    \ifp@ge \dimen@\dp\z@
+    \vbox to\vsize{\unvbox\z@\kern-\dimen@}% depth is zero
+    \else \box\z@\nobreak\bigskip\fi}\fi\endgroup}
 
 \output{\plainoutput}
 \def\plainoutput{\shipout\vbox{\makeheadline\pagebody\makefootline}%
- \advancepageno
- \ifnum\outputpenalty>-\@MM \else\dosupereject\fi}
+  \advancepageno
+  \ifnum\outputpenalty>-\@MM \else\dosupereject\fi}
 \def\pagebody{\vbox to\vsize{\boxmaxdepth\maxdepth \pagecontents}}
 \def\makeheadline{\vbox to\z@{\vskip-22.5\p@
- \line{\vbox to8.5\p@{}\the\headline}\vss}\nointerlineskip}
+  \line{\vbox to8.5\p@{}\the\headline}\vss}\nointerlineskip}
 \def\makefootline{\baselineskip24\p@\lineskiplimit\z@\line{\the\footline}}
 \def\dosupereject{\ifnum\insertpenalties>\z@ % something is being held over
- \line{}\kern-\topskip\nobreak\vfill\supereject\fi}
+  \line{}\kern-\topskip\nobreak\vfill\supereject\fi}
 
 \def\pagecontents{\ifvoid\topins\else\unvbox\topins\fi
- \dimen@=\dp\@cclv \unvbox\@cclv % open up \box255
- \ifvoid\footins\else % footnote info is present
- \vskip\skip\footins
- \footnoterule
- \unvbox\footins\fi
- \ifr@ggedbottom \kern-\dimen@ \vfil \fi}
+  \dimen@=\dp\@cclv \unvbox\@cclv % open up \box255
+  \ifvoid\footins\else % footnote info is present
+    \vskip\skip\footins
+    \footnoterule
+    \unvbox\footins\fi
+  \ifr@ggedbottom \kern-\dimen@ \vfil \fi}
 \def\footnoterule{\kern-3\p@
- \hrule width 2truein \kern 2.6\p@} % the \hrule is .4pt high
+  \hrule width 2truein \kern 2.6\p@} % the \hrule is .4pt high
 
 % Hyphenation, miscellaneous macros, and initial values for standard layout
 \message{hyphenation}
@@ -1223,16 +1223,16 @@
 
 \def\magnification{\afterassignment\m@g\count@}
 \def\m@g{\mag\count@
- \hsize6.5truein\vsize8.9truein\dimen\footins8truein}
+  \hsize6.5truein\vsize8.9truein\dimen\footins8truein}
 
 \def\loggingall{\tracingcommands\tw@\tracingstats\tw@
- \tracingpages\@ne\tracingoutput\@ne\tracinglostchars\@ne
- \tracingmacros\tw@\tracingparagraphs\@ne\tracingrestores\@ne
- \showboxbreadth\maxdimen\showboxdepth\maxdimen}
+  \tracingpages\@ne\tracingoutput\@ne\tracinglostchars\@ne
+  \tracingmacros\tw@\tracingparagraphs\@ne\tracingrestores\@ne
+  \showboxbreadth\maxdimen\showboxdepth\maxdimen}
 \def\tracingall{\tracingonline\@ne\loggingall}
 
 \def\showhyphens#1{\setbox0\vbox{\parfillskip\z@skip\hsize\maxdimen\tenrm
- \pretolerance\m@ne\tolerance\m@ne\hbadness0\showboxdepth0\ #1}}
+  \pretolerance\m@ne\tolerance\m@ne\hbadness0\showboxdepth0\ #1}}
 
 \normalbaselines\rm % select roman font
 \nonfrenchspacing % punctuation affects the spacing

@@ -1,0 +1,1371 @@
+{
+  "reference": "MiKTeX TeX 24.4; 2026-10-15; original architecture HEAD 3b6c8946; developer rerun recorded separately",
+  "rows": [
+    {
+      "name": "active_font",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent\\hbox{\\accent19?A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_chardef",
+      "body": "\\chardef\\cc=65\\catcode`?=13\\let?=\\cc\\noindent\\hbox{\\accent19?}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_count",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent\\hbox{\\accent19?1=9 A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_register",
+      "body": "\\countdef\\cc=1\\catcode`?=13\\let?=\\cc\\noindent\\hbox{\\accent19?=9 A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_font_prefixed",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent\\hbox{\\accent19\\global?A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_font_afterassignment",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent\\hbox{\\afterassignment A\\accent19?o}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            111,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            111,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_chardef_primitive_name",
+      "body": "\\chardef\\char=65\\catcode`?=13\\let?=\\char\\noindent\\hbox{\\accent19?}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_font_primitive_name",
+      "body": "\\font\\char=cmti10\\catcode`?=13\\let?=\\char\\noindent\\hbox{\\accent19?A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "ordinary_chardef_primitive_name",
+      "body": "\\chardef\\char=65\\let\\c=\\char\\noindent\\hbox{\\accent19\\c}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "ordinary_font_binding",
+      "body": "\\let\\f=\\tenit\\noindent\\hbox{\\accent19\\f A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_frozen_count",
+      "body": "\\catcode`?=13\\let?=\\count\\chardef\\count=65\\noindent\\hbox{\\accent19?1=9 A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_frozen_char",
+      "body": "\\catcode`?=13\\let?=\\char\\chardef\\char=66\\noindent\\hbox{\\accent19?65}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_chardef_snapshot",
+      "body": "\\chardef\\c=65\\catcode`?=13\\let?=\\c\\chardef\\c=66\\noindent\\hbox{\\accent19?}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_font_snapshot",
+      "body": "\\font\\f=cmti10\\catcode`?=13\\let?=\\f\\font\\f=cmr10\\noindent\\hbox{\\accent19?A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            191691,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "ordinary_let_from_active",
+      "body": "\\chardef\\c=65\\catcode`?=13\\let?=\\c\\let\\a=?\\chardef\\c=66\\noindent\\hbox{\\accent19\\a}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_owner_in_paragraph",
+      "body": "\\chardef\\c=65\\catcode`?=13\\let?=\\c\\noindent?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_owner_in_hbox",
+      "body": "\\chardef\\c=65\\catcode`?=13\\let?=\\c\\noindent\\hbox{?}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_font_in_hbox",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent\\hbox{?A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "active_chardef_number",
+      "body": "\\chardef\\c=65\\catcode`?=13\\let?=\\c\\count1=?\\message{[\\the\\count1]}\\noindent A",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[65]",
+        "[1.65]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[65]"
+      ],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_base",
+      "body": "\\noindent\\hbox{\\accent19\\nullfont A}\\message{[\\the\\font]}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[\\tenrm ]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[\\tenrm ]"
+      ],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_base_tail",
+      "body": "\\noindent\\hbox{\\accent19\\nullfont A\\tenrm x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_base_alias",
+      "body": "\\let\\n\\nullfont\\noindent\\hbox{\\accent19\\n A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_base_active",
+      "body": "\\catcode`?=13\\let?\\nullfont\\noindent\\hbox{\\accent19?A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_accent",
+      "body": "\\noindent\\hbox{\\nullfont\\accent19\\tenrm A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_accent_alias",
+      "body": "\\let\\n\\nullfont\\noindent\\hbox{\\n\\accent19\\tenrm A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_redefined",
+      "body": "\\let\\n\\nullfont\\font\\nullfont=cmr10\\noindent\\hbox{\\accent19\\n A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "real_font_named_null",
+      "body": "\\font\\nullfont=cmr10\\noindent\\hbox{\\accent19\\nullfont A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_base_paragraph",
+      "body": "\\noindent\\accent19\\nullfont A\\tenrm x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    },
+    {
+      "name": "null_base_vbox",
+      "body": "\\vbox{\\noindent\\accent19\\nullfont A\\tenrm x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true
+    }
+  ]
+}

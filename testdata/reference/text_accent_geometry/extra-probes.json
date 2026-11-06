@@ -1,0 +1,251 @@
+{
+  "reference": "MiKTeX TeX 24.4; 2026-10-15; pre-change HEAD 3b6c8946",
+  "rows": [
+    {
+      "name": "missing_accent",
+      "body": "\\noindent\\hbox{\\accent200\\count1=7 o}\\message{[\\the\\count1]}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            111,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[0]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "character code 200 not in font range bc=0..ec=127",
+      "matches": false
+    },
+    {
+      "name": "missing_base",
+      "body": "\\noindent\\hbox{\\accent19\\char200 x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "character code 200 not in font range bc=0..ec=127",
+      "matches": false
+    },
+    {
+      "name": "slant_snapshot",
+      "body": "\\noindent\\hbox{\\accent19\\fontdimen1\\tenrm=1pt o}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            282168,
+            655360
+          ],
+          [
+            111,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: \\fontdimen",
+      "matches": false
+    },
+    {
+      "name": "xheight_snapshot",
+      "body": "\\noindent\\hbox{\\accent19\\fontdimen5\\tenrm=8pt A}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: \\fontdimen",
+      "matches": false
+    },
+    {
+      "name": "ligature_barrier",
+      "body": "\\noindent\\hbox{f\\accent19 fi}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            19,
+            136534,
+            482417
+          ],
+          [
+            102,
+            200250,
+            655360
+          ],
+          [
+            105,
+            400500,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            19,
+            200250,
+            655360
+          ],
+          [
+            102,
+            200250,
+            655360
+          ],
+          [
+            105,
+            400500,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": false
+    },
+    {
+      "name": "line_start",
+      "body": "\\noindent x\\break\\accent18 y\\par",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            18,
+            9103,
+            1441792
+          ],
+          [
+            121,
+            0,
+            1441792
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            18,
+            9102,
+            1441792
+          ],
+          [
+            121,
+            0,
+            1441792
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": false
+    }
+  ]
+}

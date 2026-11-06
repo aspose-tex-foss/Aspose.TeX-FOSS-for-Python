@@ -1,0 +1,2372 @@
+{
+  "leading_parskip": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_everypar": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\parskip=3pt\\everypar{E\\message{[every=yes]}}middle\\par}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[every=yes]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            69,
+            1310720,
+            524288
+          ],
+          [
+            109,
+            1756730,
+            524288
+          ],
+          [
+            105,
+            2302865,
+            524288
+          ],
+          [
+            100,
+            2484910,
+            524288
+          ],
+          [
+            100,
+            2849000,
+            524288
+          ],
+          [
+            108,
+            3213090,
+            524288
+          ],
+          [
+            101,
+            3395135,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_depth": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\prevdepth=5pt\\parskip=3pt\\noindent middle\\par\\message{[depth=\\the\\prevdepth]}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[depth=0.0pt]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_ignore_depth": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\prevdepth=-1000pt\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_tail": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\message{[tail=\\the\\lastskip]}\\parskip=3pt\\noindent middle\\par\\message{[tail=\\the\\lastskip]}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=0.0pt]",
+        "[tail=0.0pt]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_material_first": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\kern2pt\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            782791
+          ],
+          [
+            105,
+            546135,
+            782791
+          ],
+          [
+            100,
+            728180,
+            782791
+          ],
+          [
+            100,
+            1092270,
+            782791
+          ],
+          [
+            108,
+            1456360,
+            782791
+          ],
+          [
+            101,
+            1638405,
+            782791
+          ],
+          [
+            98,
+            0,
+            1569223
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_par_first": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\par\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_barrier_tail": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\message{[tail=\\the\\lastkern,\\the\\lastpenalty]}\\setbox2=\\lastbox\\ifvoid2\\message{[tail=void]}\\fi\\unskip\\unkern\\unpenalty\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=0.0pt,0]",
+        "[tail=void]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_everypar_box": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\parskip=3pt\\everypar{\\hbox{E}}\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            69,
+            0,
+            524288
+          ],
+          [
+            109,
+            446010,
+            524288
+          ],
+          [
+            105,
+            992145,
+            524288
+          ],
+          [
+            100,
+            1174190,
+            524288
+          ],
+          [
+            100,
+            1538280,
+            524288
+          ],
+          [
+            108,
+            1902370,
+            524288
+          ],
+          [
+            101,
+            2084415,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_nested_vbox": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\vbox{\\parskip=3pt\\noindent middle}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_nested_hbox": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\hbox{middle}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_kern_removed": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\kern2pt\\unkern\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_adjacent_reset": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr \\noalign{\\prevdepth=-1000pt}\\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            524288
+          ],
+          [
+            105,
+            546135,
+            524288
+          ],
+          [
+            100,
+            728180,
+            524288
+          ],
+          [
+            100,
+            1092270,
+            524288
+          ],
+          [
+            108,
+            1456360,
+            524288
+          ],
+          [
+            101,
+            1638405,
+            524288
+          ],
+          [
+            98,
+            0,
+            1310720
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_adjacent_remove": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr \\noalign{\\hbox{M}}\\noalign{\\setbox2=\\lastbox\\unskip}\\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            786432
+          ],
+          [
+            105,
+            546135,
+            786432
+          ],
+          [
+            100,
+            728180,
+            786432
+          ],
+          [
+            100,
+            1092270,
+            786432
+          ],
+          [
+            108,
+            1456360,
+            786432
+          ],
+          [
+            101,
+            1638405,
+            786432
+          ],
+          [
+            98,
+            0,
+            1572864
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_adjacent_material": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr \\noalign{\\kern2pt}\\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            109,
+            0,
+            782791
+          ],
+          [
+            105,
+            546135,
+            782791
+          ],
+          [
+            100,
+            728180,
+            782791
+          ],
+          [
+            100,
+            1092270,
+            782791
+          ],
+          [
+            108,
+            1456360,
+            782791
+          ],
+          [
+            101,
+            1638405,
+            782791
+          ],
+          [
+            98,
+            0,
+            1569223
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_parskip": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1265208
+          ],
+          [
+            105,
+            546135,
+            1265208
+          ],
+          [
+            100,
+            728180,
+            1265208
+          ],
+          [
+            100,
+            1092270,
+            1265208
+          ],
+          [
+            108,
+            1456360,
+            1265208
+          ],
+          [
+            101,
+            1638405,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_everypar": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\everypar{E\\message{[every=yes]}}middle\\par}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[every=yes]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            69,
+            1310720,
+            1265208
+          ],
+          [
+            109,
+            1756730,
+            1265208
+          ],
+          [
+            105,
+            2302865,
+            1265208
+          ],
+          [
+            100,
+            2484910,
+            1265208
+          ],
+          [
+            100,
+            2849000,
+            1265208
+          ],
+          [
+            108,
+            3213090,
+            1265208
+          ],
+          [
+            101,
+            3395135,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_depth": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\prevdepth=5pt\\parskip=3pt\\noindent middle\\par\\message{[depth=\\the\\prevdepth]}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[depth=0.0pt]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            937528
+          ],
+          [
+            105,
+            546135,
+            937528
+          ],
+          [
+            100,
+            728180,
+            937528
+          ],
+          [
+            100,
+            1092270,
+            937528
+          ],
+          [
+            108,
+            1456360,
+            937528
+          ],
+          [
+            101,
+            1638405,
+            937528
+          ],
+          [
+            98,
+            0,
+            1723960
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_ignore_depth": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\prevdepth=-1000pt\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            933887
+          ],
+          [
+            105,
+            546135,
+            933887
+          ],
+          [
+            100,
+            728180,
+            933887
+          ],
+          [
+            100,
+            1092270,
+            933887
+          ],
+          [
+            108,
+            1456360,
+            933887
+          ],
+          [
+            101,
+            1638405,
+            933887
+          ],
+          [
+            98,
+            0,
+            1720319
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_tail": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\message{[tail=\\the\\lastskip]}\\parskip=3pt\\noindent middle\\par\\message{[tail=\\the\\lastskip]}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=0.0pt]",
+        "[tail=0.0pt]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1265208
+          ],
+          [
+            105,
+            546135,
+            1265208
+          ],
+          [
+            100,
+            728180,
+            1265208
+          ],
+          [
+            100,
+            1092270,
+            1265208
+          ],
+          [
+            108,
+            1456360,
+            1265208
+          ],
+          [
+            101,
+            1638405,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_material_first": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\kern2pt\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1396280
+          ],
+          [
+            105,
+            546135,
+            1396280
+          ],
+          [
+            100,
+            728180,
+            1396280
+          ],
+          [
+            100,
+            1092270,
+            1396280
+          ],
+          [
+            108,
+            1456360,
+            1396280
+          ],
+          [
+            101,
+            1638405,
+            1396280
+          ],
+          [
+            98,
+            0,
+            2182712
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_par_first": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\par\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1265208
+          ],
+          [
+            105,
+            546135,
+            1265208
+          ],
+          [
+            100,
+            728180,
+            1265208
+          ],
+          [
+            100,
+            1092270,
+            1265208
+          ],
+          [
+            108,
+            1456360,
+            1265208
+          ],
+          [
+            101,
+            1638405,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_barrier_tail": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\message{[tail=\\the\\lastkern,\\the\\lastpenalty]}\\setbox2=\\lastbox\\ifvoid2\\message{[tail=void]}\\fi\\unskip\\unkern\\unpenalty\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[tail=0.0pt,0]",
+        "[tail=void]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1265208
+          ],
+          [
+            105,
+            546135,
+            1265208
+          ],
+          [
+            100,
+            728180,
+            1265208
+          ],
+          [
+            100,
+            1092270,
+            1265208
+          ],
+          [
+            108,
+            1456360,
+            1265208
+          ],
+          [
+            101,
+            1638405,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_everypar_box": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\everypar{\\hbox{E}}\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            69,
+            0,
+            1265208
+          ],
+          [
+            109,
+            446010,
+            1265208
+          ],
+          [
+            105,
+            992145,
+            1265208
+          ],
+          [
+            100,
+            1174190,
+            1265208
+          ],
+          [
+            100,
+            1538280,
+            1265208
+          ],
+          [
+            108,
+            1902370,
+            1265208
+          ],
+          [
+            101,
+            2084415,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_nested_vbox": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\vbox{\\parskip=3pt\\noindent middle}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1068600
+          ],
+          [
+            105,
+            546135,
+            1068600
+          ],
+          [
+            100,
+            728180,
+            1068600
+          ],
+          [
+            100,
+            1092270,
+            1068600
+          ],
+          [
+            108,
+            1456360,
+            1068600
+          ],
+          [
+            101,
+            1638405,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_nested_hbox": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\hbox{middle}}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1068600
+          ],
+          [
+            105,
+            546135,
+            1068600
+          ],
+          [
+            100,
+            728180,
+            1068600
+          ],
+          [
+            100,
+            1092270,
+            1068600
+          ],
+          [
+            108,
+            1456360,
+            1068600
+          ],
+          [
+            101,
+            1638405,
+            1068600
+          ],
+          [
+            98,
+            0,
+            1855032
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_kern_removed": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\kern2pt\\unkern\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1265208
+          ],
+          [
+            105,
+            546135,
+            1265208
+          ],
+          [
+            100,
+            728180,
+            1265208
+          ],
+          [
+            100,
+            1092270,
+            1265208
+          ],
+          [
+            108,
+            1456360,
+            1265208
+          ],
+          [
+            101,
+            1638405,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_adjacent_reset": {
+    "source": "\\nopagenumbers \\topskip=20pt\\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\prevdepth=-1000pt}\\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            933887
+          ],
+          [
+            105,
+            546135,
+            933887
+          ],
+          [
+            100,
+            728180,
+            933887
+          ],
+          [
+            100,
+            1092270,
+            933887
+          ],
+          [
+            108,
+            1456360,
+            933887
+          ],
+          [
+            101,
+            1638405,
+            933887
+          ],
+          [
+            98,
+            0,
+            1720319
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_adjacent_remove": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\hbox{M}}\\noalign{\\setbox2=\\lastbox\\unskip}\\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1265208
+          ],
+          [
+            105,
+            546135,
+            1265208
+          ],
+          [
+            100,
+            728180,
+            1265208
+          ],
+          [
+            100,
+            1092270,
+            1265208
+          ],
+          [
+            108,
+            1456360,
+            1265208
+          ],
+          [
+            101,
+            1638405,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_adjacent_material": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#\\cr a\\cr\\noalign{\\kern2pt}\\noalign{\\parskip=3pt\\noindent middle}b\\cr}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            109,
+            0,
+            1396280
+          ],
+          [
+            105,
+            546135,
+            1396280
+          ],
+          [
+            100,
+            728180,
+            1396280
+          ],
+          [
+            100,
+            1092270,
+            1396280
+          ],
+          [
+            108,
+            1456360,
+            1396280
+          ],
+          [
+            101,
+            1638405,
+            1396280
+          ],
+          [
+            98,
+            0,
+            2182712
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_destination_direct": {
+    "source": "\\nopagenumbers \\topskip=20pt\\noindent Before\\par\\halign{#\\cr \\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}\\noindent After\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            1310720
+          ],
+          [
+            101,
+            464215,
+            1310720
+          ],
+          [
+            102,
+            755486,
+            1310720
+          ],
+          [
+            111,
+            955736,
+            1310720
+          ],
+          [
+            114,
+            1283417,
+            1310720
+          ],
+          [
+            101,
+            1540100,
+            1310720
+          ],
+          [
+            69,
+            0,
+            2097152
+          ],
+          [
+            109,
+            446010,
+            2097152
+          ],
+          [
+            105,
+            992145,
+            2097152
+          ],
+          [
+            100,
+            1174190,
+            2097152
+          ],
+          [
+            100,
+            1538280,
+            2097152
+          ],
+          [
+            108,
+            1902370,
+            2097152
+          ],
+          [
+            101,
+            2084415,
+            2097152
+          ],
+          [
+            98,
+            0,
+            2883584
+          ],
+          [
+            65,
+            0,
+            3670016
+          ],
+          [
+            102,
+            491521,
+            3670016
+          ],
+          [
+            116,
+            691771,
+            3670016
+          ],
+          [
+            101,
+            946634,
+            3670016
+          ],
+          [
+            114,
+            1237905,
+            3670016
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_destination_display": {
+    "source": "\\nopagenumbers \\noindent Before\\par$$\\halign{#\\cr \\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}$$\\noindent After\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            101,
+            464215,
+            655360
+          ],
+          [
+            102,
+            755486,
+            655360
+          ],
+          [
+            111,
+            955736,
+            655360
+          ],
+          [
+            114,
+            1283417,
+            655360
+          ],
+          [
+            101,
+            1540100,
+            655360
+          ],
+          [
+            69,
+            0,
+            3014656
+          ],
+          [
+            109,
+            446010,
+            3014656
+          ],
+          [
+            105,
+            992145,
+            3014656
+          ],
+          [
+            100,
+            1174190,
+            3014656
+          ],
+          [
+            100,
+            1538280,
+            3014656
+          ],
+          [
+            108,
+            1902370,
+            3014656
+          ],
+          [
+            101,
+            2084415,
+            3014656
+          ],
+          [
+            98,
+            0,
+            3801088
+          ],
+          [
+            65,
+            0,
+            5373952
+          ],
+          [
+            102,
+            491521,
+            5373952
+          ],
+          [
+            116,
+            691771,
+            5373952
+          ],
+          [
+            101,
+            946634,
+            5373952
+          ],
+          [
+            114,
+            1237905,
+            5373952
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_destination_vcenter": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{$\\vcenter{\\halign{#\\cr \\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}}$}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            69,
+            0,
+            455111
+          ],
+          [
+            109,
+            446010,
+            455111
+          ],
+          [
+            105,
+            992145,
+            455111
+          ],
+          [
+            100,
+            1174190,
+            455111
+          ],
+          [
+            100,
+            1538280,
+            455111
+          ],
+          [
+            108,
+            1902370,
+            455111
+          ],
+          [
+            101,
+            2084415,
+            455111
+          ],
+          [
+            98,
+            0,
+            1241543
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_destination_hbox": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\vbox{\\halign{#\\cr \\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            69,
+            0,
+            455111
+          ],
+          [
+            109,
+            446010,
+            455111
+          ],
+          [
+            105,
+            992145,
+            455111
+          ],
+          [
+            100,
+            1174190,
+            455111
+          ],
+          [
+            100,
+            1538280,
+            455111
+          ],
+          [
+            108,
+            1902370,
+            455111
+          ],
+          [
+            101,
+            2084415,
+            455111
+          ],
+          [
+            98,
+            0,
+            1241543
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "leading_destination_deferred": {
+    "source": "\\nopagenumbers \\setbox0\\vbox\\bgroup \\halign{#\\cr \\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}\\egroup\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            69,
+            0,
+            455111
+          ],
+          [
+            109,
+            446010,
+            455111
+          ],
+          [
+            105,
+            992145,
+            455111
+          ],
+          [
+            100,
+            1174190,
+            455111
+          ],
+          [
+            100,
+            1538280,
+            455111
+          ],
+          [
+            108,
+            1902370,
+            455111
+          ],
+          [
+            101,
+            2084415,
+            455111
+          ],
+          [
+            98,
+            0,
+            1241543
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_destination_direct": {
+    "source": "\\nopagenumbers \\topskip=20pt\\noindent Before\\par\\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}\\noindent After\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            1310720
+          ],
+          [
+            101,
+            464215,
+            1310720
+          ],
+          [
+            102,
+            755486,
+            1310720
+          ],
+          [
+            111,
+            955736,
+            1310720
+          ],
+          [
+            114,
+            1283417,
+            1310720
+          ],
+          [
+            101,
+            1540100,
+            1310720
+          ],
+          [
+            97,
+            0,
+            2097152
+          ],
+          [
+            69,
+            0,
+            3080192
+          ],
+          [
+            109,
+            446010,
+            3080192
+          ],
+          [
+            105,
+            992145,
+            3080192
+          ],
+          [
+            100,
+            1174190,
+            3080192
+          ],
+          [
+            100,
+            1538280,
+            3080192
+          ],
+          [
+            108,
+            1902370,
+            3080192
+          ],
+          [
+            101,
+            2084415,
+            3080192
+          ],
+          [
+            98,
+            0,
+            3866624
+          ],
+          [
+            65,
+            0,
+            4653056
+          ],
+          [
+            102,
+            491521,
+            4653056
+          ],
+          [
+            116,
+            691771,
+            4653056
+          ],
+          [
+            101,
+            946634,
+            4653056
+          ],
+          [
+            114,
+            1237905,
+            4653056
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_destination_display": {
+    "source": "\\nopagenumbers \\noindent Before\\par$$\\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}$$\\noindent After\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            101,
+            464215,
+            655360
+          ],
+          [
+            102,
+            755486,
+            655360
+          ],
+          [
+            111,
+            955736,
+            655360
+          ],
+          [
+            114,
+            1283417,
+            655360
+          ],
+          [
+            101,
+            1540100,
+            655360
+          ],
+          [
+            97,
+            0,
+            3014656
+          ],
+          [
+            69,
+            0,
+            3997696
+          ],
+          [
+            109,
+            446010,
+            3997696
+          ],
+          [
+            105,
+            992145,
+            3997696
+          ],
+          [
+            100,
+            1174190,
+            3997696
+          ],
+          [
+            100,
+            1538280,
+            3997696
+          ],
+          [
+            108,
+            1902370,
+            3997696
+          ],
+          [
+            101,
+            2084415,
+            3997696
+          ],
+          [
+            98,
+            0,
+            4784128
+          ],
+          [
+            65,
+            0,
+            6356992
+          ],
+          [
+            102,
+            491521,
+            6356992
+          ],
+          [
+            116,
+            691771,
+            6356992
+          ],
+          [
+            101,
+            946634,
+            6356992
+          ],
+          [
+            114,
+            1237905,
+            6356992
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_destination_vcenter": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{$\\vcenter{\\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}}$}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            69,
+            0,
+            1265208
+          ],
+          [
+            109,
+            446010,
+            1265208
+          ],
+          [
+            105,
+            992145,
+            1265208
+          ],
+          [
+            100,
+            1174190,
+            1265208
+          ],
+          [
+            100,
+            1538280,
+            1265208
+          ],
+          [
+            108,
+            1902370,
+            1265208
+          ],
+          [
+            101,
+            2084415,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_destination_hbox": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\vbox{\\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}}}\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            69,
+            0,
+            1265208
+          ],
+          [
+            109,
+            446010,
+            1265208
+          ],
+          [
+            105,
+            992145,
+            1265208
+          ],
+          [
+            100,
+            1174190,
+            1265208
+          ],
+          [
+            100,
+            1538280,
+            1265208
+          ],
+          [
+            108,
+            1902370,
+            1265208
+          ],
+          [
+            101,
+            2084415,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  },
+  "row_destination_deferred": {
+    "source": "\\nopagenumbers \\setbox0\\vbox\\bgroup \\halign{#\\cr a\\cr\\noalign{\\parskip=3pt\\everypar{E}\\noindent middle}b\\cr}\\egroup\\box0\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            282168
+          ],
+          [
+            69,
+            0,
+            1265208
+          ],
+          [
+            109,
+            446010,
+            1265208
+          ],
+          [
+            105,
+            992145,
+            1265208
+          ],
+          [
+            100,
+            1174190,
+            1265208
+          ],
+          [
+            100,
+            1538280,
+            1265208
+          ],
+          [
+            108,
+            1902370,
+            1265208
+          ],
+          [
+            101,
+            2084415,
+            1265208
+          ],
+          [
+            98,
+            0,
+            2051640
+          ]
+        ]
+      ],
+      "rules": [
+        []
+      ]
+    }
+  }
+}

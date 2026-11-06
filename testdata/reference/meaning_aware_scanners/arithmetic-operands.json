@@ -1,0 +1,1620 @@
+{
+  "reference": "Fresh MiKTeX TeX 24.4, plain; 2026-10-15",
+  "rows": [
+    {
+      "name": "arithmetic_paragraph",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\noindent \\advance\\tol by 9800\\message{[\\the\\tolerance]}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[10000]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hbox",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\noindent\\hbox{\\advance\\tol by 9800\\message{[\\the\\tolerance]}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[10000]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_vbox",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\vbox{\\noindent \\advance\\tol by 9800\\message{[\\the\\tolerance]}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[10000]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_edef",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\edef\\saved{\\advance\\tol by 9800\\message{[\\the\\tolerance]}}\\noindent\\saved x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[200]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[200]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_math",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\noindent$\\advance\\tol by 9800\\message{[\\the\\tolerance]}x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[10000]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_alignment",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\halign{#\\cr \\advance\\tol by 9800\\message{[\\the\\tolerance]}x\\cr}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[10000]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_nested_hbox",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\noindent\\hbox{\\hbox{\\advance\\tol by 9800\\message{[\\the\\tolerance]}x}}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[10000]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_advance_local",
+      "body": "\\tolerance=200\\let\\operand=\\tolerance{\\advance\\operand by 9800\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]",
+        "[200]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]",
+        "[200]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_advance_global",
+      "body": "\\tolerance=200\\let\\operand=\\tolerance{\\global\\advance\\operand by 9800\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]",
+        "[10000]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]",
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_multiply_local",
+      "body": "\\tolerance=200\\let\\operand=\\tolerance{\\multiply\\operand by 3\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[600]",
+        "[200]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[600]",
+        "[200]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_multiply_global",
+      "body": "\\tolerance=200\\let\\operand=\\tolerance{\\global\\multiply\\operand by 3\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[600]",
+        "[600]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[600]",
+        "[600]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_divide_local",
+      "body": "\\tolerance=200\\let\\operand=\\tolerance{\\divide\\operand by 2\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[100]",
+        "[200]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[100]",
+        "[200]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_divide_global",
+      "body": "\\tolerance=200\\let\\operand=\\tolerance{\\global\\divide\\operand by 2\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[100]",
+        "[100]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[100]",
+        "[100]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_advance_local",
+      "body": "\\hsize=100pt\\let\\operand=\\hsize{\\advance\\operand by 2pt\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[102.0pt]",
+        "[100.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[102.0pt]",
+        "[100.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_advance_global",
+      "body": "\\hsize=100pt\\let\\operand=\\hsize{\\global\\advance\\operand by 2pt\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[102.0pt]",
+        "[102.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[102.0pt]",
+        "[102.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_multiply_local",
+      "body": "\\hsize=100pt\\let\\operand=\\hsize{\\multiply\\operand by 3\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[300.0pt]",
+        "[100.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[300.0pt]",
+        "[100.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_multiply_global",
+      "body": "\\hsize=100pt\\let\\operand=\\hsize{\\global\\multiply\\operand by 3\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[300.0pt]",
+        "[300.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[300.0pt]",
+        "[300.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_divide_local",
+      "body": "\\hsize=100pt\\let\\operand=\\hsize{\\divide\\operand by 2\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[50.0pt]",
+        "[100.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[50.0pt]",
+        "[100.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_divide_global",
+      "body": "\\hsize=100pt\\let\\operand=\\hsize{\\global\\divide\\operand by 2\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[50.0pt]",
+        "[50.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[50.0pt]",
+        "[50.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_advance_local",
+      "body": "\\baselineskip=12pt\\let\\operand=\\baselineskip{\\advance\\operand by 2pt\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[14.0pt]",
+        "[12.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[14.0pt]",
+        "[12.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_advance_global",
+      "body": "\\baselineskip=12pt\\let\\operand=\\baselineskip{\\global\\advance\\operand by 2pt\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[14.0pt]",
+        "[14.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[14.0pt]",
+        "[14.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_multiply_local",
+      "body": "\\baselineskip=12pt\\let\\operand=\\baselineskip{\\multiply\\operand by 3\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[36.0pt]",
+        "[12.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[36.0pt]",
+        "[12.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_multiply_global",
+      "body": "\\baselineskip=12pt\\let\\operand=\\baselineskip{\\global\\multiply\\operand by 3\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[36.0pt]",
+        "[36.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[36.0pt]",
+        "[36.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_divide_local",
+      "body": "\\baselineskip=12pt\\let\\operand=\\baselineskip{\\divide\\operand by 2\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6.0pt]",
+        "[12.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6.0pt]",
+        "[12.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_divide_global",
+      "body": "\\baselineskip=12pt\\let\\operand=\\baselineskip{\\global\\divide\\operand by 2\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6.0pt]",
+        "[6.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6.0pt]",
+        "[6.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_advance_local",
+      "body": "\\thinmuskip=3mu\\let\\operand=\\thinmuskip{\\advance\\operand by 2mu\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5.0mu]",
+        "[3.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5.0mu]",
+        "[3.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_advance_global",
+      "body": "\\thinmuskip=3mu\\let\\operand=\\thinmuskip{\\global\\advance\\operand by 2mu\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5.0mu]",
+        "[5.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5.0mu]",
+        "[5.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_multiply_local",
+      "body": "\\thinmuskip=3mu\\let\\operand=\\thinmuskip{\\multiply\\operand by 3\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[9.0mu]",
+        "[3.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[9.0mu]",
+        "[3.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_multiply_global",
+      "body": "\\thinmuskip=3mu\\let\\operand=\\thinmuskip{\\global\\multiply\\operand by 3\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[9.0mu]",
+        "[9.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[9.0mu]",
+        "[9.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_divide_local",
+      "body": "\\thinmuskip=3mu\\let\\operand=\\thinmuskip{\\divide\\operand by 2\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1.5mu]",
+        "[3.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1.5mu]",
+        "[3.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_divide_global",
+      "body": "\\thinmuskip=3mu\\let\\operand=\\thinmuskip{\\global\\divide\\operand by 2\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1.5mu]",
+        "[1.5mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1.5mu]",
+        "[1.5mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_advance_local_direct",
+      "body": "\\tolerance=200{\\advance\\tolerance by 9800\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]",
+        "[200]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]",
+        "[200]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_advance_global_direct",
+      "body": "\\tolerance=200{\\global\\advance\\tolerance by 9800\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]",
+        "[10000]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]",
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_multiply_local_direct",
+      "body": "\\tolerance=200{\\multiply\\tolerance by 3\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[600]",
+        "[200]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[600]",
+        "[200]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_multiply_global_direct",
+      "body": "\\tolerance=200{\\global\\multiply\\tolerance by 3\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[600]",
+        "[600]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[600]",
+        "[600]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_divide_local_direct",
+      "body": "\\tolerance=200{\\divide\\tolerance by 2\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[100]",
+        "[200]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[100]",
+        "[200]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_tolerance_divide_global_direct",
+      "body": "\\tolerance=200{\\global\\divide\\tolerance by 2\\message{[\\the\\tolerance]}}\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[100]",
+        "[100]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[100]",
+        "[100]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_advance_local_direct",
+      "body": "\\hsize=100pt{\\advance\\hsize by 2pt\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[102.0pt]",
+        "[100.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[102.0pt]",
+        "[100.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_advance_global_direct",
+      "body": "\\hsize=100pt{\\global\\advance\\hsize by 2pt\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[102.0pt]",
+        "[102.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[102.0pt]",
+        "[102.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_multiply_local_direct",
+      "body": "\\hsize=100pt{\\multiply\\hsize by 3\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[300.0pt]",
+        "[100.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[300.0pt]",
+        "[100.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_multiply_global_direct",
+      "body": "\\hsize=100pt{\\global\\multiply\\hsize by 3\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[300.0pt]",
+        "[300.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[300.0pt]",
+        "[300.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_divide_local_direct",
+      "body": "\\hsize=100pt{\\divide\\hsize by 2\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[50.0pt]",
+        "[100.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[50.0pt]",
+        "[100.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_hsize_divide_global_direct",
+      "body": "\\hsize=100pt{\\global\\divide\\hsize by 2\\message{[\\the\\hsize]}}\\message{[\\the\\hsize]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[50.0pt]",
+        "[50.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[50.0pt]",
+        "[50.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_advance_local_direct",
+      "body": "\\baselineskip=12pt{\\advance\\baselineskip by 2pt\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[14.0pt]",
+        "[12.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[14.0pt]",
+        "[12.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_advance_global_direct",
+      "body": "\\baselineskip=12pt{\\global\\advance\\baselineskip by 2pt\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[14.0pt]",
+        "[14.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[14.0pt]",
+        "[14.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_multiply_local_direct",
+      "body": "\\baselineskip=12pt{\\multiply\\baselineskip by 3\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[36.0pt]",
+        "[12.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[36.0pt]",
+        "[12.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_multiply_global_direct",
+      "body": "\\baselineskip=12pt{\\global\\multiply\\baselineskip by 3\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[36.0pt]",
+        "[36.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[36.0pt]",
+        "[36.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_divide_local_direct",
+      "body": "\\baselineskip=12pt{\\divide\\baselineskip by 2\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6.0pt]",
+        "[12.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6.0pt]",
+        "[12.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_baselineskip_divide_global_direct",
+      "body": "\\baselineskip=12pt{\\global\\divide\\baselineskip by 2\\message{[\\the\\baselineskip]}}\\message{[\\the\\baselineskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6.0pt]",
+        "[6.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6.0pt]",
+        "[6.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_advance_local_direct",
+      "body": "\\thinmuskip=3mu{\\advance\\thinmuskip by 2mu\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5.0mu]",
+        "[3.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5.0mu]",
+        "[3.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_advance_global_direct",
+      "body": "\\thinmuskip=3mu{\\global\\advance\\thinmuskip by 2mu\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5.0mu]",
+        "[5.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5.0mu]",
+        "[5.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_multiply_local_direct",
+      "body": "\\thinmuskip=3mu{\\multiply\\thinmuskip by 3\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[9.0mu]",
+        "[3.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[9.0mu]",
+        "[3.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_multiply_global_direct",
+      "body": "\\thinmuskip=3mu{\\global\\multiply\\thinmuskip by 3\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[9.0mu]",
+        "[9.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[9.0mu]",
+        "[9.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_divide_local_direct",
+      "body": "\\thinmuskip=3mu{\\divide\\thinmuskip by 2\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1.5mu]",
+        "[3.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1.5mu]",
+        "[3.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "arithmetic_thinmuskip_divide_global_direct",
+      "body": "\\thinmuskip=3mu{\\global\\divide\\thinmuskip by 2\\message{[\\the\\thinmuskip]}}\\message{[\\the\\thinmuskip]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1.5mu]",
+        "[1.5mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1.5mu]",
+        "[1.5mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "frozen_named",
+      "body": "\\tolerance=200\\let\\tol=\\tolerance\\chardef\\tolerance=65\\advance\\tol by9800\\let\\tolerance=\\tol\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "frozen_family",
+      "body": "\\count1=2\\countdef\\c=1\\let\\cnt=\\count\\chardef\\count=65\\advance\\cnt1 by3\\message{[\\the\\c]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_masks_family",
+      "body": "\\count1=2\\countdef\\c=1\\countdef\\count=1\\advance\\count by3\\message{[\\the\\c]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_masks_named",
+      "body": "\\countdef\\tolerance=1\\tolerance=2\\advance\\tolerance by3\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "macro_operand",
+      "body": "\\tolerance=200\\def\\operand{\\tolerance}\\advance\\operand by9800\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "active_named_operand",
+      "body": "\\catcode`?=13\\tolerance=200\\let?=\\tolerance\\advance? by9800\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "active_register_operand",
+      "body": "\\catcode`?=13\\countdef?=1 ?=2\\advance? by3\\message{[\\the\\count1]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "active_macro_operand",
+      "body": "\\catcode`?=13\\def?{\\tolerance}\\tolerance=200\\advance? by9800\\message{[\\the\\tolerance]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[10000]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[10000]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "implicit_space_operand",
+      "body": "\\def\\:{\\let\\s= } \\: \\tolerance=200\\advance\\s\\tolerance by9800\\message{[\\the\\tolerance]}",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use `blank space  ' after \\advance.",
+      "ours_error": "\\advance/\\multiply/\\divide: \\s is not an arithmetic register",
+      "matches": false,
+      "fully_matches": false
+    },
+    {
+      "name": "expanded_space_operand",
+      "body": "\\def\\s{ }\\tolerance=200\\advance\\s\\tolerance by9800",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use `blank space  ' after \\advance.",
+      "ours_error": "\\advance/\\multiply/\\divide: register expected",
+      "matches": false,
+      "fully_matches": false
+    },
+    {
+      "name": "protected_macro_rejected",
+      "body": "\\def\\tolerance{\\count1}\\advance\\noexpand\\tolerance by1",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use `\\relax' after \\advance.",
+      "ours_error": "\\advance/\\multiply/\\divide: \\tolerance is not an arithmetic register",
+      "matches": false,
+      "fully_matches": false
+    },
+    {
+      "name": "toks_rejected",
+      "body": "\\let\\operand=\\everypar\\advance\\operand by1",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use `\\everypar' after \\advance.",
+      "ours_error": "\\advance/\\multiply/\\divide: \\everypar is not an arithmetic register",
+      "matches": false,
+      "fully_matches": false
+    },
+    {
+      "name": "nonregister_rejected",
+      "body": "\\chardef\\tolerance=65\\advance\\tolerance by1",
+      "miktex_exit": 1,
+      "miktex_pages": [],
+      "miktex_messages": [],
+      "miktex_error": "! You can't use `\\char\"41' after \\advance.",
+      "ours_error": "\\advance/\\multiply/\\divide: \\tolerance is not an arithmetic register",
+      "matches": false,
+      "fully_matches": false
+    },
+    {
+      "name": "count_advance",
+      "body": "\\countdef\\operand=1\\operand=2\\advance\\operand by3\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_multiply",
+      "body": "\\countdef\\operand=1\\operand=2\\multiply\\operand by3\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_divide",
+      "body": "\\countdef\\operand=1\\operand=2\\divide\\operand by2\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "dimen_advance",
+      "body": "\\dimendef\\operand=1\\operand=2pt\\advance\\operand by3pt\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "dimen_multiply",
+      "body": "\\dimendef\\operand=1\\operand=2pt\\multiply\\operand by3\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "dimen_divide",
+      "body": "\\dimendef\\operand=1\\operand=2pt\\divide\\operand by2\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "skip_advance",
+      "body": "\\skipdef\\operand=1\\operand=2pt\\advance\\operand by3pt\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "skip_multiply",
+      "body": "\\skipdef\\operand=1\\operand=2pt\\multiply\\operand by3\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "skip_divide",
+      "body": "\\skipdef\\operand=1\\operand=2pt\\divide\\operand by2\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1.0pt]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1.0pt]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "muskip_advance",
+      "body": "\\muskipdef\\operand=1\\operand=2mu\\advance\\operand by3mu\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[5.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[5.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "muskip_multiply",
+      "body": "\\muskipdef\\operand=1\\operand=2mu\\multiply\\operand by3\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[6.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[6.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    },
+    {
+      "name": "muskip_divide",
+      "body": "\\muskipdef\\operand=1\\operand=2mu\\divide\\operand by2\\message{[\\the\\operand]}",
+      "miktex_exit": 0,
+      "miktex_pages": [],
+      "miktex_messages": [
+        "[1.0mu]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [],
+      "ours_messages": [
+        "[1.0mu]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "fully_matches": true
+    }
+  ]
+}

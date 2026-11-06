@@ -1,0 +1,3 @@
+* text=auto
+src/aspose_tex/data/format/hyphen.tex -text
+src/aspose_tex/data/format/plain.tex -text

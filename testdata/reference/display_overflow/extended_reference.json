@@ -1,0 +1,2821 @@
+[
+  {
+    "name": "entry_negative_kern",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent x\\kern-30pt$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=25.27783pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=25.27783pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_only_math",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent $ $$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=-16383.99998pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=-16383.99998pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_trailing_math",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent x$ $$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=25.27783pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=25.27783pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_only_box",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent \\hbox{}$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=20.00003pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=20.00003pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_only_rule",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent \\vrule width0pt height0pt$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=20.00003pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=20.00003pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_trailing_penalty",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent x\\penalty123\\kern9pt$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=25.27783pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=25.27783pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_stretch_after_ink",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent x\\hfil\\kern2pt$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=25.27783pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=25.27783pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_stretch_before_ink",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent \\hfil x$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          120,
+          1465457,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          120,
+          1465457,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=16383.99998pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=16383.99998pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_leaders_before_ink",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent \\leaders\\hbox{.}\\hskip10pt plus1fil x$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          46,
+          0,
+          655360
+        ],
+        [
+          46,
+          182045,
+          655360
+        ],
+        [
+          46,
+          364090,
+          655360
+        ],
+        [
+          46,
+          546135,
+          655360
+        ],
+        [
+          46,
+          728180,
+          655360
+        ],
+        [
+          46,
+          910225,
+          655360
+        ],
+        [
+          46,
+          1092270,
+          655360
+        ],
+        [
+          46,
+          1274315,
+          655360
+        ],
+        [
+          46,
+          1456360,
+          655360
+        ],
+        [
+          120,
+          1793137,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          46,
+          0,
+          655360
+        ],
+        [
+          46,
+          182045,
+          655360
+        ],
+        [
+          46,
+          364090,
+          655360
+        ],
+        [
+          46,
+          546135,
+          655360
+        ],
+        [
+          46,
+          728180,
+          655360
+        ],
+        [
+          46,
+          910225,
+          655360
+        ],
+        [
+          46,
+          1092270,
+          655360
+        ],
+        [
+          46,
+          1274315,
+          655360
+        ],
+        [
+          46,
+          1456360,
+          655360
+        ],
+        [
+          120,
+          1793137,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=16383.99998pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=16383.99998pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_shrink_before_ink",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent x\\hskip60pt minus60pt y$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          121,
+          2930914,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          120,
+          0,
+          655360
+        ],
+        [
+          121,
+          2930914,
+          655360
+        ],
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=16383.99998pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=16383.99998pt]"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "entry_visible_negative_max",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent \\hbox to-\\maxdimen{}$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          122,
+          1471601,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "messages": [
+      "[PRE=-16363.99995pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation",
+      "[PRE=-16383.99998pt]"
+    ],
+    "error": null,
+    "exact": false
+  },
+  {
+    "name": "entry_visible_max",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent \\hbox to\\maxdimen{}$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": null,
+    "messages": [
+      "[PRE=16383.99998pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": "dimension 1075052545sp exceeds TeX maximum",
+    "exact": false
+  },
+  {
+    "name": "entry_visible_after_max_kern",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize50pt\\everydisplay{\\message{[PRE=\\the\\predisplaysize]}}\\noindent \\kern\\maxdimen\\hbox{}$$z$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          122,
+          1471601,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": null,
+    "messages": [
+      "[PRE=16383.99998pt]"
+    ],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": "dimension 1075052545sp exceeds TeX maximum",
+    "exact": false
+  },
+  {
+    "name": "eqno_empty",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          4405473,
+          1441792
+        ],
+        [
+          49,
+          4660336,
+          1441792
+        ],
+        [
+          41,
+          4988017,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          4405473,
+          1441792
+        ],
+        [
+          49,
+          4660336,
+          1441792
+        ],
+        [
+          41,
+          4988017,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_negative_width",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\kern-10pt x\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          2106482,
+          1441792
+        ],
+        [
+          40,
+          4405473,
+          1441792
+        ],
+        [
+          49,
+          4660336,
+          1441792
+        ],
+        [
+          41,
+          4988017,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          2106482,
+          1441792
+        ],
+        [
+          40,
+          4405473,
+          1441792
+        ],
+        [
+          49,
+          4660336,
+          1441792
+        ],
+        [
+          41,
+          4988017,
+          1441792
+        ],
+        [
+          81,
+          0,
+          2686976
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_infinite_negative",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hfil}\\hskip0pt minus-1fil\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327681,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          2228224
+        ],
+        [
+          49,
+          4660336,
+          2228224
+        ],
+        [
+          41,
+          4988017,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327681,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          2228224
+        ],
+        [
+          49,
+          4660336,
+          2228224
+        ],
+        [
+          41,
+          4988017,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_nested_shrink",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hskip0pt minus40pt}\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          3014656
+        ],
+        [
+          49,
+          4660336,
+          3014656
+        ],
+        [
+          41,
+          4988017,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          3014656
+        ],
+        [
+          49,
+          4660336,
+          3014656
+        ],
+        [
+          41,
+          4988017,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_leading_glue",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hskip0pt minus40pt\\hbox to70pt{x\\hfil}\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          -837408,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          2228224
+        ],
+        [
+          49,
+          4660336,
+          2228224
+        ],
+        [
+          41,
+          4988017,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          -837408,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          2228224
+        ],
+        [
+          49,
+          4660336,
+          2228224
+        ],
+        [
+          41,
+          4988017,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_two_orders",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hfil}\\hskip0pt minus40pt\\hskip0pt minus1fill\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327681,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          2228224
+        ],
+        [
+          49,
+          4660336,
+          2228224
+        ],
+        [
+          41,
+          4988017,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327681,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          2228224
+        ],
+        [
+          49,
+          4660336,
+          2228224
+        ],
+        [
+          41,
+          4988017,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_insufficient",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hfil}\\hskip0pt minus5pt\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          3014656
+        ],
+        [
+          49,
+          4660336,
+          3014656
+        ],
+        [
+          41,
+          4988017,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          3014656
+        ],
+        [
+          49,
+          4660336,
+          3014656
+        ],
+        [
+          41,
+          4988017,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_deep",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{g\\hfil}\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          103,
+          327680,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          3014656
+        ],
+        [
+          49,
+          4660336,
+          3014656
+        ],
+        [
+          41,
+          4988017,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          103,
+          327680,
+          2228224
+        ],
+        [
+          40,
+          4405473,
+          3014656
+        ],
+        [
+          49,
+          4660336,
+          3014656
+        ],
+        [
+          41,
+          4988017,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_lineskip",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize40pt\\baselineskip2pt\\lineskip3pt\\lineskiplimit5pt\\noindent Ag$$abcdefgh\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          97,
+          0,
+          2220942
+        ],
+        [
+          98,
+          346416,
+          2220942
+        ],
+        [
+          99,
+          627674,
+          2220942
+        ],
+        [
+          100,
+          911285,
+          2220942
+        ],
+        [
+          101,
+          1252391,
+          2220942
+        ],
+        [
+          102,
+          1557544,
+          2220942
+        ],
+        [
+          103,
+          1948942,
+          2220942
+        ],
+        [
+          104,
+          2285041,
+          2220942
+        ],
+        [
+          40,
+          1784033,
+          3036501
+        ],
+        [
+          49,
+          2038896,
+          3036501
+        ],
+        [
+          41,
+          2366577,
+          3036501
+        ],
+        [
+          81,
+          0,
+          3844777
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          97,
+          0,
+          2220942
+        ],
+        [
+          98,
+          346416,
+          2220942
+        ],
+        [
+          99,
+          627674,
+          2220942
+        ],
+        [
+          100,
+          911285,
+          2220942
+        ],
+        [
+          101,
+          1252391,
+          2220942
+        ],
+        [
+          102,
+          1557544,
+          2220942
+        ],
+        [
+          103,
+          1948942,
+          2220942
+        ],
+        [
+          104,
+          2285041,
+          2220942
+        ],
+        [
+          40,
+          1784033,
+          3036501
+        ],
+        [
+          49,
+          2038896,
+          3036501
+        ],
+        [
+          41,
+          2366577,
+          3036501
+        ],
+        [
+          81,
+          0,
+          3844777
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "eqno_negative_displaywidth",
+    "source": "\\nopagenumbers\\parindent0pt \\noindent Ag$$\\displaywidth=-5pt x\\eqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          0,
+          2228224
+        ],
+        [
+          40,
+          -1165087,
+          3014656
+        ],
+        [
+          49,
+          -910224,
+          3014656
+        ],
+        [
+          41,
+          -582543,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          120,
+          0,
+          2228224
+        ],
+        [
+          40,
+          -1165087,
+          3014656
+        ],
+        [
+          49,
+          -910224,
+          3014656
+        ],
+        [
+          41,
+          -582543,
+          3014656
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_empty",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_negative_width",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\kern-10pt x\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          2106482,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          2106482,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_infinite_negative",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hfil}\\hskip0pt minus-1fil\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          1165087,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          1165087,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_nested_shrink",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hskip0pt minus40pt}\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_leading_glue",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hskip0pt minus40pt\\hbox to70pt{x\\hfil}\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          655360,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          655360,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_two_orders",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hfil}\\hskip0pt minus40pt\\hskip0pt minus1fill\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          1165087,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          2228224
+        ],
+        [
+          49,
+          254863,
+          2228224
+        ],
+        [
+          41,
+          582544,
+          2228224
+        ],
+        [
+          120,
+          1165087,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_insufficient",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{x\\hfil}\\hskip0pt minus5pt\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          120,
+          327680,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_deep",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize80pt\\noindent Ag$$\\hbox to70pt{g\\hfil}\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          103,
+          327680,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          103,
+          327680,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_lineskip",
+    "source": "\\nopagenumbers\\parindent0pt \\hsize40pt\\baselineskip2pt\\lineskip3pt\\lineskiplimit5pt\\noindent Ag$$abcdefgh\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1470919
+        ],
+        [
+          49,
+          254863,
+          1470919
+        ],
+        [
+          41,
+          582544,
+          1470919
+        ],
+        [
+          97,
+          0,
+          2286478
+        ],
+        [
+          98,
+          346416,
+          2286478
+        ],
+        [
+          99,
+          627674,
+          2286478
+        ],
+        [
+          100,
+          911285,
+          2286478
+        ],
+        [
+          101,
+          1252391,
+          2286478
+        ],
+        [
+          102,
+          1557544,
+          2286478
+        ],
+        [
+          103,
+          1948942,
+          2286478
+        ],
+        [
+          104,
+          2285041,
+          2286478
+        ],
+        [
+          81,
+          0,
+          3844777
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1470919
+        ],
+        [
+          49,
+          254863,
+          1470919
+        ],
+        [
+          41,
+          582544,
+          1470919
+        ],
+        [
+          97,
+          0,
+          2286478
+        ],
+        [
+          98,
+          346416,
+          2286478
+        ],
+        [
+          99,
+          627674,
+          2286478
+        ],
+        [
+          100,
+          911285,
+          2286478
+        ],
+        [
+          101,
+          1252391,
+          2286478
+        ],
+        [
+          102,
+          1557544,
+          2286478
+        ],
+        [
+          103,
+          1948942,
+          2286478
+        ],
+        [
+          104,
+          2285041,
+          2286478
+        ],
+        [
+          81,
+          0,
+          3844777
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  },
+  {
+    "name": "leqno_negative_displaywidth",
+    "source": "\\nopagenumbers\\parindent0pt \\noindent Ag$$\\displaywidth=-5pt x\\leqno(1)$$ Q\\par\n\\bye\n",
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          120,
+          0,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "actual": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          103,
+          491521,
+          655360
+        ],
+        [
+          40,
+          0,
+          1441792
+        ],
+        [
+          49,
+          254863,
+          1441792
+        ],
+        [
+          41,
+          582544,
+          1441792
+        ],
+        [
+          120,
+          0,
+          2228224
+        ],
+        [
+          81,
+          0,
+          3801088
+        ]
+      ]
+    ],
+    "messages": [],
+    "actual_messages": [
+      "Preloading the plain format: codes,",
+      "registers,",
+      "parameters,",
+      "fonts,",
+      "more fonts,",
+      "macros,",
+      "math definitions,",
+      "output routines,",
+      "hyphenation"
+    ],
+    "error": null,
+    "exact": true
+  }
+]

@@ -1,0 +1,6545 @@
+{
+  "reference": "MiKTeX TeX 24.4; 2026-10-15; original architecture HEAD 3b6c8946; developer rerun recorded separately",
+  "rows": [
+    {
+      "name": "review_protected_letter",
+      "body": "\\catcode`?=13\\let?=A\\noindent\\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_protected_count",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent\\noexpand?1=7\\message{[\\the\\count1]}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1.7]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_protected_char",
+      "body": "\\catcode`?=13\\let?=\\char\\noindent\\noexpand?65x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_protected_letter_math",
+      "body": "\\catcode`?=13\\let?=A\\noindent$\\noexpand?$x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_protected_macro",
+      "body": "\\catcode`?=13\\def?{A}\\noindent\\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_protected_owner",
+      "body": "\\catcode`?=13\\chardef\\a=65\\let?=\\a\\noindent\\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_prior_conditional",
+      "body": "\\catcode`?=13\\catcode`!=13\\chardef\\a=65\\chardef\\b=66\\let?=\\a\\let!=\\b\\noindent\\accent19\\ifx?! A\\else B\\fi",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            68267,
+            489700
+          ],
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            68267,
+            489700
+          ],
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "review_protected_accent_base",
+      "body": "\\catcode`?=13\\let?=A\\noindent\\accent19\\noexpand?",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            19,
+            81920,
+            489700
+          ],
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "letter_paragraph",
+      "body": "\\catcode`?=13\\let?=A\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "letter_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=A\\noindent Ax",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "letter_hbox",
+      "body": "\\catcode`?=13\\let?=A\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "letter_hbox_direct",
+      "body": "\\catcode`?=13\\let?=A\\noindent\\hbox{Ax}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "letter_math",
+      "body": "\\catcode`?=13\\let?=A\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "letter_math_direct",
+      "body": "\\catcode`?=13\\let?=A\\noindent$Ax$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "letter_if",
+      "body": "\\catcode`?=13\\let?=A\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "letter_ifcat",
+      "body": "\\catcode`?=13\\let?=A\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "other_paragraph",
+      "body": "\\catcode`?=13\\let?=1\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "other_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=1\\noindent 1x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "other_hbox",
+      "body": "\\catcode`?=13\\let?=1\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "other_hbox_direct",
+      "body": "\\catcode`?=13\\let?=1\\noindent\\hbox{1x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "other_math",
+      "body": "\\catcode`?=13\\let?=1\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "other_math_direct",
+      "body": "\\catcode`?=13\\let?=1\\noindent$1x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            49,
+            0,
+            655360
+          ],
+          [
+            120,
+            327681,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "other_if",
+      "body": "\\catcode`?=13\\let?=1\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "other_ifcat",
+      "body": "\\catcode`?=13\\let?=1\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "space_paragraph",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "space_paragraph_direct",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\noindent \\ x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "space_hbox",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "space_hbox_direct",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\noindent\\hbox{\\ x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "space_math",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "space_math_direct",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\noindent$\\ x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            218453,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "space_if",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "space_ifcat",
+      "body": "\\catcode`?=13\\def\\:{\\let?= } \\: \\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "begin_group_paragraph",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\noindent \\noexpand?A}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "begin_group_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\noindent \\bgroup A}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "begin_group_hbox",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\noindent\\hbox{\\noexpand?A}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "begin_group_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\noindent\\hbox{\\bgroup A}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "begin_group_math",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\noindent$\\noexpand?A}x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "begin_group_math_direct",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\noindent$\\bgroup A}x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "begin_group_if",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "begin_group_ifcat",
+      "body": "\\catcode`?=13\\let?=\\bgroup\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "end_group_paragraph",
+      "body": "\\catcode`?=13\\let?=\\egroup\\noindent {A\\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "end_group_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\egroup\\noindent {A\\egroup x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "end_group_hbox",
+      "body": "\\catcode`?=13\\let?=\\egroup\\noindent\\hbox{{A\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "end_group_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\egroup\\noindent\\hbox{{A\\egroup x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "end_group_math",
+      "body": "\\catcode`?=13\\let?=\\egroup\\noindent${A\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "end_group_math_direct",
+      "body": "\\catcode`?=13\\let?=\\egroup\\noindent${A\\egroup x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "end_group_if",
+      "body": "\\catcode`?=13\\let?=\\egroup\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "end_group_ifcat",
+      "body": "\\catcode`?=13\\let?=\\egroup\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "char_primitive_paragraph",
+      "body": "\\catcode`?=13\\let?=\\char\\noindent \\noexpand?65x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "char_primitive_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\char\\noindent \\char 65x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "char_primitive_hbox",
+      "body": "\\catcode`?=13\\let?=\\char\\noindent\\hbox{\\noexpand?65x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "char_primitive_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\char\\noindent\\hbox{\\char 65x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "char_primitive_math",
+      "body": "\\catcode`?=13\\let?=\\char\\noindent$\\noexpand?65x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "char_primitive_math_direct",
+      "body": "\\catcode`?=13\\let?=\\char\\noindent$\\char 65x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "char_primitive_if",
+      "body": "\\catcode`?=13\\let?=\\char\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "char_primitive_ifcat",
+      "body": "\\catcode`?=13\\let?=\\char\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_primitive_paragraph",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent \\noexpand?1=7\\message{[\\the\\count1]}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1.7]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_primitive_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent \\count 1=7\\message{[\\the\\count1]}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1.7]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_primitive_hbox",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent\\hbox{\\noexpand?1=7\\message{[\\the\\count1]}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "count_primitive_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent\\hbox{\\count 1=7\\message{[\\the\\count1]}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_primitive_math",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent$\\noexpand?1=7\\message{[\\the\\count1]}x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_primitive_math_direct",
+      "body": "\\catcode`?=13\\let?=\\count\\noindent$\\count 1=7\\message{[\\the\\count1]}x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_primitive_if",
+      "body": "\\catcode`?=13\\let?=\\count\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "count_primitive_ifcat",
+      "body": "\\catcode`?=13\\let?=\\count\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "kern_primitive_paragraph",
+      "body": "\\catcode`?=13\\let?=\\kern\\noindent \\noexpand?1pt Ax",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "kern_primitive_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\kern\\noindent \\kern 1pt Ax",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "kern_primitive_hbox",
+      "body": "\\catcode`?=13\\let?=\\kern\\noindent\\hbox{\\noexpand?1pt Ax}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "kern_primitive_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\kern\\noindent\\hbox{\\kern 1pt Ax}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "kern_primitive_math",
+      "body": "\\catcode`?=13\\let?=\\kern\\noindent$\\noexpand?1pt Ax$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "kern_primitive_math_direct",
+      "body": "\\catcode`?=13\\let?=\\kern\\noindent$\\kern 1pt Ax$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            65536,
+            655360
+          ],
+          [
+            120,
+            557057,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "kern_primitive_if",
+      "body": "\\catcode`?=13\\let?=\\kern\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "kern_primitive_ifcat",
+      "body": "\\catcode`?=13\\let?=\\kern\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "relax_primitive_paragraph",
+      "body": "\\catcode`?=13\\let?=\\relax\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "relax_primitive_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\relax\\noindent \\relax x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "relax_primitive_hbox",
+      "body": "\\catcode`?=13\\let?=\\relax\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "relax_primitive_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\relax\\noindent\\hbox{\\relax x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "relax_primitive_math",
+      "body": "\\catcode`?=13\\let?=\\relax\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "relax_primitive_math_direct",
+      "body": "\\catcode`?=13\\let?=\\relax\\noindent$\\relax x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "relax_primitive_if",
+      "body": "\\catcode`?=13\\let?=\\relax\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "relax_primitive_ifcat",
+      "body": "\\catcode`?=13\\let?=\\relax\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_macro_paragraph",
+      "body": "\\catcode`?=13\\def?{A}\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_macro_paragraph_direct",
+      "body": "\\catcode`?=13\\def?{A}\\noindent \\relax x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_macro_hbox",
+      "body": "\\catcode`?=13\\def?{A}\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "expandable_macro_hbox_direct",
+      "body": "\\catcode`?=13\\def?{A}\\noindent\\hbox{\\relax x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_macro_math",
+      "body": "\\catcode`?=13\\def?{A}\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_macro_math_direct",
+      "body": "\\catcode`?=13\\def?{A}\\noindent$\\relax x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_macro_if",
+      "body": "\\catcode`?=13\\def?{A}\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_macro_ifcat",
+      "body": "\\catcode`?=13\\def?{A}\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_number_paragraph",
+      "body": "\\catcode`?=13\\let?=\\number\\noindent \\noexpand?65x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_number_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\number\\noindent \\relax 65x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_number_hbox",
+      "body": "\\catcode`?=13\\let?=\\number\\noindent\\hbox{\\noexpand?65x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "expandable_number_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\number\\noindent\\hbox{\\relax 65x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_number_math",
+      "body": "\\catcode`?=13\\let?=\\number\\noindent$\\noexpand?65x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_number_math_direct",
+      "body": "\\catcode`?=13\\let?=\\number\\noindent$\\relax 65x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            54,
+            0,
+            655360
+          ],
+          [
+            53,
+            327681,
+            655360
+          ],
+          [
+            120,
+            655362,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_number_if",
+      "body": "\\catcode`?=13\\let?=\\number\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_number_ifcat",
+      "body": "\\catcode`?=13\\let?=\\number\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_conditional_paragraph",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_conditional_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\noindent \\relax x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_conditional_hbox",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "expandable_conditional_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\noindent\\hbox{\\relax x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_conditional_math",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_conditional_math_direct",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\noindent$\\relax x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_conditional_if",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "expandable_conditional_ifcat",
+      "body": "\\catcode`?=13\\let?=\\iftrue\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_cs_paragraph",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_cs_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\noindent \\relax x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_cs_hbox",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "undefined_cs_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\noindent\\hbox{\\relax x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_cs_math",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_cs_math_direct",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\noindent$\\relax x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_cs_if",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_cs_ifcat",
+      "body": "\\catcode`?=13\\let?=\\undefinedQ\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_active_paragraph",
+      "body": "\\catcode`?=13\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_active_paragraph_direct",
+      "body": "\\catcode`?=13\\noindent \\relax x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_active_hbox",
+      "body": "\\catcode`?=13\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "undefined_active_hbox_direct",
+      "body": "\\catcode`?=13\\noindent\\hbox{\\relax x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_active_math",
+      "body": "\\catcode`?=13\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_active_math_direct",
+      "body": "\\catcode`?=13\\noindent$\\relax x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_active_if",
+      "body": "\\catcode`?=13\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "undefined_active_ifcat",
+      "body": "\\catcode`?=13\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[different]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[different]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_chardef_paragraph",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\noindent \\noexpand?x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_chardef_paragraph_direct",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\noindent \\c x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_chardef_hbox",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\noindent\\hbox{\\noexpand?x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "owner_chardef_hbox_direct",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\noindent\\hbox{\\c x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_chardef_math",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\noindent$\\noexpand?x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_chardef_math_direct",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\noindent$\\c x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_chardef_if",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_chardef_ifcat",
+      "body": "\\catcode`?=13\\chardef\\c=65\\let?=\\c\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_register_paragraph",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\noindent \\noexpand?=7\\message{[\\the\\count1]}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1.7]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_register_paragraph_direct",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\noindent \\c =7\\message{[\\the\\count1]}x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1.7]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_register_hbox",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\noindent\\hbox{\\noexpand?=7\\message{[\\the\\count1]}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "owner_register_hbox_direct",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\noindent\\hbox{\\c =7\\message{[\\the\\count1]}x}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_register_math",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\noindent$\\noexpand?=7\\message{[\\the\\count1]}x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_register_math_direct",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\noindent$\\c =7\\message{[\\the\\count1]}x$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[7]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[7]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_register_if",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_register_ifcat",
+      "body": "\\catcode`?=13\\countdef\\c=1\\let?=\\c\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_font_paragraph",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent \\noexpand?Ax",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_font_paragraph_direct",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent \\tenit Ax",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_font_hbox",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent\\hbox{\\noexpand?Ax}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: CharToken(char='?', catcode=<Catcode.ACTIVE: 13>)",
+      "matches": false,
+      "messages_match": false,
+      "fully_matches": false
+    },
+    {
+      "name": "owner_font_hbox_direct",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent\\hbox{\\tenit Ax}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            487148,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_font_math",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent$\\noexpand?Ax$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_font_math_direct",
+      "body": "\\catcode`?=13\\let?=\\tenit\\noindent$\\tenit Ax$",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            120,
+            491521,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_font_if",
+      "body": "\\catcode`?=13\\let?=\\tenit\\if\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    },
+    {
+      "name": "owner_font_ifcat",
+      "body": "\\catcode`?=13\\let?=\\tenit\\ifcat\\noexpand?\\relax\\message{[equal]}\\else\\message{[different]}\\fi\\noindent x",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[equal]",
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_pages": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "ours_messages": [
+        "[equal]"
+      ],
+      "ours_error": null,
+      "matches": true,
+      "messages_match": true,
+      "fully_matches": true
+    }
+  ]
+}

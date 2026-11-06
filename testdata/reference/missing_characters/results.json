@@ -1,0 +1,334 @@
+{
+  "scripted_ord": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d30707420245c6d617468636861723232365f615e62245c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          98,
+          0,
+          417535
+        ],
+        [
+          97,
+          0,
+          817376
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "scripted_op_inline": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d30707420245c6d6174686368617222313045325f615e62245c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          98,
+          0,
+          417535
+        ],
+        [
+          97,
+          0,
+          817376
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "scripted_op_display": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d3070742024245c6d6174686368617222313045325f615e6224245c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          98,
+          15277698,
+          1146881
+        ],
+        [
+          97,
+          15250796,
+          1835008
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "missing_rel": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d3070742024615c6d6174686368617222333045322062245c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          98,
+          710496,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "char_alias": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c636861726465665c6d697373696e673d32323620415c636861723232365c6d697373696e6720425c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!",
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "stored_repeated": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c736574626f78305c68626f787b415c6368617232323620427d5c636f7079305c636f7079305c626f78305c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          65,
+          0,
+          1441792
+        ],
+        [
+          66,
+          491521,
+          1441792
+        ],
+        [
+          65,
+          0,
+          2228224
+        ],
+        [
+          66,
+          491521,
+          2228224
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "nullfont_alias": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c6c65745c6e6f7468696e673d5c6e756c6c666f6e74207b5c6e6f7468696e67204142437d585c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          88,
+          0,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no A in font nullfont!",
+      "Missing character: There is no B in font nullfont!",
+      "Missing character: There is no C in font nullfont!"
+    ],
+    "messages": []
+  },
+  "tiny_size": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c666f6e745c7a65726f3d636d72313020617420302e30303030327074207b5c7a65726f204142437d585c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          88,
+          1429052,
+          655360
+        ]
+      ]
+    ],
+    "missing": [],
+    "messages": []
+  },
+  "live_gate": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c63686172323236207b5c74726163696e676c6f737463686172733d305c636861723232367d205c6368617232323620585c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          88,
+          218453,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!",
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "eager_sfcode": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c7366636f64653232363d3939395c68626f787b412e5c636861723232365c6d6573736167657b5b73663d5c7468655c7370616365666163746f725d7d20427d5c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          46,
+          491521,
+          655360
+        ],
+        [
+          66,
+          892019,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": [
+      "[sf=999]"
+    ]
+  },
+  "discretionary": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d30707420415c64697363726574696f6e6172797b505c636861723232367d7b515c636861723232367d7b4e5c636861723232367d425c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          78,
+          491521,
+          655360
+        ],
+        [
+          66,
+          983042,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!",
+      "Missing character: There is no \u00e2 in font cmr10!",
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "alignment": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c68616c69676e7b235c6866696c5c637220415c6368617232323620425c63727d5c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  },
+  "nested_math_hbox": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d3070742024415c68626f787b425c6368617232323620437d44245c627965",
+    "exit": 0,
+    "glyphs": [
+      [
+        [
+          65,
+          0,
+          655360
+        ],
+        [
+          66,
+          491521,
+          655360
+        ],
+        [
+          67,
+          955736,
+          655360
+        ],
+        [
+          68,
+          1429052,
+          655360
+        ]
+      ]
+    ],
+    "missing": [
+      "Missing character: There is no \u00e2 in font cmr10!"
+    ],
+    "messages": []
+  }
+}

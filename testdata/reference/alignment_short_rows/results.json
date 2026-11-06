@@ -1,0 +1,1877 @@
+{
+ "bm_display": {
+  "source": "\\nopagenumbers $$\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}$$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      18,
+      14535459,
+      1664613
+     ],
+     [
+      120,
+      15127109,
+      1277959
+     ],
+     [
+      121,
+      16157026,
+      1277959
+     ],
+     [
+      65,
+      13783389,
+      2195463
+     ],
+     [
+      49,
+      15150547,
+      2195463
+     ],
+     [
+      48,
+      16165598,
+      2195463
+     ],
+     [
+      66,
+      13783389,
+      2981895
+     ],
+     [
+      48,
+      15150547,
+      2981895
+     ],
+     [
+      49,
+      16165598,
+      2981895
+     ],
+     [
+      19,
+      16611074,
+      1664613
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_inline": {
+  "source": "\\nopagenumbers \\noindent $\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      18,
+      843089,
+      943717
+     ],
+     [
+      120,
+      1434739,
+      557063
+     ],
+     [
+      121,
+      2464656,
+      557063
+     ],
+     [
+      65,
+      91019,
+      1474567
+     ],
+     [
+      49,
+      1458177,
+      1474567
+     ],
+     [
+      48,
+      2473228,
+      1474567
+     ],
+     [
+      66,
+      91019,
+      2260999
+     ],
+     [
+      48,
+      1458177,
+      2260999
+     ],
+     [
+      49,
+      2473228,
+      2260999
+     ],
+     [
+      19,
+      2918704,
+      943717
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_paragraph": {
+  "source": "\\nopagenumbers Text before $\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}$ after.\\par\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      84,
+      1310720,
+      1867783
+     ],
+     [
+      101,
+      1729422,
+      1867783
+     ],
+     [
+      120,
+      2020693,
+      1867783
+     ],
+     [
+      116,
+      2366579,
+      1867783
+     ],
+     [
+      98,
+      2839895,
+      1867783
+     ],
+     [
+      101,
+      3222190,
+      1867783
+     ],
+     [
+      102,
+      3513461,
+      1867783
+     ],
+     [
+      111,
+      3713711,
+      1867783
+     ],
+     [
+      114,
+      4041392,
+      1867783
+     ],
+     [
+      101,
+      4298075,
+      1867783
+     ],
+     [
+      18,
+      5650888,
+      943717
+     ],
+     [
+      120,
+      6242538,
+      557063
+     ],
+     [
+      121,
+      7272455,
+      557063
+     ],
+     [
+      65,
+      4898818,
+      1474567
+     ],
+     [
+      49,
+      6265976,
+      1474567
+     ],
+     [
+      48,
+      7281027,
+      1474567
+     ],
+     [
+      66,
+      4898818,
+      2260999
+     ],
+     [
+      48,
+      6265976,
+      2260999
+     ],
+     [
+      49,
+      7281027,
+      2260999
+     ],
+     [
+      19,
+      7726503,
+      943717
+     ],
+     [
+      97,
+      8427376,
+      1867783
+     ],
+     [
+      102,
+      8755057,
+      1867783
+     ],
+     [
+      116,
+      8955307,
+      1867783
+     ],
+     [
+      101,
+      9210170,
+      1867783
+     ],
+     [
+      114,
+      9501441,
+      1867783
+     ],
+     [
+      46,
+      9758124,
+      1867783
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_hbox": {
+  "source": "\\nopagenumbers \\noindent\\hbox{$\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}$}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      18,
+      843089,
+      943717
+     ],
+     [
+      120,
+      1434739,
+      557063
+     ],
+     [
+      121,
+      2464656,
+      557063
+     ],
+     [
+      65,
+      91019,
+      1474567
+     ],
+     [
+      49,
+      1458177,
+      1474567
+     ],
+     [
+      48,
+      2473228,
+      1474567
+     ],
+     [
+      66,
+      91019,
+      2260999
+     ],
+     [
+      48,
+      1458177,
+      2260999
+     ],
+     [
+      49,
+      2473228,
+      2260999
+     ],
+     [
+      19,
+      2918704,
+      943717
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_vbox": {
+  "source": "\\nopagenumbers \\vbox{\\hbox{$\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}$}}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      18,
+      843089,
+      943717
+     ],
+     [
+      120,
+      1434739,
+      557063
+     ],
+     [
+      121,
+      2464656,
+      557063
+     ],
+     [
+      65,
+      91019,
+      1474567
+     ],
+     [
+      49,
+      1458177,
+      1474567
+     ],
+     [
+      48,
+      2473228,
+      1474567
+     ],
+     [
+      66,
+      91019,
+      2260999
+     ],
+     [
+      48,
+      1458177,
+      2260999
+     ],
+     [
+      49,
+      2473228,
+      2260999
+     ],
+     [
+      19,
+      2918704,
+      943717
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_edef": {
+  "source": "\\nopagenumbers \\def\\m{\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}}\\edef\\n{\\noexpand\\m}$$\\n$$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      18,
+      14535459,
+      1664613
+     ],
+     [
+      120,
+      15127109,
+      1277959
+     ],
+     [
+      121,
+      16157026,
+      1277959
+     ],
+     [
+      65,
+      13783389,
+      2195463
+     ],
+     [
+      49,
+      15150547,
+      2195463
+     ],
+     [
+      48,
+      16165598,
+      2195463
+     ],
+     [
+      66,
+      13783389,
+      2981895
+     ],
+     [
+      48,
+      15150547,
+      2981895
+     ],
+     [
+      49,
+      16165598,
+      2981895
+     ],
+     [
+      19,
+      16611074,
+      1664613
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_in_formula": {
+  "source": "\\nopagenumbers $$M=\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}+1$$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      77,
+      12337510,
+      2588679
+     ],
+     [
+      61,
+      13226792,
+      2588679
+     ],
+     [
+      18,
+      14761647,
+      1664613
+     ],
+     [
+      120,
+      15353297,
+      1277959
+     ],
+     [
+      121,
+      16383214,
+      1277959
+     ],
+     [
+      65,
+      14009577,
+      2195463
+     ],
+     [
+      49,
+      15376735,
+      2195463
+     ],
+     [
+      48,
+      16391786,
+      2195463
+     ],
+     [
+      66,
+      14009577,
+      2981895
+     ],
+     [
+      48,
+      15376735,
+      2981895
+     ],
+     [
+      49,
+      16391786,
+      2981895
+     ],
+     [
+      19,
+      16837262,
+      1664613
+     ],
+     [
+      43,
+      17465314,
+      2588679
+     ],
+     [
+      49,
+      18120672,
+      2588679
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_in_eqalign": {
+  "source": "\\nopagenumbers $$\\eqalign{M&=\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}\\cr N&=1\\cr}$$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      77,
+      12865438,
+      2785289
+     ],
+     [
+      61,
+      13754720,
+      2785289
+     ],
+     [
+      32,
+      15289575,
+      1664613
+     ],
+     [
+      120,
+      15917633,
+      1277961
+     ],
+     [
+      121,
+      16947550,
+      1277961
+     ],
+     [
+      65,
+      14573913,
+      2392073
+     ],
+     [
+      49,
+      15941071,
+      2392073
+     ],
+     [
+      48,
+      16956122,
+      2392073
+     ],
+     [
+      66,
+      14573913,
+      3375113
+     ],
+     [
+      48,
+      15941071,
+      3375113
+     ],
+     [
+      49,
+      16956122,
+      3375113
+     ],
+     [
+      33,
+      17401598,
+      1664613
+     ],
+     [
+      78,
+      12974666,
+      4423699
+     ],
+     [
+      61,
+      13754720,
+      4423699
+     ],
+     [
+      49,
+      14446486,
+      4423699
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_in_halign": {
+  "source": "\\nopagenumbers \\halign{#\\cr $\\bordermatrix{ &x&y\\cr A&1&0\\cr B&0&1\\cr}$\\cr}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      18,
+      843089,
+      943717
+     ],
+     [
+      120,
+      1434739,
+      557063
+     ],
+     [
+      121,
+      2464656,
+      557063
+     ],
+     [
+      65,
+      91019,
+      1474567
+     ],
+     [
+      49,
+      1458177,
+      1474567
+     ],
+     [
+      48,
+      2473228,
+      1474567
+     ],
+     [
+      66,
+      91019,
+      2260999
+     ],
+     [
+      48,
+      1458177,
+      2260999
+     ],
+     [
+      49,
+      2473228,
+      2260999
+     ],
+     [
+      19,
+      2918704,
+      943717
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_one_row": {
+  "source": "\\nopagenumbers $$\\bordermatrix{&1\\cr a&x\\cr}$$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      0,
+      15125816,
+      1664613
+     ],
+     [
+      49,
+      15558859,
+      1277955
+     ],
+     [
+      97,
+      14375262,
+      2195459
+     ],
+     [
+      120,
+      15535421,
+      2195459
+     ],
+     [
+      1,
+      16019201,
+      1664613
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_tall": {
+  "source": "\\nopagenumbers $$\\bordermatrix{&c_1&c_2&c_3\\cr r_1&a&b&c\\cr r_2&d&e&f\\cr r_3&g&h&i\\cr r_4&j&k&l\\cr}$$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      48,
+      13639875,
+      1664613
+     ],
+     [
+      66,
+      13639875,
+      2818059
+     ],
+     [
+      66,
+      13639875,
+      3211279
+     ],
+     [
+      64,
+      13639875,
+      3630712
+     ],
+     [
+      99,
+      14322546,
+      1277967
+     ],
+     [
+      49,
+      14606157,
+      1376270
+     ],
+     [
+      99,
+      15555521,
+      1277967
+     ],
+     [
+      50,
+      15839132,
+      1376270
+     ],
+     [
+      99,
+      16788496,
+      1277967
+     ],
+     [
+      51,
+      17072107,
+      1376270
+     ],
+     [
+      114,
+      12919129,
+      2195471
+     ],
+     [
+      49,
+      13214800,
+      2293774
+     ],
+     [
+      97,
+      14438145,
+      2195471
+     ],
+     [
+      98,
+      15703699,
+      2195471
+     ],
+     [
+      99,
+      16935498,
+      2195471
+     ],
+     [
+      114,
+      12919129,
+      2981903
+     ],
+     [
+      50,
+      13214800,
+      3080206
+     ],
+     [
+      100,
+      14440800,
+      2981903
+     ],
+     [
+      101,
+      15691752,
+      2981903
+     ],
+     [
+      102,
+      16881604,
+      2981903
+     ],
+     [
+      114,
+      12919129,
+      3768335
+     ],
+     [
+      51,
+      13214800,
+      3866638
+     ],
+     [
+      103,
+      14443304,
+      3768335
+     ],
+     [
+      104,
+      15655533,
+      3768335
+     ],
+     [
+      105,
+      16964413,
+      3768335
+     ],
+     [
+      114,
+      12919129,
+      4554767
+     ],
+     [
+      52,
+      13214800,
+      4653070
+     ],
+     [
+      106,
+      14457655,
+      4554767
+     ],
+     [
+      107,
+      15663421,
+      4554767
+     ],
+     [
+      108,
+      16973082,
+      4554767
+     ],
+     [
+      49,
+      17475334,
+      1664613
+     ],
+     [
+      67,
+      17475334,
+      2818059
+     ],
+     [
+      67,
+      17475334,
+      3211279
+     ],
+     [
+      65,
+      17475334,
+      3630712
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "bm_wide_labels": {
+  "source": "\\nopagenumbers $$\\bordermatrix{&x\\cr \\hbox{long label}&1\\cr}$$\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      0,
+      16345251,
+      1664613
+     ],
+     [
+      120,
+      16754856,
+      1277955
+     ],
+     [
+      108,
+      13155826,
+      2195459
+     ],
+     [
+      111,
+      13337871,
+      2195459
+     ],
+     [
+      110,
+      13665552,
+      2195459
+     ],
+     [
+      103,
+      14029642,
+      2195459
+     ],
+     [
+      108,
+      14575776,
+      2195459
+     ],
+     [
+      97,
+      14757821,
+      2195459
+     ],
+     [
+      98,
+      15085502,
+      2195459
+     ],
+     [
+      101,
+      15467797,
+      2195459
+     ],
+     [
+      108,
+      15759068,
+      2195459
+     ],
+     [
+      49,
+      16778294,
+      2195459
+     ],
+     [
+      1,
+      17238636,
+      1664613
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_plain": {
+  "source": "\\nopagenumbers \\halign{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox0\\vbox{\\halign{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt]",
+    "[skipsp=0]",
+    "[cell=364090,455111,0]",
+    "[row=1019451,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      98,
+      364090,
+      655360
+     ],
+     [
+      99,
+      728180,
+      655360
+     ],
+     [
+      100,
+      0,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_two_of_three": {
+  "source": "\\nopagenumbers \\halign{#&#&#\\cr aa&bb&cc\\cr d&e\\cr}\\setbox0\\vbox{\\halign{#&#&#\\cr aa&bb&cc\\cr d&e\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt]",
+    "[skipsp=0]",
+    "[cell=728180,455111,0]",
+    "[row=1966084,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      97,
+      327681,
+      655360
+     ],
+     [
+      98,
+      655362,
+      655360
+     ],
+     [
+      98,
+      1019452,
+      655360
+     ],
+     [
+      99,
+      1383542,
+      655360
+     ],
+     [
+      99,
+      1674813,
+      655360
+     ],
+     [
+      100,
+      0,
+      1441792
+     ],
+     [
+      101,
+      655362,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_tabskip": {
+  "source": "\\nopagenumbers \\tabskip=3pt \\halign{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox0\\vbox{\\halign{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=3.0pt]",
+    "[skipsp=196608]",
+    "[cell=364090,455111,0]",
+    "[row=1805883,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      196608,
+      655360
+     ],
+     [
+      98,
+      757306,
+      655360
+     ],
+     [
+      99,
+      1318004,
+      655360
+     ],
+     [
+      100,
+      196608,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_tabskip_mixed": {
+  "source": "\\nopagenumbers \\tabskip=1pt \\halign{#\\tabskip=2pt&#\\tabskip=4pt&#\\cr a&b&c\\cr d\\cr}\\setbox0\\vbox{\\halign{#\\tabskip=2pt&#\\tabskip=4pt&#\\cr a&b&c\\cr d\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=2.0pt]",
+    "[skipsp=131072]",
+    "[cell=364090,455111,0]",
+    "[row=1740347,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      65536,
+      655360
+     ],
+     [
+      98,
+      560698,
+      655360
+     ],
+     [
+      99,
+      1186932,
+      655360
+     ],
+     [
+      100,
+      65536,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_to": {
+  "source": "\\nopagenumbers \\tabskip=0pt plus 1fil \\halign to 100pt{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox0\\vbox{\\halign to 100pt{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt plus 1.0fil]",
+    "[skipsp=0]",
+    "[cell=364090,455111,0]",
+    "[row=6553600,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      1383537,
+      655360
+     ],
+     [
+      98,
+      3131165,
+      655360
+     ],
+     [
+      99,
+      4878792,
+      655360
+     ],
+     [
+      100,
+      1383537,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_spread": {
+  "source": "\\nopagenumbers \\tabskip=0pt plus 1fil \\halign spread 30pt{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox0\\vbox{\\halign spread 30pt{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt plus 1.0fil]",
+    "[skipsp=0]",
+    "[cell=364090,455111,0]",
+    "[row=2985531,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      491520,
+      655360
+     ],
+     [
+      98,
+      1347130,
+      655360
+     ],
+     [
+      99,
+      2202740,
+      655360
+     ],
+     [
+      100,
+      491520,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_shrink": {
+  "source": "\\nopagenumbers \\tabskip=10pt minus 10pt \\halign to 30pt{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox0\\vbox{\\halign to 30pt{#&#&#\\cr a&b&c\\cr d\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=10.0pt minus 10.0pt]",
+    "[skipsp=655360]",
+    "[cell=364090,455111,0]",
+    "[row=1966080,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      236657,
+      655360
+     ],
+     [
+      98,
+      837404,
+      655360
+     ],
+     [
+      99,
+      1438152,
+      655360
+     ],
+     [
+      100,
+      236657,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_negative_span": {
+  "source": "\\nopagenumbers \\halign{#&#&#\\cr aaaaaaaa\\span\\omit\\span\\omit\\cr a\\cr}\\setbox0\\vbox{\\halign{#&#&#\\cr aaaaaaaa\\span\\omit\\span\\omit\\cr a\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt]",
+    "[skipsp=0]",
+    "[cell=327681,282168,0]",
+    "[row=2621448,282168,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      97,
+      327681,
+      655360
+     ],
+     [
+      97,
+      655362,
+      655360
+     ],
+     [
+      97,
+      983043,
+      655360
+     ],
+     [
+      97,
+      1310724,
+      655360
+     ],
+     [
+      97,
+      1638405,
+      655360
+     ],
+     [
+      97,
+      1966086,
+      655360
+     ],
+     [
+      97,
+      2293767,
+      655360
+     ],
+     [
+      97,
+      0,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_empty_cell": {
+  "source": "\\nopagenumbers \\halign{#&#&#\\cr a&b&c\\cr &\\cr}\\setbox0\\vbox{\\halign{#&#&#\\cr a&b&c\\cr &\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt]",
+    "[skipsp=0]",
+    "[cell=364090,0,0]",
+    "[row=983042,0,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      98,
+      327681,
+      655360
+     ],
+     [
+      99,
+      691771,
+      655360
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_periodic": {
+  "source": "\\nopagenumbers \\halign{#&&\\quad#\\cr a&b&c&d\\cr e&f\\cr}\\setbox0\\vbox{\\halign{#&&\\quad#\\cr a&b&c&d\\cr e&f\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt]",
+    "[skipsp=0]",
+    "[cell=1019451,455111,0]",
+    "[row=3313215,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      98,
+      983042,
+      655360
+     ],
+     [
+      99,
+      2002493,
+      655360
+     ],
+     [
+      100,
+      2949125,
+      655360
+     ],
+     [
+      101,
+      0,
+      1441792
+     ],
+     [
+      102,
+      983042,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "row_full": {
+  "source": "\\nopagenumbers \\halign{#&#\\cr a&b\\cr c&d\\cr}\\setbox0\\vbox{\\halign{#&#\\cr a&b\\cr c&d\\cr}\\setbox1\\lastbox\\setbox2\\hbox{\\unhcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[row=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt]",
+    "[skipsp=0]",
+    "[cell=364090,455111,0]",
+    "[row=691771,455111,0]"
+   ],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      98,
+      327681,
+      655360
+     ],
+     [
+      99,
+      0,
+      1441792
+     ],
+     [
+      100,
+      327681,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    []
+   ]
+  },
+  "exact": true
+ },
+ "rule_vrule_cell": {
+  "source": "\\nopagenumbers \\halign{#\\vrule&#\\cr a&gy\\cr}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      103,
+      353895,
+      655360
+     ],
+     [
+      121,
+      681576,
+      655360
+     ]
+    ]
+   ],
+   "rules": [
+    [
+     [
+      0,
+      782791,
+      409599,
+      26214
+     ]
+    ]
+   ]
+  },
+  "exact": true
+ },
+ "rule_vrule_tall_row": {
+  "source": "\\nopagenumbers \\halign{#\\vrule&\\vbox to30pt{}#\\cr a&b\\cr}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      1966080
+     ],
+     [
+      98,
+      353895,
+      1966080
+     ]
+    ]
+   ],
+   "rules": [
+    [
+     [
+      0,
+      1966080,
+      1966080,
+      26214
+     ]
+    ]
+   ]
+  },
+  "exact": true
+ },
+ "rule_vrule_short_row": {
+  "source": "\\nopagenumbers \\halign{#\\vrule&#&#\\cr a&gy&c\\cr d\\vrule\\cr}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      103,
+      416518,
+      655360
+     ],
+     [
+      121,
+      744199,
+      655360
+     ],
+     [
+      99,
+      1090085,
+      655360
+     ],
+     [
+      100,
+      0,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    [
+     [
+      0,
+      782791,
+      409599,
+      26214
+     ],
+     [
+      0,
+      1441792,
+      455111,
+      26214
+     ],
+     [
+      0,
+      1441792,
+      455111,
+      26214
+     ]
+    ]
+   ]
+  },
+  "exact": true
+ },
+ "rule_vrule_span": {
+  "source": "\\nopagenumbers \\halign{#&#&#\\cr a\\vrule\\span b&gy\\cr c&d&e\\cr}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      655360
+     ],
+     [
+      98,
+      327681,
+      655360
+     ],
+     [
+      103,
+      717985,
+      655360
+     ],
+     [
+      121,
+      1045666,
+      655360
+     ],
+     [
+      99,
+      0,
+      1441792
+     ],
+     [
+      100,
+      291271,
+      1441792
+     ],
+     [
+      101,
+      717985,
+      1441792
+     ]
+    ]
+   ],
+   "rules": [
+    [
+     [
+      0,
+      782791,
+      582542,
+      26214
+     ]
+    ]
+   ]
+  },
+  "exact": true
+ },
+ "rule_hrule_valign": {
+  "source": "\\nopagenumbers \\hbox{\\valign{#\\hrule&#\\cr \\hbox{a}&\\hbox{bbbbbb}\\cr}}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      282168
+     ],
+     [
+      98,
+      0,
+      763493
+     ],
+     [
+      98,
+      364090,
+      763493
+     ],
+     [
+      98,
+      728180,
+      763493
+     ],
+     [
+      98,
+      1092270,
+      763493
+     ],
+     [
+      98,
+      1456360,
+      763493
+     ],
+     [
+      98,
+      1820450,
+      763493
+     ]
+    ]
+   ],
+   "rules": [
+    [
+     [
+      0,
+      308382,
+      26214,
+      2184540
+     ]
+    ]
+   ]
+  },
+  "exact": true
+ },
+ "rule_hrule_valign_both": {
+  "source": "\\nopagenumbers \\hbox{\\valign{#\\hrule&#\\hrule\\cr \\hbox{a}&\\hbox{bbbbbb}\\cr}}\\bye",
+  "ref": {
+   "messages": [],
+   "errors": [],
+   "glyphs": [
+    [
+     [
+      97,
+      0,
+      282168
+     ],
+     [
+      98,
+      0,
+      763493
+     ],
+     [
+      98,
+      364090,
+      763493
+     ],
+     [
+      98,
+      728180,
+      763493
+     ],
+     [
+      98,
+      1092270,
+      763493
+     ],
+     [
+      98,
+      1456360,
+      763493
+     ],
+     [
+      98,
+      1820450,
+      763493
+     ]
+    ]
+   ],
+   "rules": [
+    [
+     [
+      0,
+      308382,
+      26214,
+      2184540
+     ],
+     [
+      0,
+      789707,
+      26214,
+      2184540
+     ]
+    ]
+   ]
+  },
+  "exact": true
+ },
+ "col_plain": {
+  "source": "\\nopagenumbers \\setbox0\\hbox{\\valign{#&#&#\\cr\\hbox{a}&\\hbox{b}&\\hbox{c}\\cr\\hbox{d}\\cr}\\setbox1\\lastbox\\setbox2\\vbox{\\unvcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[col=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt]",
+    "[skipsp=0]",
+    "[cell=364090,455111,0]",
+    "[col=364090,1192390,0]"
+   ],
+   "errors": []
+  },
+  "exact": false
+ },
+ "col_tabskip": {
+  "source": "\\nopagenumbers \\tabskip=3pt \\setbox0\\hbox{\\valign{#&#&#\\cr\\hbox{a}&\\hbox{b}&\\hbox{c}\\cr\\hbox{d}\\cr}\\setbox1\\lastbox\\setbox2\\vbox{\\unvcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[col=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=3.0pt]",
+    "[skipsp=196608]",
+    "[cell=364090,455111,0]",
+    "[col=364090,1978822,0]"
+   ],
+   "errors": []
+  },
+  "exact": false
+ },
+ "col_tabskip_mixed": {
+  "source": "\\nopagenumbers \\tabskip=1pt \\setbox0\\hbox{\\valign{#\\tabskip=2pt&#\\tabskip=4pt&#\\cr\\hbox{a}&\\hbox{b}&\\hbox{c}\\cr\\hbox{d}\\cr}\\setbox1\\lastbox\\setbox2\\vbox{\\unvcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[col=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=2.0pt]",
+    "[skipsp=131072]",
+    "[cell=364090,455111,0]",
+    "[col=364090,1913286,0]"
+   ],
+   "errors": []
+  },
+  "exact": false
+ },
+ "col_to": {
+  "source": "\\nopagenumbers \\tabskip=0pt plus 1fil \\setbox0\\hbox{\\valign to 100pt{#&#&#\\cr\\hbox{a}&\\hbox{b}&\\hbox{c}\\cr\\hbox{d}\\cr}\\setbox1\\lastbox\\setbox2\\vbox{\\unvcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[col=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt plus 1.0fil]",
+    "[skipsp=0]",
+    "[cell=364090,455111,0]",
+    "[col=364090,6553600,0]"
+   ],
+   "errors": []
+  },
+  "exact": false
+ },
+ "col_spread": {
+  "source": "\\nopagenumbers \\tabskip=0pt plus 1fil \\setbox0\\hbox{\\valign spread 30pt{#&#&#\\cr\\hbox{a}&\\hbox{b}&\\hbox{c}\\cr\\hbox{d}\\cr}\\setbox1\\lastbox\\setbox2\\vbox{\\unvcopy1 \\message{[skip=\\the\\lastskip]}\\dimen0=\\lastskip\\message{[skipsp=\\number\\dimen0]}\\unskip\\setbox3\\lastbox\\message{[cell=\\ifvoid3 void\\else\\number\\wd3,\\number\\ht3,\\number\\dp3\\fi]}}\\message{[col=\\number\\wd1,\\number\\ht1,\\number\\dp1]}}\\bye",
+  "ref": {
+   "messages": [
+    "[skip=0.0pt plus 1.0fil]",
+    "[skipsp=0]",
+    "[cell=364090,455111,0]",
+    "[col=364090,3158470,0]"
+   ],
+   "errors": []
+  },
+  "exact": false
+ }
+}

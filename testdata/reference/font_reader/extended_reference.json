@@ -1,0 +1,584 @@
+{
+  "shadow_font": {
+    "source": "\\let\\definefont=\\font\\definefont\\font=cmr17 \\message{R[\\fontname\\font/\\the\\font]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\font ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\font ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "shadow_textfont": {
+    "source": "\\font\\textfont=cmr17 \\message{R[\\fontname\\textfont/\\the\\textfont]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\textfont ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\textfont ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "shadow_scriptfont": {
+    "source": "\\font\\scriptfont=cmr17 \\message{R[\\fontname\\scriptfont/\\the\\scriptfont]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\scriptfont ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\scriptfont ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "shadow_fontdimen": {
+    "source": "\\font\\fontdimen=cmr17 \\message{R[\\fontname\\fontdimen/\\the\\fontdimen]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\fontdimen ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\fontdimen ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "alias_shadow_font": {
+    "source": "\\let\\currentreader=\\font\\font\\font=cmr17 \\message{R[\\fontname\\currentreader/\\fontname\\font]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "frozen_current_rebound": {
+    "source": "\\let\\currentreader=\\font\\font\\font=cmr17 \\edef\\saved{\\the\\currentreader}\\message{R[\\fontname\\saved]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "punctuation_id": {
+    "source": "\\font\\!=cmr10 \\edef\\saved{\\the\\!}\\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\! /\\!]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\! /\\!]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "empty_id": {
+    "source": "\\expandafter\\font\\csname\\endcsname=cmr10 \\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\FONT /\\FONT]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\FONT /\\FONT]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_alias_accent": {
+    "source": "\\font\\qa=cmr17 \\let\\qb=\\qa{\\font\\qa=cmr7 }\\setbox0=\\hbox{\\qb\\accent19 a}\\message{R[\\the\\wd0/\\fontname\\qb]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[7.92491pt/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7.92491pt/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_local_current_globaldefs": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=1 \\qa}\\message{R[\\fontname\\font]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_negative_selection": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=-1 \\global\\qa}\\message{R[\\fontname\\font]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "family_after_global_local": {
+    "source": "\\font\\qa=cmr17 {\\textfont0=\\qa{\\globaldefs=1 \\textfont0=\\tenrm}\\textfont0=\\qa}\\message{R[\\fontname\\textfont0]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_let_after_global_local": {
+    "source": "\\font\\qa=cmr17 {\\let\\qb=\\qa{\\globaldefs=1 \\let\\qb=\\tenrm}\\let\\qb=\\qa}\\message{R[\\fontname\\qb]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "suppress_futurelet_prefix": {
+    "source": "\\count5=0 {\\globaldefs=-1 \\global\\futurelet\\qa\\relax X\\count5=8}\\message{R[\\meaning\\qa/\\the\\count5]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[undefined/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[undefined/0]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "global_everymath": {
+    "source": "\\fam=0 {\\globaldefs=1 \\everymath{\\fam=2} $a$}\\message{R[\\the\\fam]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_xdef_frozen": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=-1 \\xdef\\saved{\\the\\qa}}\\message{R[\\meaning\\saved]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[undefined]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_globaldefs_self": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=1 \\font\\qb=cmr7 \\globaldefs=-1 \\global\\font\\qb=cmr17 }\\message{R[\\fontname\\qb/\\the\\globaldefs]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr7/-1]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7/-1]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "fontname_catcodes": {
+    "source": "\\font\\qa=cmr10 at12pt \\edef\\saved{\\fontname\\qa}\\message{R[\\meaning\\saved]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->cmr10 at 12.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->cmr10 at 12.0pt]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_existing": {
+    "source": "\\font\\qa=cmr7 {\\globaldefs=-1 \\global\\font\\qa=cmr17 }\\message{R[\\fontname\\qa]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_new": {
+    "source": "{\\globaldefs=-1 \\global\\font\\qa=cmr17 }\\message{R[\\meaning\\qa]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[undefined]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_no_prefix": {
+    "source": "\\font\\qa=cmr7 {\\globaldefs=-1 \\font\\qa=cmr17 }\\message{R[\\fontname\\qa]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "negative_font_local_override": {
+    "source": "\\font\\qa=cmr10 {\\font\\qa=cmr7 \\globaldefs=-1 \\global\\font\\qa=cmr17 }\\message{R[\\fontname\\qa]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "punctuation_id_current": {
+    "source": "\\font\\!=cmr10 \\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\! ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\! ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "reader_font": {
+    "source": "\\let\\definefont=\\font\\let\\cur=\\font\\let\\family=\\textfont\\definefont\\font=cmr17 \\fontdimen2\\font=3pt \\textfont4=\\font\\message{R[\\fontname\\font/\\the\\font/\\the\\fontdimen2\\font/\\fontname\\cur/\\fontname\\family4]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\font /3.0pt/cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\font /3.0pt/cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "reader_textfont": {
+    "source": "\\let\\definefont=\\font\\let\\cur=\\font\\let\\family=\\textfont\\definefont\\textfont=cmr17 \\fontdimen2\\textfont=3pt \\textfont4=\\textfont\\message{R[\\fontname\\textfont/\\the\\textfont/\\the\\fontdimen2\\textfont/\\fontname\\cur/\\fontname\\family4]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\textfont /3.0pt/cmr17/cmti10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\textfont /3.0pt/cmr17/cmti10]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "reader_scriptfont": {
+    "source": "\\let\\definefont=\\font\\let\\cur=\\font\\let\\family=\\textfont\\definefont\\scriptfont=cmr17 \\fontdimen2\\scriptfont=3pt \\textfont4=\\scriptfont\\message{R[\\fontname\\scriptfont/\\the\\scriptfont/\\the\\fontdimen2\\scriptfont/\\fontname\\cur/\\fontname\\family4]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\scriptfont /3.0pt/cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\scriptfont /3.0pt/cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "reader_scriptscriptfont": {
+    "source": "\\let\\definefont=\\font\\let\\cur=\\font\\let\\family=\\textfont\\definefont\\scriptscriptfont=cmr17 \\fontdimen2\\scriptscriptfont=3pt \\textfont4=\\scriptscriptfont\\message{R[\\fontname\\scriptscriptfont/\\the\\scriptscriptfont/\\the\\fontdimen2\\scriptscriptfont/\\fontname\\cur/\\fontname\\family4]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\scriptscriptfont /3.0pt/cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\scriptscriptfont /3.0pt/cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "reader_fontdimen": {
+    "source": "\\let\\definefont=\\font\\let\\cur=\\font\\let\\family=\\textfont\\definefont\\fontdimen=cmr17 \\fontdimen2\\fontdimen=3pt \\textfont4=\\fontdimen\\message{R[\\fontname\\fontdimen/\\the\\fontdimen/\\the\\fontdimen2\\fontdimen/\\fontname\\cur/\\fontname\\family4]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\fontdimen /\\fontdimen 2\\fontdimen /cmr17/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\fontdimen /\\fontdimen 2\\fontdimen /cmr17/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "reader_hyphenchar": {
+    "source": "\\let\\definefont=\\font\\let\\cur=\\font\\let\\family=\\textfont\\definefont\\hyphenchar=cmr17 \\fontdimen2\\hyphenchar=3pt \\textfont4=\\hyphenchar\\message{R[\\fontname\\hyphenchar/\\the\\hyphenchar/\\the\\fontdimen2\\hyphenchar/\\fontname\\cur/\\fontname\\family4]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\hyphenchar /3.0pt/cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\hyphenchar /3.0pt/cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "reader_skewchar": {
+    "source": "\\let\\definefont=\\font\\let\\cur=\\font\\let\\family=\\textfont\\definefont\\skewchar=cmr17 \\fontdimen2\\skewchar=3pt \\textfont4=\\skewchar\\message{R[\\fontname\\skewchar/\\the\\skewchar/\\the\\fontdimen2\\skewchar/\\fontname\\cur/\\fontname\\family4]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/\\skewchar /3.0pt/cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/\\skewchar /3.0pt/cmr10/cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "frozen_alias_font": {
+    "source": "\\let\\reader=\\font\\let\\definefont=\\font\\definefont\\font=cmr17 \\message{R[\\fontname\\reader/\\the\\reader]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10/\\tenrm ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/\\tenrm ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "frozen_alias_textfont": {
+    "source": "\\let\\reader=\\textfont\\let\\definefont=\\font\\definefont\\textfont=cmr17 \\message{R[\\fontname\\reader0/\\the\\reader0]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10/\\tenrm ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/\\tenrm ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "frozen_alias_scriptfont": {
+    "source": "\\let\\reader=\\scriptfont\\let\\definefont=\\font\\definefont\\scriptfont=cmr17 \\message{R[\\fontname\\reader0/\\the\\reader0]}\n\\bye\n",
+    "miktex": [
+      "R[cmr7/\\sevenrm ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7/\\sevenrm ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "frozen_alias_scriptscriptfont": {
+    "source": "\\let\\reader=\\scriptscriptfont\\let\\definefont=\\font\\definefont\\scriptscriptfont=cmr17 \\message{R[\\fontname\\reader0/\\the\\reader0]}\n\\bye\n",
+    "miktex": [
+      "R[cmr5/\\fiverm ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr5/\\fiverm ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "frozen_alias_nullfont": {
+    "source": "\\let\\reader=\\nullfont\\let\\definefont=\\font\\definefont\\nullfont=cmr17 \\message{R[\\fontname\\reader/\\the\\reader]}\n\\bye\n",
+    "miktex": [
+      "R[nullfont/\\nullfont ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[nullfont/\\nullfont ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_punct_92": {
+    "source": "\\font\\!=cmr10 \\edef\\saved{\\the\\font}\\escapechar=92 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\! /\\!/\\! ]",
+      "R[\\! ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\! /\\!/\\! ]",
+      "R[\\! ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_punct_33": {
+    "source": "\\font\\!=cmr10 \\edef\\saved{\\the\\font}\\escapechar=33 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->!! /!!/!! ]",
+      "R[!! ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->!! /!!/!! ]",
+      "R[!! ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_punct_-1": {
+    "source": "\\font\\!=cmr10 \\edef\\saved{\\the\\font}\\escapechar=-1 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->! /!/! ]",
+      "R[! ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->! /!/! ]",
+      "R[! ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_empty_92": {
+    "source": "\\expandafter\\font\\csname\\endcsname=cmr10 \\edef\\saved{\\the\\font}\\escapechar=92 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\FONT /\\FONT/\\FONT ]",
+      "R[\\FONT ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\FONT /\\FONT/\\FONT ]",
+      "R[\\FONT ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_empty_33": {
+    "source": "\\expandafter\\font\\csname\\endcsname=cmr10 \\edef\\saved{\\the\\font}\\escapechar=33 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->!FONT /!FONT/!FONT ]",
+      "R[!FONT ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->!FONT /!FONT/!FONT ]",
+      "R[!FONT ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_empty_-1": {
+    "source": "\\expandafter\\font\\csname\\endcsname=cmr10 \\edef\\saved{\\the\\font}\\escapechar=-1 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->FONT /FONT/FONT ]",
+      "R[FONT ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->FONT /FONT/FONT ]",
+      "R[FONT ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_letter_92": {
+    "source": "\\font\\q=cmr10 \\edef\\saved{\\the\\font}\\escapechar=92 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\q /\\q/\\q ]",
+      "R[\\q ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\q /\\q/\\q ]",
+      "R[\\q ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_letter_33": {
+    "source": "\\font\\q=cmr10 \\edef\\saved{\\the\\font}\\escapechar=33 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->!q /!q/!q ]",
+      "R[!q ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->!q /!q/!q ]",
+      "R[!q ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "printer_letter_-1": {
+    "source": "\\font\\q=cmr10 \\edef\\saved{\\the\\font}\\escapechar=-1 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved/\\the\\font]}\\toks0=\\expandafter{\\saved}\\message{R[\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->q /q/q ]",
+      "R[q ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->q /q/q ]",
+      "R[q ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "ordinary_punctuation_control": {
+    "source": "\\def\\saved{\\!}\\message{R[\\meaning\\saved/\\string\\!]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\!/\\!]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\!/\\!]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "ordinary_empty_control": {
+    "source": "\\expandafter\\def\\csname\\endcsname{X}\\def\\saved{\\csname\\endcsname}\\message{R[\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\csname \\endcsname ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\csname \\endcsname ]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "dynamic_font_id_rename": {
+    "source": "\\font\\!=cmr10\\edef\\saved{\\the\\font}\\font\\q=cmr10\\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\q /\\q]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\q /\\q]"
+    ],
+    "error": null,
+    "match": true
+  }
+}

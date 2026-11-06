@@ -1,0 +1,35 @@
+{
+  "reference": "MiKTeX TeX 24.4; 2026-10-15; pre-change HEAD 3b6c8946",
+  "rows": [
+    {
+      "name": "negative_half_tie",
+      "body": "\\fontdimen1\\tenrm=.5pt\\fontdimen5\\tenrm=1sp\\noindent\\hbox{\\accent19\\fontdimen1\\tenrm=0pt i}",
+      "miktex_exit": 0,
+      "miktex_pages": [
+        [
+          [
+            19,
+            -72819,
+            455111
+          ],
+          [
+            105,
+            0,
+            892798
+          ],
+          [
+            49,
+            15229091,
+            43725786
+          ]
+        ]
+      ],
+      "miktex_messages": [
+        "[1]"
+      ],
+      "miktex_error": null,
+      "ours_error": "Unexpected token in hbox: \\fontdimen",
+      "matches": false
+    }
+  ]
+}

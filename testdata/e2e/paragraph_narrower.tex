@@ -1,0 +1,16 @@
+%: narrower changes both live skips locally and restores them.
+\nopagenumbers
+\hsize4in
+\hyphenchar\font=-1
+\parindent20pt
+Outside the group the paragraph keeps its ordinary margins.
+One two three four five six seven eight nine ten eleven twelve.
+\par
+{\narrower
+Inside the group.
+One two three four five six seven eight nine ten eleven twelve.
+One two three four five six seven eight nine ten eleven twelve.
+\par}
+After the group the ordinary margins are restored.
+One two three four five six seven eight nine ten eleven twelve.
+\par\bye

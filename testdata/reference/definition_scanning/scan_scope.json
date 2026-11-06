@@ -1,0 +1,426 @@
+{
+  "countdef_target_relax": {
+    "source": "\\def\\q{8}\\countdef\\q\\ifx\\q\\relax=9\\else=8\\fi\\relax\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\count9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "countdef_global_then_local": {
+    "source": "\\def\\q{outer}{\\countdef\\q=1{\\global\\countdef\\q=2\\countdef\\q=3\\relax}\\message{R[\\meaning\\q]}}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\count2]",
+      "R[\\count2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count2]",
+      "R[\\count2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "countdef_globaldefs_-1": {
+    "source": "\\def\\q{outer}{\\globaldefs=-1\\global\\countdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->outer]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->outer]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "countdef_globaldefs_1": {
+    "source": "\\def\\q{outer}{\\globaldefs=1\\global\\countdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\count9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "dimendef_target_relax": {
+    "source": "\\def\\q{8}\\dimendef\\q\\ifx\\q\\relax=9\\else=8\\fi\\relax\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\dimen9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\dimen9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "dimendef_global_then_local": {
+    "source": "\\def\\q{outer}{\\dimendef\\q=1{\\global\\dimendef\\q=2\\dimendef\\q=3\\relax}\\message{R[\\meaning\\q]}}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\dimen2]",
+      "R[\\dimen2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\dimen2]",
+      "R[\\dimen2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "dimendef_globaldefs_-1": {
+    "source": "\\def\\q{outer}{\\globaldefs=-1\\global\\dimendef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->outer]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->outer]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "dimendef_globaldefs_1": {
+    "source": "\\def\\q{outer}{\\globaldefs=1\\global\\dimendef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\dimen9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\dimen9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "skipdef_target_relax": {
+    "source": "\\def\\q{8}\\skipdef\\q\\ifx\\q\\relax=9\\else=8\\fi\\relax\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\skip9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\skip9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "skipdef_global_then_local": {
+    "source": "\\def\\q{outer}{\\skipdef\\q=1{\\global\\skipdef\\q=2\\skipdef\\q=3\\relax}\\message{R[\\meaning\\q]}}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\skip2]",
+      "R[\\skip2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\skip2]",
+      "R[\\skip2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "skipdef_globaldefs_-1": {
+    "source": "\\def\\q{outer}{\\globaldefs=-1\\global\\skipdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->outer]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->outer]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "skipdef_globaldefs_1": {
+    "source": "\\def\\q{outer}{\\globaldefs=1\\global\\skipdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\skip9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\skip9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "muskipdef_target_relax": {
+    "source": "\\def\\q{8}\\muskipdef\\q\\ifx\\q\\relax=9\\else=8\\fi\\relax\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\muskip9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\muskip9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "muskipdef_global_then_local": {
+    "source": "\\def\\q{outer}{\\muskipdef\\q=1{\\global\\muskipdef\\q=2\\muskipdef\\q=3\\relax}\\message{R[\\meaning\\q]}}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\muskip2]",
+      "R[\\muskip2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\muskip2]",
+      "R[\\muskip2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "muskipdef_globaldefs_-1": {
+    "source": "\\def\\q{outer}{\\globaldefs=-1\\global\\muskipdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->outer]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->outer]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "muskipdef_globaldefs_1": {
+    "source": "\\def\\q{outer}{\\globaldefs=1\\global\\muskipdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\muskip9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\muskip9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "toksdef_target_relax": {
+    "source": "\\def\\q{8}\\toksdef\\q\\ifx\\q\\relax=9\\else=8\\fi\\relax\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\toks9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\toks9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "toksdef_global_then_local": {
+    "source": "\\def\\q{outer}{\\toksdef\\q=1{\\global\\toksdef\\q=2\\toksdef\\q=3\\relax}\\message{R[\\meaning\\q]}}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\toks2]",
+      "R[\\toks2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\toks2]",
+      "R[\\toks2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "toksdef_globaldefs_-1": {
+    "source": "\\def\\q{outer}{\\globaldefs=-1\\global\\toksdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->outer]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->outer]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "toksdef_globaldefs_1": {
+    "source": "\\def\\q{outer}{\\globaldefs=1\\global\\toksdef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\toks9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\toks9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "chardef_target_relax": {
+    "source": "\\def\\q{8}\\chardef\\q\\ifx\\q\\relax=9\\else=8\\fi\\relax\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "chardef_global_then_local": {
+    "source": "\\def\\q{outer}{\\chardef\\q=1{\\global\\chardef\\q=2\\chardef\\q=3\\relax}\\message{R[\\meaning\\q]}}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"2]",
+      "R[\\char\"2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"2]",
+      "R[\\char\"2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "chardef_globaldefs_-1": {
+    "source": "\\def\\q{outer}{\\globaldefs=-1\\global\\chardef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->outer]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->outer]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "chardef_globaldefs_1": {
+    "source": "\\def\\q{outer}{\\globaldefs=1\\global\\chardef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mathchardef_target_relax": {
+    "source": "\\def\\q{8}\\mathchardef\\q\\ifx\\q\\relax=9\\else=8\\fi\\relax\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\mathchar\"9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\mathchar\"9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mathchardef_global_then_local": {
+    "source": "\\def\\q{outer}{\\mathchardef\\q=1{\\global\\mathchardef\\q=2\\mathchardef\\q=3\\relax}\\message{R[\\meaning\\q]}}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\mathchar\"2]",
+      "R[\\mathchar\"2]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\mathchar\"2]",
+      "R[\\mathchar\"2]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mathchardef_globaldefs_-1": {
+    "source": "\\def\\q{outer}{\\globaldefs=-1\\global\\mathchardef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->outer]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->outer]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "mathchardef_globaldefs_1": {
+    "source": "\\def\\q{outer}{\\globaldefs=1\\global\\mathchardef\\q=9\\relax}\\message{R[\\meaning\\q]}\n\\bye\n",
+    "miktex": [
+      "R[\\mathchar\"9]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\mathchar\"9]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_optional_equals": {
+    "source": "\\font\\q\\ifx\\q\\nullfont=cmr17\\else=cmr7\\fi\\relax\\message{R[\\fontname\\q]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_old_alias": {
+    "source": "\\countdef\\q=8\\font\\q=\\ifx\\q\\nullfont cmr17\\else cmr7\\fi\\relax\\message{R[\\fontname\\q]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_old_constant": {
+    "source": "\\chardef\\q=65\\font\\q=\\ifx\\q\\nullfont cmr17\\else cmr7\\fi\\relax\\message{R[\\fontname\\q]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_rebound_nullfont": {
+    "source": "\\let\\zero=\\nullfont\\font\\nullfont=cmr7\\font\\q=\\ifx\\q\\zero cmr17\\else cmr7\\fi\\relax\\message{R[\\fontname\\q/\\fontname\\nullfont]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17/cmr7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17/cmr7]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_frozen_zero": {
+    "source": "\\let\\zero=\\nullfont\\edef\\saved{\\the\\zero}\\font\\nullfont=cmr7\\font\\q=\\ifx\\q\\saved cmr17\\else cmr7\\fi\\relax\\message{R[\\fontname\\q/\\fontname\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[cmr7/nullfont]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr7/nullfont]"
+    ],
+    "error": null,
+    "match": true
+  },
+  "font_global_then_local": {
+    "source": "\\def\\q{outer}{\\font\\q=cmr7 {\\global\\font\\q=cmr17\\font\\q=cmr10\\relax}\\message{R[\\fontname\\q]}}\\message{R[\\fontname\\q]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]",
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]",
+      "R[cmr17]"
+    ],
+    "error": null,
+    "match": true
+  }
+}

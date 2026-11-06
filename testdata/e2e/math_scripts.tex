@@ -1,0 +1,19 @@
+% E2E canonical fixture — math scripts / fraction / radical
+% / accent / overline (cascade #4).
+%
+% Exercises the layout in one inline formula: super/subscripts
+% (make_scripts, App G rule 18), a plain \over fraction (rule 15), a SHORT
+% radicand \sqrt (rule 11, base-size delimiter — §0 interim, so the
+% glyph stream is MiKTeX-exact WITHOUT delimiter growth), a \hat accent
+% (rule 12), and \overline (rule 16).  The glyph stream + positions byte-compare
+% to MiKTeX-pdfTeX 4.19 within the tolerance (+/-0.5pt V / +/-0.1pt H).
+%
+% Under the bundled plain.tex format the math families (\textfont0..3) and the
+% \sqrt / \hat / \over / \overline macros are all set up.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+The math $x^2 + x_i + x_i^2 + {1\over2} + \sqrt x + \hat a + \overline{x+y}$ here.
+\par
+\bye

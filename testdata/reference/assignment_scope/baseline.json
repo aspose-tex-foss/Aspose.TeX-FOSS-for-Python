@@ -1,0 +1,1066 @@
+{
+  "font_redefine_paragraph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\nx \\font\\qa=cmr10 \\setbox2=\\hbox{\\qa a}\\font\\qa=cmr17 \\message{R[\\the\\wd2]} y\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "font_redefine_hbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{\\font\\qa=cmr10 \\setbox2=\\hbox{\\qa a}\\font\\qa=cmr17 \\message{R[\\the\\wd2]}}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "font_redefine_vbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\vbox{\\font\\qa=cmr10 \\setbox2=\\hbox{\\qa a}\\font\\qa=cmr17 \\message{R[\\the\\wd2]}}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "font_redefine_math": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\font\\qa=cmr10 \\setbox2=\\hbox{\\qa a}\\font\\qa=cmr17 \\message{R[\\the\\wd2]}$\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "font_redefine_message": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\setbox2=\\hbox{\\qa a}\\font\\qa=cmr17 \\message{R[\\the\\wd2]}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "font_redefine_edef": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\setbox2=\\hbox{\\qa a}\\font\\qa=cmr17 \\message{R[\\the\\wd2]}\\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt]",
+      "R[macro:->\\qa ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_redefine_alignment": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\halign{#\\cr \\font\\qa=cmr10 \\setbox2=\\hbox{\\qa a}\\font\\qa=cmr17 \\message{R[\\the\\wd2]}\\cr}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "font_scope_paragraph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\nx {\\font\\qa=cmr10 }\\message{R[\\meaning\\qa]} y\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_scope_hbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{{\\font\\qa=cmr10 }\\message{R[\\meaning\\qa]}}\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_scope_vbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\vbox{{\\font\\qa=cmr10 }\\message{R[\\meaning\\qa]}}\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_scope_math": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n${\\font\\qa=cmr10 }\\message{R[\\meaning\\qa]}$\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_scope_message": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n{\\font\\qa=cmr10 }\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_scope_edef": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n{\\font\\qa=cmr10 }\\message{R[\\meaning\\qa]}\\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[undefined]",
+      "R[macro:->\\qa ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_scope_alignment": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\halign{#\\cr {\\font\\qa=cmr10 }\\message{R[\\meaning\\qa]}\\cr}\n\\bye\n",
+    "miktex": [
+      "R[undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_share_paragraph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\nx \\font\\qa=cmr10 \\font\\qb=cmr10 \\fontdimen2\\qa=3pt \\message{R[\\the\\fontdimen2\\qb]} y\n\\bye\n",
+    "miktex": [
+      "R[3.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[3.33333pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_share_hbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{\\font\\qa=cmr10 \\font\\qb=cmr10 \\fontdimen2\\qa=3pt \\message{R[\\the\\fontdimen2\\qb]}}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Unexpected token in hbox: \\fontdimen",
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_share_vbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\vbox{\\font\\qa=cmr10 \\font\\qb=cmr10 \\fontdimen2\\qa=3pt \\message{R[\\the\\fontdimen2\\qb]}}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[3.33333pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_share_math": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\font\\qa=cmr10 \\font\\qb=cmr10 \\fontdimen2\\qa=3pt \\message{R[\\the\\fontdimen2\\qb]}$\n\\bye\n",
+    "miktex": [
+      "R[3.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[3.33333pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_share_message": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\font\\qb=cmr10 \\fontdimen2\\qa=3pt \\message{R[\\the\\fontdimen2\\qb]}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[3.33333pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_share_edef": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\font\\qb=cmr10 \\fontdimen2\\qa=3pt \\message{R[\\the\\fontdimen2\\qb]}\\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt]",
+      "R[macro:->\\qb ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[3.33333pt]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_share_alignment": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\halign{#\\cr \\font\\qa=cmr10 \\font\\qb=cmr10 \\fontdimen2\\qa=3pt \\message{R[\\the\\fontdimen2\\qb]}\\cr}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt]"
+    ],
+    "errors": [],
+    "ours": [],
+    "error": "Unexpected token in hbox: \\fontdimen",
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_id_paragraph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\nx \\font\\roman=cmr10 \\message{R[\\the\\tenrm/\\the\\font/\\the\\roman]} y\n\\bye\n",
+    "miktex": [
+      "R[\\roman /\\roman /\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\tenrm /\\tenrm /\\roman ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_id_hbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{\\font\\roman=cmr10 \\message{R[\\the\\tenrm/\\the\\font/\\the\\roman]}}\n\\bye\n",
+    "miktex": [
+      "R[\\roman /\\roman /\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\tenrm /\\tenrm /\\roman ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_id_vbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\vbox{\\font\\roman=cmr10 \\message{R[\\the\\tenrm/\\the\\font/\\the\\roman]}}\n\\bye\n",
+    "miktex": [
+      "R[\\roman /\\roman /\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\tenrm /\\tenrm /\\roman ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_id_math": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\font\\roman=cmr10 \\message{R[\\the\\tenrm/\\the\\font/\\the\\roman]}$\n\\bye\n",
+    "miktex": [
+      "R[\\roman /\\roman /\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\tenrm /\\tenrm /\\roman ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_id_message": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\roman=cmr10 \\message{R[\\the\\tenrm/\\the\\font/\\the\\roman]}\n\\bye\n",
+    "miktex": [
+      "R[\\roman /\\roman /\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\tenrm /\\tenrm /\\roman ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_id_edef": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\roman=cmr10 \\message{R[\\the\\tenrm/\\the\\font/\\the\\roman]}\\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[\\roman /\\roman /\\roman ]",
+      "R[macro:->\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\tenrm /\\tenrm /\\roman ]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_id_alignment": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\halign{#\\cr \\font\\roman=cmr10 \\message{R[\\the\\tenrm/\\the\\font/\\the\\roman]}\\cr}\n\\bye\n",
+    "miktex": [
+      "R[\\roman /\\roman /\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\tenrm /\\tenrm /\\roman ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "cross_kind_paragraph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\nx \\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]} y\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "cross_kind_hbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "cross_kind_vbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\vbox{\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "cross_kind_math": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}$\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "cross_kind_message": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "cross_kind_edef": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "cross_kind_alignment": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\halign{#\\cr \\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\\cr}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "local_global_local_paragraph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\nx \\count5=0 {\\count5=3 \\global\\count5=7 \\count5=9 }\\message{R[\\the\\count5]} y\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "local_global_local_hbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{\\count5=0 {\\count5=3 \\global\\count5=7 \\count5=9 }\\message{R[\\the\\count5]}}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "local_global_local_vbox": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\vbox{\\count5=0 {\\count5=3 \\global\\count5=7 \\count5=9 }\\message{R[\\the\\count5]}}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "local_global_local_math": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\count5=0 {\\count5=3 \\global\\count5=7 \\count5=9 }\\message{R[\\the\\count5]}$\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "local_global_local_message": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\count5=0 {\\count5=3 \\global\\count5=7 \\count5=9 }\\message{R[\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "local_global_local_edef": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\count5=0 {\\count5=3 \\global\\count5=7 \\count5=9 }\\message{R[\\the\\count5]}\\edef\\saved{\\the\\font}\\message{R[\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[7]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]",
+      "R[macro:->\\tenrm ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "local_global_local_alignment": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\halign{#\\cr \\count5=0 {\\count5=3 \\global\\count5=7 \\count5=9 }\\message{R[\\the\\count5]}\\cr}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_local": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\count5=7 a$\\message{R[\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_global": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{$\\global\\count5=7 a$}\\message{R[\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_local_global": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\count5=3\\global\\count5=7 a$\\message{R[\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_fam_global": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\fam=0 $\\global\\fam=1 a$\\message{R[\\the\\fam]}\n\\bye\n",
+    "miktex": [
+      "R[1]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[1]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_aftergroup": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\count5=0 $\\count5=7\\aftergroup\\probe a$\\message{R[end]}\n\\bye\n",
+    "miktex": [
+      "R[after=0]",
+      "R[end]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[after=0]",
+      "R[end]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_glyph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\setbox0=\\hbox{$\\mathcode`\\a=\"7144 a$}\\message{R[\\number\\wd0/\\number\\ht0/\\number\\dp0/\\the\\mathcode`\\a]}\n\\bye\n",
+    "miktex": [
+      "R[560788/447828/0/29025]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[560788/447828/0/29025]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_cell_global": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\halign{$#$\\cr \\global\\count5=7 a\\cr}\\message{R[\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "negative_globaldefs": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\def\\qa{old}{\\globaldefs=-1 \\global\\chardef\\qa=65 }\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"41]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "negative_gdef": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\def\\qa{old}{\\globaldefs=-1 \\gdef\\qa{new}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "globaldefs_self": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n{\\globaldefs=1 \\globaldefs=0 }\\message{R[\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "font_current_independent": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\qa\\font\\qa=cmr17 \\message{R[\\fontname\\font/\\fontname\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\fontname \\font /\\fontname \\qa ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_family_independent": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\textfont0=\\qa\\font\\qa=cmr17 \\message{R[\\fontname\\textfont0/\\fontname\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\fontname \\textfont 0/\\fontname \\qa ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_local_idtext": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n{\\font\\roman=cmr10 }\\message{R[\\meaning\\roman/\\the\\tenrm]}\n\\bye\n",
+    "miktex": [
+      "R[undefined/\\roman ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10/\\tenrm ]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_frozen_token": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\font\\qa=cmr17 \\message{R[\\meaning\\saved]}\\setbox0=\\hbox{\\saved a}\\message{R[\\the\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\qa ]",
+      "R[5.00002pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\qa ]",
+      "R[7.92491pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "short_display": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n{\\hbadness=-1 \\parfillskip=0pt plus 1000pt \\hsize=100pt \\let\\x=\\tenrm \\font\\y=cmr10 \\noindent\\x ab\\y cd\\par}\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "error": null,
+    "reports": [
+      "\\x ab\\y cd "
+    ],
+    "miktex_report": true,
+    "match": false
+  },
+  "font_original_glyph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\x=cmr10 \\noindent\\x a\\font\\x=cmr17 \\x a\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false,
+    "miktex_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          97,
+          327681,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          97,
+          519367,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "font_current_glyph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\x=cmr10 \\x\\font\\x=cmr17 \\noindent aa\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false,
+    "miktex_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          97,
+          327681,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          97,
+          519367,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "font_family_glyph": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\x=cmr10 \\textfont0=\\x\\font\\x=cmr17 \\noindent$\\mathchar\"0061\\mathchar\"0061$\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false,
+    "miktex_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          97,
+          327681,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          97,
+          519367,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "inline_positive_fam_reset": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\fam=0 \\globaldefs=1 $a$\\message{R[\\the\\fam]}\n\\bye\n",
+    "miktex": [
+      "R[0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_positive_local_override": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\globaldefs=1 \\count5=8 a$\\message{R[\\the\\count5/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[8/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "inline_negative_global_override": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n$\\globaldefs=-1 \\global\\count5=8 a$\\message{R[\\the\\count5/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[8/0]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "font_reuse_parameters": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\qa=cmr10 \\hyphenchar\\qa=65 \\font\\qb=cmr10 \\message{R[\\the\\hyphenchar\\qa/\\the\\hyphenchar\\qb]}\n\\bye\n",
+    "miktex": [
+      "R[65/65]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[65/45]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": false
+  },
+  "inline_surround_order": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\mathsurround=1pt \\setbox0=\\hbox{$\\mathsurround=5pt a$}\\message{R[\\number\\wd0/\\the\\mathsurround]}\n\\bye\n",
+    "miktex": [
+      "R[1001776/1.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[1001776/1.0pt]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_family_order": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\font\\large=cmr17 \\setbox0=\\hbox{$\\textfont0=\\large\\mathchar\"0061$}\\message{R[\\number\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[519367]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[519367]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_muskip_order": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\thinmuskip=3mu \\setbox0=\\hbox{$\\thinmuskip=20mu a\\,b$}\\message{R[\\number\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[1355834]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[1355834]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  },
+  "inline_scriptspace_order": {
+    "source": "\\def\\probe{\\message{R[after=\\the\\count5]}}\n\\scriptspace=1pt \\setbox0=\\hbox{$\\scriptspace=8pt a^b$}\\message{R[\\number\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[1101172]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[1101172]"
+    ],
+    "error": null,
+    "reports": [],
+    "miktex_report": false,
+    "match": true
+  }
+}

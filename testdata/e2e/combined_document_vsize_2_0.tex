@@ -1,0 +1,58 @@
+% \vsize sweep of combined_document.tex: the same
+% document at \vsize=2.0in (MiKTeX baseline), so the page-break choice over
+% display, \halign and paragraph penalties is pinned at more than one
+% goal height.  Body identical to combined_document.tex.
+% comprehensive fixture (FR-1) — realistic combined document.
+% One end-user-style plain TeX document that interleaves ALL of the delivered
+% math + alignment constructs across >=2 natural pages (no \eject), so the
+% page-builder decisions interact with the mixed content.  Every construct is
+% already individually byte-exact vs MiKTeX (math_inline, alignment_text,
+% alignment_matrix, alignment_eqalign, short-skip); this fixture pins
+% them COMBINED against a MiKTeX baseline within the tolerance
+% (+/-0.5pt V / +/-0.1pt H).
+%
+% Constructs exercised: running text; inline $...$ in prose (2+ paragraphs);
+% a $$...$$ display preceded by a SHORT in-paragraph line (the
+% \predisplaysize short-skip path); a text \halign; inline $\matrix{}$ and
+% $\pmatrix{}$; a display $$\eqalign{}$$.  \vsize is deliberately short so the
+% material breaks naturally across >=2 pages.
+\hsize=6.5in
+\vsize=2.0in
+\nopagenumbers
+\noindent
+The quick brown fox jumps over the lazy dog. The identity $x+y=z$ holds
+for all values, and $\alpha\beta$ are Greek letters that appear inline in
+running prose without disturbing the surrounding line.
+\par
+\noindent
+Pack my box with five dozen liquor jugs. When $a$ and $b$ are given, the
+sum $a+b$ follows, and the relation $x=y$ closes the argument for this
+second paragraph of ordinary body text.
+\par
+\noindent
+The system
+$$\eqalign{x &= y + z\cr a &= b\cr}$$
+has a solution when the coefficients agree.
+\par
+\noindent
+A small table of pairs follows to mix alignment with the surrounding prose:
+\par
+\normalbaselines
+\halign{#\hfil&\quad#\hfil\cr
+  one&two\cr
+  three&four\cr
+  five&six\cr}
+\par
+\noindent
+Inline matrices also appear in text: a matrix $\matrix{a&b\cr c&d\cr}$ and a
+parenthesised one $\pmatrix{x&y\cr z&w\cr}$ sit within the paragraph, and
+enough further running text follows here to push the remaining content onto a
+second page so the page-builder must break the mixed body naturally rather
+than at a forced boundary.
+\par
+\noindent
+The quick brown fox jumps over the lazy dog once more, and pack my box with
+five dozen liquor jugs a final time to fill out the closing page of this
+combined verification document.
+\par
+\bye

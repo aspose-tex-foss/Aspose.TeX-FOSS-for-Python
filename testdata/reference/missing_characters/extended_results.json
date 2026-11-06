@@ -1,0 +1,438 @@
+{
+  "accent_missing": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d30707420415c616363656e7432323620425c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [
+        "Missing character: There is no \u00e2 in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "accent_missing_eager": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c68626f787b415c616363656e7432323620427d5c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [
+        "Missing character: There is no \u00e2 in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "accent_missing_base": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d30707420415c616363656e7431395c6368617232323620425c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [
+        "Missing character: There is no \u00e2 in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            19,
+            491521,
+            655360
+          ],
+          [
+            66,
+            819202,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            19,
+            491521,
+            655360
+          ],
+          [
+            66,
+            819202,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "accent_utf8_base": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d30707420415c616363656e743139e2809c425c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [
+        "Missing character: There is no \u00e2 in font cmr10!",
+        "Missing character: There is no \u0080 in font cmr10!",
+        "Missing character: There is no \u009c in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            19,
+            491521,
+            655360
+          ],
+          [
+            66,
+            819202,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [
+        "Missing character: There is no ^^80 in font cmr10!",
+        "Missing character: There is no ^^9c in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            19,
+            491521,
+            655360
+          ],
+          [
+            66,
+            819202,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "accent_nullfont": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074207b5c6e756c6c666f6e745c616363656e74363520427d585c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [
+        "Missing character: There is no A in font nullfont!",
+        "Missing character: There is no B in font nullfont!"
+      ],
+      "glyphs": [
+        [
+          [
+            88,
+            0,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [
+        "Missing character: There is no B in font nullfont!"
+      ],
+      "glyphs": [
+        [
+          [
+            88,
+            0,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "accent_live_gate": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c74726163696e676c6f737463686172733d305c616363656e7432323620417b5c74726163696e676c6f737463686172733d315c616363656e7432323620427d435c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [
+        "Missing character: There is no \u00e2 in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ],
+          [
+            67,
+            955736,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            66,
+            491521,
+            655360
+          ],
+          [
+            67,
+            955736,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "math_choice": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d30707420245c6d61746863686f6963657b5c6d617468636861723232367d7b587d7b5c6d617468636861723232367d7b5c6d617468636861723232367d245c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            88,
+            0,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            88,
+            0,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "math_nullfont": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c74657874666f6e74303d5c6e756c6c666f6e742024415f615e62245c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            98,
+            491521,
+            417535
+          ],
+          [
+            97,
+            491521,
+            817376
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            98,
+            491521,
+            417535
+          ],
+          [
+            97,
+            491521,
+            817376
+          ]
+        ]
+      ]
+    }
+  },
+  "byte_control": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c636174636f64653235353d3131205c6465665cff7b587d5cff5c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            88,
+            0,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [],
+      "glyphs": [
+        [
+          [
+            88,
+            0,
+            655360
+          ]
+        ]
+      ]
+    }
+  },
+  "boundary_barriers": {
+    "source_hex": "5c6e6f706167656e756d626572735c706172696e64656e743d307074205c68626f787b665c63686172323535206920415c6368617232353520567d5c6279650a",
+    "reference": {
+      "exit": 0,
+      "missing": [
+        "Missing character: There is no \u00ff in font cmr10!",
+        "Missing character: There is no \u00ff in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            105,
+            200250,
+            655360
+          ],
+          [
+            65,
+            600748,
+            655360
+          ],
+          [
+            86,
+            1092269,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "missing": [
+        "Missing character: There is no ^^ff in font cmr10!",
+        "Missing character: There is no ^^ff in font cmr10!"
+      ],
+      "glyphs": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            105,
+            200250,
+            655360
+          ],
+          [
+            65,
+            600748,
+            655360
+          ],
+          [
+            86,
+            1092269,
+            655360
+          ]
+        ]
+      ]
+    }
+  }
+}

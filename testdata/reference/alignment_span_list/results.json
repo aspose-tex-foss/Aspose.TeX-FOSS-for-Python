@@ -1,0 +1,1985 @@
+{
+  "witness": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "three_box_first": {
+    "source": "\\nopagenumbers \\halign{#&#&#\\cr \\hbox{a}\\span\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "three_box_middle": {
+    "source": "\\nopagenumbers \\halign{#&#&#\\cr x\\span\\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            98,
+            345886,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            120,
+            0,
+            655360
+          ],
+          [
+            97,
+            345886,
+            655360
+          ],
+          [
+            98,
+            673567,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "three_char_tail": {
+    "source": "\\nopagenumbers \\halign{#&#&#\\cr \\hbox{a}\\span c\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            99,
+            327681,
+            655360
+          ],
+          [
+            98,
+            618952,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            99,
+            327681,
+            655360
+          ],
+          [
+            98,
+            618952,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "twice": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr\\hbox{a}\\hbox{c}\\span\\global\\setbox11=\\lastbox \\global\\setbox12=\\lastbox b\\cr}\\box11\\box12\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            99,
+            0,
+            1441792
+          ],
+          [
+            97,
+            0,
+            2228224
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            99,
+            327681,
+            655360
+          ],
+          [
+            98,
+            618952,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "shifted": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\raise2pt\\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            524288
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "shift_hbox_no_align": {
+    "source": "\\nopagenumbers \\setbox1\\hbox{\\raise2pt\\hbox{a}\\global\\setbox11=\\lastbox }\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            131072,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "shift_vbox_no_align": {
+    "source": "\\nopagenumbers \\setbox1\\vbox{\\moveright3pt\\hbox{a}\\global\\setbox11=\\lastbox }\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "shift_contribution_unvbox": {
+    "source": "\\nopagenumbers \\setbox2\\vbox{\\moveright3pt\\hbox{a}}\\unvbox2 \\global\\setbox11=\\lastbox \\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "diag_current_page": {
+    "source": "\\nopagenumbers \\moveright3pt\\hbox{a}\\global\\setbox11=\\lastbox \\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=\\ifvoid11 ...\nSorry...I usually can't take things from the current page.\nThis \\lastbox will therefore be void.\n\n[void=y]"
+      ],
+      "errors": [
+        "You can't use `\\lastbox' in vertical mode."
+      ],
+      "glyphs": [
+        [
+          [
+            97,
+            196608,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "EngineError: \\lastbox in outer vertical mode"
+    },
+    "exact": false
+  },
+  "shift_reinsert_hbox": {
+    "source": "\\nopagenumbers \\setbox1\\hbox{\\raise2pt\\hbox{a}\\setbox12=\\lastbox\\box12 b}\\box1\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            524288
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "adjust_tail": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\hbox{a}\\vadjust{\\kern2pt}\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "local_lost": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\hbox{a}\\span\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "local_reused": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\hbox{a}\\span\\setbox11=\\lastbox b\\box11\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            364090,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "lastkern_neg": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr a\\kern-3pt\\span\\message{[tail=\\the\\lastkern]}\\unkern b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[tail=-3.0pt]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[tail=0.0pt]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            131073,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "lastskip_neg": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr a\\hskip-2pt\\span\\message{[tail=\\the\\lastskip]}\\unskip b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[tail=-2.0pt]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[tail=0.0pt]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            196609,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "lastpenalty_neg": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr a\\penalty-5\\span\\message{[tail=\\the\\lastpenalty]}\\unpenalty b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[tail=-5]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[tail=0]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "unskip_three": {
+    "source": "\\nopagenumbers \\halign{#&#&#\\cr a\\hskip3pt\\span\\span\\unskip b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            524289,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "v_template_char": {
+    "source": "\\nopagenumbers \\halign{(#)&[#]\\cr \\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            40,
+            0,
+            655360
+          ],
+          [
+            97,
+            254863,
+            655360
+          ],
+          [
+            41,
+            582544,
+            655360
+          ],
+          [
+            91,
+            837407,
+            655360
+          ],
+          [
+            98,
+            1019452,
+            655360
+          ],
+          [
+            93,
+            1383542,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            40,
+            0,
+            655360
+          ],
+          [
+            97,
+            254863,
+            655360
+          ],
+          [
+            41,
+            582544,
+            655360
+          ],
+          [
+            91,
+            837407,
+            655360
+          ],
+          [
+            98,
+            1019452,
+            655360
+          ],
+          [
+            93,
+            1383542,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "v_template_box": {
+    "source": "\\nopagenumbers \\halign{#\\hbox{v}&#\\cr a\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ],
+          [
+            118,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            118,
+            327681,
+            655360
+          ],
+          [
+            98,
+            673567,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "u_template_box": {
+    "source": "\\nopagenumbers \\halign{#&\\hbox{u}#\\cr a\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ],
+          [
+            117,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ],
+          [
+            117,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "omit_second": {
+    "source": "\\nopagenumbers \\halign{(#)&[#]\\cr \\omit\\hbox{a}\\span\\omit\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "math_template_second": {
+    "source": "\\nopagenumbers \\halign{#&$#$\\cr \\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=\\ifvo...\nSorry; this \\lastbox will be void.\n\n[void=y]"
+      ],
+      "errors": [
+        "You can't use `\\lastbox' in math mode."
+      ],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "math_cells": {
+    "source": "\\nopagenumbers \\halign{$#$&$#$\\cr a\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=\\ifvo...\nSorry; this \\lastbox will be void.\n\n[void=y]"
+      ],
+      "errors": [
+        "You can't use `\\lastbox' in math mode."
+      ],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            346416,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            346416,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "nested_eager": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\hbox{a}\\span\\setbox12=\\hbox{\\global\\setbox11=\\lastbox }\\box12 b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "nested_deferred": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\hbox{a}\\span\\setbox12=\\hbox\\bgroup\\global\\setbox11=\\lastbox \\egroup\\box12 b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "deferred_straddle": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr \\hbox{a}\\setbox12=\\hbox\\bgroup x\\span y\\egroup\\box12 b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[void=\\ifvoid11 ...\nI can't figure out why you would want to use a tab mark\nor \\cr or \\span just now. If something like a right brace\nup above has ended a previous alignment prematurely,\nyou're probably due for more error messages, and you\nmight try typing `S' now just to see what is salvageable.\n\n! Too many }'s.\nl.1 ...12=\\hbox\\bgroup x\\span y\\egroup\\box12 b\\cr}\n                                                  \\message{[void=\\ifvoid11 y...\nYou've closed more groups than you opened.\nSuch booboos are generally harmless, so keep going.\n\n[void=n]"
+      ],
+      "errors": [
+        "Missing } inserted.",
+        "Missing \\cr inserted.",
+        "Misplaced \\cr.",
+        "Too many }'s."
+      ],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            121,
+            327681,
+            655360
+          ],
+          [
+            98,
+            1310720,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "error": "AlignmentError: \\halign: unexpected } in alignment cell"
+    },
+    "exact": false
+  },
+  "math_lastbox_no_align": {
+    "source": "\\nopagenumbers \\setbox1\\hbox{$\\hbox{a}\\global\\setbox11=\\lastbox$}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[void=\\ifvoid11...\nSorry; this \\lastbox will be void.\n\n[void=y]"
+      ],
+      "errors": [
+        "You can't use `\\lastbox' in math mode."
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": []
+    },
+    "exact": false
+  },
+  "ligature_boundary": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr f\\span f\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            102,
+            200250,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            102,
+            0,
+            655360
+          ],
+          [
+            102,
+            200250,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "kern_boundary": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr A\\span V\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            86,
+            491521,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            65,
+            0,
+            655360
+          ],
+          [
+            86,
+            491521,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "spacefactor": {
+    "source": "\\nopagenumbers \\halign{#&#\\cr a.\\span\\message{[sf=\\the\\spacefactor]}b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\bye",
+    "ref": {
+      "messages": [
+        "[sf=3000]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            46,
+            327681,
+            655360
+          ],
+          [
+            98,
+            509726,
+            655360
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[sf=1000]",
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            46,
+            327681,
+            655360
+          ],
+          [
+            98,
+            509726,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "width": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#\\cr\\hbox{aaa}\\span\\global\\setbox11=\\lastbox b\\cr x&y\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[dims=691772,1241543,127431]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            455111
+          ],
+          [
+            120,
+            0,
+            1241543
+          ],
+          [
+            121,
+            345886,
+            1241543
+          ],
+          [
+            97,
+            0,
+            2027975
+          ],
+          [
+            97,
+            327681,
+            2027975
+          ],
+          [
+            97,
+            655362,
+            2027975
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=1347133,1241543,127431]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            455111
+          ],
+          [
+            97,
+            327681,
+            455111
+          ],
+          [
+            97,
+            655362,
+            455111
+          ],
+          [
+            98,
+            983043,
+            455111
+          ],
+          [
+            120,
+            0,
+            1241543
+          ],
+          [
+            121,
+            345886,
+            1241543
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "ctx_running_paragraph": {
+    "source": "\\nopagenumbers \\noindent Before\\par\\halign{#&#\\cr \\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\noindent After\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            101,
+            464215,
+            655360
+          ],
+          [
+            102,
+            755486,
+            655360
+          ],
+          [
+            111,
+            955736,
+            655360
+          ],
+          [
+            114,
+            1283417,
+            655360
+          ],
+          [
+            101,
+            1540100,
+            655360
+          ],
+          [
+            98,
+            0,
+            1441792
+          ],
+          [
+            97,
+            0,
+            2228224
+          ],
+          [
+            65,
+            0,
+            3014656
+          ],
+          [
+            102,
+            491521,
+            3014656
+          ],
+          [
+            116,
+            691771,
+            3014656
+          ],
+          [
+            101,
+            946634,
+            3014656
+          ],
+          [
+            114,
+            1237905,
+            3014656
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            66,
+            0,
+            655360
+          ],
+          [
+            101,
+            464215,
+            655360
+          ],
+          [
+            102,
+            755486,
+            655360
+          ],
+          [
+            111,
+            955736,
+            655360
+          ],
+          [
+            114,
+            1283417,
+            655360
+          ],
+          [
+            101,
+            1540100,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ],
+          [
+            98,
+            327681,
+            1441792
+          ],
+          [
+            65,
+            0,
+            2228224
+          ],
+          [
+            102,
+            491521,
+            2228224
+          ],
+          [
+            116,
+            691771,
+            2228224
+          ],
+          [
+            101,
+            946634,
+            2228224
+          ],
+          [
+            114,
+            1237905,
+            2228224
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "ctx_hbox": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\vbox{\\halign{#&#\\cr\\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[dims=364090,455111,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=691771,455111,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "ctx_vbox": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#\\cr\\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[dims=364090,455111,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=691771,455111,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "ctx_edef_message": {
+    "source": "\\nopagenumbers \\def\\pull{\\global\\setbox11=\\lastbox }\\let\\sp=\\span\\edef\\saved{\\noexpand\\pull}\\halign{#&#\\cr \\hbox{a}\\sp\\saved b\\cr}\\message{[void=\\ifvoid11 y\\else n\\fi]}\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[void=n]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            655360
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[void=y]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            327681,
+            655360
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "ctx_inside_math": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{$\\vcenter{\\halign{#&#\\cr\\hbox{a}\\span\\global\\setbox11=\\lastbox b\\cr}}$}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[dims=364090,391396,63715]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            719075
+          ],
+          [
+            97,
+            0,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=691771,391396,63715]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            719075
+          ],
+          [
+            98,
+            327681,
+            719075
+          ]
+        ]
+      ]
+    },
+    "exact": false
+  },
+  "keep_ordinary_span": {
+    "source": "\\nopagenumbers \\setbox0\\vbox{\\halign{#&#\\cr aaa\\span b\\cr x&y\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\bye",
+    "ref": {
+      "messages": [
+        "[dims=1347133,1241543,127431]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            455111
+          ],
+          [
+            97,
+            327681,
+            455111
+          ],
+          [
+            97,
+            655362,
+            455111
+          ],
+          [
+            98,
+            983043,
+            455111
+          ],
+          [
+            120,
+            0,
+            1241543
+          ],
+          [
+            121,
+            345886,
+            1241543
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=1347133,1241543,127431]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            455111
+          ],
+          [
+            97,
+            327681,
+            455111
+          ],
+          [
+            97,
+            655362,
+            455111
+          ],
+          [
+            98,
+            983043,
+            455111
+          ],
+          [
+            120,
+            0,
+            1241543
+          ],
+          [
+            121,
+            345886,
+            1241543
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "keep_valign_span": {
+    "source": "\\nopagenumbers \\setbox0\\hbox{\\valign{#&#\\cr\\hbox{a}\\span\\global\\setbox11=\\lastbox \\hbox{b}\\cr}}\\dimen0=\\wd0\\dimen1=\\ht0\\dimen2=\\dp0\\message{[dims=\\number\\dimen0,\\number\\dimen1,\\number\\dimen2]}\\box0\\box11\\bye",
+    "ref": {
+      "messages": [
+        "[dims=364090,786432,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            786432
+          ],
+          [
+            97,
+            0,
+            1572864
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [
+        "[dims=364090,786432,0]"
+      ],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            98,
+            0,
+            786432
+          ],
+          [
+            97,
+            0,
+            1572864
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  },
+  "keep_settabs": {
+    "source": "\\nopagenumbers \\settabs 2\\columns \\+a&b\\cr \\+\\hbox{c}&d\\cr\\bye",
+    "ref": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            15392931,
+            655360
+          ],
+          [
+            99,
+            0,
+            1441792
+          ],
+          [
+            100,
+            15392931,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "ours": {
+      "messages": [],
+      "errors": [],
+      "glyphs": [
+        [
+          [
+            97,
+            0,
+            655360
+          ],
+          [
+            98,
+            15392931,
+            655360
+          ],
+          [
+            99,
+            0,
+            1441792
+          ],
+          [
+            100,
+            15392931,
+            1441792
+          ]
+        ]
+      ]
+    },
+    "exact": true
+  }
+}

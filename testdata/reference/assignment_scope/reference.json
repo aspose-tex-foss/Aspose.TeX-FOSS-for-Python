@@ -1,0 +1,2007 @@
+{
+  "frozen_let": {
+    "source": "\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\expandafter\\let\\expandafter\\qb\\saved\\font\\qa=cmr17 \\setbox0=\\hbox{\\qb a}\\message{R[\\the\\wd0/\\fontname\\qb/\\the\\qb]}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt/cmr10/\\qa ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt/cmr10/\\qa ]"
+    ],
+    "match": true
+  },
+  "frozen_futurelet": {
+    "source": "\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\def\\take{\\futurelet\\qb\\relax}\\expandafter\\take\\saved\\font\\qa=cmr17 \\setbox0=\\hbox{\\qb a}\\message{R[\\the\\wd0/\\fontname\\qb]}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt/cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt/cmr10]"
+    ],
+    "match": true
+  },
+  "frozen_toks": {
+    "source": "\\font\\qa=cmr10 \\toks0=\\expandafter{\\the\\qa}\\font\\qa=cmr17 \\setbox0=\\hbox{\\the\\toks0 a}\\message{R[\\the\\wd0/\\the\\toks0]}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt/\\qa ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt/\\qa ]"
+    ],
+    "match": true
+  },
+  "frozen_undefined": {
+    "source": "{\\font\\qa=cmr10 \\xdef\\saved{\\the\\qa}}\\setbox0=\\hbox{\\saved a}\\message{R[\\the\\wd0/\\meaning\\qa/\\meaning\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[5.00002pt/undefined/macro:->\\qa ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[5.00002pt/undefined/macro:->\\qa ]"
+    ],
+    "match": true
+  },
+  "frozen_rename": {
+    "source": "\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\font\\qb=cmr10 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->\\qb /\\qb]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->\\qb /\\qb]"
+    ],
+    "match": true
+  },
+  "frozen_ifx": {
+    "source": "\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\expandafter\\ifx\\saved\\qa\\message{R[Y]}\\else\\message{R[N]}\\fi\n\\bye\n",
+    "miktex": [
+      "R[Y]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[Y]"
+    ],
+    "match": true
+  },
+  "frozen_ifcat": {
+    "source": "\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\ifcat\\saved\\relax\\message{R[Y]}\\else\\message{R[N]}\\fi\n\\bye\n",
+    "miktex": [
+      "R[Y]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[Y]"
+    ],
+    "match": true
+  },
+  "frozen_if": {
+    "source": "\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\if\\saved\\relax\\message{R[Y]}\\else\\message{R[N]}\\fi\n\\bye\n",
+    "miktex": [
+      "R[Y]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[Y]"
+    ],
+    "match": true
+  },
+  "frozen_escape": {
+    "source": "\\font\\qa=cmr10 \\edef\\saved{\\the\\qa}\\escapechar=33 \\message{R[\\meaning\\saved/\\expandafter\\string\\saved]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->!qa /!qa]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->!qa /!qa]"
+    ],
+    "match": true
+  },
+  "fontname_all": {
+    "source": "\\font\\qa=cmr10 scaled1200 \\textfont4=\\qa\\let\\reader=\\fontname\\message{R[\\fontname\\font/\\reader\\qa/\\fontname\\textfont4/\\fontname\\nullfont]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10/cmr10 at 12.0pt/cmr10 at 12.0pt/nullfont]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/cmr10 at 12.0pt/cmr10 at 12.0pt/nullfont]"
+    ],
+    "match": true
+  },
+  "font_operand_aliases": {
+    "source": "\\let\\cur=\\font\\let\\family=\\textfont\\message{R[\\fontname\\cur/\\fontname\\family0/\\the\\fontdimen2\\cur]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10/cmr10/3.33333pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10/cmr10/3.33333pt]"
+    ],
+    "match": true
+  },
+  "fontdimen_family": {
+    "source": "\\font\\qa=cmr10 \\textfont4=\\qa\\fontdimen2\\textfont4=3pt \\message{R[\\the\\fontdimen2\\qa/\\the\\fontdimen2\\textfont4]}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt/3.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[3.0pt/3.0pt]"
+    ],
+    "match": true
+  },
+  "font_integer_family": {
+    "source": "\\font\\qa=cmr10 \\textfont4=\\qa\\hyphenchar\\textfont4=65 \\message{R[\\the\\hyphenchar\\qa/\\the\\hyphenchar\\textfont4]}\n\\bye\n",
+    "miktex": [
+      "R[65/65]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[65/65]"
+    ],
+    "match": true
+  },
+  "font_local_rebind": {
+    "source": "\\font\\qa=cmr10 {\\font\\qa=cmr17 \\message{R[\\fontname\\qa]}}\\message{R[\\fontname\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]",
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]",
+      "R[cmr10]"
+    ],
+    "match": true
+  },
+  "font_global_hidden": {
+    "source": "\\font\\qa=cmr10 {\\def\\qa{old}{\\global\\font\\qa=cmr17 }}\\message{R[\\fontname\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "match": true
+  },
+  "font_later_local": {
+    "source": "\\font\\qa=cmr10 {\\font\\qa=cmr7 \\global\\font\\qa=cmr17 \\font\\qa=cmr5 }\\message{R[\\fontname\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "match": true
+  },
+  "font_local_let": {
+    "source": "\\font\\qa=cmr10 {\\let\\qb=\\qa}\\message{R[\\meaning\\qb/\\the\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[undefined/\\qa ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[undefined/\\qa ]"
+    ],
+    "match": true
+  },
+  "font_dynamic_cs": {
+    "source": "\\font\\qa=cmr10 \\def\\saved{\\qa}\\font\\qa=cmr17 \\setbox0=\\hbox{\\saved a}\\message{R[\\the\\wd0]}\n\\bye\n",
+    "miktex": [
+      "R[7.92491pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7.92491pt]"
+    ],
+    "match": true
+  },
+  "font_following_prefix": {
+    "source": "{\\font\\qa=cmr10\\global\\count5=7 }\\message{R[\\the\\count5/\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[7/undefined]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/undefined]"
+    ],
+    "match": true
+  },
+  "font_defaults_alloc_vs_reuse": {
+    "source": "\\defaulthyphenchar=33 \\defaultskewchar=12 \\font\\qa=cmr10 \\font\\qb=cmr10 at11pt \\message{R[\\the\\hyphenchar\\qa/\\the\\hyphenchar\\qb/\\the\\skewchar\\qa/\\the\\skewchar\\qb]}\n\\bye\n",
+    "miktex": [
+      "R[45/33/-1/12]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[45/33/-1/12]"
+    ],
+    "match": true
+  },
+  "font_zero_unset_roles": {
+    "source": "\\font\\nullfont=cmr17 \\message{R[\\fontname\\textfont15/\\fontname\\scriptfont15/\\fontname\\scriptscriptfont15/\\fontname\\nullfont]}\n\\bye\n",
+    "miktex": [
+      "R[nullfont/nullfont/nullfont/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[nullfont/nullfont/nullfont/cmr17]"
+    ],
+    "match": true
+  },
+  "font_zero_hidden_macro": {
+    "source": "\\def\\nullfont{BAD}\\message{R[\\fontname\\textfont15/\\the\\textfont15]}\n\\bye\n",
+    "miktex": [
+      "R[nullfont/\\nullfont ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[nullfont/\\nullfont ]"
+    ],
+    "match": true
+  },
+  "font_zero_hidden_register": {
+    "source": "\\countdef\\nullfont=5 \\message{R[\\fontname\\textfont15/\\the\\scriptfont15]}\n\\bye\n",
+    "miktex": [
+      "R[nullfont/\\nullfont ]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[nullfont/\\nullfont ]"
+    ],
+    "match": true
+  },
+  "font_zero_frozen_alias": {
+    "source": "\\edef\\saved{\\the\\textfont15}\\expandafter\\let\\expandafter\\qa\\saved\\font\\nullfont=cmr17 \\message{R[\\fontname\\qa/\\meaning\\qa/\\meaning\\saved]}\\qa\\message{R[\\fontname\\font]}\n\\bye\n",
+    "miktex": [
+      "R[nullfont/select font nullfont/macro:->\\nullfont ]",
+      "R[nullfont]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[nullfont/select font nullfont/macro:->\\nullfont ]",
+      "R[nullfont]"
+    ],
+    "match": true
+  },
+  "font_zero_ifx": {
+    "source": "\\edef\\saved{\\the\\textfont15}\\expandafter\\ifx\\saved\\nullfont\\message{R[Y]}\\else\\message{R[N]}\\fi\\font\\nullfont=cmr17 \\expandafter\\ifx\\saved\\nullfont\\message{R[Y]}\\else\\message{R[N]}\\fi\n\\bye\n",
+    "miktex": [
+      "R[Y]",
+      "R[Y]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[Y]",
+      "R[Y]"
+    ],
+    "match": true
+  },
+  "font_zero_parameters": {
+    "source": "\\font\\nullfont=cmr17 \\fontdimen2\\textfont15=3pt \\hyphenchar\\scriptfont15=65 \\dimen0=\\fontdimen2\\scriptscriptfont15\\message{R[\\the\\dimen0/\\the\\fontdimen2\\textfont15/\\the\\hyphenchar\\textfont15/\\the\\hyphenchar\\nullfont]}\n\\bye\n",
+    "miktex": [
+      "R[3.0pt/3.0pt/65/45]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[3.0pt/3.0pt/65/45]"
+    ],
+    "match": true
+  },
+  "font_zero_meaning_distinct_tiny_font": {
+    "source": "\\font\\zero=cmr10 at1sp \\message{R[\\meaning\\zero/\\meaning\\nullfont/\\the\\hyphenchar\\nullfont/\\the\\skewchar\\nullfont]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr10 at 0.00002pt/select font nullfont/45/-1]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10 at 0.00002pt/select font nullfont/45/-1]"
+    ],
+    "match": true
+  },
+  "font_zero_assigned_family": {
+    "source": "\\textfont15=\\nullfont\\font\\nullfont=cmr17 \\message{R[\\fontname\\textfont15/\\fontname\\scriptfont15/\\fontname\\nullfont]}\n\\bye\n",
+    "miktex": [
+      "R[nullfont/nullfont/cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[nullfont/nullfont/cmr17]"
+    ],
+    "match": true
+  },
+  "glyph_font_macro_target": {
+    "source": "\\font\\big=cmr10 at20pt\\big\\noindent a\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "match": true,
+    "miktex_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          97,
+          0,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "font_family_restore": {
+    "source": "\\font\\qa=cmsy7 {\\textfont2=\\qa\\setbox0=\\hbox{$a+b$}}\\setbox0=\\hbox{$a+b$}\\message{R[\\number\\wd0/\\fontname\\textfont2]}\n\\bye\n",
+    "miktex": [
+      "R[1428664/cmsy10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[1428664/cmsy10]"
+    ],
+    "match": true
+  },
+  "glyph_boxes_pages": {
+    "source": "\\font\\qa=cmr10 \\setbox0=\\hbox{\\qa office}\\setbox1=\\hbox{\\copy0}\\font\\qa=cmr17 \\noindent\\copy0\\copy1\\qa a\\par\\vfill\\eject\\noindent\\copy0\\qa a\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "match": true,
+    "miktex_glyphs": [
+      [
+        [
+          111,
+          0,
+          655360
+        ],
+        [
+          14,
+          327681,
+          655360
+        ],
+        [
+          99,
+          873816,
+          655360
+        ],
+        [
+          101,
+          1165087,
+          655360
+        ],
+        [
+          111,
+          1456358,
+          655360
+        ],
+        [
+          14,
+          1784039,
+          655360
+        ],
+        [
+          99,
+          2330174,
+          655360
+        ],
+        [
+          101,
+          2621445,
+          655360
+        ],
+        [
+          97,
+          2912716,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ],
+      [
+        [
+          111,
+          0,
+          655360
+        ],
+        [
+          14,
+          327681,
+          655360
+        ],
+        [
+          99,
+          873816,
+          655360
+        ],
+        [
+          101,
+          1165087,
+          655360
+        ],
+        [
+          97,
+          1456358,
+          655360
+        ],
+        [
+          50,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          111,
+          0,
+          655360
+        ],
+        [
+          14,
+          327681,
+          655360
+        ],
+        [
+          99,
+          873816,
+          655360
+        ],
+        [
+          101,
+          1165087,
+          655360
+        ],
+        [
+          111,
+          1456358,
+          655360
+        ],
+        [
+          14,
+          1784039,
+          655360
+        ],
+        [
+          99,
+          2330174,
+          655360
+        ],
+        [
+          101,
+          2621445,
+          655360
+        ],
+        [
+          97,
+          2912716,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ],
+      [
+        [
+          111,
+          0,
+          655360
+        ],
+        [
+          14,
+          327681,
+          655360
+        ],
+        [
+          99,
+          873816,
+          655360
+        ],
+        [
+          101,
+          1165087,
+          655360
+        ],
+        [
+          97,
+          1456358,
+          655360
+        ],
+        [
+          50,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "glyph_math_pieces": {
+    "source": "\\font\\qa=cmex10 \\textfont3=\\qa\\setbox0=\\hbox{$\\left(\\vbox to40pt{}\\right)\\sqrt{x}$}\\font\\qa=cmr17 \\noindent\\box0\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "match": true,
+    "miktex_glyphs": [
+      [
+        [
+          48,
+          0,
+          124494
+        ],
+        [
+          66,
+          0,
+          1277940
+        ],
+        [
+          66,
+          0,
+          1671160
+        ],
+        [
+          66,
+          0,
+          2064380
+        ],
+        [
+          66,
+          0,
+          2457600
+        ],
+        [
+          66,
+          0,
+          2850820
+        ],
+        [
+          66,
+          0,
+          3244040
+        ],
+        [
+          64,
+          0,
+          3663473
+        ],
+        [
+          49,
+          573441,
+          124494
+        ],
+        [
+          67,
+          573441,
+          1277940
+        ],
+        [
+          67,
+          573441,
+          1671160
+        ],
+        [
+          67,
+          573441,
+          2064380
+        ],
+        [
+          67,
+          573441,
+          2457600
+        ],
+        [
+          67,
+          573441,
+          2850820
+        ],
+        [
+          67,
+          573441,
+          3244040
+        ],
+        [
+          65,
+          573441,
+          3663473
+        ],
+        [
+          112,
+          1256106,
+          2149400
+        ],
+        [
+          120,
+          1802241,
+          2621440
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          48,
+          0,
+          124494
+        ],
+        [
+          66,
+          0,
+          1277940
+        ],
+        [
+          66,
+          0,
+          1671160
+        ],
+        [
+          66,
+          0,
+          2064380
+        ],
+        [
+          66,
+          0,
+          2457600
+        ],
+        [
+          66,
+          0,
+          2850820
+        ],
+        [
+          66,
+          0,
+          3244040
+        ],
+        [
+          64,
+          0,
+          3663473
+        ],
+        [
+          49,
+          573441,
+          124494
+        ],
+        [
+          67,
+          573441,
+          1277940
+        ],
+        [
+          67,
+          573441,
+          1671160
+        ],
+        [
+          67,
+          573441,
+          2064380
+        ],
+        [
+          67,
+          573441,
+          2457600
+        ],
+        [
+          67,
+          573441,
+          2850820
+        ],
+        [
+          67,
+          573441,
+          3244040
+        ],
+        [
+          65,
+          573441,
+          3663473
+        ],
+        [
+          112,
+          1256106,
+          2149400
+        ],
+        [
+          120,
+          1802241,
+          2621440
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "font_accent_box": {
+    "source": "\\font\\qa=cmr10 \\textfont0=\\qa\\setbox0=\\hbox{$\\hat a$}\\font\\qa=cmr17 \\message{R[\\number\\wd0/\\number\\ht0/\\number\\dp0]}\n\\bye\n",
+    "miktex": [
+      "R[346416/455111/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[346416/455111/0]"
+    ],
+    "match": true
+  },
+  "glyph_discretionary_leaders": {
+    "source": "\\font\\qa=cmr10 \\setbox0=\\hbox{\\qa\\discretionary{a}{b}{c}\\leaders\\hbox{d}\\hskip20pt}\\font\\qa=cmr17 \\noindent\\copy0\\qa a\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "match": true,
+    "miktex_glyphs": [
+      [
+        [
+          99,
+          0,
+          655360
+        ],
+        [
+          100,
+          364090,
+          655360
+        ],
+        [
+          100,
+          728180,
+          655360
+        ],
+        [
+          100,
+          1092270,
+          655360
+        ],
+        [
+          97,
+          1601991,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          99,
+          0,
+          655360
+        ],
+        [
+          100,
+          364090,
+          655360
+        ],
+        [
+          100,
+          728180,
+          655360
+        ],
+        [
+          100,
+          1092270,
+          655360
+        ],
+        [
+          97,
+          1601991,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "glyph_ligature_hyphenation": {
+    "source": "\\font\\qa=cmr10 \\noindent\\qa office difficulties\\font\\qa=cmr17 \\qa a\n\\bye\n",
+    "miktex": [],
+    "errors": [],
+    "ours": [],
+    "match": true,
+    "miktex_glyphs": [
+      [
+        [
+          111,
+          0,
+          655360
+        ],
+        [
+          14,
+          327681,
+          655360
+        ],
+        [
+          99,
+          873816,
+          655360
+        ],
+        [
+          101,
+          1165087,
+          655360
+        ],
+        [
+          100,
+          1674811,
+          655360
+        ],
+        [
+          105,
+          2038901,
+          655360
+        ],
+        [
+          14,
+          2220946,
+          655360
+        ],
+        [
+          99,
+          2767081,
+          655360
+        ],
+        [
+          117,
+          3058352,
+          655360
+        ],
+        [
+          108,
+          3422442,
+          655360
+        ],
+        [
+          116,
+          3604487,
+          655360
+        ],
+        [
+          105,
+          3859350,
+          655360
+        ],
+        [
+          101,
+          4041395,
+          655360
+        ],
+        [
+          115,
+          4332666,
+          655360
+        ],
+        [
+          97,
+          4591169,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ],
+    "ours_glyphs": [
+      [
+        [
+          111,
+          0,
+          655360
+        ],
+        [
+          14,
+          327681,
+          655360
+        ],
+        [
+          99,
+          873816,
+          655360
+        ],
+        [
+          101,
+          1165087,
+          655360
+        ],
+        [
+          100,
+          1674811,
+          655360
+        ],
+        [
+          105,
+          2038901,
+          655360
+        ],
+        [
+          14,
+          2220946,
+          655360
+        ],
+        [
+          99,
+          2767081,
+          655360
+        ],
+        [
+          117,
+          3058352,
+          655360
+        ],
+        [
+          108,
+          3422442,
+          655360
+        ],
+        [
+          116,
+          3604487,
+          655360
+        ],
+        [
+          105,
+          3859350,
+          655360
+        ],
+        [
+          101,
+          4041395,
+          655360
+        ],
+        [
+          115,
+          4332666,
+          655360
+        ],
+        [
+          97,
+          4591169,
+          655360
+        ],
+        [
+          49,
+          15229091,
+          43725786
+        ]
+      ]
+    ]
+  },
+  "scope_owners_macro_macro_1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_macro_-1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=-1 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_macro_0": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=0 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_constant_1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_constant_-1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=-1 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_constant_0": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=0 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_register_1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_register_-1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=-1 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_register_0": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=0 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_font_1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=1 \\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_font_-1": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=-1 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "match": true
+  },
+  "scope_owners_macro_font_0": {
+    "source": "\\def\\qa{old}{\\chardef\\qa=65 {\\globaldefs=0 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_macro_1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=1 \\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_macro_-1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=-1 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"41]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"41]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_macro_0": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=0 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_constant_1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=1 \\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_constant_-1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=-1 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"41]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"41]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_constant_0": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=0 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_register_1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_register_-1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=-1 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"41]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"41]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_register_0": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=0 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_font_1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=1 \\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_font_-1": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=-1 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"41]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"41]"
+    ],
+    "match": true
+  },
+  "scope_owners_constant_font_0": {
+    "source": "\\chardef\\qa=65 {\\def\\qa{old}{\\globaldefs=0 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_macro_1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=1 \\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_macro_-1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count4]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count4]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_macro_0": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_constant_1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=1 \\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_constant_-1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count4]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count4]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_constant_0": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_register_1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_register_-1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count4]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count4]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_register_0": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_font_1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=1 \\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_font_-1": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count4]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count4]"
+    ],
+    "match": true
+  },
+  "scope_owners_register_font_0": {
+    "source": "\\countdef\\qa=4 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_macro_1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=1 \\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_macro_-1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_macro_0": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\def\\qa{new}}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->new]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->new]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_constant_1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=1 \\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_constant_-1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_constant_0": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\chardef\\qa=66 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\char\"42]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\char\"42]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_register_1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=1 \\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_register_-1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_register_0": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\countdef\\qa=5 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[\\count5]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[\\count5]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_font_1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=1 \\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_font_-1": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=-1 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr10]"
+    ],
+    "match": true
+  },
+  "scope_owners_font_font_0": {
+    "source": "\\font\\qa=cmr10 {\\chardef\\qa=65 {\\globaldefs=0 \\global\\font\\qa=cmr17 }}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[select font cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[select font cmr17]"
+    ],
+    "match": true
+  },
+  "scope_negative_gdef": {
+    "source": "\\def\\qa{old}{\\globaldefs=-1 \\gdef\\qa{new}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "match": true
+  },
+  "scope_negative_xdef": {
+    "source": "\\def\\qa{old}{\\globaldefs=-1 \\xdef\\qa{new}}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "match": true
+  },
+  "scope_negative_let": {
+    "source": "\\def\\qa{old}\\def\\qb{new}{\\globaldefs=-1 \\global\\let\\qa=\\qb}\\message{R[\\meaning\\qa]}\n\\bye\n",
+    "miktex": [
+      "R[macro:->old]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[macro:->old]"
+    ],
+    "match": true
+  },
+  "scope_negative_prefix_cleanup": {
+    "source": "{\\globaldefs=-1 \\global\\count5=8 \\globaldefs=0 \\count6=9 }\\message{R[\\the\\count5/\\the\\count6]}\n\\bye\n",
+    "miktex": [
+      "R[0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0]"
+    ],
+    "match": true
+  },
+  "scope_self_positive": {
+    "source": "{\\globaldefs=1 \\globaldefs=0 }\\message{R[\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0]"
+    ],
+    "match": true
+  },
+  "scope_self_negative": {
+    "source": "{\\globaldefs=-1 \\global\\globaldefs=0 }\\message{R[\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0]"
+    ],
+    "match": true
+  },
+  "scope_later_local": {
+    "source": "{\\count5=2 \\globaldefs=1 \\count5=7 \\globaldefs=0 \\count5=9 }\\message{R[\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "match": true
+  },
+  "scope_values_positive": {
+    "source": "{\\globaldefs=1 \\count5=7 \\dimen5=3pt \\skip5=2pt plus1pt \\muskip5=3mu \\toks5={yes}\\mathcode`\\a=123 \\catcode`\\@=11 }\\message{R[\\the\\count5/\\the\\dimen5/\\the\\skip5/\\the\\muskip5/\\the\\toks5/\\the\\mathcode`\\a/\\the\\catcode`\\@]}\n\\bye\n",
+    "miktex": [
+      "R[7/3.0pt/2.0pt plus 1.0pt/3.0mu/yes/123/11]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/3.0pt/2.0pt plus 1.0pt/3.0mu/yes/123/11]"
+    ],
+    "match": true
+  },
+  "scope_values_negative": {
+    "source": "{\\globaldefs=-1 \\global\\count5=7 \\global\\dimen5=3pt \\global\\skip5=2pt \\global\\muskip5=3mu \\global\\toks5={yes}\\global\\mathcode`\\a=123 \\global\\catcode`\\@=11 }\\message{R[\\the\\count5/\\the\\dimen5/\\the\\skip5/\\the\\muskip5/\\the\\toks5/\\the\\mathcode`\\a/\\the\\catcode`\\@]}\n\\bye\n",
+    "miktex": [
+      "R[0/0.0pt/0.0pt/0.0mu//29025/12]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0.0pt/0.0pt/0.0mu//29025/12]"
+    ],
+    "match": true
+  },
+  "scope_font_current_positive": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=1 \\qa}\\message{R[\\fontname\\font]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "match": true
+  },
+  "scope_font_current_negative": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=-1 \\global\\qa}\\message{R[\\fontname\\font]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "match": true
+  },
+  "scope_family_positive": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=1 \\textfont0=\\qa}\\message{R[\\fontname\\textfont0]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "match": true
+  },
+  "scope_family_negative": {
+    "source": "\\font\\qa=cmr17 {\\globaldefs=-1 \\global\\textfont0=\\qa}\\message{R[\\fontname\\textfont0]}\n\\bye\n",
+    "miktex": [
+      "R[cmr10]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr10]"
+    ],
+    "match": true
+  },
+  "scope_family_later_local": {
+    "source": "\\font\\qa=cmr17 \\font\\qb=cmr7 {\\textfont0=\\qb\\global\\textfont0=\\qa\\textfont0=\\qb}\\message{R[\\fontname\\textfont0]}\n\\bye\n",
+    "miktex": [
+      "R[cmr17]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[cmr17]"
+    ],
+    "match": true
+  },
+  "scope_afterassignment": {
+    "source": "\\def\\qa{\\message{R[after=\\the\\count5]}}{\\globaldefs=1 \\afterassignment\\qa\\count5=7 }\\message{R[end=\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[after=7]",
+      "R[end=7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[after=7]",
+      "R[end=7]"
+    ],
+    "match": true
+  },
+  "scope_font_parameters_negative": {
+    "source": "{\\globaldefs=-1 \\hyphenchar\\tenrm=65 \\fontdimen2\\tenrm=3pt }\\message{R[\\the\\hyphenchar\\tenrm/\\the\\fontdimen2\\tenrm]}\n\\bye\n",
+    "miktex": [
+      "R[65/3.0pt]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[65/3.0pt]"
+    ],
+    "match": true
+  },
+  "inline_paragraph_positive": {
+    "source": "\\fam=0 $\\globaldefs=1 \\count5=8 a$\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[8/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[8/0/0]"
+    ],
+    "match": true
+  },
+  "inline_paragraph_negative": {
+    "source": "\\fam=0 $\\globaldefs=-1 \\global\\count5=8 a$\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0/0]"
+    ],
+    "match": true
+  },
+  "inline_paragraph_local_global_local": {
+    "source": "\\fam=0 $\\count5=3 \\global\\count5=7 \\count5=9 a$\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[7/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/0/0]"
+    ],
+    "match": true
+  },
+  "inline_paragraph_global_fam": {
+    "source": "\\fam=0 $\\global\\fam=1 a$\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/1/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/1/0]"
+    ],
+    "match": true
+  },
+  "inline_hbox_positive": {
+    "source": "\\fam=0 \\setbox0=\\hbox{$\\globaldefs=1 \\count5=8 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[8/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[8/0/0]"
+    ],
+    "match": true
+  },
+  "inline_hbox_negative": {
+    "source": "\\fam=0 \\setbox0=\\hbox{$\\globaldefs=-1 \\global\\count5=8 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0/0]"
+    ],
+    "match": true
+  },
+  "inline_hbox_local_global_local": {
+    "source": "\\fam=0 \\setbox0=\\hbox{$\\count5=3 \\global\\count5=7 \\count5=9 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[7/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/0/0]"
+    ],
+    "match": true
+  },
+  "inline_hbox_global_fam": {
+    "source": "\\fam=0 \\setbox0=\\hbox{$\\global\\fam=1 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/1/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/1/0]"
+    ],
+    "match": true
+  },
+  "inline_deferred_positive": {
+    "source": "\\fam=0 \\setbox0=\\hbox\\bgroup$\\globaldefs=1 \\count5=8 a$\\egroup\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[8/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[8/0/0]"
+    ],
+    "match": true
+  },
+  "inline_deferred_negative": {
+    "source": "\\fam=0 \\setbox0=\\hbox\\bgroup$\\globaldefs=-1 \\global\\count5=8 a$\\egroup\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0/0]"
+    ],
+    "match": true
+  },
+  "inline_deferred_local_global_local": {
+    "source": "\\fam=0 \\setbox0=\\hbox\\bgroup$\\count5=3 \\global\\count5=7 \\count5=9 a$\\egroup\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[7/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/0/0]"
+    ],
+    "match": true
+  },
+  "inline_deferred_global_fam": {
+    "source": "\\fam=0 \\setbox0=\\hbox\\bgroup$\\global\\fam=1 a$\\egroup\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/1/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/1/0]"
+    ],
+    "match": true
+  },
+  "inline_vbox_positive": {
+    "source": "\\fam=0 \\setbox0=\\vbox{$\\globaldefs=1 \\count5=8 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[8/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[8/0/0]"
+    ],
+    "match": true
+  },
+  "inline_vbox_negative": {
+    "source": "\\fam=0 \\setbox0=\\vbox{$\\globaldefs=-1 \\global\\count5=8 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0/0]"
+    ],
+    "match": true
+  },
+  "inline_vbox_local_global_local": {
+    "source": "\\fam=0 \\setbox0=\\vbox{$\\count5=3 \\global\\count5=7 \\count5=9 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[7/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/0/0]"
+    ],
+    "match": true
+  },
+  "inline_vbox_global_fam": {
+    "source": "\\fam=0 \\setbox0=\\vbox{$\\global\\fam=1 a$}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/1/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/1/0]"
+    ],
+    "match": true
+  },
+  "inline_cell_positive": {
+    "source": "\\fam=0 \\halign{#\\cr$\\globaldefs=1 \\count5=8 a$\\cr}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[8/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[8/0/0]"
+    ],
+    "match": true
+  },
+  "inline_cell_negative": {
+    "source": "\\fam=0 \\halign{#\\cr$\\globaldefs=-1 \\global\\count5=8 a$\\cr}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/0/0]"
+    ],
+    "match": true
+  },
+  "inline_cell_local_global_local": {
+    "source": "\\fam=0 \\halign{#\\cr$\\count5=3 \\global\\count5=7 \\count5=9 a$\\cr}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[7/0/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/0/0]"
+    ],
+    "match": true
+  },
+  "inline_cell_global_fam": {
+    "source": "\\fam=0 \\halign{#\\cr$\\global\\fam=1 a$\\cr}\\message{R[\\the\\count5/\\the\\fam/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[0/1/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0/1/0]"
+    ],
+    "match": true
+  },
+  "inline_everymath_prefix": {
+    "source": "\\everymath{\\global\\count5=7 }$a$\\message{R[\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7]"
+    ],
+    "match": true
+  },
+  "inline_everymath_positive": {
+    "source": "\\everymath{\\globaldefs=1 \\count5=7 }\\setbox0=\\hbox{$a$}\\message{R[\\the\\count5/\\the\\globaldefs]}\n\\bye\n",
+    "miktex": [
+      "R[7/0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[7/0]"
+    ],
+    "match": true
+  },
+  "inline_positive_fam_reset": {
+    "source": "\\fam=0 \\globaldefs=1 $a$\\message{R[\\the\\fam]}\n\\bye\n",
+    "miktex": [
+      "R[0]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[0]"
+    ],
+    "match": true
+  },
+  "inline_aftergroup_order": {
+    "source": "\\def\\qa{\\message{R[A=\\the\\count5/\\the\\count6]}}\\def\\qb{\\message{R[B=\\the\\count5/\\the\\count6]}}$\\count6=3 \\globaldefs=1 \\count5=7 \\aftergroup\\qa\\aftergroup\\qb a$\\message{R[end]}\n\\bye\n",
+    "miktex": [
+      "R[A=7/0]",
+      "R[B=7/0]",
+      "R[end]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[A=7/0]",
+      "R[B=7/0]",
+      "R[end]"
+    ],
+    "match": true
+  },
+  "inline_nested_scopes": {
+    "source": "\\def\\qa{\\message{R[after=\\the\\count5]}}$\\count5=2\\hbox{$\\global\\count5=7 \\count5=9\\aftergroup\\qa a$}\\aftergroup\\qa b$\\message{R[end=\\the\\count5]}\n\\bye\n",
+    "miktex": [
+      "R[after=7]",
+      "R[after=7]",
+      "R[end=7]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[after=7]",
+      "R[after=7]",
+      "R[end=7]"
+    ],
+    "match": true
+  },
+  "inline_direct_dollar_alias": {
+    "source": "\\let\\qa=$\\qa a\\qa\\message{R[ok]}\n\\bye\n",
+    "miktex": [
+      "R[ok]"
+    ],
+    "errors": [],
+    "ours": [
+      "R[ok]"
+    ],
+    "match": true
+  }
+}

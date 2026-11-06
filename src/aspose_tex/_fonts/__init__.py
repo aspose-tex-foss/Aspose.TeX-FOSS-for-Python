@@ -6,10 +6,10 @@ from aspose_tex._fonts.math_family_registry import MathFamilyRegistry
 from aspose_tex._fonts.tfm_parser import TfmData, parse_tfm
 
 __all__ = [
- "CharMetrics",
- "FontManager",
- "FontMetrics",
- "MathFamilyRegistry",
- "TfmData",
- "parse_tfm",
+    "CharMetrics",
+    "FontManager",
+    "FontMetrics",
+    "MathFamilyRegistry",
+    "TfmData",
+    "parse_tfm",
 ]

@@ -1,0 +1,15 @@
+% thematic fixture (c, OPTIONAL) — \settabs/\+ with math.
+% Pins the tabbing alignment leg with inline $...$ math in the fields:
+% \settabs sets column stops, each \+ line lays fields against them, and the
+% fields here carry inline math.  \settabs/\+ rely on the deferred-close
+% \hbox\bgroup open-group box construction (the known-weakest area, /
+% [[project-open-group-box-gap]]), so a divergence here is EXPECTED and is
+% characterized per FR-5 (README + follow-up) rather than fixed here.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\settabs 2 \columns
+\+$a+b$&$x=y$\cr
+\+$c-d$&$\alpha\beta$\cr
+\+$e+f$&$z=w$\cr
+\bye

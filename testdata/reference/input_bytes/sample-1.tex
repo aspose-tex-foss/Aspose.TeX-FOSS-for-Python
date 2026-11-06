@@ -1,0 +1,44 @@
+\tracinglostchars=1
+\font\einbf=cmbx10 at 18pt
+\font\twbf=cmbx10 at 14pt
+\parindent=0pt \parskip=10pt
+
+{\einbf Avoid Duplicate Content With A Menu Item Alias}
+
+The Alias Menu Item Type is an often overlooked type of Menu Item that is available in Joomla. In plain terms, it is used to create a Menu Item that links to an existing Menu Item. We can use them to create a duplicate menu item without creating a duplicate URL or duplicating content. It is very simple to use and it can solve SEO and content management challenges in Joomla.
+
+{\twbf What is A Menu Item Alias?}
+
+The Menu Item Alias is a Type of Menu Item available in the Joomla Menu Manager. Not to be confused with the ``Alias'' field (mentioned throughout this article) that is found in every Menu Item and is used by Joomla to define a page URL. The Alias Menu Item is a ``Type'' --- much like ``Single Article'' or ``Category Blog'' we would use to display content through a menu item. The Alias Menu Item does not display content, it creates an internal link to an existing menu item and is available under the "System Links" section when choosing a the Menu Item Type.
+
+{\twbf Why Do We Need A Menu Item Alias?}
+
+Websites commonly feature multiple navigation menus to help users find their way around and it is not uncommon to have the same links in multiple menus. For example, a menu in the footer may contain the same links that appear in the main navigation. If these menu links are not set up properly it can cause problems with duplicate content, multiple URL's and other problems. Fortunately, Joomla offers an easy way to accomplish this through the {\bf Alias Menu Item Type.}
+
+From a technical standpoint, the Menu Item Alias exists to help us deal with the fact that it is not possible for more than one menu item to have the exact same URL in Joomla 3.x. We won't get into any specifics of the Joomla menu system architecture, for now it's only important to know that each Menu Item in Joomla must have a unique URL which is set in the “Alias” field of each Menu Item.
+
+{\twbf When Should We Use It?}
+
+A Menu Item Alias is used to create a link to an already existing Menu Item, and when it is used will always depend on the menu structure of our website. For example, let's say there is an ``About Us'' Page on our website that was created in the Main Menu using a Single Article Menu Item Type, and we need to have a link to that same ``About Us'' page in a footer menu that is located at the bottom of the page. Instead of creating another Single Article Menu Item in our footer menu, we use a Menu Item Alias.
+
+Sticking with the example, let's look at the ``About Us'' page in our main menu. The URL for that page comes from the ``Alias'' field, which is automatically generated from the title of the Menu Item. The title of the Menu Item is ``About Us'', so we have an alias of ``about-us'' and URL like this: --- examplewebsite/about-us
+
+We need to put a link to the ``About Us'' in our footer menu, so our first instinct might be to create another Single Article Menu Item in the footer menu also titled ``About Us'', which also creates the alias ``about-us''. So far so good, but when we click ``Save'' Joomla gives us this message:
+
+{\tt Warning: Save failed with the following error: Another menu item with the same parent has this alias (remember it may be a trashed item).}
+
+{\sl Warning: Save failed with the following error: Another menu item with the same parent has this alias (remember it may be a trashed item) --- or ``Use a Menu Item Alias!''}
+
+Maybe you've seen this message before, and it is bit cryptic if you're not familiar with the inner workings of the Joomla architecture. Basically, this Menu Item can't be saved because the Alias field is exactly same as another Menu Item that already exists in our Joomla installation.
+
+There are only few reasons this message appears. We may have an old Menu Item with the same alias hanging around in the trash. In that case, you can simply empty the trash in the Menu Manager to get rid of the old copy, but that is not the case in this example.
+
+{\bf In most cases, this message is really saying ``USE A MENU ITEM ALIAS!''---} and we should. To do this, simply change the Menu Item Type from ``Content -- Single Article'' to ``System Links -- Menu Item Alias'' then select the existing ``About Us'' menu item from the ``Menu Item'' select drop down.
+
+We also could get around the message by altering the Alias field in some way, like ``about-us-2''. {\bf THIS IS A VERY BAD SOLUTION}. It allows for quickly saving the menu item, but now we have 2 separate Menu Items that create 2 different URL's on our website --- about-us \& about-us-2 --- and it creates two separate web pages with the exact same content. This equals duplicate content in the eyes of a search engine and it also creates potential administrative problems.
+
+{\bf Never do this!}
+
+You may notice the Warning in this Menu Item Type stating to leave the Alias field empty in some cases. In all cases, you can delete the contents of alias field and Joomla will create a new alias automatically, so feel free to delete it if there is something there already. In Content Type Menu Items the alias is based on the Title and it's used to create a page URL. In the Alias Menu Item Type, a unique alias is created based on the date and time and it is not used to create a URL. It's simply a system link that Joomla uses to point to the chosen Menu Item.
+
+\end

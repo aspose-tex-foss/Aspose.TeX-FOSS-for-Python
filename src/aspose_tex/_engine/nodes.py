@@ -1,13 +1,13 @@
 """TeX node types for the box model.
 
 Implements: all node kinds used in horizontal
-and vertical lists. Nodes use ``__slots__`` via dataclasses for memory
+and vertical lists.  Nodes use ``__slots__`` via dataclasses for memory
 efficiency (NFR-1).
 
 Conventions:
-- All dimension fields are in scaled points (sp). 1 pt = 65536 sp.
+- All dimension fields are in scaled points (sp).  1 pt = 65536 sp.
 - ``RUNNING_DIMEN`` sentinel (``-(1 << 30)``) marks "inherit from context"
- (used for rule node dimensions, per TeX semantics).
+  (used for rule node dimensions, per TeX semantics).
 - ``INF_PENALTY`` / ``NEG_INF_PENALTY`` are the standard TeX break-point sentinels.
 
 See the project documentation for design rationale.
@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import copy
 import dataclasses
+from collections.abc import Iterable, Iterator
 from enum import IntEnum
 
 from aspose_tex._engine.registers import Glue, GlueOrder
@@ -36,30 +37,33 @@ NEG_INF_PENALTY: int = -10_000
 INF_BAD: int = 10_000
 """Maximum finite badness value."""
 
+OVERFULL_BAD: int = 1_000_000
+"""``\\badness`` of a box whose finite shrink cannot reach its size (TeX §664, §676)."""
+
 
 # ---------------------------------------------------------------------------
 # GlueSign — used in HlistNode / VlistNode after glue is set
 # ---------------------------------------------------------------------------
 
 class GlueSign(IntEnum):
- """Glue setting direction.
+    """Glue setting direction.
 
- NORMAL — box is at its natural size (no stretch or shrink applied).
- STRETCHING — glue is being stretched.
- SHRINKING — glue is being shrunk.
- """
+    NORMAL     — box is at its natural size (no stretch or shrink applied).
+    STRETCHING — glue is being stretched.
+    SHRINKING  — glue is being shrunk.
+    """
 
- NORMAL = 0
- STRETCHING = 1
- SHRINKING = 2
+    NORMAL     = 0
+    STRETCHING = 1
+    SHRINKING  = 2
 
 
 class LeadersKind(IntEnum):
- r"""Leader distribution kind for ``\leaders`` family nodes."""
+    r"""Leader distribution kind for ``\leaders`` family nodes."""
 
- NORMAL = 0
- C = 1
- X = 2
+    NORMAL = 0
+    C = 1
+    X = 2
 
 
 # ---------------------------------------------------------------------------
@@ -68,178 +72,227 @@ class LeadersKind(IntEnum):
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class CharNode:
- """A typeset character.
+    """A typeset character.
 
- Dimensions are NOT stored here; they are looked up from the font at
- render time via ``FontManager.get_metrics(font_name).char_metrics(char)``.
+    Dimensions are NOT stored here; they are looked up from the font at
+    render time via ``FontManager.get_metrics(font_name).char_metrics(char)``.
 
- Attributes:
- char: Unicode code point (0-255 for TeX text fonts).
- font_name: Font identifier string as registered with ``FontManager``
- (e.g. ``"tenrm"``).
+    Attributes:
+        char:      Unicode code point (0-255 for TeX text fonts).
+        font_name: Persistent loaded-font key. Hand-built nodes may
+            use a live binding name at the FontManager compatibility boundary
+                   (e.g. ``"tenrm"``).
+        source:    For a ligature, the character codes that formed it, in
+                   order (``ffi`` -> ``(f, f, i)``); empty for a plain
+                   character. Excluded from equality and hashing, so it only
+                   informs hyphenation (§4).
 
- Example::
+    Example::
 
- node = CharNode(char=ord('A'), font_name='tenrm')
- """
+        node = CharNode(char=ord('A'), font_name='tenrm')
+        lig = CharNode(char=14, font_name='tenrm', source=(102, 102, 105))
+        assert lig == CharNode(char=14, font_name='tenrm')
+    """
 
- char: int
- font_name: str
+    char: int
+    font_name: str
+    source: tuple[int, ...] = dataclasses.field(default=(), compare=False)
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class KernNode:
- """Fixed inter-character or inter-word spacing.
+    """Fixed inter-character or inter-word spacing.
 
- Attributes:
- width: Amount of space in sp (positive = gap, negative = overlap).
- explicit: ``True`` for ``\\kern`` primitive; ``False`` for automatic
- font kern from the lig/kern table.
+    Attributes:
+        width:    Amount of space in sp (positive = gap, negative = overlap).
+        explicit: ``True`` for ``\\kern`` primitive; ``False`` for automatic
+                  font kern from the lig/kern table.
+        italic_correction: ``True`` only for the kern emitted by the ``\\/``
+                  primitive (TeX:The Program §1112, explicit kern subtype).
+                  Distinguishes it from an ordinary lig/kern
+                  table kern, which is also ``explicit=False`` but which
+                  ``\\unkern`` and the line breaker may treat differently.
+        accent_kern: ``True`` for TeX's accent kern subtype (§1125); retained
+                  at line starts, unlike ordinary discardable kerns (§879).
 
- Example::
+    Example::
 
- node = KernNode(width=1000, explicit=True)
- """
+        node = KernNode(width=1000, explicit=True)
+    """
 
- width: int
- explicit: bool
+    width: int
+    explicit: bool
+    italic_correction: bool = False
+    accent_kern: bool = False
+
+
+@dataclasses.dataclass(frozen=True, slots=True)
+class MathNode:
+    r"""Boundary of an inline formula in a horizontal list (TeX §147).
+
+    The closing ``$`` frames the translated formula with a math-on and a
+    math-off node (§1196), so the formula's last glue or kern is never the
+    list tail: ``\lastskip`` reads zero after ``$\mskip2mu$`` and ``\unskip``
+    removes nothing ( D5).
+
+    Attributes:
+        width: ``\mathsurround`` at the closing ``$``, in sp; 0 after a line
+               break taken at this node (§881).
+        after: ``False`` for math-on (before the formula), ``True`` for
+               math-off.
+
+    Example::
+
+        on, off = MathNode(width=0, after=False), MathNode(width=0, after=True)
+    """
+
+    width: int
+    after: bool
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class GlueNode:
- """Stretchable/shrinkable space.
+    """Stretchable/shrinkable space.
 
- Attributes:
- glue: A ``Glue`` value from ``registers.py``.
+    Attributes:
+        glue: A ``Glue`` value from ``registers.py``.
 
- Example::
+    Example::
 
- from aspose_tex._engine.registers import Glue, GlueOrder
- hfil = GlueNode(glue=Glue(0, 65536, GlueOrder.FIL, 0, GlueOrder.NORMAL))
- """
+        from aspose_tex._engine.registers import Glue, GlueOrder
+        hfil = GlueNode(glue=Glue(0, 65536, GlueOrder.FIL, 0, GlueOrder.NORMAL))
+    """
 
- glue: Glue
+    glue: Glue
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class PenaltyNode:
- """Line/page break incentive.
+    """Line/page break incentive.
 
- Attributes:
- penalty: Value in range ``[-10000, 10000]``.
- Use ``INF_PENALTY`` / ``NEG_INF_PENALTY`` for absolute control.
+    Attributes:
+        penalty: Value in range ``[-10000, 10000]``.
+                 Use ``INF_PENALTY`` / ``NEG_INF_PENALTY`` for absolute control.
 
- Example::
+    Example::
 
- node = PenaltyNode(penalty=INF_PENALTY) # \\nobreak
- """
+        node = PenaltyNode(penalty=INF_PENALTY)  # \\nobreak
+    """
 
- penalty: int
+    penalty: int
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class RuleNode:
- """Filled rectangle (``\\hrule`` / ``\\vrule``).
+    """Filled rectangle (``\\hrule`` / ``\\vrule``).
 
- Attributes:
- width: Horizontal extent in sp; ``RUNNING_DIMEN`` = inherit.
- height: Height above baseline in sp; ``RUNNING_DIMEN`` = inherit.
- depth: Depth below baseline in sp; ``RUNNING_DIMEN`` = inherit.
+    Attributes:
+        width:  Horizontal extent in sp; ``RUNNING_DIMEN`` = inherit.
+        height: Height above baseline in sp; ``RUNNING_DIMEN`` = inherit.
+        depth:  Depth below baseline in sp; ``RUNNING_DIMEN`` = inherit.
 
- Example::
+    Example::
 
- node = RuleNode(width=65536 * 100, height=26214, depth=0)
- """
+        node = RuleNode(width=65536 * 100, height=26214, depth=0)
+    """
 
- width: int
- height: int
- depth: int
+    width: int
+    height: int
+    depth: int
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class DiscretionaryNode:
- """Line-break alternative from ``\\discretionary{pre}{post}{nobreak}``.
+    """Line-break alternative from ``\\discretionary{pre}{post}{nobreak}``.
 
- The three replacement lists are immutable node tuples. M3 stores the
- alternatives and lets the linebreaker pass through the node; full branch
- selection is deferred to M4.
- """
+    The linebreaker selects pre/post at a break and nobreak otherwise.
+    Stored boxes retain all three immutable alternatives for later unhbox.
+    """
 
- pre: tuple
- post: tuple
- nobreak: tuple
+    pre: tuple
+    post: tuple
+    nobreak: tuple
+
+
+def iter_nobreak_nodes(nodes: Iterable[Node]) -> Iterator[Node]:
+    """Stream unbroken alternatives without entering ordinary nested boxes."""
+    for node in nodes:
+        if isinstance(node, DiscretionaryNode):
+            yield from iter_nobreak_nodes(node.nobreak)
+        else:
+            yield node
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class LeadersNode:
- """Repeated rule or box payload across a glue skip.
+    """Repeated rule or box payload across a glue skip.
 
- M3 stores the payload and treats the surrounding glue as the width shell.
- Backend repetition is deferred to a future release.
- """
+    M3 stores the payload and treats the surrounding glue as the width shell.
+    Backend repetition is deferred to a future release.
+    """
 
- kind: LeadersKind
- payload: object
- glue: Glue
+    kind: LeadersKind
+    payload: object
+    glue: Glue
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class MarkNode:
- r"""Page mark sentinel from ``\mark{...}``."""
+    r"""Page mark sentinel from ``\mark{...}``."""
 
- tokens: tuple
+    tokens: tuple
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class InsertNode:
- r"""An ``\insert<n>{<vlist>}`` contribution.
+    r"""An ``\insert<n>{<vlist>}`` contribution.
 
- The page builder accumulates insert payloads by class before running the
- token-list output routine. The class number maps to the box register that
- receives the accumulated vlist; ``\holdinginserts != 0`` leaves the node
- in the body box instead.
+    The page builder accumulates insert payloads by class before running the
+    token-list output routine.  The class number maps to the box register that
+    receives the accumulated vlist; ``\holdinginserts != 0`` leaves the node
+    in the body box instead.
 
- Attributes:
- class_: 8-bit box-register / insert-class number (0..255).
- vlist: Immutable tuple of vertical-mode child nodes.
- height: Natural height of the vlist in sp.
- depth: Natural depth of the vlist in sp.
- floating_penalty: ``\floatingpenalty`` snapshot in sp-less integer.
- split_top_skip: ``\splittopskip`` glue snapshot.
- split_max_depth: ``\splitmaxdepth`` snapshot in sp.
+    Attributes:
+        class_:           8-bit box-register / insert-class number (0..255).
+        vlist:            Immutable tuple of vertical-mode child nodes.
+        height:           Natural height of the vlist in sp.
+        depth:            Natural depth of the vlist in sp.
+        floating_penalty: ``\floatingpenalty`` snapshot in sp-less integer.
+        split_top_skip:   ``\splittopskip`` glue snapshot.
+        split_max_depth:  ``\splitmaxdepth`` snapshot in sp.
 
- Example::
+    Example::
 
- from aspose_tex._engine.registers import Glue, GlueOrder
- node = InsertNode(
- class_=254,
- vlist=(),
- height=0,
- depth=0,
- floating_penalty=0,
- split_top_skip=Glue(0, 0, GlueOrder.NORMAL, 0, GlueOrder.NORMAL),
- split_max_depth=0,
- )
- """
+        from aspose_tex._engine.registers import Glue, GlueOrder
+        node = InsertNode(
+            class_=254,
+            vlist=(),
+            height=0,
+            depth=0,
+            floating_penalty=0,
+            split_top_skip=Glue(0, 0, GlueOrder.NORMAL, 0, GlueOrder.NORMAL),
+            split_max_depth=0,
+        )
+    """
 
- class_: int
- vlist: tuple
- height: int
- depth: int
- floating_penalty: int
- split_top_skip: Glue
- split_max_depth: int
+    class_: int
+    vlist: tuple
+    height: int
+    depth: int
+    floating_penalty: int
+    split_top_skip: Glue
+    split_max_depth: int
 
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class WhatsitNode:
- """Extensibility hook for special material (e.g. PDF specials).
+    """Extensibility hook for special material (e.g. PDF specials).
 
- Attributes:
- data: Arbitrary payload; semantics defined by the producer.
- """
+    Attributes:
+        data: Arbitrary payload; semantics defined by the producer.
+    """
 
- data: object
+    data: object
 
 
 # ---------------------------------------------------------------------------
@@ -248,99 +301,118 @@ class WhatsitNode:
 
 @dataclasses.dataclass(slots=True)
 class HlistNode:
- """A horizontal box (``\\hbox``).
+    """A horizontal box (``\\hbox``).
 
- Fields ``glue_sign``, ``glue_order``, and ``glue_set`` are written
- once by ``set_glue_hbox()`` after the list is finalized; before that
- they hold their default "natural size" values.
+    Fields ``glue_sign``, ``glue_order``, and ``glue_set`` are written
+    once by ``set_glue_hbox()`` after the list is finalized; before that
+    they hold their default "natural size" values.
 
- Attributes:
- list: Ordered sequence of child nodes.
- width: Natural (or set) total width in sp.
- height: Height above baseline in sp.
- depth: Depth below baseline in sp.
- shift_amount: Vertical displacement in sp (positive = up for ``\\raise``,
- negative = down for ``\\lower``). Zero for ordinary hboxes.
- glue_sign: Direction of glue setting.
- glue_order: Infinity order of the dominant glue component.
- glue_set: Ratio applied to all glue of ``glue_order``; 0.0 before set.
+    Attributes:
+        list:         Ordered sequence of child nodes.
+        width:        Natural (or set) total width in sp.
+        height:       Height above baseline in sp.
+        depth:        Depth below baseline in sp.
+        shift_amount: Vertical displacement in sp (positive = up for ``\\raise``,
+                      negative = down for ``\\lower``).  Zero for ordinary hboxes.
+        glue_sign:    Direction of glue setting.
+        glue_order:   Infinity order of the dominant glue component.
+        glue_set:     Ratio applied to all glue of ``glue_order``; 0.0 before set.
 
- Example::
+    Example::
 
- box = HlistNode(list=[], width=0, height=0, depth=0, shift_amount=0,
- glue_sign=GlueSign.NORMAL, glue_order=GlueOrder.NORMAL,
- glue_set=0.0)
- """
+        box = HlistNode(list=[], width=0, height=0, depth=0, shift_amount=0,
+                        glue_sign=GlueSign.NORMAL, glue_order=GlueOrder.NORMAL,
+                        glue_set=0.0)
+    """
 
- list: list # list[Node] — forward ref avoidance
- width: int
- height: int
- depth: int
- shift_amount: int
- glue_sign: GlueSign
- glue_order: GlueOrder
- glue_set: float
+    list: list  # list[Node] — forward ref avoidance
+    width: int
+    height: int
+    depth: int
+    shift_amount: int
+    glue_sign: GlueSign
+    glue_order: GlueOrder
+    glue_set: float
 
 
 @dataclasses.dataclass(slots=True)
 class VlistNode:
- """A vertical box (``\\vbox``).
+    """A vertical box (``\\vbox``).
 
- Attributes:
- list: Ordered sequence of child nodes (hboxes, glue, kerns, etc.).
- width: Width of the widest child in sp.
- height: Height above baseline in sp.
- depth: Depth below baseline in sp.
- shift_amount: Horizontal displacement in sp (``\\moveleft`` / ``\\moveright``).
- glue_sign: Direction of glue setting.
- glue_order: Infinity order of the dominant glue component.
- glue_set: Ratio; 0.0 before set.
- """
+    Attributes:
+        list:         Ordered sequence of child nodes (hboxes, glue, kerns, etc.).
+        width:        Width of the widest child in sp.
+        height:       Height above baseline in sp.
+        depth:        Depth below baseline in sp.
+        shift_amount: Horizontal displacement in sp (``\\moveleft`` / ``\\moveright``).
+        glue_sign:    Direction of glue setting.
+        glue_order:   Infinity order of the dominant glue component.
+        glue_set:     Ratio; 0.0 before set.
+    """
 
- list: list # list[Node] — forward ref avoidance
- width: int
- height: int
- depth: int
- shift_amount: int
- glue_sign: GlueSign
- glue_order: GlueOrder
- glue_set: float
+    list: list  # list[Node] — forward ref avoidance
+    width: int
+    height: int
+    depth: int
+    shift_amount: int
+    glue_sign: GlueSign
+    glue_order: GlueOrder
+    glue_set: float
 
 
 # ---------------------------------------------------------------------------
 # Union type alias
 # ---------------------------------------------------------------------------
 
+@dataclasses.dataclass(slots=True)
+class AdjustNode:
+    r"""Zero-width ``\vadjust`` material, migrated only by line packing.
+
+    Attributes:
+        list: Raw internal vertical nodes in written order.
+
+    Example::
+
+        adjustment = AdjustNode(list=[KernNode(width=65536, explicit=True)])
+    """
+
+    list: list
+
+
 Node = (
- CharNode
- | HlistNode
- | VlistNode
- | GlueNode
- | KernNode
- | PenaltyNode
- | RuleNode
- | DiscretionaryNode
- | LeadersNode
- | MarkNode
- | InsertNode
- | WhatsitNode
+    CharNode
+    | HlistNode
+    | VlistNode
+    | GlueNode
+    | KernNode
+    | MathNode
+    | PenaltyNode
+    | RuleNode
+    | DiscretionaryNode
+    | LeadersNode
+    | MarkNode
+    | InsertNode
+    | WhatsitNode
+    | AdjustNode
 )
 """Any TeX node that can appear in a horizontal or vertical list."""
 
 # Tuple of all node types — used for isinstance checks at runtime.
 NODE_TYPES: tuple = (
- CharNode,
- HlistNode,
- VlistNode,
- GlueNode,
- KernNode,
- PenaltyNode,
- RuleNode,
- DiscretionaryNode,
- LeadersNode,
- MarkNode,
- InsertNode,
- WhatsitNode,
+    CharNode,
+    HlistNode,
+    VlistNode,
+    GlueNode,
+    KernNode,
+    MathNode,
+    PenaltyNode,
+    RuleNode,
+    DiscretionaryNode,
+    LeadersNode,
+    MarkNode,
+    InsertNode,
+    WhatsitNode,
+    AdjustNode,
 )
 
 
@@ -349,52 +421,52 @@ NODE_TYPES: tuple = (
 # ---------------------------------------------------------------------------
 
 def deep_copy_node(
- node: (
- CharNode
- | HlistNode
- | VlistNode
- | GlueNode
- | KernNode
- | PenaltyNode
- | RuleNode
- | DiscretionaryNode
- | LeadersNode
- | MarkNode
- | InsertNode
- | WhatsitNode
- ),
+    node: (
+        CharNode
+        | HlistNode
+        | VlistNode
+        | GlueNode
+        | KernNode
+        | PenaltyNode
+        | RuleNode
+        | DiscretionaryNode
+        | LeadersNode
+        | MarkNode
+        | InsertNode
+        | WhatsitNode
+    ),
 ) -> (
- CharNode
- | HlistNode
- | VlistNode
- | GlueNode
- | KernNode
- | PenaltyNode
- | RuleNode
- | DiscretionaryNode
- | LeadersNode
- | MarkNode
- | InsertNode
- | WhatsitNode
+    CharNode
+    | HlistNode
+    | VlistNode
+    | GlueNode
+    | KernNode
+    | PenaltyNode
+    | RuleNode
+    | DiscretionaryNode
+    | LeadersNode
+    | MarkNode
+    | InsertNode
+    | WhatsitNode
 ):
- """Return a deep copy of *node* (for ``\\copy`` semantics).
+    """Return a deep copy of *node* (for ``\\copy`` semantics).
 
- ``CharNode``, ``KernNode``, ``GlueNode``, ``PenaltyNode``, ``RuleNode``,
- ``LeadersNode``, ``MarkNode``, ``InsertNode``, ``WhatsitNode`` are frozen; returned
- as-is (immutable, safe to share).
- ``HlistNode`` and ``VlistNode`` are recursively copied.
+    ``CharNode``, ``KernNode``, ``MathNode``, ``GlueNode``, ``PenaltyNode``, ``RuleNode``,
+    ``LeadersNode``, ``MarkNode``, ``InsertNode``, ``WhatsitNode`` are frozen; returned
+    as-is (immutable, safe to share).
+    ``HlistNode`` and ``VlistNode`` are recursively copied.
 
- Example::
+    Example::
 
- original = HlistNode(list=[CharNode(65, 'tenrm')], width=100,
- height=50, depth=10, shift_amount=0,
- glue_sign=GlueSign.NORMAL,
- glue_order=GlueOrder.NORMAL, glue_set=0.0)
- clone = deep_copy_node(original)
- assert clone is not original
- assert clone.list is not original.list
- """
- if isinstance(node, (HlistNode, VlistNode)):
- return copy.deepcopy(node)
- # All other node types are frozen dataclasses — immutable, safe to share.
- return node
+        original = HlistNode(list=[CharNode(65, 'tenrm')], width=100,
+                             height=50, depth=10, shift_amount=0,
+                             glue_sign=GlueSign.NORMAL,
+                             glue_order=GlueOrder.NORMAL, glue_set=0.0)
+        clone = deep_copy_node(original)
+        assert clone is not original
+        assert clone.list is not original.list
+    """
+    if isinstance(node, (HlistNode, VlistNode, AdjustNode)):
+        return copy.deepcopy(node)
+    # All other node types are frozen dataclasses — immutable, safe to share.
+    return node

@@ -1,0 +1,18 @@
+% E2E canonical fixture — math alignment (\matrix).
+% Exercises the math-cell-in-\halign grid built via the \endv v-template
+% injection: a real 2x2 \matrix and a \pmatrix wrapped in
+% \left(...\right) delimiters, so the row/column cell positions + the grown
+% cmex delimiters byte-compare to MiKTeX within the tolerance
+% (+/-0.5pt V / +/-0.1pt H).
+%
+% Under the bundled plain.tex format \matrix / \pmatrix expand to
+% \vcenter{\ialign{...}} grids; the cell scanner routes each $...$ cell through
+% the \endv mechanism so the a&b\cr c&d\cr layout produces aligned columns.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+A matrix $\matrix{a&b\cr c&d\cr}$ and a parenthesised one
+$\pmatrix{x&y\cr z&w\cr}$.
+\par
+\bye

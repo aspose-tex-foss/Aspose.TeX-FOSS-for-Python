@@ -1,0 +1,16 @@
+% E2E canonical fixture — math alignment (\eqalign).
+% Exercises the display-math alignment leg: \eqalign (built via the \endv
+% v-template injection,) aligns equations on their relation
+% column, so the &=-anchored cell positions byte-compare to MiKTeX within the
+% tolerance (+/-0.5pt V / +/-0.1pt H).
+%
+% \eqalign{x &= y + z\cr a &= b\cr} produces two equation rows aligned on the
+% = column; the lhs cells are right-flushed and the rhs cells left-flushed,
+% matching plain.tex's \eqalign template \hfil$\displaystyle{##}$&$...$\hfil.
+\hsize=6.5in
+\vsize=8.9in
+\nopagenumbers
+\noindent
+The system $$\eqalign{x &= y + z\cr a &= b\cr}$$ has a solution.
+\par
+\bye
