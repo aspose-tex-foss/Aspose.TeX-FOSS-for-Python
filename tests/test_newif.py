@@ -1,6 +1,6 @@
 r""" regression: plain.tex's ``\newif`` runtime gap.
 
-Covers the four engine pieces fixed by:
+Covers the four engine pieces fixed:
 
 1. ``\string`` honours ``\escapechar`` (TeXbook ch. 24): emit the escape
    character only when ``\escapechar`` is in ``0..255``, otherwise omit.

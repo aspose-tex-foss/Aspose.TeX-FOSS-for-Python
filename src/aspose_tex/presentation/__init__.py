@@ -60,9 +60,6 @@ class TeXOptions:
         load_format:      Format to load before user input. ``"plain"`` loads
                           the bundled Plain TeX source, while ``False`` or
                           ``None`` skips format loading. Default ``"plain"``.
-                          In the current M3 workstream, pass ``False`` for
-                          runnable M2-style documents until the remaining
-                          Plain TeX cascade lands.
         extra_format_paths:
                           Additional directories to search for format and
                           ``\input`` files after bundled format data and

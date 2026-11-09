@@ -1,4 +1,4 @@
-r""" — plain's tie ``~`` and the control space ``\ `` ( amendment).
+r"""plain's tie ``~`` and the control space ``\ ``.
 
 plain.tex defines the tie ``\def~{\penalty\@M \ }`` (line 555) and later the
 accent ``\def\~#1{{\accent"7E #1}}`` (line 703).  Both used to share the macro
@@ -6,7 +6,7 @@ key ``"~"``, so every ``~`` ran the accent and crashed on its ``#1``.  Active
 characters now have their own key and are expanded by the expander, so a tie
 also works inside a box.  The tie ends in ``\ ``, which only became the real
 control-space primitive once ``\^^I`` stopped being tokenized as ``\ ``
-: it is the font's normal interword glue and ignores the space factor
+it is the font's normal interword glue and ignores the space factor
 (TeX §1045).
 
 Every expected list is MiKTeX 24.4 ``tex`` + the DVI walker over its DVI:
@@ -91,7 +91,7 @@ class TestPlainTie:
 
 
 class TestControlSpace:
-    r"""``\ `` is the primitive, a normal space ( Component 4/5)."""
+    r"""``\ `` is the primitive, a normal space (5)."""
 
     @pytest.mark.parametrize(
         ("body", "miktex"),
@@ -144,7 +144,7 @@ def _glyph_h_or_hang(body: str, seconds: float = 20.0) -> list[tuple[int, int]]:
 
 
 class TestControlSpaceInVerticalLists:
-    r"""``\ `` and ``~`` inside ``\vbox``/``\footnote`` ( review blockers 1-3).
+    r"""``\ `` and ``~`` inside ``\vbox``/``\footnote`` (review blockers 1-3).
 
     The vbox text-line scanner used to re-dispatch ``\ `` forever, and the
     vbox's vertical loop rejected a ``\ `` that a ``\penalty`` left behind.

@@ -90,7 +90,7 @@ class LinebreakParams:
     hbadness: int = 1000
     hfuzz: int = 6554  # plain TeX's 0.1pt, rounded to sp
     overfull_rule: int = 0  # \overfullrule: IniTeX's 0pt (plain sets 5pt)
-    # §869 / §859 discretionary charges ( Component 7); plain TeX sets
+    # §869 / §859 discretionary charges; plain TeX sets
     # 50 / 50 / 10000 / 5000.
     hyphenpenalty: int = 0
     exhyphenpenalty: int = 0
@@ -145,7 +145,7 @@ def _node_natural_width(node: object, font_manager: FontManager) -> int:
     KernNode  → kern width.
     HlistNode / VlistNode → stored width.
     RuleNode  → stored width (RUNNING_DIMEN treated as 0).
-    DiscretionaryNode → M3 nobreak-branch width.
+    DiscretionaryNode → nobreak-branch width.
     PenaltyNode, WhatsitNode → 0.
     """
     if isinstance(node, CharNode):
@@ -174,7 +174,7 @@ def _is_legal_breakpoint(nodes: list, i: int, *, in_math: bool = False) -> bool:
 
     Legal:
     - GlueNode or LeadersNode at i, provided it is not inside a formula (§866: TeX's
-      ``auto_breaking`` is false between math-on and math-off,) and
+      ``auto_breaking`` is false between math-on and math-off) and
       the immediately preceding item is not a GlueNode, PenaltyNode,
       explicit KernNode or MathNode.
     - An explicit kern (including italic correction) or math-off node followed
@@ -512,7 +512,7 @@ def _run_dp(
             # j==-1 means start: offset = sum_width[0] = 0
             j_offset = sum_width[start]
             w = sum_width[i] - j_offset
-            #: the selected endpoints replace, never add to, nobreak.
+            # the selected endpoints replace, never add to, nobreak.
             w += sum(_node_natural_width(n, font_manager) for n in prefix_nodes)
             if is_disc:
                 w += sum(_node_natural_width(n, font_manager) for n in node_i.pre)
@@ -588,7 +588,7 @@ def _run_dp(
             )
             new_candidates.append(candidate)
 
-        #: only equivalent future geometry and cost histories may merge.
+        # only equivalent future geometry and cost histories may merge.
         best_at: dict[tuple[int, int, int, bool], _Active] = {}
         for cand in new_candidates:
             key = (cand.position, min(cand.line_number, last_special_line + 1),
@@ -637,7 +637,7 @@ def break_paragraph(
         warnings:     Optional list; warning strings are appended here.
         disc_breaks:  Optional list; one flag per returned line is appended,
                       True when that line ends at a discretionary break
-                      (TeX §890 adds ``\\brokenpenalty`` after it,).
+                      (TeX §890 adds ``\\brokenpenalty`` after it).
         hyphenate:    Optional hyphenation step (§6), called once with
                       the paragraph list when the second pass is entered (the
                       first pass found no break chain, or ``pretolerance < 0``

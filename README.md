@@ -1,6 +1,6 @@
 # Aspose.TeX FOSS for Python
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml) [![Status: Pre--Alpha](https://img.shields.io/badge/status-pre--alpha-orange.svg)](#scope-and-limitations)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python/blob/main/LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python/blob/main/pyproject.toml) [![Status: Pre--Alpha](https://img.shields.io/badge/status-pre--alpha-orange.svg)](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#scope-and-limitations)
 
 [![Aspose.TeX FOSS for Python](https://products.aspose.org/media/tex/python/banner-readme.png)](https://products.aspose.org/tex/python/)
 
@@ -11,17 +11,17 @@ inside the package.
 
 ## Navigation
 
-- [At a Glance](#at-a-glance)
-- [Key Capabilities](#key-capabilities)
-- [Installation](#installation)
-- [Dependencies](#dependencies)
-- [Quick Start](#quick-start)
-- [Additional Examples](#additional-examples)
-- [API Reference](#api-reference)
-- [Documentation & Resources](#documentation--resources)
-- [Scope and Limitations](#scope-and-limitations)
-- [Development and Testing](#development-and-testing)
-- [License](#license)
+- [At a Glance](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#at-a-glance)
+- [Key Capabilities](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#key-capabilities)
+- [Installation](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#installation)
+- [Dependencies](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#dependencies)
+- [Quick Start](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#quick-start)
+- [Additional Examples](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#additional-examples)
+- [API Reference](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#api-reference)
+- [Documentation & Resources](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#documentation--resources)
+- [Scope and Limitations](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#scope-and-limitations)
+- [Development and Testing](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#development-and-testing)
+- [License](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#license)
 
 ## At a Glance
 
@@ -73,26 +73,35 @@ flowchart TD
 
 **Requirements**: Python 3.10+.
 
-No PyPI package has been published for this library yet — install it from source:
+Install the package from PyPI:
+
+```bash
+pip install aspose-tex-foss
+```
+
+The package is imported as `aspose_tex`. To run the MCP server, install the `mcp` extra and start
+it with `python -m aspose_tex.mcp`:
+
+```bash
+pip install "aspose-tex-foss[mcp]"
+```
+
+### From source (contributors)
 
 ```bash
 git clone https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python.git
 cd Aspose.TeX-FOSS-for-Python
-pip install -e .
-```
-
-For development (adds `pytest`, `ruff`, `build`, and `twine`):
-
-```bash
 pip install -e ".[dev]"
 ```
+
+The `dev` extra adds `pytest`, `ruff`, `build`, and `twine`.
 
 ## Dependencies
 
 ### Required Package Dependencies
 
-No required third-party package dependencies. The published `aspose-tex` package builds from
-`pyproject.toml`, which declares no `[project.dependencies]` entries.
+No required third-party package dependencies. The published `aspose-tex-foss` package declares
+no runtime dependencies; the optional `mcp` extra installs the `mcp` package.
 
 ### Native and System Requirements
 
@@ -312,7 +321,7 @@ The primary entry point is `TeXJob`, which combines an `InputSource`, an `Output
 
 - **[Getting started guide](https://docs.aspose.org/tex/python/)** — installation, walkthroughs, and feature guides for this library.
 - **[How-to guides & FAQ](https://kb.aspose.org/tex/python/)** — task-focused answers for common TeX/LaTeX-processing questions.
-- **[Full API reference](https://reference.aspose.org/tex/python/)** — the complete, browsable reference for the public API surface (the [API reference](#api-reference) section above covers the essentials).
+- **[Full API reference](https://reference.aspose.org/tex/python/)** — the complete, browsable reference for the public API surface (the [API reference](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python#api-reference) section above covers the essentials).
 - Found a bug or have a feature request? [Open an issue](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python/issues) on GitHub.
 
 ## Scope and Limitations
@@ -363,8 +372,8 @@ applications can opt into standard Python logging without unexpected default-han
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). The MIT License permits use, copying,
+This project is licensed under the [MIT License](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python/blob/main/LICENSE). The MIT License permits use, copying,
 modification, distribution, sublicensing, and commercial use, provided its copyright and
 permission notice are retained. The software is provided without warranty.
 
-Bundled Computer Modern fonts are covered separately — see the [font license file](LICENSE-FONTS).
+Bundled Computer Modern fonts are covered separately — see the [font license file](https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python/blob/main/LICENSE-FONTS).

@@ -1,11 +1,11 @@
 r""" cascade (b/c) — \settabs / \+ via the REAL plain.tex bodies.
 
 AC-8 wants ``\settabs 4\columns \+ a&b&c&d\cr`` driven through the bundled
-plain.tex ``\settabs`` / ``\+`` / ``\ialign`` / ``\tabskip`` macros (no mocks),
-closing the reviewer/integrator note about mocked alignment bodies.
+plain.tex ``\settabs`` / ``\+`` / ``\ialign`` / ``\tabskip`` macros, not
+mocked alignment bodies.
 
 The repeating-preamble (``&&``) feature these macros depend on landed in
-. The full ``\settabs`` / ``\+`` end-to-end path was BLOCKED by an engine
+The full ``\settabs`` / ``\+`` end-to-end path was BLOCKED by an engine
 gap unrelated to alignment: ``\settabs``'s ``\t@bbox`` cell template opens
 ``\setbox\z@\hbox\bgroup`` and closes it only in the ``\t@bb@x`` v-template
 *after* the cell terminator, and ``\m@ketabbox`` redefines ``\cr`` for the row
@@ -29,7 +29,7 @@ def _halign_result(body: str) -> VlistNode:
     Wraps the alignment in ``\\setbox0=\\vbox{…}`` so it takes the
     *packed* path (a box frame is open) and the row structure these tests assert
     on is captured as one vlist; a *top-level* ``\\halign`` splices its rows
-    directly into the page list per.
+    directly into the page list.
     """
     interp = TeXInterpreter()
     interp.run_with_device(
@@ -110,7 +110,7 @@ class TestRepeatingPreamble:
 
 
 # ---------------------------------------------------------------------------
-# AC-8 — real \settabs / \+ end-to-end ( open-group boxes)
+# AC-8 — real \settabs / \+ end-to-end (open-group boxes)
 # ---------------------------------------------------------------------------
 
 def _tabs_box(source: str) -> HlistNode | None:

@@ -1,4 +1,4 @@
-r"""Tests for cascade #2 fractions ( / §C).
+r"""Tests for cascade #2 fractions (§C).
 
 Covers AC-3:
   - $1\over2$  → num/denom boxes + a RuleNode of default_rule_thickness centred

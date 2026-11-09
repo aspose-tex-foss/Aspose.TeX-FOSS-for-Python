@@ -69,7 +69,7 @@ class TestActiveCharGroupScope:
 
 
 # ---------------------------------------------------------------------------
-#: own key space, expanded by the expander (plain format).
+# own key space, expanded by the expander (plain format).
 # Every expected line is MiKTeX 24.4 plain \message output of the same input.
 # ---------------------------------------------------------------------------
 
@@ -131,14 +131,14 @@ class TestActiveCharExpandedByExpander:
 class TestActiveCharMeaning:
     r"""``\meaning`` and ``\ifx`` look an active char up like a control sequence (§296, §507).
 
-    ; expected lines are MiKTeX 24.4 plain output.
+    expected lines are MiKTeX 24.4 plain output.
     """
 
     def test_meaning_of_a_macro(self) -> None:
         assert _plain_messages(r"\def!{X}\message{[\meaning!]}") == ["[macro:->X]"]
 
     def test_meaning_of_plain_tie(self) -> None:
-        # A control word is printed with a space after it (§262,).
+        # A control word is printed with a space after it (§262).
         assert _plain_messages(r"\message{[\meaning~]}") == [r"[macro:->\penalty \@M \ ]"]
 
     def test_undefined_is_undefined(self) -> None:

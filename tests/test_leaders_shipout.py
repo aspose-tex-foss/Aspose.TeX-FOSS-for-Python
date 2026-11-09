@@ -394,10 +394,10 @@ def _special_page(vertical, nested):
     mgr = _make_mgr_with_cmr10()
     mgr.load_font('tenit','cmti10')
     attrs = dict(shift_amount=0,glue_sign=GlueSign.NORMAL,glue_order=GlueOrder.NORMAL,glue_set=0.0)
-    payload = HlistNode([CharNode(65,'tenit'),WhatsitNode(b'rework-special')],65536,65536,0,**attrs)
+    payload = HlistNode([CharNode(65,'tenit'),WhatsitNode(b'leader-special')],65536,65536,0,**attrs)
     if nested:
         payload.list.pop()
-        payload = VlistNode([WhatsitNode(b'rework-special'),payload],65536,65536,0,**attrs)
+        payload = VlistNode([WhatsitNode(b'leader-special'),payload],65536,65536,0,**attrs)
     leader = LeadersNode(LeadersKind.NORMAL,payload,Glue(196608,0,GlueOrder.NORMAL,0,GlueOrder.NORMAL))
     follow = _make_char_hbox('Z','tenrm',mgr.get_metrics('tenrm'))
     italic = _make_char_hbox('Q','tenit',mgr.get_metrics('tenit'))
@@ -428,7 +428,7 @@ def test_leader_specials_measured_dvi_font_and_cursor(vertical,nested):
     writer.finalize()
     data = writer.get_bytes()
     ops = _parse_dvi_opcodes(data)
-    assert [op[1] for op in ops if op[0]=='xxx'] == [b'rework-special']*3
+    assert [op[1] for op in ops if op[0]=='xxx'] == [b'leader-special']*3
     assert _relative_glyphs(walk_chars_with_positions(data,_tfm_width())[0]) == _SPECIAL_GLYPHS[vertical]
     selected = None
     fonts = []
@@ -456,7 +456,7 @@ def test_leader_specials_once_diagnostics_and_cursor(vertical,nested,backend):
         writer.finalize()
     diagnostics = [w for w in caught if 'whatsit ignored' in str(w.message)]
     assert len(diagnostics) == 1
-    assert 'rework-special' in str(diagnostics[0].message)
+    assert 'leader-special' in str(diagnostics[0].message)
     if backend=='svg':
         placements = writer._char_placements
         assert [font.cs_name for font,_,_,_ in placements] == ['tenit']*3+['tenrm','tenit']

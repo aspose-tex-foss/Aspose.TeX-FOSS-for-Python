@@ -1,4 +1,4 @@
-r"""Spaces at the start of a template's u-part (TeX §783,).
+r"""Spaces at the start of a template's u-part (TeX §783).
 
 TeX drops a space token while the u-part is still empty, so a preamble split
 over two lines after ``&`` adds nothing to the next column. Every expected
@@ -113,7 +113,7 @@ def test_space_does_not_hide_the_periodic_tab(body: str, miktex: str) -> None:
 
 
 def test_ruled_table_with_a_two_line_preamble() -> None:
-    r"""The M4 visual table: every ``\vrule`` column and ``\hrule`` width as MiKTeX."""
+    r"""The visual check table: every ``\vrule`` column and ``\hrule`` width as MiKTeX."""
     rules = walk_rules(_compile(_RULED_TABLE, DviDevice()))[0]
 
     assert len(rules) == 30

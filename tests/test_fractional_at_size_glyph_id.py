@@ -1,6 +1,6 @@
-"""Regression tests for exact fractional ``at_size_sp`` ( FR-9 / FR-10).
+"""Regression tests for exact fractional ``at_size_sp``.
 
-Covers §G — fractional / magnified font sizes (reachable in M4 via
+Covers §G — fractional / magnified font sizes (reachable via
 ``\\font\\x=cmr10 at 10.95pt`` and ``scaled \\magstephalf``):
 
 - **AC-5a (FR-9):** ``\\font\\x=cmr10 at 10.95pt`` emits the *exact* ``at_size_sp``
@@ -11,7 +11,7 @@ Covers §G — fractional / magnified font sizes (reachable in M4 via
   10pt) must emit **distinct** SVG ``<path>`` ids with per-size ``<use>``
   resolution.  Under the old ``g-{tfm}-{round(pt)}-{code}`` scheme both collapsed
   onto ``g-cmr10-10-72`` and the later font silently overwrote the earlier
-  outline ( re-opened for fractional sizes).
+  outline (re-opened for fractional sizes).
 """
 from __future__ import annotations
 
@@ -132,7 +132,7 @@ class TestDviExactAtSize:
 
 
 # ---------------------------------------------------------------------------
-# AC-5b (FR-10,): collision-free SVG glyph ids for fractional sizes
+# AC-5b (FR-10): collision-free SVG glyph ids for fractional sizes
 # ---------------------------------------------------------------------------
 
 class TestFractionalGlyphIdCollision:
@@ -141,7 +141,7 @@ class TestFractionalGlyphIdCollision:
     def test_same_round_pt_distinct_path_ids(self) -> None:
         """10.3pt and 10.4pt (both round to 10pt) yield distinct id sets.
 
-        AC-1: the old ``round(pt)`` id scheme collapsed both onto
+        the old ``round(pt)`` id scheme collapsed both onto
         ``g-cmr10-10-72``; the exact-sp scheme keeps them separate.
         """
         mgr = FontManager()
@@ -164,7 +164,7 @@ class TestFractionalGlyphIdCollision:
         assert len(ids) == len(set(ids)), f"duplicate path ids: {ids}"
 
     def test_per_size_use_resolution(self) -> None:
-        """ AC-2: each ``<use>`` resolves to the path for its own size."""
+        """each ``<use>`` resolves to the path for its own size."""
         mgr = FontManager()
         mgr.load_font("small", "cmr10", at_sp=_AT_10_3_SP)
         mgr.load_font("big", "cmr10", at_sp=_AT_10_4_SP)

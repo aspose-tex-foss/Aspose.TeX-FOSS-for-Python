@@ -32,7 +32,7 @@ def test_measured_display(row):
 
 
 @pytest.mark.parametrize(("line", "pre"), [
-    #, §1146: v starts at two quads (20pt) and stops growing at
+    # §1146: v starts at two quads (20pt) and stops growing at
     # \maxdimen; a later visible node then gives exactly \maxdimen.
     (r"\kern\maxdimen\kern-\maxdimen\hbox{}", "16383.99998pt"),
     (r"\kern16370pt\kern-100pt\hbox{}", "16383.99998pt"),

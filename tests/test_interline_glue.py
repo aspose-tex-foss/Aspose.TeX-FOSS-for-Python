@@ -1,4 +1,4 @@
-r""" — §679 interline glue helper + `\halign` inter-row glue.
+r"""§679 interline glue helper + `\halign` inter-row glue.
 
 Unit-tests ``box_builder.compute_interline_glue`` (the four TeX:The Program
 §679 branches) and integration-tests that ``\halign`` / ``\valign`` now insert
@@ -29,7 +29,7 @@ def _glue(width_pt: float, stretch_pt: float = 0.0) -> Glue:
 
 
 # ---------------------------------------------------------------------------
-# Unit — compute_interline_glue (§679, Component 1)
+# Unit — compute_interline_glue (§679)
 # ---------------------------------------------------------------------------
 
 class TestComputeInterlineGlue:
@@ -164,7 +164,7 @@ class TestInterRowGlue:
 class TestOpenupReachesRowStack:
     def test_interline_tracks_captured_baselineskip(self) -> None:
         # The interline width is driven by the \baselineskip CAPTURED in-group
-        # ( C2), so a larger \baselineskip yields proportionally larger
+        # so a larger \baselineskip yields proportionally larger
         # interline glue: +6pt of \baselineskip → +6pt of inter-row glue.
         base = _halign_vlist(_BSK12, r"\halign{#\hfil\cr aa\cr bb\cr}")
         bigger = _halign_vlist(
@@ -179,7 +179,7 @@ class TestOpenupReachesRowStack:
         # End-to-end proof that \openup\jot reaches the row stack: \eqalign does
         # \openup\jot inside its \vcenter body group; the resulting display rows
         # are \baselineskip + \jot (12 + 3 = 15pt) apart, not 12pt — captured
-        # before the group close rolls the advance back ( C2).
+        # before the group close rolls the advance back.
         from tests._verification.dvi_walker import walk_line_starts
         dev = DviDevice()
         TeXJob(

@@ -201,7 +201,7 @@ class TestTailRemoval:
         assert not any(isinstance(n, PenaltyNode) and n.penalty == 5 for n in nodes)
 
     # ------------------------------------------------------------------
-    # — V-mode \unskip / \unkern / \unpenalty must roll
+    # V-mode \unskip / \unkern / \unpenalty must roll
     # back the PageBuilder accumulators that contribute() wrote, not just
     # pop the MVL tail.  See cascade.
     # ------------------------------------------------------------------
@@ -337,7 +337,7 @@ class TestMoveBox:
 class TestLeavevmode:
     def test_leavevmode_starts_indented_paragraph(self) -> None:
         # Like plain's \unhbox\voidb@x: new_graf(true), an indented paragraph
-        # (§1090; MiKTeX `\leavevmode y` sets y at h = \parindent,).
+        # (§1090; MiKTeX `\leavevmode y` sets y at h = \parindent).
         interp = _InspectInterpreter()
         interp.run_with_device(StringInputSource(r"\leavevmode a\par\bye"), DviDevice())
 
@@ -352,7 +352,7 @@ class TestLeavevmode:
 class TestHangindent:
     def test_hangindent_hangafter_parshape_store_and_restore(self) -> None:
         # Read through the public readers before \bye's \par resets them
-        # ( D4, §1070); MiKTeX 24.4 prints [20.0pt,2,1].
+        # (§1070); MiKTeX 24.4 prints [20.0pt,2,1].
         job = TeXJob(
             StringInputSource(
                 r"\hangindent=20pt \hangafter=2 \parshape=1 0pt 5pt "

@@ -1,4 +1,4 @@
-"""TeX math styles and the style-transition functions ( / §E).
+"""TeX math styles and the style-transition functions (§E).
 
 TeX has eight math styles (display / text / script / scriptscript, each in a
 normal and a *cramped* variant); the math-font size selector

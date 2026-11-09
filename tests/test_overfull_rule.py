@@ -1,4 +1,4 @@
-r"""Tests for the ``\overfullrule`` marker on overfull hboxes (, TeX §666).
+r"""Tests for the ``\overfullrule`` marker on overfull hboxes (TeX §666).
 
 Unit tests drive ``append_overfull_rule`` directly; the integration tests
 compile plain-TeX snippets to DVI and compare every rule ``walk_rules`` sees
@@ -191,5 +191,5 @@ def test_overfull_report_is_unchanged_by_the_marker(rule) -> None:
         warnings.simplefilter("always")
         job.run()
     reports = [str(w.message) for w in caught if issubclass(w.category, OverfullBoxWarning)]
-    #: the report carries MiKTeX's measured excess, before the marker.
+    # the report carries MiKTeX's measured excess, before the marker.
     assert reports == [r"Overfull \hbox (121.83368pt too wide)"]

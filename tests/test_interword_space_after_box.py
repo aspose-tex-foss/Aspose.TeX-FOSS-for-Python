@@ -1,8 +1,8 @@
-r""" — an interword space after a box, a group or a control space.
+r"""an interword space after a box, a group or a control space.
 
 ``_handle_space`` used to drop a space token whenever the previous space token
 had set an ``_after_space`` flag that only typeset characters (and, since
-, inline math) cleared.  A box, ``{}``, ``\relax`` or a second control
+inline math) cleared.  A box, ``{}``, ``\relax`` or a second control
 space left the flag set, so in ``o \hbox{o} o`` the space after the box was
 taken for a repeated space and discarded.  TeX has no such flag: runs of input
 spaces are collapsed by the tokenizer's state S (§347), and every space token

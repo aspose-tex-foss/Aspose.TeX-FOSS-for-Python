@@ -1,4 +1,4 @@
-r"""Tests for the mlist_to_hlist translation ( / §C/§D/§E).
+r"""Tests for the mlist_to_hlist translation (§C/§D/§E).
 
 Covers cascade #2 acceptance criteria:
   AC-1  $x$ → one math-italic CharNode from \textfont1 + \mathsurround kerns
@@ -87,7 +87,7 @@ class TestSingleSymbol:
         assert chars[0].font_name == font_key("teni", _PRE)
 
     def test_mathsurround_kerns_frame_the_formula(self) -> None:
-        # \mathsurround=2pt → math-on and math-off nodes of 2pt (§1196, D5).
+        # \mathsurround=2pt → math-on and math-off nodes of 2pt (§1196).
         from aspose_tex._engine.nodes import MathNode
 
         nodes = render(r"\mathsurround=2pt $x$")
@@ -297,7 +297,7 @@ class TestFormulaDeletedWithoutFonts:
 
 
 class TestOrdinaryGlueInMath:
-    r""" — horizontal glue keeps its flex and its position.
+    r"""horizontal glue keeps its flex and its position.
 
     Before a math-mode ``\hfil`` was appended to the *enclosing*
     horizontal list, while the formula reached that list only at the ``$``-close
@@ -413,7 +413,7 @@ class TestOrdinaryGlueInMath:
 
 
 # ---------------------------------------------------------------------------
-# — mu → sp follows TeX §716 math_glue / mu_mult exactly
+# mu → sp follows TeX §716 math_glue / mu_mult exactly
 # ---------------------------------------------------------------------------
 
 def _plain_messages(body: str) -> list[str]:
@@ -478,7 +478,7 @@ class TestMuGlueRoundsLikeTeX:
 
 
 # ---------------------------------------------------------------------------
-# — \mskip scans a full <muglue> (§1057/§1060, §716)
+# \mskip scans a full <muglue> (§1057/§1060, §716)
 # ---------------------------------------------------------------------------
 
 def _plain_glyph_h(body: str) -> list[tuple[int, int]]:
@@ -573,7 +573,7 @@ class TestMskipFullMuglue:
 
 
 # ---------------------------------------------------------------------------
-# — spacing inside `{…}` math fields executes (TeX §1151/§1186)
+# spacing inside `{…}` math fields executes (TeX §1151/§1186)
 # ---------------------------------------------------------------------------
 
 class TestSpacingInsideMathFields:
@@ -645,7 +645,7 @@ class TestSpacingInsideMathFields:
 
 
 # ---------------------------------------------------------------------------
-# — script-style spacing codes '1'/'2' decode per TeX §766
+# script-style spacing codes '1'/'2' decode per TeX §766
 # ---------------------------------------------------------------------------
 
 class TestScriptStyleSpacingCodes:
@@ -679,7 +679,7 @@ class TestScriptStyleSpacingCodes:
 
 
 # ---------------------------------------------------------------------------
-# — a \mathchoice branch is spliced in place (TeX §731)
+# a \mathchoice branch is spliced in place (TeX §731)
 # ---------------------------------------------------------------------------
 
 class TestMathChoiceSplicedInPlace:
@@ -717,7 +717,7 @@ class TestMathChoiceSplicedInPlace:
 
 
 # ---------------------------------------------------------------------------
-# — italic correction kept before a lone superscript (TeX §755)
+# italic correction kept before a lone superscript (TeX §755)
 # ---------------------------------------------------------------------------
 
 class TestItalicCorrectionBeforeSuperscript:
@@ -753,7 +753,7 @@ class TestItalicCorrectionBeforeSuperscript:
 
 
 # ---------------------------------------------------------------------------
-# — control space in math appends text-font interword glue (§1045)
+# control space in math appends text-font interword glue (§1045)
 # ---------------------------------------------------------------------------
 
 class TestControlSpaceInMath:
@@ -796,7 +796,7 @@ class TestControlSpaceInMath:
 
 
 # ---------------------------------------------------------------------------
-# — the sub+sup box is as wide as the shifted superscript (§758/§668)
+# the sub+sup box is as wide as the shifted superscript (§758/§668)
 # ---------------------------------------------------------------------------
 
 class TestSubSupStackWidth:
@@ -833,7 +833,7 @@ class TestSubSupStackWidth:
 
 
 # ---------------------------------------------------------------------------
-# — an operator with a subscript drops its italic correction (§749)
+# an operator with a subscript drops its italic correction (§749)
 # ---------------------------------------------------------------------------
 
 class TestOpItalicCorrectionWithSubscript:
@@ -842,7 +842,7 @@ class TestOpItalicCorrectionWithSubscript:
     §749 make_op: for a char nucleus with a subscript beside it (not
     ``\limits``) the italic correction comes off the operator box and becomes
     the superscript offset.  ``\mathop{f}`` has the char as its nucleus because
-    a one-Ord group hands its nucleus up (§1186, amendment).
+    a one-Ord group hands its nucleus up (§1186).
     """
 
     @pytest.mark.parametrize(
@@ -890,7 +890,7 @@ class TestOpItalicCorrectionWithSubscript:
 
 
 # ---------------------------------------------------------------------------
-# — groups nested inside a \mathchoice branch are not branches
+# groups nested inside a \mathchoice branch are not branches
 # ---------------------------------------------------------------------------
 
 class TestMathChoiceNestedGroups:
@@ -927,7 +927,7 @@ class TestMathChoiceNestedGroups:
 
 
 # ---------------------------------------------------------------------------
-# — a fraction spliced from a \mathchoice branch spaces as Ord (§761)
+# a fraction spliced from a \mathchoice branch spaces as Ord (§761)
 # ---------------------------------------------------------------------------
 
 class TestSplicedFractionSpacesAsOrd:
@@ -972,7 +972,7 @@ class TestSplicedFractionSpacesAsOrd:
 
 
 # ---------------------------------------------------------------------------
-# — inter-atom spacing follows mid-formula style changes (§760-§763)
+# inter-atom spacing follows mid-formula style changes (§760-§763)
 # ---------------------------------------------------------------------------
 
 class TestSpacingFollowsStyleChanges:

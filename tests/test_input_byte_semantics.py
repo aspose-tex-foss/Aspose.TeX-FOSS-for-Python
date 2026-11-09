@@ -1,4 +1,4 @@
-""": exact TeX bytes across source and public API boundaries."""
+"""exact TeX bytes across source and public API boundaries."""
 from __future__ import annotations
 
 import hashlib

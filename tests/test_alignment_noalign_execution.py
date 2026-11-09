@@ -11,7 +11,7 @@ from tests._verification.dvi_walker import walk_chars_with_positions, walk_rules
 from tests.test_plain_tie import _tfm_width
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCH = json.loads((ROOT / 'testdata/reference/noalign_execution/results.json').read_text())
+BASE_CASES = json.loads((ROOT / 'testdata/reference/noalign_execution/results.json').read_text())
 EXTRA = json.loads((ROOT / 'testdata/reference/noalign_execution/measurements.json').read_text())
 OWNERS = json.loads((ROOT / 'testdata/reference/noalign_execution/document_measurements.json').read_text())
 
@@ -30,9 +30,9 @@ def assert_reference(case):
         assert [[list(r) for r in page] for page in rules] == case['ref']['rules']
 
 
-@pytest.mark.parametrize('name', [n for n in ARCH if not n.startswith('span_') and n != 'valign_wrong_prevdepth'])
-def test_architecture_context(name):
-    assert_reference(ARCH[name])
+@pytest.mark.parametrize('name', [n for n in BASE_CASES if not n.startswith('span_') and n != 'valign_wrong_prevdepth'])
+def test_base_context(name):
+    assert_reference(BASE_CASES[name])
 
 
 @pytest.mark.parametrize('name', [n for n in EXTRA if not n.startswith('span_')])
@@ -47,7 +47,7 @@ def test_ordinary_list_ownership_context(name):
 
 def test_valign_rejects_vertical_prevdepth():
     with pytest.raises(EngineError, match=r'prevdepth.*vertical'):
-        TeXJob(StringInputSource(ARCH['valign_wrong_prevdepth']['source']), DviDevice()).run()
+        TeXJob(StringInputSource(BASE_CASES['valign_wrong_prevdepth']['source']), DviDevice()).run()
 
 
 @pytest.mark.parametrize('body', [r'\begingroup}', r'$x}', r'\endgroup}', r'\hbox{M', r'{\aftergroup\relax'])
@@ -100,7 +100,7 @@ def test_collection_preserves_carriers_without_page_writes(monkeypatch):
         return record
 
     monkeypatch.setattr(alignment, '_scan_noalign', scan)
-    assert_reference(ARCH['mark_insert'])
+    assert_reference(BASE_CASES['mark_insert'])
     assert any(isinstance(node, MarkNode) for node in records[0].nodes)
     assert any(isinstance(node, InsertNode) for node in records[0].nodes)
 

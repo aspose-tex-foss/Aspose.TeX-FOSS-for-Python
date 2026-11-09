@@ -1,6 +1,6 @@
 """aspose_tex — pure-Python TeX/LaTeX processing library."""
 
-__version__ = "26.11"
+__version__ = "26.11.1"
 
 import logging
 

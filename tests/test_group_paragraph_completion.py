@@ -220,7 +220,7 @@ def test_global_assignment_retention(body, expected):
     ("parshape", "1 1pt 10pt", "2 1pt 10pt 2pt 11pt", "3 1pt 10pt 2pt 11pt 3pt 12pt", "[0,2]"),
 ])
 def test_paragraph_shape_state_retention(command, first, global_value, last, expected):
-    # The public readers see the live owners since D4.
+    # The public readers see the live owners.
     body = ("{\\" + command + "=" + first + " \\global\\" + command + "=" + global_value
             + " \\" + command + "=" + last + r" \count200=4}"
             + r"\message{[\the\count200," + "\\the\\" + command + "]}")
@@ -315,7 +315,7 @@ def test_endgroup_cannot_pop_math_owner_or_emit_aborted_tokens(opening, closing,
     assert interp._math_builder is None
     assert interp._math_tail_depths == []
     assert interp._math_shell._left_right_depth == 0
-    #: $$ has already contributed and popped the interrupted paragraph.
+    # $$ has already contributed and popped the interrupted paragraph.
     expected_mode = ModeKind.OUTER_VERTICAL if opening == "$$" else ModeKind.HORIZONTAL
     assert interp._mode_stack.current == expected_mode
     if opening == "$$":

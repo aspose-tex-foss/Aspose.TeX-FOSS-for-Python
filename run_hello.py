@@ -1,4 +1,4 @@
-"""M2 smoke: drive hello.tex and smoke_m2.tex through the public API.
+"""Smoke run: drive hello.tex and smoke_m2.tex through the public API.
 
 Generates DVI, PDF and SVG outputs via ``TeXJob`` + ``DviDevice`` /
 ``PdfDevice`` / ``SvgDevice``.  Runs each job in

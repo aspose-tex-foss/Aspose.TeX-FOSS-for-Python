@@ -1,7 +1,7 @@
 """Integration tests for FontManager using bundled cmr10.tfm.
 
 Reference values were extracted from cmr10.tfm binary via direct parsing
-(see implementation notes — the cmr10.tfm in MiKTeX was verified
+(implementation notes — the cmr10.tfm in MiKTeX was verified
 to have the standard Knuth checksum 0x9B33AE44).
 """
 from __future__ import annotations

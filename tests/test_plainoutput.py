@@ -23,9 +23,9 @@ _PLAIN = TeXOptions(load_format="plain")
 _FAST = TeXOptions(load_format=False)
 
 # AC-5: the body characters of `Hello World\bye` are byte-identical between
-# the M2 fast-path and the plain.tex token-list `\plainoutput` path, and the
+# the built-in output fast-path and the plain.tex token-list `\plainoutput` path, and the
 # folio "1" matches within the ±0.5pt vertical tolerance. The ~17.55pt
-# folio v deviation was closed by ( cascade #1): the outer
+# folio v deviation was closed (cascade #1): the outer
 # `\vbox{\makeheadline\pagebody\makefootline}` of `\plainoutput` now honours
 # the live `\baselineskip=24pt` written by `\makefootline` when inserting
 # interline glue between `\pagebody` and `\line{\the\footline}`.
@@ -54,11 +54,11 @@ def _page_text(dvi: bytes) -> list[str]:
 
 
 def test_plainoutput_byte_stable_vs_m2_fast_path() -> None:
-    r"""AC-5: `Hello World\bye` matches M2 fast-path within ±0.5pt V / ±0.1pt H.
+    r"""AC-5: `Hello World\bye` matches the built-in fast-path within ±0.5pt V / ±0.1pt H.
 
-    Compares per-character (h, v) coordinates between the M2 fast-path
+    Compares per-character (h, v) coordinates between the built-in fast-path
     (`PlainOutputRoutine`) and the plain.tex token-list `\plainoutput`
-    path. After ( cascade #1) all eleven characters
+    path. After (cascade #1) all eleven characters
     (`Hello World` + folio `1`) land within the AC-5 tolerance: the body
     line is byte-equivalent and the folio v matches within the ±0.5pt
     vertical tolerance.
@@ -74,7 +74,7 @@ def test_plainoutput_byte_stable_vs_m2_fast_path() -> None:
 
     assert [c for c, _, _ in fast_chars[0]] == [c for c, _, _ in plain_chars[0]]
 
-    # Both operands are OUR output (M2 fast-path vs `\plainoutput`), so the
+    # Both operands are OUR output (built-in fast-path vs `\plainoutput`), so the
     # helper is used symmetrically here — its "MiKTeX" diagnostic label names
     # the `\plainoutput` side, not a reference implementation.
     diagnostics = compare_glyph_positions(
@@ -86,13 +86,13 @@ def test_plainoutput_byte_stable_vs_m2_fast_path() -> None:
 @pytest.mark.parametrize(
     ("name", "tex", "expected_md5"),
     [
-        # MD5s re-anchored by ( cascade #1) — the outer
+        # MD5s re-anchored (cascade #1) — the outer
         # `\vbox{\makeheadline\pagebody\makefootline}` of `\plainoutput`
         # now inserts live-\baselineskip interline glue between
         # `\pagebody` and `\line{\the\footline}`, so every plain.tex
         # token-list page drifts by ~17.55pt for the folio.
         #
-        # Re-anchored again by: the page box now reads
+        # Re-anchored again: the page box now reads
         # \hsize LIVE from config.hsize instead of the hardcoded _HSIZE
         # constant, so the page-box width is the value plain.tex's own
         # `\hsize=6.5in` resolves to (30785859 sp) rather than the constant
@@ -100,7 +100,7 @@ def test_plainoutput_byte_stable_vs_m2_fast_path() -> None:
         # only diff; same length, same glyph stream). The `marks_page_break`
         # MD5 below is unchanged (its \eject path already matched).
         #
-        # Re-anchored by (TeX §452/§458 unit rounding): plain.tex's
+        # Re-anchored (TeX §452/§458 unit rounding): plain.tex's
         # `\hsize=6.5in` / `\vsize=8.9in` now scan to MiKTeX's 30785863 /
         # 42152922 sp (were 30785859 / 42152945).  Same length and glyph
         # stream; only the \vsize down/up, the \hsize-derived centring
@@ -109,7 +109,7 @@ def test_plainoutput_byte_stable_vs_m2_fast_path() -> None:
         (
             "headline",
             r"\headline={\bf TEST HEADER}Hello\bye",
-            #: binary32 glue_ratio moves six header glyphs by -1sp
+            # binary32 glue_ratio moves six header glyphs by -1sp
             # to exact MiKTeX positions (a reference probe).
             "ab7fa36735ed25f744c45e188900e2da",
         ),
@@ -120,7 +120,7 @@ def test_plainoutput_byte_stable_vs_m2_fast_path() -> None:
             "f692d2bbff0292f0ade4c1100122ec97",
         ),
         (
-            #: the \eject before any box is discarded
+            # the \eject before any box is discarded
             # (§1000), so this is one page, as in MiKTeX 24.4.
             "marks_page_break",
             r"\mark{first}\eject\mark{second}\bye",

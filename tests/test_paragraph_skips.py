@@ -1,4 +1,4 @@
-""": live paragraph side glue, measured against fresh MiKTeX."""
+"""live paragraph side glue, measured against fresh MiKTeX."""
 import json
 import warnings
 from pathlib import Path
@@ -17,15 +17,15 @@ from tests.test_plain_tie import _tfm_width
 
 ROWS = json.loads(
     (Path(__file__).parents[1] / "testdata/reference/paragraph_skips/reference.json").read_text(encoding="utf-8"))
-REVIEW_ROWS = json.loads(
+CONTROL_ROWS = json.loads(
     (Path(__file__).parents[1] / "testdata/reference/paragraph_skips/control_reference.json")
     .read_text(encoding="utf-8"))
-REWORK_ROWS = json.loads(
+EXTENDED_ROWS = json.loads(
     (Path(__file__).parents[1] / "testdata/reference/paragraph_skips/extended_reference.json")
     .read_text(encoding="utf-8"))
 
 
-@pytest.mark.parametrize("row", ROWS + REVIEW_ROWS + REWORK_ROWS, ids=lambda row: row["name"])
+@pytest.mark.parametrize("row", ROWS + CONTROL_ROWS + EXTENDED_ROWS, ids=lambda row: row["name"])
 def test_live_skips_match_fresh_miktex(row):
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
@@ -90,9 +90,9 @@ def test_direct_params_keep_measured_wraps_and_empty_lines(cancel):
     lines = exec_par(paragraph, params, fm)
     actual = [[n.char for n in line.list if isinstance(n, CharNode)] for line in lines]
     if cancel:
-        assert actual == [[65], [], [66]]  # Measured reviewer cancellation witness.
+        assert actual == [[65], [], [66]]  # Measured cancellation witness.
     else:
-        row = next(r for r in REWORK_ROWS if r["name"] == "direct_side_stretch")
+        row = next(r for r in EXTENDED_ROWS if r["name"] == "direct_side_stretch")
         expected = {}
         for c, _h, v in row["glyphs"][0]:
             expected.setdefault(v, []).append(c)

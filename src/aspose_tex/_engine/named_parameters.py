@@ -1,7 +1,7 @@
 """Named TeX parameter registry: dispatcher for \\hsize, \\tolerance, etc.
 
 Implements FR-10 through FR-15.  Canonical pattern for
-..022 — those specs register their entries against the same
+.022 — those specs register their entries against the same
 ``NamedParameterRegistry`` instance instead of growing scattered ``_exec_*``
 handlers in the interpreter.
 
@@ -26,7 +26,7 @@ if TYPE_CHECKING:
 
 
 class ParamKind(IntEnum):
-    """Kind of a named TeX parameter ( FR-10)."""
+    """Kind of a named TeX parameter."""
 
     INT = 1
     DIMEN = 2
@@ -130,7 +130,7 @@ class NamedParameterRegistry:
                      bypassing GroupStack save (interpreter is not yet inside
                      a group at construction time).
             on_set:  Optional post-write hook called after every assignment with
-                     the new value.  Used by the page-builder mirror in;
+                     the new value.  Used by the page-builder mirror;
                      forbidden for new entries unless explicitly justified.
 
         Raises:
@@ -277,12 +277,12 @@ class NamedParameterRegistry:
 
 
 # ---------------------------------------------------------------------------
-# Appendix A catalog ( / §"Slot Map")
+# Appendix A catalog (§"Slot Map")
 # ---------------------------------------------------------------------------
 
 # Each tuple is (name, slot, default).  ``vsize`` (DIMEN slot 256), ``maxdepth``
 # (DIMEN slot 257), and ``topskip`` (SKIP slot 256) are registered here as of
-#; their ``on_set`` mirrors are attached by ``_register_appendix_a``
+# their ``on_set`` mirrors are attached by ``_register_appendix_a``
 # when ``page_config`` is provided so ``PageBuilderConfig`` keeps tracking
 # user assignments after the legacy ``_exec_*`` handlers were retired.
 
@@ -327,7 +327,7 @@ _APPENDIX_A_INT: list[tuple[str, int, int]] = [
     ("globaldefs", 293, 0),
     ("maxdeadcycles", 294, 25),
     ("hangafter", 295, 1),
-    ("fam", 296, -1),  # IniTeX default is -1 (tex.web §240);
+    ("fam", 296, -1),  # IniTeX default is -1 (tex.web §240)/
     ("mag", 297, 1000),
     ("escapechar", 298, 92),
     ("defaulthyphenchar", 299, -1),
@@ -339,7 +339,7 @@ _APPENDIX_A_INT: list[tuple[str, int, int]] = [
     ("showboxdepth", 305, 3),
     ("errorcontextlines", 306, 5),
     # Slots 307 (\deadcycles) and 308 (\insertpenalties) were Appendix A
-    # placeholders retired in — InternalQuantityRegistry now owns both
+    # placeholders retired — InternalQuantityRegistry now owns both
     # names (interpreter.py _build_internal_quantities); the placeholders
     # were unreachable through both _dispatch_cs and get_tokens_for_the.
 ]
@@ -348,7 +348,7 @@ _APPENDIX_A_INT: list[tuple[str, int, int]] = [
 def _clock_parameters(now: datetime.datetime) -> list[tuple[str, int, int]]:
     """Return the clock INT entries (TeX §241 ``fix_date_and_time``).
 
-    Slots 307 and 308 were freed by; D1 takes 307..310.
+    Slots 307 and 308 were freed; D1 takes 307..310.
     """
     return [
         ("year", 307, now.year),
@@ -386,7 +386,7 @@ def _build_appendix_a_dimen() -> list[tuple[str, int, int]]:
         # Slots 276..284 (\pagetotal, \pagegoal, \pagestretch,
         # \pagefilstretch, \pagefillstretch, \pagefilllstretch, \pageshrink,
         # \pagedepth, \prevdepth) were Appendix A placeholders retired in
-        # — InternalQuantityRegistry now owns these page-state names
+        # InternalQuantityRegistry now owns these page-state names
         # (interpreter.py _build_internal_quantities); the placeholders
         # were unreachable through both _dispatch_cs and get_tokens_for_the.
     ]
@@ -394,7 +394,7 @@ def _build_appendix_a_dimen() -> list[tuple[str, int, int]]:
 
 def _build_appendix_a_skip() -> list[tuple[str, int, Glue]]:
     """Return SKIP entries.  ``topskip`` (slot 256) carries its IniTeX 10pt
-    default and is mirrored onto ``PageBuilderConfig.topskip`` in."""
+    default and is mirrored onto ``PageBuilderConfig.topskip``."""
     from aspose_tex._engine.registers import Glue, GlueOrder
 
     zero = Glue(0, 0, GlueOrder.NORMAL, 0, GlueOrder.NORMAL)
@@ -457,14 +457,14 @@ def _register_appendix_a(
 
     102 entries land here: 55 INT (slots 256-306 and 307-310), 20 DIMEN
     (256-275), 15 SKIP (256-270), 3 MUSKIP (256-258), 9 TOKS (256-264).
-    The old INT placeholders 307-308 and DIMEN 276-284 were retired in
+    The old INT placeholders 307-308 and DIMEN 276-284 were retired
     because ``InternalQuantityRegistry`` intercepts those names before this
     registry is consulted in both ``_dispatch_cs`` and
     ``RegisterSet.get_tokens_for_the``.
 
     The clock values ``\\year``, ``\\month``, ``\\day`` and ``\\time``
     (minutes since midnight) are INT parameters at slots 307-310, seeded from
-    one clock reading ( D1; supersedes Q4's ``\\count0..3``
+    one clock reading (supersedes Q4's ``\\count0..3``
     aliases).
 
     Args:
@@ -474,7 +474,7 @@ def _register_appendix_a(
                      get ``on_set`` mirror callbacks so that user assignments
                      keep ``PageBuilderConfig`` in sync — replaces the
                      legacy ``_exec_vsize`` / ``_exec_topskip`` /
-                     ``_exec_maxdepth`` handlers retired by
+                     ``_exec_maxdepth`` handlers retired
                      (§"Migration plan").  ``\\hsize`` joined this set
                      in so the page box tracks the document
                      width.
@@ -487,7 +487,7 @@ def _register_appendix_a(
         mirrors["maxdepth"] = lambda v: setattr(page_config, "max_depth", v)
         mirrors["topskip"] = lambda v: setattr(page_config, "topskip", v)
         # \hsize → page-box width, read live by PlainOutputRoutine.execute
-        #.  Same mirror pattern as vsize/maxdepth.
+        # Same mirror pattern as vsize/maxdepth.
         mirrors["hsize"] = lambda v: setattr(page_config, "hsize", v)
 
     for name, slot, default in _APPENDIX_A_INT:

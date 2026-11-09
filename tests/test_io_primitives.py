@@ -79,15 +79,19 @@ def test_immediate_write_16_matches_write_16(
     ]
 
 
-def test_write_numbered_stream_is_deferred_to_m5() -> None:
+def test_write_numbered_stream_is_not_supported() -> None:
     job = TeXJob(
         StringInputSource(r"\write 5{x}"),
         DviDevice(),
         options=_NO_FORMAT,
     )
 
-    with pytest.raises(NotImplementedError, match=r"\\openout.*M5"):
+    with pytest.raises(NotImplementedError) as exc_info:
         job.run()
+
+    assert str(exc_info.value) == (
+        "\\write to stream 5 is not supported: file streams are not implemented"
+    )
 
 
 def test_write_stream_number_out_of_range_raises_engine_error_first() -> None:
@@ -133,7 +137,7 @@ def test_errhelp_surfaces_in_warning_line(
         (r"\read 0 to \line", "read"),
     ],
 )
-def test_file_stream_primitives_parse_then_defer_to_m5(
+def test_file_stream_primitives_parse_then_report_unsupported(
     tex: str, primitive: str
 ) -> None:
     job = TeXJob(StringInputSource(tex), DviDevice(), options=_NO_FORMAT)
@@ -141,9 +145,9 @@ def test_file_stream_primitives_parse_then_defer_to_m5(
     with pytest.raises(NotImplementedError) as exc_info:
         job.run()
 
-    message = str(exc_info.value)
-    assert f"\\{primitive}" in message
-    assert "M5" in message
+    assert str(exc_info.value) == (
+        f"\\{primitive} stream 0 is not supported: file streams are not implemented"
+    )
 
 
 def test_openin_stream_out_of_range_raises_engine_error_first() -> None:

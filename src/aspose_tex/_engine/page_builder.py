@@ -178,7 +178,7 @@ class PageBuilderConfig:
 class ShipoutBackend(Protocol):
     """Receives completed page boxes for output (DVI / PDF / SVG).
 
-    Implemented by the backend modules ( onwards).
+    Implemented by the backend modules (onwards).
 
     Example::
 
@@ -235,7 +235,7 @@ class OutputRoutineBase(abc.ABC):
     """Abstract output routine.
 
     In full TeX, the output routine is a token list (\\output).
-    For M1/M2, it is a Python callback invoked by PageBuilder when a page is
+    Here it is a Python callback invoked by PageBuilder when a page is
     complete.  The routine receives the raw main-vertical-list tail for the
     page (a list of nodes, already stripped of trailing discardables) and is
     responsible for wrapping it into a final shipout box (``\\pagebody`` in
@@ -285,7 +285,7 @@ class OutputRoutineBase(abc.ABC):
 
 
 # ---------------------------------------------------------------------------
-# Plain TeX output routine (M2 implementation —)
+# Plain TeX output routine
 # ---------------------------------------------------------------------------
 
 # 1 pt = 65_536 sp
@@ -349,18 +349,18 @@ def _hss_glue() -> GlueNode:
 
 
 class PlainOutputRoutine(OutputRoutineBase):
-    """Plain-TeX default output routine, M2 implementation.
+    """Plain-TeX default output routine.
 
-    Replicates plain.tex's ``\\plainoutput`` behaviour in Python (plain.tex
-    itself is not loaded until M3).  For each page:
+    Replicates plain.tex's ``\\plainoutput`` behaviour in Python, for jobs
+    that run without the plain format.  For each page:
 
     1. Wraps the body nodes in a ``\\vbox to\\vsize`` via
        :func:`set_glue_vbox`.  Any ``\\vfil`` / ``\\vfill`` inside the body
        stretches into real space, so the page body fills ``\\vsize`` exactly.
     2. Builds an empty headline hbox (plain TeX default ``\\headline={\\hfil}``)
        shifted up by 22.5 pt via a preceding negative kern (matches
-       ``\\makeheadline``).  For M2 the headline is always empty; user
-       ``\\headline={…}`` redefinition is deferred to M3.
+       ``\\makeheadline``).  The headline is always empty; a user
+       ``\\headline={…}`` is not read here.
     3. Builds a footline hbox of width ``hsize`` containing
        ``\\hss \\tenrm \\folio \\hss`` — CharNodes for each digit of
        ``\\folio`` surrounded by ``\\hss`` glue (plain TeX default
@@ -385,7 +385,7 @@ class PlainOutputRoutine(OutputRoutineBase):
                            routine reads ``config.vsize`` on each execute
                            call and wraps the page body in
                            ``\\vbox to\\vsize``.  When ``None`` the body is
-                           built at its natural height (M1 behaviour —
+                           built at its natural height (which
                            preserves unit tests that do not need vsize
                            stretching).
         footline_baselineskip_sp: Distance from the body's last baseline to
@@ -491,7 +491,7 @@ class PlainOutputRoutine(OutputRoutineBase):
         Uses ``set_glue_vbox`` so ``\\vfil`` / ``\\vfill`` inside the body
         stretches into real space.  The target height is read from
         ``self._config.vsize`` if a config was wired; otherwise the body is
-        built at its natural height (M1 behaviour — preserves unit tests
+        built at its natural height (which preserves unit tests
         that do not need vsize stretching).
         """
         return _build_pagebody_vbox(body_nodes, self._config, self._font_manager)
@@ -499,8 +499,8 @@ class PlainOutputRoutine(OutputRoutineBase):
     def _build_headline(self, hsize: int) -> HlistNode:
         """Build the plain-TeX default headline (``\\headline={\\hfil}``).
 
-        Zero-height, zero-depth HlistNode of width ``hsize``.  For M2 always
-        empty; user ``\\headline={…}`` redefinition is deferred to M3.
+        Zero-height, zero-depth HlistNode of width ``hsize``.  Always
+        empty; a user ``\\headline={…}`` is not read here.
         """
         return HlistNode(
             list=[],
@@ -583,7 +583,7 @@ _UNDO_COMMANDS = ((GlueNode, "unskip"), (KernNode, "unkern"), (PenaltyNode, "unp
 
 @dataclasses.dataclass(slots=True)
 class _PageIns:
-    r"""A page insertion record for one ``\insert`` class (§981,).
+    r"""A page insertion record for one ``\insert`` class (§981).
 
     Attributes:
         class_:     The insertion class ``n``.
@@ -664,9 +664,9 @@ class PageBuilder:
                               with hsize=0.
             pageno_register:  Optional ``PageNumberRegister``.  When provided
                               the page counter is read from / written to the
-                              register (M2 replacement for plain.tex's
+                              register (the replacement for plain.tex's
                               ``\\advancepageno``).  When None, an internal
-                              integer counter is used (M1 behaviour).
+                              integer counter is used.
             marks_registry:   Optional mark registry updated around
                               output-routine execution.
             box_registers:    Optional box-register bank for token-list
@@ -680,7 +680,7 @@ class PageBuilder:
             font_manager:     Optional font manager used to size boxes.
             on_output_start:  Called when a token-list ``\\output`` is about
                               to run, so the interpreter can open the output
-                              routine's own nest ( Component 5).
+                              routine's own nest.
         """
         self._config = config
         self._backend = backend
@@ -781,7 +781,7 @@ class PageBuilder:
 
         TeX reads ``\\lastskip``/``\\lastpenalty``/``\\lastkern`` in vertical
         mode from the contribution list's tail, or — when it is empty — from
-        the last node ``build_page`` took from it (§424, §996,).
+        the last node ``build_page`` took from it (§424, §996).
 
         Returns:
             The node, or ``None`` when nothing qualifies.
@@ -896,7 +896,7 @@ class PageBuilder:
 
         ``\unvbox`` material (§1110) and migrated ``\vadjust``/``\insert``
         material carry their own glue, so no interline glue is added
-        .  Nothing is moved to the page.
+        Nothing is moved to the page.
 
         Args:
             nodes: Children returned by vertical unpackaging.
@@ -917,7 +917,7 @@ class PageBuilder:
                 items.append(glue)
             self._prev_depth = node.depth
         elif isinstance(node, RuleNode):
-            # TeX:The Program §679: prev_depth <- ignore_depth ( v5).
+            # TeX:The Program §679: prev_depth <- ignore_depth.
             self._prev_depth = _PREVDEPTH_SENTINEL
         items.append(node)
         return items
@@ -1337,7 +1337,7 @@ class PageBuilder:
     def _advance_pageno(self) -> None:
         r"""Run plain's global, sign-aware \advancepageno for the fast path.
 
-        Token-list outputs own their assignments themselves ( D1).
+        Token-list outputs own their assignments themselves.
         """
         pageno = self.page_number
         value = pageno - 1 if pageno < 0 else pageno + 1
@@ -1547,7 +1547,7 @@ class PageBuilder:
     def _interline_params(self) -> tuple[Glue, Glue, int]:
         r"""Return the live ``(\baselineskip, \lineskip, \lineskiplimit)``.
 
-        .  ``PageBuilderConfig`` is built once at interpreter
+        ``PageBuilderConfig`` is built once at interpreter
         construction, so reading these three from it meant **no** user
         assignment ever reached the interline computation — measurable without
         any display: ``\baselineskip=30pt`` still produced 12 pt glue.  The
@@ -1567,7 +1567,7 @@ class PageBuilder:
         ``\normalbaselines``, so the registers read ``0/0/0`` while the config
         carries plain TeX's ``12 pt / 1 pt / 0``.  Taking the register value
         unconditionally there would silently collapse every interline gap to
-        ``\lineskip`` — measured: the `smoke_m2` byte-stability MD5s all moved.
+        ``\lineskip`` — measured: the smoke-fixture byte-stability MD5s all moved.
         A document that genuinely wants ``\baselineskip=0pt`` sets it explicitly
         *and* loads a format, in which case the other two are non-zero and the
         interline computation behaves as TeX's does.

@@ -356,7 +356,7 @@ def test_toks_stores_copy():
 
 # ---------------------------------------------------------------------------
 # \count0..9 are plain registers; the clock lives in NamedParameterRegistry
-# ( D1, tests in test_internal_value_ownership.py)
+# (tests in test_internal_value_ownership.py)
 # ---------------------------------------------------------------------------
 
 def test_count_registers_start_at_zero():
@@ -397,7 +397,7 @@ def test_execute_unknown_returns_false():
 
 
 # ---------------------------------------------------------------------------
-# \the prints dimensions and glue as TeX does (§103, §177-178, §465;)
+# \the prints dimensions and glue as TeX does (§103, §177-178, §465)
 # ---------------------------------------------------------------------------
 
 def test_dimen_to_tokens_prints_points_with_catcode_other():

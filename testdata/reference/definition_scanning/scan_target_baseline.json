@@ -1,5 +1,5 @@
 {
-  "reviewer": {
+  "let_fontname_alias": {
     "source": "\\let\\reader=\\fontname\\font\\fontname=cmr17 \\message{R[\\reader\\fontname/\\the\\fontname]}\n\\bye\n",
     "miktex": [
       "R[cmr17/\\fontname ]"

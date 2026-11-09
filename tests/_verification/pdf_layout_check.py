@@ -1,4 +1,4 @@
-"""PDF layout integrity check ( FR-4b).
+"""PDF layout integrity check.
 
 Scans a PDF file emitted by :class:`aspose_tex._output.pdf_writer.PdfWriter`
 and returns a :class:`LayoutReport` with:
@@ -8,7 +8,7 @@ and returns a :class:`LayoutReport` with:
 2. On the first page, a list of adjacent glyph positions where the
    horizontal advance at a source whitespace position falls below the
    minimum interword space — the word-concatenation heuristic that
-   would have caught at developer stage (FR-4b, sentence 3).
+   would have caught before release (FR-4b, sentence 3).
 3. Ratio of the content's used vertical span to the page height —
    approximation of the ``used content / \\vsize`` ratio used in
    FR-4b sentence 1 comparisons.
@@ -81,12 +81,12 @@ class LayoutReport:
     Attributes:
         page_count: Number of ``/Type /Page`` objects in the PDF.
         expected_page_count: ``\\eject`` count in *source_tex* ``+ 1``
-            ( FR-4b).  ``None`` when no source file was supplied
+            ``None`` when no source file was supplied
             or it could not be read.
         zero_advance_pairs: Adjacencies on page 1 flagged by the word-
             concatenation heuristic.  Empty on a clean post-fix PDF.
         vfill_ratio: ``used_vertical_span / page_height`` on page 1, in
-            ``[0, 1]``.  Used by reviewers to cross-check against the
+            ``[0, 1]``.  Used to cross-check against the
             MiKTeX baseline within ±10% per FR-4b sentence 1.
         page_height_pt: Page height parsed from ``/MediaBox`` (the
             MediaBox's ``ury`` coordinate).
@@ -166,7 +166,7 @@ def _count_ejects(source_tex: Path | None) -> int | None:
 
     Returns ``None`` when *source_tex* is ``None`` or unreadable.  The
     caller uses ``eject_count + 1`` as the expected ``/Page`` count per
-    FR-4b.
+    
     """
     if source_tex is None:
         return None

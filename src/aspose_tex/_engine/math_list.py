@@ -1,11 +1,11 @@
-"""Math-list (noad) data model and builder ( / §A, §B).
+"""Math-list (noad) data model and builder (§A, §B).
 
-This module owns the math-atom **structure** for milestone M4.  It replaces the
+This module owns the math-atom **structure**.  It replaces the
 load-without-execute math shell's no-op operand consumers
 with a real :class:`MathListBuilder` that constructs a list of **noads** (math
 atoms) while the interpreter is in math mode.
 
-The noad field set (§A) is deliberately **complete** for (scripts /
+The noad field set (§A) is deliberately **complete** (scripts /
 fractions / accents / radicals) and (delimiters / large operators):
 those specs add only *layout* (the :mod:`mlist_to_hlist` translation), never
 *parsing*.  This cascade emits no output nodes by itself — the
@@ -116,7 +116,7 @@ class MathChar:
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class DelimiterCode:
-    """A 27-bit ``\\delimiter`` operand ( reads; structure here).
+    """A 27-bit ``\\delimiter`` operand (reads; structure here).
 
     Carries the small (text-size) and large (extension) variant fam/position
     pairs decoded from the delcode / ``\\delimiter`` integer.
@@ -156,7 +156,7 @@ _FieldStore = Callable[[MathField], None]
 
 @dataclasses.dataclass(slots=True)
 class Noad:
-    """A single math-list atom (§A — field-complete for).
+    """A single math-list atom (§A — field-complete).
 
     owns the *structure*: every field a downstream layout spec reads
     is parsed and populated here.  add only the layout functions
@@ -168,8 +168,8 @@ class Noad:
     kind: NoadKind
     math_class: MathClass = MathClass.ORD  # ATOM only
     nucleus: MathField = None
-    subscr: MathField = None  # parsed here; laid out by
-    supscr: MathField = None  # parsed here; laid out by
+    subscr: MathField = None  # parsed here; laid out
+    supscr: MathField = None  # parsed here; laid out
     # --- accent / radical / over-under (structure here, layout) ---
     accent_fam: int | None = None  # \mathaccent char family (ACCENT)
     accent_pos: int | None = None
@@ -197,7 +197,7 @@ class Noad:
     glue: Glue | None = None  # GLUE noad: sp glue, or mu glue when mu_glue
     nonscript: bool = False  # \nonscript marker on the following GLUE
     choices: tuple[MathList, MathList, MathList, MathList] | None = None  # CHOICE noad
-    # --- large-operator limit placement (; OP atoms only) ---
+    # --- large-operator limit placement (OP atoms only) ---
     limits: LimitMode = LimitMode.DISPLAY_LIMITS  # \limits / \nolimits / \displaylimits
 
 
@@ -244,7 +244,7 @@ class MathListBuilder:
     :meth:`add_mathchar`, the class-routing and structure primitives through the
     named ``add_*`` methods, and ``_`` / ``^`` through :meth:`add_subscript` /
     :meth:`add_superscript`.  The finished list is handed off via
-    :meth:`take_mlist` at ``$``-close ( cascade #2 translates it).
+    :meth:`take_mlist` at ``$``-close (cascade #2 translates it).
 
     A nested ``{<mlist>}`` math field is built by the main loop as a sub-group
     of this builder (:meth:`scan_math_field`, :meth:`begin_group` /
@@ -321,13 +321,13 @@ class MathListBuilder:
         # end_group delivers the finished sub-mlist.  None when no field is
         # awaiting its group.
         self._pending_field: _FieldStore | None = None
-        #: a \mathchoice arms a four-group capture instead of scanning
+        # a \mathchoice arms a four-group capture instead of scanning
         # its branches eagerly.  Each entry is (group depth at arming, branch
         # mlists collected so far, 0-3); the main loop's begin_group/end_group
         # build each {…} branch with full dispatch (so \setbox/\finph@nt run),
         # and end_group diverts a finished group here only when it closes back
         # to the armed depth — a group nested inside a branch is not a branch
-        #.  On the fourth branch the CHOICE noad is appended and the
+        # On the fourth branch the CHOICE noad is appended and the
         # entry popped; a \mathchoice inside a branch pushes its own entry.
         self._choice_stack: list[tuple[int, list[MathList]]] = []
 
@@ -406,7 +406,7 @@ class MathListBuilder:
         """
         store = self._pending_field
         self._pending_field = None
-        #: a class primitive's forced class belongs to THIS group, not
+        # a class primitive's forced class belongs to THIS group, not
         # to the first group that closes — a {…} nested in the argument closes
         # first.
         forced = self._pending_class
@@ -420,7 +420,7 @@ class MathListBuilder:
 
         A field group (see :meth:`begin_group`) passes the sub-mlist to its
         field's store (TeX §1186); a ``\\mathchoice`` branch is collected
-        ; any other group is appended as one Ord atom, of the pending
+        any other group is appended as one Ord atom, of the pending
         forced class if a class primitive is awaiting it.
 
         Returns:
@@ -445,7 +445,7 @@ class MathListBuilder:
         if store is not None:
             store(_group_nucleus(inner))
             return True
-        #: a \mathchoice branch closes here — collect it instead of
+        # a \mathchoice branch closes here — collect it instead of
         # appending an atom.  Only a group closing back to the depth the
         # \mathchoice armed at is a branch; a {…} or class-primitive argument
         # inside a branch closes deeper and falls through.  On the
@@ -969,7 +969,7 @@ class MathListBuilder:
         self.scan_math_field(lambda field: setattr(noad, "nucleus", field))
 
     def add_vcenter(self) -> None:
-        r"""``\vcenter <box>`` — build the field as a real box ( C3).
+        r"""``\vcenter <box>`` — build the field as a real box.
 
         The field is built through the interpreter's box scanners (an executed
         ``\vbox``/``\hbox`` — implicit ``\vcenter{…}`` is a vbox), so an inner

@@ -97,7 +97,7 @@ class TestMathAccent:
         assert box.width > 0
 
     def test_accent_offset_is_texs_half_of_char_box_width(self) -> None:
-        #, §738: shift = s + half(w - width(y)), width(y) = char width +
+        # §738: shift = s + half(w - width(y)), width(y) = char width +
         # italic (§709).  a - \hat = 18735 sp (odd: floor division lands 1 sp
         # left); \vec (cmmi10 '176) carries a 100806 sp italic correction.
         # Positions measured with MiKTeX 24.4 `tex` (plain), 2026-10-29.
@@ -201,7 +201,7 @@ class TestDelimiterBox:
         assert kerns and kerns[0].width == int(1.2 * 65536)
 
     def test_small_target_uses_base_size_glyph(self) -> None:
-        #: a tiny target is already covered by the base (small-variant)
+        # a tiny target is already covered by the base (small-variant)
         # glyph, so var_delimiter returns the small `(` from cmsy without growth.
         from aspose_tex._engine.math_list import DelimiterCode
         from aspose_tex._engine.math_style import TeXStyle
@@ -225,7 +225,7 @@ class TestDelimiterBox:
         assert chars[0].char == 0x28 and chars[0].font_name == font_key("tensy", _PRE)
 
     def test_large_target_grows_via_cmex(self) -> None:
-        #: a tall target walks the large (cmex, fam 3) successor chain
+        # a tall target walks the large (cmex, fam 3) successor chain
         # and returns a larger glyph than the base `(`.
         from aspose_tex._engine.math_list import DelimiterCode
         from aspose_tex._engine.math_style import TeXStyle

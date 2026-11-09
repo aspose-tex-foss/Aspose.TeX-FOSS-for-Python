@@ -1,4 +1,4 @@
-r"""The hyphenation step of the second line-breaking pass (, §5).
+r"""The hyphenation step of the second line-breaking pass (§5).
 
 When the first pass at ``\pretolerance`` fails, TeX hyphenates the words of the
 paragraph before the second pass (tex.web §891-§918).  A word is tried after

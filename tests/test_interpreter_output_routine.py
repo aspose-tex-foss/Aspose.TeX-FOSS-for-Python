@@ -1,11 +1,11 @@
 """Interpreter-integration tests for output-routine wiring.
 
 Covers:
-- \\pageno alias to \\count0 and register-driven advance ( AC-2).
-- \\vsize, \\topskip, \\maxdepth assignment handlers ( AC-6).
-- \\output CS is undefined in M2 ( AC-1 / error-handling row).
-- DVI-regression: folio CharNodes are shipped ( AC-5).
-- DVI-regression: \\vfil / \\vsize vertical distribution ( AC-3, AC-4).
+- \\pageno alias to \\count0 and register-driven advance.
+- \\vsize, \\topskip, \\maxdepth assignment handlers.
+- \\output CS is undefined without the plain format.
+- DVI-regression: folio CharNodes are shipped.
+- DVI-regression: \\vfil / \\vsize vertical distribution.
 """
 from __future__ import annotations
 
@@ -170,7 +170,7 @@ class TestConfigRegisterSync:
 
 
 # ---------------------------------------------------------------------------
-# \output is registered as a TOKS named parameter in M3 ( AC-3)
+# \output is registered as a TOKS named parameter
 # ---------------------------------------------------------------------------
 
 class TestOutputCsRegistered:
@@ -201,7 +201,7 @@ class TestFolioInDvi:
 
 
 # ---------------------------------------------------------------------------
-# DVI-regression — \vfil / \vsize vertical distribution ( AC-3, AC-4)
+# DVI-regression — \vfil / \vsize vertical distribution
 # ---------------------------------------------------------------------------
 
 _FIXTURE_DIR = Path(__file__).parent.parent / "testdata" / "fixtures" / "vsize_stretch"
@@ -236,7 +236,7 @@ def _read_folio_v(dvi: bytes) -> int:
 
 class TestVfilVsizeDistributesBody:
     def test_vfil_vsize_distributes_body(self) -> None:
-        """ AC-3: paragraphs 1..3 land within 1pt of MiKTeX baseline."""
+        """paragraphs 1..3 land within 1pt of MiKTeX baseline."""
         tex_source = _FIXTURE_TEX.read_text(encoding="utf-8")
         ours_dvi = _run(tex_source)
         miktex_dvi = _FIXTURE_MIKTEX_DVI.read_bytes()
@@ -255,11 +255,11 @@ class TestVfilVsizeDistributesBody:
     def test_vfil_vsize_regression_if_build_pagebody_skipped(
         self, monkeypatch: pytest.MonkeyPatch
     ) -> None:
-        """ AC-4: bypassing set_glue_vbox breaks the page layout.
+        """bypassing set_glue_vbox breaks the page layout.
 
         Pins the architectural claim that the `\\vbox to\\vsize` wrap is
         load-bearing.  With content placed from the top of the body vbox
-        ( + correct DVI-writer vbox entry), paragraph-1 y stays at
+        (+ correct DVI-writer vbox entry), paragraph-1 y stays at
         ``topskip`` regardless of the vbox's total height — so this regression
         guard checks the *folio* position, which shifts whenever the body box
         is not stretched to ``\\vsize``.  Skipping set_glue_vbox leaves the

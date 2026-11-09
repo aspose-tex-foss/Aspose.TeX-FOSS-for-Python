@@ -1,4 +1,4 @@
-r""" — full bundled plain.tex load gate.
+r"""full bundled plain.tex load gate.
 
 Closes the AC-18 / AC-8 broader contract (the
 redirect): the **entire** bundled ``src/aspose_tex/data/format/plain.tex`` must
@@ -8,7 +8,7 @@ load verbatim through the format loader without an ``EngineError`` /
 ``\bordermatrix``/``\displaylines``/``\eqalignno``/``\leqalignno``/``\ialign``,
 whose execution paths land at) must at least **define** cleanly.
 
-The task title's "1-1402" is the historical upper bound from; the
+The task title's "1-1402" is the historical upper bound; the
 bundled file is 1241 lines (it ends with ``\def\fmtname...\dump``).  ``\dump``
 is only legal during a format load, so the file is loaded the way users load it
 - ``TeXOptions(load_format="plain")`` - not re-fed as ordinary document input.
@@ -28,7 +28,7 @@ _PLAIN_TEX = Path(__file__).parent.parent / "src" / "aspose_tex" / "data" / "for
 def test_bundled_plain_tex_is_present_and_nonempty() -> None:
     assert _PLAIN_TEX.is_file(), f"bundled plain.tex missing at {_PLAIN_TEX}"
     lines = _PLAIN_TEX.read_text(encoding="utf-8").splitlines()
-    # The bundled format is the full ~1241-line plain.tex ( corpus),
+    # The bundled format is the full ~1241-line plain.tex (corpus),
     # ending with the \fmtname / \fmtversion / \dump epilogue.
     assert len(lines) >= 1200, f"plain.tex unexpectedly short: {len(lines)} lines"
     assert any("\\dump" in ln for ln in lines[-3:]), "plain.tex must end with \\dump"

@@ -1,4 +1,4 @@
-r""": live tolerance and the measured fourteen inline-math widths.
+r"""live tolerance and the measured fourteen inline-math widths.
 
 Ground truth: MiKTeX 24.4, ``tex -interaction=nonstopmode`` and the DVI
 walker; measured 2026-10-14. The baseline excludes plain's page number.

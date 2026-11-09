@@ -1,4 +1,4 @@
-r""": source sfcodes precede expanded lig/kern lookahead.
+r"""source sfcodes precede expanded lig/kern lookahead.
 
 Every expected message and complete glyph stream was measured with MiKTeX
 24.4 tex; testdata/reference/footnote_spacefactor/miktex.json retains the exact source for replay.

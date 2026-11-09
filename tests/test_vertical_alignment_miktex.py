@@ -1,4 +1,4 @@
-""": MiKTeX 24.4 measured context regressions."""
+"""MiKTeX 24.4 measured context regressions."""
 
 import pytest
 
@@ -34,7 +34,7 @@ CASES = [
             [97, 0, 1471698],
             [98, 1310720, 2258130],
         ],
-        # MiKTeX's paragraph-line report (§8, re-measured 2026-10-21 for).
+        # MiKTeX's paragraph-line report (§8, re-measured 2026-10-21).
         ["[]\\tenrm one two|"],
     ),
     (

@@ -1,4 +1,4 @@
-r"""One current binding per control-sequence name ( D2).
+r"""One current binding per control-sequence name.
 
 TeX keeps a single equivalent per name (§222): the last assignment of any
 kind — ``\def``, ``\let``, ``\chardef``, ``\countdef``, ``\font`` — replaces
@@ -53,13 +53,13 @@ class Binding:
 
 
 class MeaningBindings:
-    r"""Keeps a name bound in exactly one owner ( D2).
+    r"""Keeps a name bound in exactly one owner.
 
     Args:
         expander:     Owner of macros and ``\let`` meanings.
         register_set: Owner of register aliases and ``\chardef`` constants.
         font_manager: Owner of font names.
-        group_stack:  Shared save stack ( keys of each owner).
+        group_stack:  Shared save stack (keys of each owner).
 
     Example::
 

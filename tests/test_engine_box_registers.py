@@ -1,4 +1,4 @@
-"""Tests for BoxRegisterSet ( FR-14, FR-15).
+"""Tests for BoxRegisterSet.
 
 Covers AC-6, AC-7.
 """

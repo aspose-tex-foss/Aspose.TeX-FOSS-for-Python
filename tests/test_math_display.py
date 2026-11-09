@@ -111,7 +111,7 @@ class TestDisplayCentring:
         assert 12 * _PT not in glue_widths
         assert 11 * _PT not in glue_widths
         # The empty pre-display line box (HT=DP=0, full \hsize) is contributed:
-        # the indent-only paragraph line-broken into one line (§1096,),
+        # the indent-only paragraph line-broken into one line (§1096),
         # holding the indent box and \parfillskip but no printable material.
         empty_lines = [
             n for n in out
@@ -136,7 +136,7 @@ class TestDisplayCentring:
 
 
 # ---------------------------------------------------------------------------
-# — \predisplaysize short-vs-long display-skip selection
+# \predisplaysize short-vs-long display-skip selection
 # ---------------------------------------------------------------------------
 
 
@@ -180,7 +180,7 @@ class TestPredisplaysize:
         assert 2 * _PT not in glue_widths
 
     def test_standalone_display_still_short(self) -> None:
-        # The standalone `$$` path (empty pre-display line,) is
+        # The standalone `$$` path (empty pre-display line) is
         # unchanged — still short skips.
         out = contributed(
             r"\abovedisplayskip=12pt \belowdisplayskip=11pt "
@@ -279,7 +279,7 @@ class TestDisplayStyle:
 
 
 # ---------------------------------------------------------------------------
-# — §1206 resume_after_display + §1207 optional-space scan
+# §1206 resume_after_display + §1207 optional-space scan
 # ---------------------------------------------------------------------------
 
 
@@ -387,7 +387,7 @@ class TestResumeAfterDisplay:
 
 
 # ---------------------------------------------------------------------------
-# Component 1 — §1145 \displaywidth / \displayindent
+# §1145 \displaywidth / \displayindent
 # ---------------------------------------------------------------------------
 
 
@@ -433,7 +433,7 @@ class TestDisplayParams:
         This asserted the value survived, which only held while the engine
         opened no group for a display.  MiKTeX 24.4 on the same input reports
         ``[BEFORE dw=0.0pt] [AFTER dw=0.0pt]`` — the assignment does not escape
-        .
+        
         """
         interp = TeXInterpreter()
         interp.run(StringInputSource(
@@ -476,7 +476,7 @@ class TestDisplayParams:
         The difference is not the width: on the §812 splice path there is no
         single centred box to measure, so the §1204 short-skip test cannot
         select short. The rows are contributed individually and the long skips
-        follow — no special-casing of the skip choice ( Component 3).
+        follow — no special-casing of the skip choice.
         """
         out = contributed(
             r"\abovedisplayskip=12pt \belowdisplayskip=11pt "
@@ -557,7 +557,7 @@ class TestDisplayScopingAndInterline:
         assert interp._get_named_skip("baselineskip").width == 12 * _PT
 
     def test_page_builder_reads_a_live_baselineskip(self) -> None:
-        r""": the interline computation reads the register, not the config.
+        r"""the interline computation reads the register, not the config.
 
         ``PageBuilderConfig`` is built once at construction, so before
         a ``\baselineskip`` assignment never reached the page builder.

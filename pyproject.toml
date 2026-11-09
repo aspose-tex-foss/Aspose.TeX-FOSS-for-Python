@@ -1,17 +1,17 @@
 [build-system]
-requires = ["setuptools>=68.0"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "aspose-tex"
-version = "26.11"
+name = "aspose-tex-foss"
+version = "26.11.1"
 description = "Pure-Python TeX/LaTeX processing library"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE", "LICENSE-FONTS"]
 requires-python = ">=3.10"
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -20,6 +20,11 @@ classifiers = [
     "Topic :: Text Processing :: Markup :: LaTeX",
     "Typing :: Typed",
 ]
+
+[project.urls]
+Homepage = "https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python"
+Source = "https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python"
+Issues = "https://github.com/aspose-tex-foss/Aspose.TeX-FOSS-for-Python/issues"
 
 [project.scripts]
 aspose-tex = "aspose_tex.cli:main"
@@ -33,14 +38,14 @@ dev = [
     "tomli>=2.0; python_version < '3.11'",
 ]
 mcp = [
-    "mcp>=1.0",
+    "mcp>=1.0,<2",
 ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-aspose_tex = ["data/**/*"]
+aspose_tex = ["data/**/*", "py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

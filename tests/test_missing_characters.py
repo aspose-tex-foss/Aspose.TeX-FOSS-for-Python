@@ -1,4 +1,4 @@
-""": missing glyph admission preserves text runs and math owners."""
+"""missing glyph admission preserves text runs and math owners."""
 from __future__ import annotations
 
 import json
@@ -91,7 +91,7 @@ def test_font_manager_tfm_admission_and_strict_metric_access():
     with pytest.raises(FontError):
         manager.check_character("unknown", 65)
     with pytest.raises(FontError):
-        manager.load_font("missing", "nonexistent_tex420")
+        manager.load_font("missing", "nonexistent_font")
     manager.set_missing_character_sink(None)
     assert not manager.check_character("rm", 226)
     assert len(attempts) == 2

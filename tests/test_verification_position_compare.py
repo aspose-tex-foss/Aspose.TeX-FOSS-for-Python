@@ -1,4 +1,4 @@
-""" — unit tests for the per-glyph position comparator.
+"""unit tests for the per-glyph position comparator.
 
 Covers the comparator contract directly (tolerance edges, shape mismatches,
 truncation) plus the AC-4 proof that it catches a synthetic missing-interword-
@@ -161,7 +161,7 @@ class TestSyntheticMissingSpaceRegression:
     def test_preexisting_checks_would_miss_it(self, baseline_dvi) -> None:
         """The glyph stream and line starts are blind to this mutation.
 
-        This is the whole justification for: a horizontal-only defect
+        This is the whole justification: a horizontal-only defect
         leaves both pre-existing signals untouched, which is why fixtures could
         be called "byte-exact vs MiKTeX" while carrying one.
 

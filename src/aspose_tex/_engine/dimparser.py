@@ -76,7 +76,7 @@ def _push_back(expander: Expander, tok) -> None:
 
 
 def _primitive_token(expander: Expander, tok):
-    """Return *tok* as the primitive a ``\\let`` alias of one means ( D3).
+    """Return *tok* as the primitive a ``\\let`` alias of one means.
 
     ``get_x_token`` hands such an alias back as read, so after
     ``\\let\\cnt=\\count`` the text ``\\cnt5`` reaches a scanner as ``\\cnt``;
@@ -90,7 +90,7 @@ def _primitive_token(expander: Expander, tok):
 def _register_owner(regs, tok) -> tuple[str, int] | None:
     r"""Return the ``(family, index)`` register owner *tok* names, if any.
 
-    D2: a ``\countdef``-style owner outranks the built-in its name
+    a ``\countdef``-style owner outranks the built-in its name
     spells, so ``\countdef\count=1`` makes ``\count`` read register 1 with no
     index; a frozen primitive reference (D3) never resolves to an owner.
     """

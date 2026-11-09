@@ -31,7 +31,7 @@ def _page1(body: str) -> list[tuple[int, int, int]]:
 
 
 # ---------------------------------------------------------------------------
-# — §1038: a non-character command ends the lig/kern run; a character,
+# §1038: a non-character command ends the lig/kern run; a character,
 # \char and a \chardef constant continue it
 # ---------------------------------------------------------------------------
 
@@ -129,7 +129,7 @@ class TestHBoxBuilderRun:
 
 
 # ---------------------------------------------------------------------------
-# — §1041: a space in an open-group \hbox\bgroup list is interword
+# §1041: a space in an open-group \hbox\bgroup list is interword
 # glue; the list starts at \spacefactor 1000 and restores its parent's
 # ---------------------------------------------------------------------------
 
@@ -194,7 +194,7 @@ class TestOpenGroupHBoxSpaces:
 
 
 # ---------------------------------------------------------------------------
-# — §1034 adjust_space_factor: sfcode 0 leaves the factor alone,
+# §1034 adjust_space_factor: sfcode 0 leaves the factor alone,
 # 1..999 sets it outright
 # ---------------------------------------------------------------------------
 
@@ -265,7 +265,7 @@ class TestSpaceFactorCodes:
 
 
 # ---------------------------------------------------------------------------
-# — §1123-1124: without a base character the accent stands alone and
+# §1123-1124: without a base character the accent stands alone and
 # the following token is read again; spaces and \relax are skipped first
 # ---------------------------------------------------------------------------
 
@@ -329,7 +329,7 @@ class TestAccentWithoutBase:
 
 
 # ---------------------------------------------------------------------------
-# — \noboundary: starts a paragraph in vertical mode (§1090), ends
+# \noboundary: starts a paragraph in vertical mode (§1090), ends
 # the lig/kern run in horizontal mode (§1038), is ignored in math (§1045)
 # ---------------------------------------------------------------------------
 

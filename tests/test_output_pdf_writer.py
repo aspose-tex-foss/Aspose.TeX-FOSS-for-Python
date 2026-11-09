@@ -375,7 +375,7 @@ def test_kern_flushes_run() -> None:
 
 
 def test_adjacent_hlists_do_not_concatenate_text_runs() -> None:
-    #: chars from two sibling HlistNodes (successive paragraph lines)
+    # chars from two sibling HlistNodes (successive paragraph lines)
     # must not be emitted in a single (...) Tj at one baseline. Before the
     # fix the run state leaked across lines, producing e.g. "theafterno" at
     # line-N baseline and the next line starting mid-word.
@@ -427,7 +427,7 @@ def test_rule_coords_correct() -> None:
 
 
 def test_one_inch_rule_is_72_big_points() -> None:
-    """: TeX's 1in (4736287sp = 72.27pt) is written as 72bp, as dvipdfmx does."""
+    """TeX's 1in (4736287sp = 72.27pt) is written as 72bp, as dvipdfmx does."""
     w, buf = _make_writer()
     rule = RuleNode(width=4736287, height=4736287, depth=0)
     hbox = _hbox([rule], width=4736287, height=4736287)
@@ -517,7 +517,7 @@ def _widths_of(data: bytes) -> list[list[int]]:
 
 
 def test_widths_identical_for_scaled_and_at_size_instances() -> None:
-    """: /Widths are glyph space, independent of the at size."""
+    """/Widths are glyph space, independent of the at size."""
     mgr = FontManager()
     mgr.load_font("tenrm", "cmr10")
     mgr.load_font("bigrm", "cmr10", scaled=1440)

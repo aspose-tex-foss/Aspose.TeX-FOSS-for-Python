@@ -1,4 +1,4 @@
-""": box construction, measured against MiKTeX."""
+"""box construction, measured against MiKTeX."""
 import json
 import warnings
 from pathlib import Path

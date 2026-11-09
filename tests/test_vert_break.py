@@ -1,4 +1,4 @@
-"""Unit tests for ``vert_break`` and ``prune_page_top`` (TeX §968-§977,)."""
+"""Unit tests for ``vert_break`` and ``prune_page_top`` (TeX §968-§977)."""
 from __future__ import annotations
 
 from aspose_tex._engine.nodes import (

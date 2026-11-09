@@ -1,5 +1,5 @@
 {
-  "owner_table_tex422": {
+  "multispan_table": {
     "source": "\\nopagenumbers \\hsize=4in\n\\halign{#\\hfil\\quad&\\hfil#\\quad&#\\hfil\\cr\n\\multispan3\\hfil Table heading\\hfil\\cr\n\\noalign{\\smallskip\\hrule\\smallskip}\nAlpha&12&first row\\cr\nBeta&345&second\\cr\n\\noalign{\\medskip}\nGamma&6&third row text\\cr}\\bye",
     "ref": {
       "messages": [],

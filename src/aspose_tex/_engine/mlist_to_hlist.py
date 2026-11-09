@@ -12,7 +12,7 @@ selection via the math families, italic correction (no-script case, rule 17),
 the minimal Op axis-shift (rule 13), the full 8x8 spacing table (rule 18) with
 mu-to-sp conversion, and the style/glue/kern/nonscript carriers.  Scripts,
 fractions, accents, radicals, and delimiters are parsed into the noad structure
-by cascade #1 but laid out by; here they go through the
+by cascade #1 but laid out; here they go through the
 *placeholder path* (§C.6 — render the available nucleus, skip the geometry,
 never raise).
 
@@ -181,7 +181,7 @@ def mlist_to_hlist(
             a delimiter may fall short of its target (plain.tex = 5pt; §762).
         penalties:       TeX's ``mlist_penalties`` (§761): append the §767
             Bin/Rel penalties.  True only for a formula in a paragraph; every
-            nested translation leaves it False (§720,).
+            nested translation leaves it False (§720).
         binoppenalty / relpenalty: ``\\binoppenalty`` / ``\\relpenalty``.
 
     Returns:
@@ -922,7 +922,7 @@ def _make_radical(noad: Noad, ctx: _Ctx) -> list:
     """Draw a radical sign over the radicand (TeX §737, App G rule 11).
 
     The radical sign grows to the radicand via :func:`_delimiter_box`
-    ; the vinculum is an :func:`_overbar` as thick as the sign is
+    the vinculum is an :func:`_overbar` as thick as the sign is
     tall, so it continues the sign's top stroke.
     """
     style = ctx.style
@@ -1078,7 +1078,7 @@ def _make_left_right(noad: Noad, ctx: _Ctx) -> list:
     # keeps its own baseline.
     left_box = axis_center(var_delimiter(noad.left_delim, target, style, ctx), style, ctx)
     right_box = axis_center(var_delimiter(noad.right_delim, target, style, ctx), style, ctx)
-    #: the inner box is measurement-only. One whole nucleus owns
+    # the inner box is measurement-only. One whole nucleus owns
     # the leader grid and running-rule inheritance, including delimiters.
     return [_pack_hbox([left_box, *inner.list, right_box], ctx.font_manager)]
 
@@ -1149,7 +1149,7 @@ def _translate_glue_kern(noad: Noad, ctx: _Ctx) -> list:
         if noad.mu_glue:
             # \mskip: every finite component converts per style (§716 math_glue).
             return [GlueNode(glue=_mu_glue_to_sp(noad.glue, ctx))]
-        #: an ordinary glue (\hfil and friends) is already in sp and
+        # an ordinary glue (\hfil and friends) is already in sp and
         # carries stretch/shrink orders the scalar path cannot express — emit it
         # verbatim (§1196 passes a glue_node through unchanged).
         return [GlueNode(glue=noad.glue)]
@@ -1260,7 +1260,7 @@ def _atom_penalty(items: list[_Item], index: int, penalties: tuple[int, int]) ->
 
     A Bin or Rel atom that is not last gets ``\\binoppenalty`` /
     ``\\relpenalty`` when that is below ``INF_PENALTY`` and the next item is
-    neither a Rel atom nor a penalty ( Component 6).
+    neither a Rel atom nor a penalty.
     """
     math_class = items[index].math_class
     if math_class == int(MathClass.BIN):

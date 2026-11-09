@@ -1,4 +1,4 @@
-r""": readers consult the live owner of every internal value.
+r"""readers consult the live owner of every internal value.
 
 Every expected value is a MiKTeX 24.4 measurement recorded by
 a reference probe (``probe_baseline.json``); none is computed by hand.
@@ -50,7 +50,7 @@ def _first_bop(dvi: bytes) -> list[int]:
 
 
 # ---------------------------------------------------------------------------
-# — D1: the clock is four integer parameters, \count0..9 are free
+# D1: the clock is four integer parameters, \count0..9 are free
 # ---------------------------------------------------------------------------
 
 
@@ -113,7 +113,7 @@ class TestClockParameters:
 
 
 # ---------------------------------------------------------------------------
-# — D4: paragraph-shape values are read from their owners
+# D4: paragraph-shape values are read from their owners
 # ---------------------------------------------------------------------------
 
 
@@ -173,7 +173,7 @@ class TestParagraphShapeReaders:
 
 
 # ---------------------------------------------------------------------------
-# — D2: one current binding per control-sequence name
+# D2: one current binding per control-sequence name
 # ---------------------------------------------------------------------------
 
 
@@ -239,7 +239,7 @@ class TestOneMeaningPerName:
 
 
 # ---------------------------------------------------------------------------
-# — D3: a \let of a primitive holds it; implicit paragraph ends run \par
+# D3: a \let of a primitive holds it; implicit paragraph ends run \par
 # ---------------------------------------------------------------------------
 
 
@@ -307,7 +307,7 @@ class TestPrimitiveMeanings:
 
 
 # ---------------------------------------------------------------------------
-# — D5: math nodes frame an inline formula
+# D5: math nodes frame an inline formula
 # ---------------------------------------------------------------------------
 
 

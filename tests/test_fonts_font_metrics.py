@@ -200,7 +200,7 @@ def test_ligature_not_found_wrong_pair() -> None:
 
 
 def test_ligature_other_type_returns_none() -> None:
-    """op_byte=1 (/LIG/ >) should return None (not supported in M1)."""
+    """op_byte=1 (/LIG/ >) should return None (not supported)."""
     lh = 2
     n_chars = 128
     nw, nh, nd, ni, nl, nk, ne, np_ = 2, 1, 1, 1, 1, 0, 0, 7
@@ -217,7 +217,7 @@ def test_ligature_other_type_returns_none() -> None:
     buf += struct.pack(">i", 0)
     buf += struct.pack(">i", 0)
     buf += struct.pack(">i", 0)
-    # lig_kern[0]: op_byte=1 (LIG/ >) — not supported in M1
+    # lig_kern[0]: op_byte=1 (LIG/ >) — not supported
     buf += struct.pack(">I", (128 << 24) | (105 << 16) | (1 << 8) | 12)
     params = (0, 0x280000, 0x80000, 0x40000, 0x6EB85, 0x100000, 0)
     for p in params:

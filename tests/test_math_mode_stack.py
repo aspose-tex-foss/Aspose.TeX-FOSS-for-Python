@@ -55,7 +55,7 @@ class TestMathModePop:
         assert interp._mode_stack.current == ModeKind.OUTER_VERTICAL
 
     def test_second_adjacent_inline_formula_requires_its_closing_dollar(self) -> None:
-        #: the first dollar closes inline math without inspecting the
+        # the first dollar closes inline math without inspecting the
         # following dollar. That opens another inline formula, which is unclosed.
         with pytest.raises(EngineError, match=r"missing \$ inserted"):
             _run(r"$ $$\bye")
@@ -78,7 +78,7 @@ class TestEverymathInjection:
 
         _run(r"\everymath={\relax}$ $\bye")
 
-        # The $ first starts a paragraph, which inserts \everypar (§1091,).
+        # The $ first starts a paragraph, which inserts \everypar (§1091).
         assert seen == [257, 258]
 
     def test_everydisplay_tokens_injected_at_display_open(self, monkeypatch: pytest.MonkeyPatch) -> None:
@@ -93,7 +93,7 @@ class TestEverymathInjection:
 
         _run(r"\everydisplay={\relax}$$ $$\bye")
 
-        # The $$ first starts a paragraph, which inserts \everypar (§1091,).
+        # The $$ first starts a paragraph, which inserts \everypar (§1091).
         assert seen == [257, 259]
 
     def test_empty_everymath_and_everydisplay_are_noops(self) -> None:

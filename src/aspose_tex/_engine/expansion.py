@@ -1,7 +1,7 @@
 """TeX macro expansion engine.
 
 Implements: macro definition (\\def/\\edef/\\gdef/\\xdef/\\let)
-with ``\\long`` and ``\\outer`` prefixes (FR-1a/FR-1b;), expansion-time primitives
+with ``\\long`` and ``\\outer`` prefixes (FR-1a/FR-1b), expansion-time primitives
 (\\expandafter/\\noexpand/\\csname), conditionals (\\if, \\ifx, \\ifnum, \\ifcat, \\iftrue,
 \\iffalse, \\ifcase), token converters (\\the, \\number, \\string), and file inclusion
 (\\input).
@@ -227,12 +227,12 @@ class Expander:
         self._long_pending: bool = False        # \\long prefix seen before \\def
         self._outer_pending: bool = False       # \\outer prefix seen before \\def
         self._after_assignment_token: Token | None = None
-        # D2: one binding per name across macros, register aliases,
+        # one binding per name across macros, register aliases,
         # constants and fonts; wired by the interpreter.
         self._bindings: MeaningBindings | None = None
 
     def _release(self, name: str, *, is_global: bool) -> None:
-        """Clear *name*'s non-macro bindings before a macro-table write ( D2)."""
+        """Clear *name*'s non-macro bindings before a macro-table write."""
         if self._bindings is not None:
             from aspose_tex._engine.meanings import BindingKind
 
@@ -410,7 +410,7 @@ class Expander:
             # CharTokens: pass through to caller (See)
             # Group open/close ({/}) now handled by interpreter, not expander.
             # An active character is expanded like a control sequence (TeX
-            # §358,); an undefined one goes to the interpreter, which
+            # §358); an undefined one goes to the interpreter, which
             # reports it.
             if isinstance(tok, CharToken):
                 if tok.catcode != Catcode.ACTIVE:
@@ -446,14 +446,14 @@ class Expander:
 
             # ControlSequenceToken: look up in dispatch table
             name = tok.name
-            # D3: a \let alias of a primitive is that primitive, and a
+            # a \let alias of a primitive is that primitive, and a
             # PrimitiveRefToken is never looked up in the macro table again.
             frozen = isinstance(tok, PrimitiveRefToken)
             if not frozen:
                 meaning = self._macros.get(name)
                 if isinstance(meaning, PrimitiveMeaning):
                     # get_x_token and full expansion keep an alias of an
-                    # unexpandable primitive as the alias (, §478)
+                    # unexpandable primitive as the alias (§478)
                     if (x_token or keep_aliases) and meaning.name not in _EXPANDABLE_PRIMITIVES:
                         return tok
                     tok = PrimitiveRefToken(meaning.name)
@@ -474,7 +474,7 @@ class Expander:
                 if meaning is None and name in _COMMAND_PRIMITIVES:
                     return tok
 
-            # 0. Stale prefix-flag guard (See FR-1a)
+            # 0. Stale prefix-flag guard (See)
             # In TeX, \long/\outer before a non-def command is an error.
             # We clear the flags so they do not bleed into a subsequent \def.
             _is_prefix = name in ("long", "outer")
@@ -496,7 +496,7 @@ class Expander:
 
             # 2. \let alias to a token
             if meaning is not None:
-                # C1: a \let alias whose meaning is a CS of the SAME name
+                # a \let alias whose meaning is a CS of the SAME name
                 # is a fixed point that resolves to a primitive of that name —
                 # return it as unexpandable instead of re-looping.  TeX's \let
                 # copies the *equivalent* (the primitive command code), so
@@ -524,7 +524,7 @@ class Expander:
                 self._stack.append(meaning)  # type: ignore[arg-type]
                 continue
 
-            #: a live non-macro owner is unexpandable even when
+            # a live non-macro owner is unexpandable even when
             # its name is also an expandable built-in. Frozen primitive aliases
             # have already resolved their meaning and bypass live bindings.
             if not frozen and self._bindings is not None:
@@ -676,7 +676,7 @@ class Expander:
                 self._exec_currentgrouplevel()
                 continue
 
-            # 9. Definition prefixes ( FR-1a / FR-1b) — See
+            # 9. Definition prefixes — See
             if name == "long":
                 self._long_pending = True
                 continue
@@ -694,7 +694,7 @@ class Expander:
         Follows chains of control-sequence aliases.  Returns ``None`` when the
         chain ends at a character, a command primitive, an unknown control
         sequence, or loops back on itself (``\let\cr\endline`` after
-        ``\let\endline\cr``,).
+        ``\let\endline\cr``).
         """
         seen = {name}
         while isinstance(meaning, ControlSequenceToken | PrimitiveMeaning):
@@ -916,7 +916,7 @@ class Expander:
         if self._group_stack is not None and self._group_stack._global_pending:
             self._group_stack.consume_global()
 
-        # Consume \long / \outer prefix flags ( FR-1a / FR-1b)
+        # Consume \long / \outer prefix flags
         long = self._long_pending
         outer = self._outer_pending
         self._long_pending = False
@@ -1078,7 +1078,7 @@ class Expander:
         pending ``\afterassignment`` token.
         """
         # An active character's current meaning is copied, as for a control
-        # sequence (TeX §1221,); an undefined one is kept as the token.
+        # sequence (TeX §1221); an undefined one is kept as the token.
         is_global = self._group_stack is None or self._group_stack.is_global_pending
         source_name = (tok.name if isinstance(tok, ControlSequenceToken)
                        else active_char_key(tok.char) if tok.catcode == Catcode.ACTIVE else None)
@@ -1086,7 +1086,7 @@ class Expander:
                 and source_name not in self._macros and self._bindings is not None
                 and self._bindings.copy_binding(a_name, source_name, is_global=is_global)):
             # A register, constant or font binding is copied into its own
-            # owner ( D2), including active-character keys.
+            # owner, including active-character keys.
             self.fire_after_assignment()
             return
         meaning = self._let_meaning(tok)
@@ -1114,7 +1114,7 @@ class Expander:
         r"""Return the macro-table meaning ``\let`` copies from *tok* (§1221).
 
         A macro-table entry is copied as is; a built-in becomes
-        :class:`PrimitiveMeaning` ( D3), so a later ``\def`` of that
+        :class:`PrimitiveMeaning`, so a later ``\def`` of that
         name does not reach the alias; an undefined name is kept as the token.
         """
         if isinstance(tok, PrimitiveRefToken):
@@ -1271,7 +1271,7 @@ class Expander:
             return f"{kind}{chr(10) if show else ''}{params}->{body}"
         if isinstance(meaning, PrimitiveMeaning):  # D3
             return esc + meaning.name
-        # A self-alias is the primitive of that name ( C1).
+        # A self-alias is the primitive of that name.
         if key in seen or (isinstance(meaning, ControlSequenceToken) and meaning.name == key):
             if isinstance(tok, ControlSequenceToken) and self._is_primitive_name(key):
                 return esc + key
@@ -1672,7 +1672,7 @@ class Expander:
                 return meaning
             if isinstance(meaning, PrimitiveMeaning):  # D3
                 return ("prim", meaning.name)
-            # A self-alias is the primitive of that name ( C1); an active
+            # A self-alias is the primitive of that name; an active
             # character \let to itself while undefined stays undefined.
             if name in seen or (
                 isinstance(meaning, ControlSequenceToken) and meaning.name == name
@@ -1697,7 +1697,7 @@ class Expander:
     def _is_primitive_name(self, name: str) -> bool:
         """Return whether *name* has a meaning outside the macro table.
 
-        That is the primitive a self-alias stands for ( C1); a name
+        That is the primitive a self-alias stands for; a name
         ``\\let`` to itself while undefined has none.
         """
         if name in _EXPANDER_PRIMITIVES:
@@ -1718,9 +1718,9 @@ class Expander:
             self._skip_false_branch()
 
     def _exec_ifeof(self) -> None:
-        """Execute \\ifeof<n> as always false in M3.
+        """Execute \\ifeof<n> as always false: file streams are not implemented.
 
-        Enforces the canonical TeX stream-number range 0..15 ( FR-11),
+        Enforces the canonical TeX stream-number range 0..15,
         matching :func:`aspose_tex._engine.io_primitives._read_stream_number`
         so that ``\\ifeof`` rejects the same out-of-range inputs as
         ``\\openin`` / ``\\openout`` / ``\\closein`` / ``\\closeout`` /
@@ -2049,10 +2049,10 @@ class Expander:
 
         Readers of internal quantities dispatch on the primitive's name, so a
         control sequence or active character whose meaning is a
-        :class:`PrimitiveMeaning` ( D3) becomes the matching
+        :class:`PrimitiveMeaning` becomes the matching
         :class:`PrimitiveRefToken`. An active owner binding becomes its
         control-sequence key, so existing quantity readers reach the
-        copied binding ( D2). Other tokens are returned unchanged.
+        copied binding. Other tokens are returned unchanged.
 
         Example::
 

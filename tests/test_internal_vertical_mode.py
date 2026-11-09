@@ -1,4 +1,4 @@
-""": internal vertical lists; MiKTeX 24.4 measured expectations."""
+"""internal vertical lists; MiKTeX 24.4 measured expectations."""
 
 import pytest
 

@@ -11,7 +11,7 @@ Covers §E (TeX:The Program §749-§750, App G rule 13):
   - AC-4-equiv: the LimitMode enum + Noad.limits field; \limits/\nolimits/
           \displaylimits set the last OP atom's mode; on a non-op they raise.
   - AC-6-equiv: a single-symbol text-style Op is raised onto the math axis
-          (§749, MiKTeX-measured;).
+          (§749, MiKTeX-measured).
 
 The \sum/\int/\intop/\prod macros come from the REAL plain.tex format
 (``TeXOptions(load_format="plain")``), never mocks (FR-8).

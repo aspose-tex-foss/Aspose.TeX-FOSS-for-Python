@@ -1,9 +1,9 @@
-"""Plain TeX lines 376-730 load fixtures ( AC-18,).
+"""Plain TeX lines 376-730 load fixtures.
 
 Two fixtures coexist:
 
 1. ``test_plain_tex_376_730_text_mark_leader_active_subset_loads`` — the original
-   bounded subset shipped under. Exercises only the-owned text
+   bounded subset shipped. Exercises only the-owned text
    slice (active ``~`` macro at line 555, ``\\hrulefill`` at line 707,
    ``\\outer\\def\\bye`` at line 724) with a hand-rolled scaffolding so that
    neither alignment nor math execution paths are entered. Retained for
@@ -56,7 +56,7 @@ def test_plain_tex_376_730_text_mark_leader_active_subset_loads() -> None:
 
 
 def test_plain_tex_376_730_verbatim_loads() -> None:
-    """Load plain.tex lines 1-730 verbatim — closes AC-18 for.
+    """Load plain.tex lines 1-730 verbatim — closes AC-18.
 
     Per AC-18 the engine must parse and execute lines 376-730 without raising
     ``Undefined control sequence`` or ``NotImplementedError``. Lines 376-730
@@ -67,8 +67,8 @@ def test_plain_tex_376_730_verbatim_loads() -> None:
     TeX itself (the macros are simply undefined).
 
     Excluded sub-ranges: **none**. The AC text reserves the right to skip
-    alignment-using and math-mode-using paths (covered by /
-    ). The reason no exclusion is needed is narrow but load-bearing:
+    alignment-using and math-mode-using paths, which are covered
+    elsewhere. The reason no exclusion is needed is narrow but load-bearing:
     the *macro-definition* statements in 376-730 (``\\def`` / ``\\outer\\def``
     / ``\\let``) store their replacement text verbatim and do not expand
     alignment bodies (e.g. ``\\m@ketabbox`` lines 615-631 with ``\\ialign``,

@@ -1,4 +1,4 @@
-r"""Hyphenation stores and Liang word hyphenation (, §1).
+r"""Hyphenation stores and Liang word hyphenation (§1).
 
 TeX keeps, per ``\language``, a set of Liang patterns (``\patterns``) and a
 list of exception words (``\hyphenation``).  This module holds both, answers

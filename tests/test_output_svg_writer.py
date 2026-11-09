@@ -106,7 +106,7 @@ class TestBasicStructure:
         assert b'xmlns="http://www.w3.org/2000/svg"' in data
 
     def test_svg_dimensions_empty_page_falls_back_to_full_page(self):
-        """: empty pages fall back to the configured page size.
+        """empty pages fall back to the configured page size.
 
         With no painted placements, the content bbox is undefined; the
         writer keeps the original page-sized canvas so the SVG still
@@ -131,7 +131,7 @@ class TestBasicStructure:
         assert root.get("viewBox") == "0 0 300 400"
 
     def test_svg_viewbox_is_content_tight_when_page_has_content(self):
-        """: a non-empty page emits a content-tight viewBox.
+        """a non-empty page emits a content-tight viewBox.
 
         With content present, ``width`` / ``height`` and the four
         ``viewBox`` numbers must reflect the painted bbox (plus a small
@@ -162,7 +162,7 @@ class TestBasicStructure:
         assert vh < 100, f"content-tight height should be << page; got {vh}"
 
     def test_svg_viewbox_encloses_far_off_placement(self):
-        """ AC-2: a glyph placed far from body text (the folio
+        """a glyph placed far from body text (the folio
         case) must still fall inside the emitted viewBox."""
         writer, _ = _make_writer()
         # Body char at top of page ...
@@ -215,7 +215,7 @@ class TestBasicStructure:
         assert b"<image" not in data
         assert b"@font-face" not in data
         # Every xlink:href must reference an internal glyph id
-        # (: switched from bare ``href`` to ``xlink:href`` for SVG 1.1
+        # (switched from bare ``href`` to ``xlink:href`` for SVG 1.1
         # canonical form; Chromium-friendly and Inkscape-compatible).
         root = _parse_svg(data)
         for use in root.findall(f".//{_NS}use"):
@@ -257,7 +257,7 @@ class TestGlyphs:
         root = _parse_svg(writer.get_bytes())
         path = root.find(f"{_NS}defs/{_NS}path")
         assert path is not None
-        #: glyph id encodes the exact at-size in sp
+        # glyph id encodes the exact at-size in sp
         # (cmr10 @ 10pt = 655360 sp).
         assert path.get("id") == "g-cmr10-655360-72"
 
@@ -278,13 +278,13 @@ class TestGlyphs:
             assert href[1:] in ids
 
     def test_use_emits_x_y_xlink_href_no_transform(self):
-        """: ``<use>`` uses bare ``x``/``y`` + ``xlink:href`` (no ``transform``).
+        """``<use>`` uses bare ``x``/``y`` + ``xlink:href`` (no ``transform``).
 
         Folding ``transform="translate(...) scale(0.01,-0.01)"`` into the
         path data and emitting placements with bare ``x`` / ``y``
         attributes mirrors dvisvgm's output and renders reliably across
         Chromium browsers — the form Chrome silently dropped for the
-        page-folio glyph in.
+        page-folio glyph.
         """
         writer, _ = _make_writer()
         page = _page([_hbox([CharNode(char=72, font_name="tenrm")])])
@@ -332,7 +332,7 @@ class TestGlyphs:
         defs = root.find(f"{_NS}defs")
         paths = defs.findall(f"{_NS}path")
         ids = [p.get("id") for p in paths]
-        # Each unique glyph appears once (: at-size-encoded ids;
+        # Each unique glyph appears once (at-size-encoded ids;
         # cmr10 @ 10pt = 655360 sp)
         assert ids.count("g-cmr10-655360-108") == 1
         # But <use> appears for each placement
@@ -341,7 +341,7 @@ class TestGlyphs:
         assert len(l_uses) == 2
 
     def test_def_path_data_pre_scaled_to_pt_units(self):
-        """: glyph path data is pre-scaled into user (pt) units.
+        """glyph path data is pre-scaled into user (pt) units.
 
         Before the fix, the path emitted ``M 613 605 ...`` in font-design
         units (max coord ~700) and a per-``<use>`` ``scale(0.01,-0.01)``
@@ -373,14 +373,14 @@ class TestGlyphs:
         )
 
     def test_ensure_font_leaves_scaled_paths_empty(self):
-        """: loading a font must not pre-scale its whole glyph table."""
+        """loading a font must not pre-scale its whole glyph table."""
         writer, _ = _make_writer()
         rec = writer._ensure_font("tenrm")
         assert rec.outlines
         assert rec.scaled_d == {}
 
     def test_scaled_path_populates_only_used_glyphs(self):
-        """: shipout scales and caches only glyphs referenced by the page."""
+        """shipout scales and caches only glyphs referenced by the page."""
         writer, _ = _make_writer()
         page = _page([_hbox([
             CharNode(char=72, font_name="tenrm"),
@@ -396,7 +396,7 @@ class TestGlyphs:
         assert rec.scaled_d[101]
 
     def test_scaled_path_cache_hit_reuses_existing_string(self, monkeypatch):
-        """: repeated glyph references do not repeat path-scaling work."""
+        """repeated glyph references do not repeat path-scaling work."""
         import aspose_tex._output.svg_writer as svg_writer
 
         writer, _ = _make_writer()
@@ -431,7 +431,7 @@ class TestGlyphs:
         assert path.get("d") == rec.scaled_d[72]
 
     def test_multi_size_same_tfm_distinct_glyph_ids(self):
-        """: cmr10 loaded at 10pt and 7pt must not collide on a path id.
+        """cmr10 loaded at 10pt and 7pt must not collide on a path id.
 
         Before the fix, the glyph id scheme ``g-{tfm}-{code}`` reused
         ``g-cmr10-72`` for both sizes; whichever font emitted last
@@ -480,7 +480,7 @@ class TestGlyphs:
         assert d10 != d7
 
     def test_xlink_namespace_declared(self):
-        """: root ``<svg>`` declares the ``xlink`` namespace prefix.
+        """root ``<svg>`` declares the ``xlink`` namespace prefix.
 
         SVG 1.1 canonical form requires ``xmlns:xlink`` for ``xlink:href``.
         """
@@ -529,7 +529,7 @@ class TestRules:
 
 
     def test_one_inch_rule_is_72_big_points(self):
-        """: TeX's 1in (4736287sp = 72.27pt) is 72 user units (bp), as in dvisvgm."""
+        """TeX's 1in (4736287sp = 72.27pt) is 72 user units (bp), as in dvisvgm."""
         writer, _ = _make_writer()
         rule = RuleNode(width=4736287, height=4736287, depth=0)
         writer.shipout(1, _page([_hbox([rule])]))
@@ -664,7 +664,7 @@ class TestErrors:
 # ---------------------------------------------------------------------------
 
 class TestScalePathD:
-    """Unit tests for the path pre-scaling helper introduced in."""
+    """Unit tests for the path pre-scaling helper introduced."""
 
     def test_empty_input_returns_empty(self):
         assert _scale_path_d("", 0.01) == ""

@@ -77,17 +77,17 @@ def _glyph_id(tfm_name: str, at_size_sp: int, code: int) -> str:
     """Build the ``<defs>`` glyph id / ``xlink:href`` target for one glyph.
 
     The id encodes the at-size so the same TFM loaded at multiple sizes does
-    not collide on a single ``<path id>``.  In M2 every document used
+    not collide on a single ``<path id>``.  Once every document used
     cmr10 at exactly one size and the old ``g-{tfm}-{code}`` scheme sufficed;
-    plain.tex (M3) routinely selects e.g. cmr10 at 7pt (``\\sevenrm``) or 5pt
+    plain.tex routinely selects e.g. cmr10 at 7pt (``\\sevenrm``) or 5pt
     (``\\fiverm``), where the un-sized scheme would let whichever font emitted
     last overwrite the other's outline in ``<defs>``.
 
     The at-size component is the **exact** size in sp (not a rounded pt value):
-    M4 makes fractional / magnified sizes reachable (``\\font\\x=cmr10 at
+    Fractional / magnified sizes are reachable (``\\font\\x=cmr10 at
     10.95pt``, ``scaled \\magstephalf``), so two distinct sizes that round to
     the same integer pt — e.g. 10.3pt and 10.4pt — would re-collide under the
-    old ``round(pt)`` scheme (, §G FR-10).  Encoding sp keeps the
+    old ``round(pt)`` scheme (§G FR-10).  Encoding sp keeps the
     id collision-free for every distinct at-size.
 
     Args:
@@ -104,7 +104,7 @@ def _glyph_id(tfm_name: str, at_size_sp: int, code: int) -> str:
 
 
 # Padding (in pt) added around the content bounding box when emitting a
-# content-tight viewBox.  See RCA — Chrome 147 silently drops glyph
+# content-tight viewBox.  Chrome 147 silently drops glyph
 # placements that fall too close to the bottom edge of an SVG that exactly
 # fills the layout viewport.  dvisvgm uses a comparable margin around its
 # content-tight box; we add a small constant rather than computing exact
@@ -120,7 +120,7 @@ def _rule_paints(width: int, height: int, depth: int) -> bool:
     its ``width`` are positive. A non-painting rule (e.g. a zero-width
     ``\\strut``) advances the reference point but emits no placement.
     Dimensions are in sp and must already be RUNNING_DIMEN-resolved
-    .
+    
     """
     return width > 0 and (height + depth) > 0
 
@@ -221,7 +221,7 @@ class _SvgFontRecord:
                         ``x'`` = ``x * at_size_pt/1000`` and
                         ``y'`` = ``-y * at_size_pt/1000`` (TeX-up to
                         SVG-down y-flip is folded in).  Empty string when
-                        the glyph has no outline.  See RCA: this
+                        the glyph has no outline.  This
                         replaces an emit-time ``transform="translate(...)
                         scale(0.01,-0.01)"`` on every ``<use>`` so glyph
                         placements use bare ``x`` / ``y`` attributes
@@ -664,7 +664,7 @@ class SvgWriter:
         offset applied by ``_build_char_use`` / ``_build_rule_rect`` so
         the bbox can be plugged straight into the SVG header.
 
-        : this is the data feeding the content-tight viewBox that
+        this is the data feeding the content-tight viewBox that
         replaces the page-sized one.  Empty pages return ``None``; the
         caller falls back to the configured page dimensions.
         """
@@ -726,7 +726,7 @@ class SvgWriter:
         ``width`` / ``height``.  Empty pages fall back to the
         configured page dimensions (preserves the FR-10 default
         for the no-content edge case).  See ``_compute_content_bbox``
-        for the bounding-box calculation and the RCA note above for the
+        for the bounding-box calculation and the padding note above for the
         Chromium rendering quirk that motivated the switch from a
         page-sized viewBox.
         """
@@ -755,7 +755,7 @@ class SvgWriter:
         # (tfm_name, at_size_sp, code) so the same TFM at distinct sizes
         # produces distinct <defs> entries; the exact-sp at-size keeps
         # fractional sizes that round to the same int pt from colliding
-        # (, §G FR-10).  The record is carried alongside so
+        # (§G FR-10).  The record is carried alongside so
         # _build_defs can scale through the right font.
         used_glyphs: dict[tuple[str, int, int], _SvgFontRecord] = {}
         for rec, code, _h, _v in self._char_placements:

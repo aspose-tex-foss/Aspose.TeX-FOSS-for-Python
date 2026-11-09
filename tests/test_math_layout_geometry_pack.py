@@ -62,7 +62,7 @@ def _dims(*formulas: str) -> list[tuple[int, int, int]]:
 
 
 # ---------------------------------------------------------------------------
-# — large operators centred on the axis (§749)
+# large operators centred on the axis (§749)
 # ---------------------------------------------------------------------------
 
 
@@ -132,7 +132,7 @@ class TestOperatorOnTheAxis:
 
 
 # ---------------------------------------------------------------------------
-# — limits of a slanted operator skewed by half the italic correction
+# limits of a slanted operator skewed by half the italic correction
 # ---------------------------------------------------------------------------
 
 
@@ -157,7 +157,7 @@ class TestLimitsSkew:
 
 
 # ---------------------------------------------------------------------------
-# — height/depth of script-only formulas; the radical in a script
+# height/depth of script-only formulas; the radical in a script
 # ---------------------------------------------------------------------------
 
 
@@ -226,7 +226,7 @@ class TestRadicalGeometry:
 
 
 # ---------------------------------------------------------------------------
-# — delimiter search order (§707-§708) and axis centring (§710)
+# delimiter search order (§707-§708) and axis centring (§710)
 # ---------------------------------------------------------------------------
 
 
@@ -270,7 +270,7 @@ class TestDelimiterSearch:
 
 
 # ---------------------------------------------------------------------------
-# — a class primitive's forced class belongs to its own argument group
+# a class primitive's forced class belongs to its own argument group
 # ---------------------------------------------------------------------------
 
 
@@ -301,7 +301,7 @@ class TestClassArgumentGroups:
 
 
 # ---------------------------------------------------------------------------
-# — make_ord: ligatures and kerns between symbols (§752-§753)
+# make_ord: ligatures and kerns between symbols (§752-§753)
 # ---------------------------------------------------------------------------
 
 

@@ -128,7 +128,7 @@ class Tokenizer:
 
         # The name is the character itself, not its catcode (TeX §354): `\ `,
         # `\^^I` and `\^^M` are distinct, so plain's `\def\^^I{\ }` does not
-        # turn `\ ` into a macro of itself ( amendment,).
+        # turn `\ ` into a macro of itself.
         return ControlSequenceToken(c2)
 
     def _skip_comment(self) -> None:

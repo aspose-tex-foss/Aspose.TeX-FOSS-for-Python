@@ -107,9 +107,9 @@ def test_bare_expander_keeps_the_name() -> None:
 class TestFullExpansionKeepsUnexpandableAliases:
     r"""``\edef``, ``\message`` and ``\write`` keep an alias of an unexpandable meaning (§478).
 
-    , fixed in: a name ``\csname`` has made ``\relax`` stays
-    that name.  A control word is printed with a space after it (§262,
-    ); the expected text is MiKTeX 24.4 output.
+    fixed: a name ``\csname`` has made ``\relax`` stays
+    that name.  A control word is printed with a space after it
+    (§262); the expected text is MiKTeX 24.4 output.
     """
 
     def test_name_built_before_its_definition(self) -> None:
@@ -158,7 +158,7 @@ def test_name_let_to_itself_while_undefined_stays_undefined() -> None:
 
 
 class TestFullExpansionResolvesAliasesItReads:
-    r"""Inside ``\edef``/``\message`` only output tokens keep their alias (second review).
+    r"""Inside ``\edef``/``\message`` only output tokens keep their alias.
 
     ``\if``/``\ifcat`` operands, ``\csname`` and the number scanner look at the
     meaning, as in TeX; every expected line is MiKTeX 24.4 plain output.

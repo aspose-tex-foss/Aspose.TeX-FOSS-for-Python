@@ -327,7 +327,7 @@ def test_vsize_300pt_page_break():
 
 
 # ---------------------------------------------------------------------------
-#: trailing discardables preserved through page break
+# trailing discardables preserved through page break
 # ---------------------------------------------------------------------------
 
 def test_page_break_preserves_trailing_vfill():
@@ -713,7 +713,7 @@ def test_to_roman_lowercase_boundary():
 
 
 # ---------------------------------------------------------------------------
-# v4 — RuleNode dispatch on the main vertical list
+# RuleNode dispatch on the main vertical list
 # ---------------------------------------------------------------------------
 
 def _make_rule(height: int = 26_214, depth: int = 0, width: int = 4_000_000) -> RuleNode:
@@ -721,13 +721,13 @@ def _make_rule(height: int = 26_214, depth: int = 0, width: int = 4_000_000) -> 
 
 
 def test_rule_first_on_page_inserts_topskip_glue():
-    """Rule-first on a page goes through the topskip path ( Measurement B).
+    """Rule-first on a page goes through the topskip path (Measurement B).
 
     Fresh PageBuilder, contribute a single RuleNode with default 0.4 pt height
     and zero depth.  MVL must be ``[GlueNode(topskip), RuleNode]`` with the
     topskip glue's natural width equal to ``max(0, cfg.topskip.width - rule.height)``
     = 655_360 - 26_214 = 629_146 sp.  The flag flips, ``_prev_depth`` writes
-    the §679 sentinel ``ignore_depth = _PREVDEPTH_SENTINEL`` ( v5
+    the §679 sentinel ``ignore_depth = _PREVDEPTH_SENTINEL`` (v5
     Component 6), and ``_page_total`` accumulates topskip_nat + rule.height +
     rule.depth = 655_360 sp (= 10 pt = ``\\topskip.width``).
     """
@@ -743,7 +743,7 @@ def test_rule_first_on_page_inserts_topskip_glue():
     assert topskip.glue.width == 629_146  # 655360 - 26214
     assert builder._mvl[1] is rule
     assert builder.is_at_top_of_page is False
-    # v5: §679 sentinel write (was `rule.depth` under v4).
+    # §679 sentinel write (was `rule.depth` under v4).
     assert builder._prev_depth == _PREVDEPTH_SENTINEL
     assert builder.page_total == 655_360  # topskip_nat + rule.height + rule.depth
 
@@ -759,7 +759,7 @@ def test_rule_first_on_page_with_nonzero_rule_depth():
     topskip = builder._mvl[0]
     assert isinstance(topskip, GlueNode)
     assert topskip.glue.width == 629_146  # depth is NOT part of topskip formula
-    # v5: §679 sentinel — `_prev_depth` is independent of `rule.depth`.
+    # §679 sentinel — `_prev_depth` is independent of `rule.depth`.
     assert builder._prev_depth == _PREVDEPTH_SENTINEL
     # §1002: a rule moves like a box — its depth is page_depth
     # until glue or a kern folds it into the total.
@@ -795,11 +795,11 @@ def test_rule_mid_page_appends_without_interline_glue():
     assert not isinstance(builder._mvl[-2], GlueNode), (
         "mid-page rule must not be preceded by interline glue (§679 vs §1078)"
     )
-    # v5: §679 sentinel write — `_prev_depth = ignore_depth` (NOT
+    # §679 sentinel write — `_prev_depth = ignore_depth` (NOT
     # `rule.depth`, which was the literal misread under v4).  The sentinel
     # makes the next box's interline-glue prelude skip per §253.
     assert builder._prev_depth == _PREVDEPTH_SENTINEL
-    # §1002 (, superseding's exemption): the rule is counted
+    # §1002 (superseding's exemption): the rule is counted
     # like a box; the box's depth is folded in ahead of it.
     assert builder.page_total == pre_rule_total + 100_000 + 26_214
     assert builder.page_depth == 78_643
@@ -823,7 +823,7 @@ def test_box_after_rule_skips_interline_glue():
 
     _feed(builder, box)
 
-    # v5: MVL is [topskip_glue, rule, box] — no interline glue
+    # MVL is [topskip_glue, rule, box] — no interline glue
     # between rule and box (was [..., interline_glue, box] under v4).
     assert len(builder._mvl) == 3
     assert isinstance(builder._mvl[0], GlueNode)  # topskip
@@ -837,7 +837,7 @@ def test_box_after_rule_skips_interline_glue():
 
 
 # ---------------------------------------------------------------------------
-# v5 Component 6 — sentinel `_prev_depth` after `\hrule` + sentinel
+# sentinel `_prev_depth` after `\hrule` + sentinel
 # guard in interline-glue prelude
 # ---------------------------------------------------------------------------
 
@@ -846,7 +846,7 @@ def test_contribute_rule_first_writes_prev_depth_sentinel():
 
     Fresh PageBuilder, contribute a single RuleNode (rule-first arm because
     `is_at_top_of_page` starts True). Assert `_prev_depth` post-call equals
-    `_PREVDEPTH_SENTINEL` ( v5 §Component 6 / Edit 6.2).
+    `_PREVDEPTH_SENTINEL`.
     """
     backend = _NullBackend()
     builder = PageBuilder(_default_config(), backend, _ShippingRoutine())
@@ -863,7 +863,7 @@ def test_contribute_rule_midpage_writes_prev_depth_sentinel():
     PageBuilder, contribute a HlistNode first (flips `is_at_top_of_page` to
     False and sets `_prev_depth` to box.depth via `_update_page_totals_for_box`),
     then contribute a RuleNode (mid-page arm).  Assert `_prev_depth` post-call
-    equals `_PREVDEPTH_SENTINEL` ( v5 §Component 6 / Edit 6.2) and
+    equals `_PREVDEPTH_SENTINEL` and
     overrides the previous box's depth.
     """
     backend = _NullBackend()
@@ -875,7 +875,7 @@ def test_contribute_rule_midpage_writes_prev_depth_sentinel():
 
     _feed(builder, _make_rule(height=26_214, depth=78_643))
 
-    # v5: mid-page rule arm overrides box.depth with the sentinel.
+    # mid-page rule arm overrides box.depth with the sentinel.
     assert builder._prev_depth == _PREVDEPTH_SENTINEL
 
 
@@ -883,7 +883,7 @@ def test_insert_interline_skips_on_sentinel_prev_depth():
     r"""No interline glue is computed when `_prev_depth` is the sentinel.
 
     TeXbook §253: when `\prevdepth <= -1000 pt` the interline-glue prelude
-    is skipped entirely ( v5 §Component 6).
+    is skipped entirely.
     """
     backend = _NullBackend()
     builder = PageBuilder(_default_config(), backend, _ShippingRoutine())
@@ -901,7 +901,7 @@ def test_contribute_two_rules_midpage_sets_sentinel_each_time():
     `_prev_depth` must equal `_PREVDEPTH_SENTINEL`.  Pin that consecutive
     rules do not compound the spurious-glue defect — each rule individually
     writes the sentinel and there is no interline GlueNode between them
-    ( v5 §Measurement E + Component 6).
+    (§Measurement E + Component 6).
     """
     backend = _NullBackend()
     builder = PageBuilder(_default_config(), backend, _ShippingRoutine())
@@ -938,7 +938,7 @@ def test_page_reset_restores_first_box_on_page():
 
 
 # ---------------------------------------------------------------------------
-#: TeXbook §1000 — discard leading discardables at the top of a
+# TeXbook §1000 — discard leading discardables at the top of a
 # continuation page.  After a natural page break the leftover that
 # is re-contributed to the fresh page must NOT carry the interline glue that
 # sat between the shipped page's last box and the leftover's first box — that
@@ -1157,7 +1157,7 @@ def test_remove_last_node_does_not_touch_prev_depth():
 
 
 # ---------------------------------------------------------------------------
-#: least-cost page breaking, the pending-contribution queue,
+# least-cost page breaking, the pending-contribution queue,
 # §1004 depth folding and the §668 maximum depth of the page box.
 # ---------------------------------------------------------------------------
 
@@ -1173,7 +1173,7 @@ def _boxes_per_page(backend: _NullBackend) -> list[int]:
 
 
 class TestLeastCostPageBreak:
-    """§1000 legal breakpoints and §1005-§1007 cost selection ( C1/C2)."""
+    """§1000 legal breakpoints and §1005-§1007 cost selection."""
 
     def _builder(self, vsize_pt: int, topskip_stretch_pt: int = 0):
         backend = _NullBackend()
@@ -1266,7 +1266,7 @@ class TestLeastCostPageBreak:
         builder.finish_output_cycle()
         assert not builder._contrib
         # The page was not fired here (pending was set by hand): fire_up, not
-        # finish_output_cycle, empties the page (§1017/§991,), so the
+        # finish_output_cycle, empties the page (§1017/§991), so the
         # queued box simply joins it.
         assert sum(isinstance(n, HlistNode) for n in builder._mvl) == 2
 
@@ -1283,7 +1283,7 @@ class TestDepthFolding:
         _feed(builder, PenaltyNode(INF_PENALTY))  # a kern moves once its successor is known
         assert (builder.page_total, builder.page_depth) == (15 * _PT, 0)
 
-    def test_tex332_last_depth_before_fil_glue(self, tmp_path):
+    def test_last_depth_before_fil_glue(self, tmp_path):
         """ repro: MiKTeX sets y at v=21733642 sp on page 1."""
         from aspose_tex import DviDevice, TeXJob, TeXOptions
         from aspose_tex._input.reader import FileInputSource
@@ -1334,7 +1334,7 @@ class TestPageBoxMaxDepth:
 
 
 # ---------------------------------------------------------------------------
-#: the contribution list, page-top discards, readers and
+# the contribution list, page-top discards, readers and
 # insertions.
 # ---------------------------------------------------------------------------
 

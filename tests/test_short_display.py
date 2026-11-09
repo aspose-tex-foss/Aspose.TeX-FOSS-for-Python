@@ -1,4 +1,4 @@
-r"""Tests for ``short_display`` and paragraph-line reports (§8, FR-11, AC-7).
+r"""Tests for ``short_display`` and paragraph-line reports (§8).
 
 Every expected message is MiKTeX 24.4 (``tex``, plain, nonstopmode,
 2026-10-21) on the same source, copied verbatim from its log.  TeX follows
@@ -177,7 +177,7 @@ class TestParagraphLineReports:
         r"""Each line ends at a discretionary or the paragraph end; ``|`` is the overfull rule.
 
         MiKTeX starts the first line with `` \tenrm``: its ``\hskip0pt`` is
-        not ``zero_glue`` ( amendment, known gap), so the
+        not ``zero_glue`` (a known gap), so the
         engine's copy of that probe leaves the glue out.
         """
         assert _messages("{\\hsize=10pt \\noindent\\hskip0pt difficulties\\par}\n") == [

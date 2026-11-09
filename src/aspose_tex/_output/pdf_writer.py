@@ -1,7 +1,7 @@
 """PDF 1.4 output backend.
 
-Implements the PDF writer specified in (FR-1..FR-4, FR-7..FR-11) and
-.  Receives completed page boxes from the page builder via the
+Implements the PDF writer specified (FR-1..FR-4, FR-7..FR-11) and
+Receives completed page boxes from the page builder via the
 ShipoutBackend protocol and emits a valid, self-contained PDF file with
 embedded Type 1 Computer Modern fonts.
 
@@ -84,7 +84,7 @@ def _rule_paints(width: int, height: int, depth: int) -> bool:
     its ``width`` are positive. A non-painting rule (e.g. a zero-width
     ``\\strut``) advances the reference point but emits no rectangle.
     Dimensions are in sp and must already be RUNNING_DIMEN-resolved
-    .
+    
     """
     return width > 0 and (height + depth) > 0
 

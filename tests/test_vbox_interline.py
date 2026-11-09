@@ -1,4 +1,4 @@
-""" — interline-glue behaviour for ``\\hrule`` / ``\\unvbox``
+"""interline-glue behaviour for ``\\hrule`` / ``\\unvbox``
 / ``\\unvcopy`` arms inside ``exec_vbox``.
 
 Covers the six test cases from §"Testing":

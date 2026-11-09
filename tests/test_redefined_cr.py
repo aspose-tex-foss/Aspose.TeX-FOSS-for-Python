@@ -1,4 +1,4 @@
-r""" — redefined-\cr honouring in the alignment cell scanner.
+r"""redefined-\cr honouring in the alignment cell scanner.
 
 plain.tex's ``\m@ketabbox`` does ``\def\cr{\@crtrue\crcr\egroup\egroup…}`` — the
 user's ``\cr`` after an alignment row is a *macro* whose body emits the real

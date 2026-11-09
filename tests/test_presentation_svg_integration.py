@@ -77,7 +77,7 @@ def test_texjob_svg_bytesio_produces_valid_svg() -> None:
 def test_svg_self_contained_no_external_fonts() -> None:
     """Generated SVG has <defs> with <path> elements; no external refs.
 
-    : ``xlink:href`` is allowed but must only resolve to internal
+    ``xlink:href`` is allowed but must only resolve to internal
     ``#g-*`` glyph ids; no ``@font-face`` or ``<image>`` references.
     """
     svg = TeXJob(
@@ -98,11 +98,11 @@ def test_svg_self_contained_no_external_fonts() -> None:
 
 
 def test_svg_office_includes_ffi_ligature_use() -> None:
-    """ AC-6: a word triggering a ligature must reach SVG as a
+    """a word triggering a ligature must reach SVG as a
     ``<use href="#g-cmr10-655360-N">`` element.  ``office`` = o·f·f·i·c·e yields
     the ffi ligature at code 14 via cmr10's lig table (f+f→ff, ff+i→ffi), so the
     emitted SVG must reference ``#g-cmr10-655360-14`` and raise no
-    outline-missing warning on ligature slots (: ids encode the
+    outline-missing warning on ligature slots (ids encode the
     exact at-size in sp, cmr10 at 10pt = 655360 sp).
     """
     import warnings as _warnings
@@ -137,7 +137,7 @@ def test_svg_office_includes_ffi_ligature_use() -> None:
 
 
 def test_svg_all_cmr10_ligature_slots_render() -> None:
-    """ AC-1..AC-3 coverage: a carrier string that exercises each of
+    """.AC-3 coverage: a carrier string that exercises each of
     the five CM ligatures (ff, fi, fl, ffi, ffl) must emit a <use> reference
     at every slot 11..15 and no outline-missing warning for those slots.
 
@@ -234,7 +234,7 @@ def test_texjob_svg_positions_match_dvi() -> None:
     sw.finalize()
     svg = sw.get_bytes()
 
-    # First <use> element's x (: bare x/y attrs replaced
+    # First <use> element's x (bare x/y attrs replaced
     # transform="translate(...)" so Chromium paints page folios).
     root = ET.fromstring(svg)
     first_use = root.find(f".//{_NS}use")

@@ -1,4 +1,4 @@
-r""": box/group boundaries, measured with MiKTeX 24.4.
+r"""box/group boundaries, measured with MiKTeX 24.4.
 
 Expected values come from tex + tests._verification.dvi_walker on the
 identical sources (a reference probe), with the folio excluded.

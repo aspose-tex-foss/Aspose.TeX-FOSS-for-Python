@@ -1,4 +1,4 @@
-""": MiKTeX 24.4 measured context regressions."""
+"""MiKTeX 24.4 measured context regressions."""
 
 import pytest
 

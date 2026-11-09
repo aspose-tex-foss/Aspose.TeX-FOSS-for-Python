@@ -27,7 +27,7 @@ _DIMS = r"\dimen0=\wd0 \dimen1=\ht0 \dimen2=\dp0 \message{[\number\dimen0,\numbe
 
 
 # ---------------------------------------------------------------------------
-# Component 1 — members already exact
+# members already exact
 # ---------------------------------------------------------------------------
 
 
@@ -35,12 +35,12 @@ class TestAlreadyExactMembers:
     """Pins for the members other work fixed before this pack was designed."""
 
     def test_inline_cases_width(self) -> None:
-        """: ``$\\cases{…}$`` is MiKTeX's width, not twice it."""
+        """``$\\cases{…}$`` is MiKTeX's width, not twice it."""
         body = r"\setbox0\hbox{$\cases{a&b\cr c&d\cr}$}" + _DIMS
         assert _messages(body) == ["[1990642,784612,456931]"]
 
     def test_display_cases_extent(self) -> None:
-        """: the ``\\cases`` display block is not 1.848pt short."""
+        """the ``\\cases`` display block is not 1.848pt short."""
         body = (
             r"\hsize=6.5in \nopagenumbers \noindent lead "
             r"$$f(x)=\cases{0&if $x<0$\cr 1&if $x\ge0$\cr}$$ tail"
@@ -58,7 +58,7 @@ class TestAlreadyExactMembers:
         ]
 
     def test_settabs_fields_are_math(self) -> None:
-        """: ``$…$`` in ``\\+`` fields sets cmmi glyphs on one line per row."""
+        """``$…$`` in ``\\+`` fields sets cmmi glyphs on one line per row."""
         body = "\n".join([
             r"\settabs 2 \columns",
             r"\+$a+b$&$x=y$\cr",
@@ -73,7 +73,7 @@ class TestAlreadyExactMembers:
 
 
 # ---------------------------------------------------------------------------
-# Component 2 — §801 null_flag column widths
+# §801 null_flag column widths
 # ---------------------------------------------------------------------------
 
 
@@ -151,7 +151,7 @@ class TestNullFlagColumnWidths:
 
 
 # ---------------------------------------------------------------------------
-# Component 3 — \noalign \prevdepth through both passes
+# \noalign \prevdepth through both passes
 # ---------------------------------------------------------------------------
 
 
@@ -275,14 +275,14 @@ class TestNoalignPrevdepth:
     )
     def test_page_positions(self, body: str, miktex: list) -> None:
         """Outer vertical list, display splice and inline formulas."""
-        #: brace leaders now paint real set_rule events. The old
+        # brace leaders now paint real set_rule events. The old
         # walker hid their advancement. now sets every glue exactly.
         data = _compile(body, DviDevice())
         assert walk_chars_with_positions(data, _tfm_width(), advance_rules=True)[0][:-1] == miktex
 
 
 # ---------------------------------------------------------------------------
-# Component 4 — §1202-§1203 display skips and displacement
+# §1202-§1203 display skips and displacement
 # ---------------------------------------------------------------------------
 
 _LEQNO_AFTER_TEXT = [
@@ -388,7 +388,7 @@ class TestDisplaySkipSelection:
                 r"x $$\halign{#\cr y\cr}$$ x",
                 [(120, 1310720, 655360), (121, 0, 2228224), (120, 0, 3801088)],
             ),
-            # reviewer rows
+            # Control rows
             (
                 r"x\par\noindent$$\displaylines{a\cr b\cr}$$ x",
                 [(120, 1310720, 655360), (97, 15219724, 2228224), (98, 15252302, 3211264),
@@ -401,7 +401,7 @@ class TestDisplaySkipSelection:
         assert _page1(body) == miktex
 
     def test_noindent_eqalignno_vertical(self) -> None:
-        """ reviewer vertical row; complete positions are covered by the corpus guard."""
+        """Vertical control row; complete positions are covered by the corpus guard."""
         glyphs = _page1(r"x\par\noindent$$\eqalignno{a&=b&(1)\cr}$$ x")
         assert [(c, v) for c, _h, v in glyphs] == [
             (120, 655360), (97, 2228224), (61, 2228224), (98, 2228224),

@@ -482,7 +482,7 @@ def test_edef_snapshots_at_definition():
 
 
 # ---------------------------------------------------------------------------
-#: \outer and \long prefix parsing ( FR-1a / FR-1b)
+# \outer and \long prefix parsing
 # ---------------------------------------------------------------------------
 
 def test_outer_def_parsed_without_error():
@@ -560,7 +560,7 @@ def test_prefix_flags_not_sticky():
 
 
 # ---------------------------------------------------------------------------
-#: prefix flags cleared when non-def command follows
+# prefix flags cleared when non-def command follows
 # ---------------------------------------------------------------------------
 
 def test_long_before_let_does_not_corrupt_next_def():
@@ -582,7 +582,7 @@ def test_outer_before_let_does_not_corrupt_next_def():
 
 
 # ---------------------------------------------------------------------------
-#: unpeek() — the peek-then-push stream-order contract
+# unpeek() — the peek-then-push stream-order contract
 # ---------------------------------------------------------------------------
 
 class TestUnpeek:

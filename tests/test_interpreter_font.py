@@ -1,4 +1,4 @@
-"""Tests for TeX interpreter \\font primitive and font-CS dispatch ( / §3).
+"""Tests for TeX interpreter \\font primitive and font-CS dispatch (§3).
 
 Covers:
 - AC#1: \\font\\myfont=cmr10 at 10pt loads cmr10, assigns font_num to \\myfont

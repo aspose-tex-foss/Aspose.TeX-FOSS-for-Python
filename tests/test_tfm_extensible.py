@@ -1,4 +1,4 @@
-"""Unit tests for the TFM extensible-recipe parser extension ( / §A).
+"""Unit tests for the TFM extensible-recipe parser extension (§A).
 
 Covers the read-only ``tag == 3`` extensible-recipe surface that ``var_delimiter``
 (cascade #2) consumes: ``parse_tfm`` reading the ``exten`` table into

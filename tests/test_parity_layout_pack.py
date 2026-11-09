@@ -30,7 +30,7 @@ def _page(source: str) -> tuple[list, list]:
 
 
 # ---------------------------------------------------------------------------
-# — a one-Ord {…} field is its char (§1186), so accents see the skew
+# a one-Ord {…} field is its char (§1186), so accents see the skew
 # ---------------------------------------------------------------------------
 
 _ACCENTS = [
@@ -95,7 +95,7 @@ _FIELD_CONTROLS = [
 
 
 class TestBracedMathField:
-    r""": ``\hat{x}`` sets exactly like ``\hat x``."""
+    r"""``\hat{x}`` sets exactly like ``\hat x``."""
 
     @pytest.mark.parametrize(
         ("formula", "glyphs", "rules"), _ACCENTS + _SCRIPTED_ACCENTS + _FIELD_CONTROLS,
@@ -106,7 +106,7 @@ class TestBracedMathField:
 
 
 # ---------------------------------------------------------------------------
-# — an alignment's own rules take the alignment's width (§806)
+# an alignment's own rules take the alignment's width (§806)
 # ---------------------------------------------------------------------------
 
 _ALIGNMENT_RULES = {
@@ -340,7 +340,7 @@ _ALIGNMENT_RULES = {
 
 
 class TestAlignmentRules:
-    r""": ``fin_align`` resolves running rules; display indent boxes them."""
+    r"""``fin_align`` resolves running rules; display indent boxes them."""
 
     @pytest.mark.parametrize("name", _ALIGNMENT_RULES)
     def test_page_matches_miktex(self, name) -> None:
@@ -349,7 +349,7 @@ class TestAlignmentRules:
 
 
 # ---------------------------------------------------------------------------
-# — \mag reaches the output (§288, §617)
+# \mag reaches the output (§288, §617)
 # ---------------------------------------------------------------------------
 
 _SQUARE = r"\noindent\vrule width 1truein height 1truein depth 0pt "

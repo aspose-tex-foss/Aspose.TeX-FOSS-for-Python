@@ -1,5 +1,5 @@
 r"""Tests for ``\fontdimen<n>\font`` as ``<internal dimen>`` + the shared
-``<font>`` resolver ( FR-7 / §E).
+``<font>`` resolver (§E).
 
 Covers:
 - AC-1: ``FontManager.current_cs`` + ``resolve_font_cs`` (``\font`` → current,

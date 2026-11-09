@@ -366,7 +366,7 @@ def test_optimal_over_greedy(fm: FontManager) -> None:
 
 
 def test_line_stretched_past_ratio_one_is_feasible_within_tolerance(fm: FontManager) -> None:
-    r""": a line with stretch ratio 1.1 has TeX badness 132, under \tolerance 200.
+    r"""a line with stretch ratio 1.1 has TeX badness 132, under \tolerance 200.
 
     The only legal break set is [w1 w2] [w3]: line 1 needs 11pt from 10pt of
     stretch.  Rating every ratio above 1 as 10000 made it infeasible, and the
@@ -441,7 +441,7 @@ def test_overfull_warning_emitted(fm: FontManager) -> None:
 
 
 # ---------------------------------------------------------------------------
-#: _line_demerits — 10^8 cap (pdftex.web §25248)
+# _line_demerits — 10^8 cap (pdftex.web §25248)
 # ---------------------------------------------------------------------------
 
 class TestLineDemerits:

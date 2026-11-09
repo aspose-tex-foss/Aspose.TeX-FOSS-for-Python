@@ -1,16 +1,16 @@
-r""" — the expander reads meanings, and prints them as TeX does.
+r"""the expander reads meanings, and prints them as TeX does.
 
-*: ``\if``/``\ifcat`` compare a token's meaning (§506), so an alias of
+* ``\if``/``\ifcat`` compare a token's meaning (§506), so an alias of
   ``\relax`` is code 256 / category 16 like any other non-character, and
   ``\the`` and the number/dimension/glue scanners read a ``\let`` alias of a
   primitive as that primitive (``\let\cnt=\count``).
-*: ``\let`` skips a space it means, not only a typed one (§1221).
-*: ``\futurelet`` is a ``\let`` assignment: local unless ``\global``,
+* ``\let`` skips a space it means, not only a typed one (§1221).
+* ``\futurelet`` is a ``\let`` assignment: local unless ``\global``,
   ``\afterassignment`` fires, an active character may be the target.
-*: ``\show`` and ``\showthe`` log TeX's text and processing goes on.
-*: ``\meaning`` of a character names its category (§298):
+* ``\show`` and ``\showthe`` log TeX's text and processing goes on.
+* ``\meaning`` of a character names its category (§298):
   ``blank space``, ``begin-group character`` ...
-*: token-list text puts a space after a control word (§262), doubles
+* token-list text puts a space after a control word (§262), doubles
   a macro parameter character, prints ``\escapechar`` and a macro's
   parameter text (§294) in ``\meaning``, ``\message`` and ``\write``.
 
@@ -38,7 +38,7 @@ def _log(body: str) -> list[str]:
             + [m for m in messages if m.startswith("> ")])
 
 
-_TEX290 = [
+_MEANING_COMPARISONS = [
     pytest.param(
         r'\let\ra=\relax \message{[\ifcat\ra\relax T\else F\fi]}',
         [r'[T]'],
@@ -226,7 +226,7 @@ _TEX290 = [
     ),
 ]
 
-_TEX292 = [
+_LET_IMPLICIT_SPACE = [
     pytest.param(
         r'\def\:{\let\sptok= }\: \let\q=\sptok\relax \message{[\meaning\q]}',
         [r'[\relax]'],
@@ -249,7 +249,7 @@ _TEX292 = [
     ),
 ]
 
-_TEX288 = [
+_FUTURELET = [
     pytest.param(
         r'{\futurelet\x\relax\relax}\message{[\meaning\x]}',
         [r'[undefined]'],
@@ -287,7 +287,7 @@ _TEX288 = [
     ),
 ]
 
-_TEX285 = [
+_SHOW_AND_SHOWTHE = [
     pytest.param(
         r'\def\x{X}\show\x \message{[ok]}',
         [r'[ok]', '> \\x=macro:\n->X.'],
@@ -360,7 +360,7 @@ _TEX285 = [
     ),
 ]
 
-_TEX291 = [
+_CHARACTER_MEANING = [
     pytest.param(
         r'\message{[\expandafter\meaning\space]}',
         [r'[blank space  ]'],
@@ -388,7 +388,7 @@ _TEX291 = [
     ),
 ]
 
-_TEX289 = [
+_TOKEN_LIST_TEXT = [
     pytest.param(
         r'\message{[\meaning~]}',
         [r'[macro:->\penalty \@M \ ]'],
@@ -482,39 +482,39 @@ _TEX289 = [
 ]
 
 
-@pytest.mark.parametrize(("body", "miktex"), _TEX290)
+@pytest.mark.parametrize(("body", "miktex"), _MEANING_COMPARISONS)
 def test_conditionals_and_the_read_meanings(body: str, miktex: list[str]) -> None:
-    """: §506 operands and ``\\the``/scanner aliases, in several modes."""
+    """§506 operands and ``\\the``/scanner aliases, in several modes."""
     assert _log(body) == miktex
 
 
-@pytest.mark.parametrize(("body", "miktex"), _TEX292)
+@pytest.mark.parametrize(("body", "miktex"), _LET_IMPLICIT_SPACE)
 def test_let_skips_an_implicit_space(body: str, miktex: list[str]) -> None:
-    """: both skip loops of ``\\let`` test ``cur_cmd = spacer``."""
+    """both skip loops of ``\\let`` test ``cur_cmd = spacer``."""
     assert _log(body) == miktex
 
 
-@pytest.mark.parametrize(("body", "miktex"), _TEX288)
+@pytest.mark.parametrize(("body", "miktex"), _FUTURELET)
 def test_futurelet_is_a_let_assignment(body: str, miktex: list[str]) -> None:
-    """: grouping, ``\\global``, ``\\afterassignment``, active target."""
+    """grouping, ``\\global``, ``\\afterassignment``, active target."""
     assert _log(body) == miktex
 
 
-@pytest.mark.parametrize(("body", "miktex"), _TEX285)
+@pytest.mark.parametrize(("body", "miktex"), _SHOW_AND_SHOWTHE)
 def test_show_and_showthe_log_and_continue(body: str, miktex: list[str]) -> None:
-    """: the ``> …`` text of the log, and the ``[ok]`` after it."""
+    """the ``> …`` text of the log, and the ``[ok]`` after it."""
     assert _log(body) == miktex
 
 
-@pytest.mark.parametrize(("body", "miktex"), _TEX291)
+@pytest.mark.parametrize(("body", "miktex"), _CHARACTER_MEANING)
 def test_meaning_of_a_character_names_its_category(body: str, miktex: list[str]) -> None:
-    """: §298 ``print_cmd_chr`` for character tokens."""
+    """§298 ``print_cmd_chr`` for character tokens."""
     assert _log(body) == miktex
 
 
-@pytest.mark.parametrize(("body", "miktex"), _TEX289)
+@pytest.mark.parametrize(("body", "miktex"), _TOKEN_LIST_TEXT)
 def test_token_list_text(body: str, miktex: list[str]) -> None:
-    """: §262/§294 spacing, parameters and escape character."""
+    """§262/§294 spacing, parameters and escape character."""
     assert _log(body) == miktex
 
 
@@ -530,7 +530,7 @@ def test_token_list_text(body: str, miktex: list[str]) -> None:
     (r"\message{[\expandafter\string\the\font]}", ["[\\tenrm]"]),
 ])
 def test_string_of_the_null_control_sequence(body: str, miktex: list[str]) -> None:
-    """: §263 ``sprint_cs`` prints ``null_cs`` as ``\\csname\\endcsname``.
+    """§263 ``sprint_cs`` prints ``null_cs`` as ``\\csname\\endcsname``.
 
     MiKTeX 24.4 plain, measured 2026-10-29.
     """
@@ -569,7 +569,7 @@ class TestTokenListText:
 
 
 class TestPrimitiveToken:
-    """Unit tests of :meth:`Expander.primitive_token` ( D3 aliases)."""
+    """Unit tests of :meth:`Expander.primitive_token` (aliases)."""
 
     def test_alias_of_a_primitive_becomes_its_reference(self) -> None:
         expander = _bare()

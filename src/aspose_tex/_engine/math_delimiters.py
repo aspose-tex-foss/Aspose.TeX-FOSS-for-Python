@@ -1,4 +1,4 @@
-"""Variable-size delimiters — ``var_delimiter`` ( / §B).
+"""Variable-size delimiters — ``var_delimiter`` (§B).
 
 This module owns the delimiter-growth algorithm: given a delimiter
 code and a target size, it selects the smallest glyph from the TFM successor
@@ -302,7 +302,7 @@ def _pack(nodes: list, ctx: _Ctx) -> HlistNode:
 
 
 # ---------------------------------------------------------------------------
-# make_op — large operators ( / §E; TeX §749-§750, rule 13)
+# make_op — large operators (§E; TeX §749-§750, rule 13)
 # ---------------------------------------------------------------------------
 
 

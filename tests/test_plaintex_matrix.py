@@ -14,8 +14,7 @@ layout lives in the E2E suite (``tests/test_e2e_dvi_baseline.py``); the
 ``\baselineskip`` interline-glue residual it surfaced (general ``\halign``
 ``fin_align`` §807 gap) is tracked separately — see that module's note.
 
-Explicitly covers the two fragile alignment↔macro seams flagged in the
-original task + the reviewer/integrator note: the line-1101
+Explicitly covers the two fragile alignment↔macro seams: the line-1101
 ``\bordermatrix`` nested ``\def\cr{\crcr\noalign{\kern2\p@\global\let\cr
 \endline}}`` redefined-``\cr`` pattern, and the ``\ialign`` helper.
 """
@@ -65,7 +64,7 @@ def _row_hlists(box: VlistNode) -> list[HlistNode]:
 
 
 # ---------------------------------------------------------------------------
-# — \mathstrut / \finph@nt phantom is invisible
+# \mathstrut / \finph@nt phantom is invisible
 # ---------------------------------------------------------------------------
 
 class TestPhantomStrut:
@@ -181,14 +180,14 @@ class TestMatrixFamily:
 
 
 # ---------------------------------------------------------------------------
-# AC-3 — \bordermatrix redefined-\cr + \ialign fragile seam ( D1)
+# AC-3 — \bordermatrix redefined-\cr + \ialign fragile seam
 # ---------------------------------------------------------------------------
 
 class TestBordermatrix:
     def test_bordermatrix_compiles(self) -> None:
         # The line-1101 \def\cr{\crcr\noalign{…\global\let\cr\endline}} +
         # \ialign pattern: the live terminator becomes \endline (meaning \cr)
-        # mid-row.  The by-meaning terminator resolution ( D1)
+        # mid-row.  The by-meaning terminator resolution
         # keeps the next row's `&` inside the cell scanner.
         assert _run_plain(
             r"$\bordermatrix{&c_1&c_2\cr r_1&a&b\cr r_2&c&d\cr}$\bye"
@@ -196,7 +195,7 @@ class TestBordermatrix:
 
 
 # ---------------------------------------------------------------------------
-# AC-3 — display family \displaylines / \eqalignno / \leqalignno ( D2)
+# AC-3 — display family \displaylines / \eqalignno / \leqalignno
 # ---------------------------------------------------------------------------
 
 class TestDisplayFamily:

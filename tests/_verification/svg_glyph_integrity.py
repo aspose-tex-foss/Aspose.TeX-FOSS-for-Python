@@ -1,4 +1,4 @@
-"""SVG glyph path integrity check ( FR-4a).
+"""SVG glyph path integrity check.
 
 Scans an SVG file emitted by :class:`aspose_tex._output.svg_writer.SvgWriter`,
 walks every ``<path id="g-*" d="...">`` node, and reports every path whose
@@ -8,7 +8,7 @@ Type 1 Flex defect class: a single orphan ``M`` can occur for open
 subpaths the renderer still closes visually, but two or more indicates an
 interpreter error.
 
-This module is the canonical helper that FR-6 reviewer replay
+This module is the canonical helper that a FR-6 replay
 re-runs.  It is stdlib-only (``re``, ``pathlib``, ``warnings``) so that
 the same module can be invoked from tests, verification scripts, and
 inline task notes without dragging dependencies or side effects.

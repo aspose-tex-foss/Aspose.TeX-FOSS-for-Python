@@ -197,7 +197,7 @@ def vsplit_at_height(
 ) -> tuple[VlistNode, VlistNode | None]:
     """Split *box* at *target_height* sp and return ``(top, residue)``.
 
-    This is the M3 simplified ``\\vsplit`` algorithm: walk the
+    This is the simplified ``\\vsplit`` algorithm: walk the
     vertical list from the front, stop before the first node that would exceed
     the requested height. ``\\splittopskip`` adjusts the remainder's first
     baseline, never the returned top piece. Precise ``\\splitmaxdepth`` handling is
@@ -422,7 +422,7 @@ def _set_glue(box: HlistNode | VlistNode, need: int) -> int:
         box.glue_sign = GlueSign.STRETCHING
         box.glue_order = order
         # No stretch available: the box stays at natural width (underfull).
-        # Binary32 operands and quotient preserve TeX §109 arithmetic ( D1).
+        # Binary32 operands and quotient preserve TeX §109 arithmetic.
         box.glue_set = glue_ratio(need, total) if total else 0.0
         if order != GlueOrder.NORMAL or not box.list:
             return 0

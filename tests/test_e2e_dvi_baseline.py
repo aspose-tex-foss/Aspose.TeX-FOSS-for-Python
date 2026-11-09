@@ -1,11 +1,11 @@
-""" — automated E2E DVI baseline suite against MiKTeX references.
+"""automated E2E DVI baseline suite against MiKTeX references.
 
 Compiles each canonical fixture under ``testdata/e2e/`` through the **public**
 API (``TeXJob(source, DviDevice()).run()``) and compares the result against a
 committed MiKTeX-generated ``.dvi`` reference under ``testdata/baselines/``,
 **semantically** (page count, glyph stream, per-glyph positions, line/rule
-positions, font/page metadata) — never byte-for-byte ( AC-9;;
-;).
+positions, font/page metadata) — never byte-for-byte
+
 
 **Mid-line horizontal advances are compared.** Until
 this suite checked the glyph-code *stream* and each line's *start*
@@ -112,26 +112,26 @@ _POST = 248
 _POST_POST = 249
 
 # Every testdata/e2e/*.tex document — TestFixtureInventory enforces that the
-# two sets are equal ( FR-4), so a committed document cannot sit in the
+# two sets are equal, so a committed document cannot sit in the
 # corpus without being asserted.
 _FIXTURES = (
     # independent documents: unchanged human-authored Aspose .NET
-    # regression documents (2020-21), published with the owner's permission of
+    # regression documents (2020-21), published with the project owner's permission of
     # 2026-10-20. tex-what-is-what has a title footnote; sample-1 has
     # UTF-8 quotes the fonts lack and an overfull line with its \overfullrule
     # marker.
     "sample-1",
     "tex-what-is-what",
-    # owner idiom documents ( owner session, verbatim; the
-    # footnote document was written from the repro on owner request).
+    # Idiom documents written by the project owner, kept verbatim;
+    # the footnote document reproduces a reported defect.
     "owner_raggedright",
     "owner_narrower",
     "owner_table",
     "owner_dashes",
     "owner_footnote",
     "owner_hyphenation",
-    # regression pins: agent rewrites of owner documents 3/4 (other
-    # text, \hyphenchar\font=-1 switches hyphenation off) — not owner documents.
+    # Regression pins rewritten from admitted documents 3/4 with other text and
+    # \hyphenchar\font=-1, which switches hyphenation off.
     "paragraph_raggedright",
     "paragraph_narrower",
     "hello",
@@ -151,7 +151,7 @@ _FIXTURES = (
     # A tall \left(...\over...\right) (rule-19 sizing, var_delimiter §706-710)
     # plus a display $$\sum_{i=1}^{n}$$ (make_op size switch + limits §749-750).
     # Committed with its baseline since but asserted only since
-    # FR-4; closed the \big-family gap that kept it out.
+    # closed the \big-family gap that kept it out.
     "math_delimiters",
     # text-mode \halign (§807 inter-row interline glue +
     # §812 fin_align row-splice so the first row attracts \topskip):
@@ -177,18 +177,18 @@ _FIXTURES = (
     # thematic fixture (a) — math inside \halign cells: a
     # text \halign whose cells contain inline $…$ (Ord/Bin/Rel atoms + Greek
     # \mathchardef), the historically weakest cross-construct seam
-    #.  Byte-matches MiKTeX end-to-end (glyph stream / fonts /
+    # Byte-matches MiKTeX end-to-end (glyph stream / fonts /
     # page count exact; row baselines within ±0.5 pt), reusing the already-
     # byte-exact math-cell machinery + §807 interline
     # glue.
     "combined_math_in_cells",
-    # (b) and optional (c), admitted by: the display-
+    # (b) and optional (c), admitted: the display-
     # family sequence — its last gate, the \cases extent, closed with
-    # the \left\{ delimiter — and the \settabs/\+ math fields (,
-    # closed by).  Both pass every check below unchanged.
+    # the \left\{ delimiter — and the \settabs/\+ math fields
+    # Both pass every check below unchanged.
     "combined_display_families",
     "combined_settabs_math",
-    # FR-1: the comprehensive document across
+    # the comprehensive document across
     # pages.  Least-cost page breaking (§1000-§1017), §890 line penalties and
     # the display penalties choose MiKTeX's break; §866/§767/§1039 give its
     # line breaks.  The vsize variants pin the choice at other goal heights,
@@ -212,7 +212,7 @@ _FIXTURES = (
 
 
 # ---------------------------------------------------------------------------
-# — the corpus divergence ledger
+# the corpus divergence ledger
 # ---------------------------------------------------------------------------
 
 class Check(enum.Enum):
@@ -248,7 +248,7 @@ class Divergence:
 # fails the moment a listed check matches MiKTeX (or a crash-form document
 # compiles), forcing the entry out when its owning task lands.
 #
-# History:'s mid-line ledger once held six entries ( / 181 / 182
+# History:'s mid-line ledger once held six entries (181 / 182
 # / 183, all fixed) and's topskip set one (fixed); both were empty when
 # folded them into this ledger. (automatic hyphenation) deleted
 # its last entries, owner_dashes and owner_hyphenation; criterion 1
@@ -257,7 +257,7 @@ _CORPUS_LEDGER: dict[str, dict[Check, Divergence]] = {}
 
 _OWNER_RE = re.compile(r"^TEX-\d+$")
 
-# FR-1/FR-3: the eight owner-admitted documents, pinned to the SHA-256
+# the eight owner-admitted documents, pinned to the SHA-256
 # records, in the line-end form that hash was taken in — the two
 # independent documents were hashed as their CRLF upstream files, the owner
 # documents as LF files (§3). ``_canonical_sha256`` rewrites line ends
@@ -291,7 +291,7 @@ def _run(fixture: str) -> bytes:
     Uses exactly the path AC-3 names: ``TeXJob(source, DviDevice()).run()``
     with the plain-TeX format loaded. Cached: compilation is deterministic and
     the bytes are immutable, so each document compiles once per session rather
-    than once per check ( NFR-3); a raised error is not cached.
+    than once per check; a raised error is not cached.
 
     Args:
         fixture: Bare fixture base name (no extension).
@@ -535,7 +535,7 @@ def _diff_line_baselines(fixture: str, ours: bytes, ref: bytes) -> list[str]:
 
 
 def _diff_glyph_positions(fixture: str, ours: bytes, ref: bytes) -> list[str]:
-    """: every glyph's (h, v) matches MiKTeX.
+    """every glyph's (h, v) matches MiKTeX.
 
     This is the mid-line horizontal check: it compares where each glyph lands
     *within* a line, not just the line's start, so a dropped interword space,
@@ -562,7 +562,7 @@ def _diff_visible_rules(fixture: str, ours: bytes, ref: bytes) -> list[str]:
     longer emit non-painting rules (zero-width ``\\strut`` / zero-height
     rules), matching TeX:The Program §622/§634, so the rule stream is compared
     **without** filtering. Width is compared unconditionally as of /
-    : a full-\\hsize ``\\hrule`` in an \\hsize-overriding fixture
+    a full-\\hsize ``\\hrule`` in an \\hsize-overriding fixture
     (rules.tex at 4in) resolves to MiKTeX's concrete 18945146 sp within
     rounding slack.
     """
@@ -619,7 +619,7 @@ _CHECKS: dict[Check, Callable[[str, bytes, bytes], list[str]]] = {
 
 
 def _skip_text(fixture: str, check: Check, divergence: Divergence) -> str:
-    """The ledger text a skipped check reports ( FR-5)."""
+    """The ledger text a skipped check reports."""
     return (
         f"{fixture}: characterized divergence [{check.value}] — "
         f"{divergence.symptom} (owner: {', '.join(divergence.owners)})"
@@ -711,7 +711,7 @@ class TestFixtureInventory:
         assert "--output-format=dvi" in text
 
     def test_every_corpus_document_is_asserted(self) -> None:
-        """ FR-4: every testdata/e2e/*.tex is in _FIXTURES, once."""
+        """every testdata/e2e/*.tex is in _FIXTURES, once."""
         duplicates = sorted({f for f in _FIXTURES if _FIXTURES.count(f) > 1})
         assert not duplicates, f"_FIXTURES lists documents twice: {duplicates}"
         on_disk = {p.stem for p in _E2E_DIR.glob("*.tex")}
@@ -722,15 +722,14 @@ class TestFixtureInventory:
         )
 
     def test_admitted_documents_unchanged(self) -> None:
-        """ FR-3: the admitted documents keep their recorded SHA-256."""
+        """the admitted documents keep their recorded SHA-256."""
         for name, (sha256, line_end) in sorted(_ADMITTED_DOCUMENTS.items()):
             path = _E2E_DIR / f"{name}.tex"
             assert path.is_file(), f"admitted document {name}.tex missing"
             digest = _canonical_sha256(path.read_bytes(), line_end)
             assert digest == sha256, (
                 f"{name}.tex changed: SHA-256 ({line_end}) {digest} != recorded "
-                f"{sha256}. Admitted documents are kept verbatim; changing one is "
-                f"an owner decision."
+                f"{sha256}. Admitted documents are kept verbatim."
             )
 
     def test_canonical_hash_ignores_checkout_line_ends(self) -> None:
@@ -746,13 +745,13 @@ class TestFixtureInventory:
         )
 
     def test_readme_records_admitted_provenance(self) -> None:
-        """ FR-2: the README records every pin and the permission date."""
+        """the README records every pin and the permission date."""
         text = (_E2E_DIR / "README.md").read_text(encoding="utf-8")
         missing = sorted(
             name for name, (sha256, _) in _ADMITTED_DOCUMENTS.items() if sha256 not in text
         )
         assert not missing, f"README lacks the recorded SHA-256 of {missing}"
-        assert "2026-10-20" in text, "README lacks the owner's publication permission date"
+        assert "2026-10-20" in text, "README lacks the publication permission date"
 
 
 # ---------------------------------------------------------------------------
@@ -783,7 +782,7 @@ class TestSemanticBaseline:
         _assert_check(fixture, Check.LINE_BASELINES)
 
     def test_midline_glyph_positions_match(self, fixture: str) -> None:
-        """: every glyph's (h, v) matches MiKTeX."""
+        """every glyph's (h, v) matches MiKTeX."""
         _assert_check(fixture, Check.GLYPH_POSITIONS)
 
     def test_visible_rules_match(self, fixture: str) -> None:
@@ -792,7 +791,7 @@ class TestSemanticBaseline:
 
 
 # ---------------------------------------------------------------------------
-# FR-6 / — the ledger must not outlive its defects
+# the ledger must not outlive its defects
 # ---------------------------------------------------------------------------
 
 def _divergence(symptom: str = "synthetic") -> Divergence:
@@ -811,7 +810,7 @@ class TestCorpusLedger:
     task *forces* the entry out, because the guard fails the moment a listed
     check matches MiKTeX. The synthetic tests prove the guard catches each
     stale form without depending on any engine defect staying unfixed
-    ( AC-5).
+    
     """
 
     def test_ledger_is_live(self) -> None:
@@ -897,7 +896,7 @@ class TestCorpusLedger:
 
 
 # ---------------------------------------------------------------------------
-# AC-4 — page-1 strictness pin for multipage (regression guard for)
+# AC-4 — page-1 strictness pin for multipage (regression guard)
 # ---------------------------------------------------------------------------
 
 class TestMultipagePageOneStrict:

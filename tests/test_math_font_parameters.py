@@ -83,7 +83,7 @@ class TestParamCountValidation:
     def test_assignment_never_raises(self) -> None:
         _params, registry, _fonts = _setup()
         # Assigning a 7-param text font to family 2 must succeed silently
-        # (M3 load-without-execute contract).
+        # (load-without-execute contract).
         registry.set_text(2, "tenrm")
 
     def test_too_few_params_raises_on_read(self) -> None:
@@ -152,7 +152,7 @@ class TestCaching:
 
         first = params.axis_height(MathStyle.TEXT)
         registry.set_text(2, "othersy")
-        #: a changed family key must not reuse the previous metrics.
+        # a changed family key must not reuse the previous metrics.
         assert params.axis_height(MathStyle.TEXT) != first
 
         params.invalidate()

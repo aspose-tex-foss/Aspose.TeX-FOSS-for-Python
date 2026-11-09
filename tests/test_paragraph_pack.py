@@ -1,4 +1,4 @@
-r""": paragraph/list-tail pins measured with MiKTeX 24.4 tex."""
+r"""paragraph/list-tail pins measured with MiKTeX 24.4 tex."""
 import pytest
 
 from aspose_tex._engine.nodes import CharNode, DiscretionaryNode

@@ -1,6 +1,6 @@
-r""": register owners outrank built-in spellings; frozen primitives bypass owners.
+r"""register owners outrank built-in spellings; frozen primitives bypass owners.
 
-D2/D3.  Every expectation is the message MiKTeX 24.4 ``tex`` (plain)
+Every expectation is the message MiKTeX 24.4 ``tex`` (plain)
 prints for the same source, measured 2026-10-29.
 """
 import warnings

@@ -1,4 +1,4 @@
-r""": actual list-tail ownership and removal, MiKTeX 24.4 pins."""
+r"""actual list-tail ownership and removal, MiKTeX 24.4 pins."""
 import pytest
 
 from aspose_tex._engine.interpreter import TeXInterpreter
@@ -133,7 +133,7 @@ def test_math_removal_changes_rendered_content():
     assert _glyph_h(r"\noindent $x\mskip3mu x$") != _glyph_h(r"\noindent $xx$")
 
 
-# MiKTeX 24.4 review-rework probes, successful reference runs.
+# MiKTeX 24.4 control probes, successful reference runs.
 @pytest.mark.parametrize("body,expected", [
     (
         (
@@ -187,7 +187,7 @@ def test_deferred_vbox_paragraph_owns_tail(body, expected):
     assert _messages(body) == expected
 
 
-# Successful MiKTeX 24.4 measurements, 2026-10-07: second review rework.
+# Successful MiKTeX 24.4 measurements, 2026-10-07: vertical list tails.
 VERTICAL_TAILS = [
     (r"\vskip4pt plus1pt", "[4.0pt plus 1.0pt/0.0pt/0]"),
     (r"\kern2pt", "[0.0pt/2.0pt/0]"),

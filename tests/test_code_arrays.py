@@ -182,7 +182,7 @@ class TestCodeArraysRangeViolations:
 # ---------------------------------------------------------------------------
 
 class TestCatcodePrimitive:
-    """ AC-1 — \\catcode write + \\the\\catcode read."""
+    """\\catcode write + \\the\\catcode read."""
 
     def test_catcode_set_and_the(self) -> None:
         # plain.tex line 11: \catcode`\{=1 — make { a BEGIN_GROUP catcode.
@@ -203,7 +203,7 @@ class TestCatcodePrimitive:
 
 
 class TestMathcodePrimitive:
-    """ — \\mathcode write + \\the\\mathcode read."""
+    """\\mathcode write + \\the\\mathcode read."""
 
     def test_mathcode_set_and_the(self) -> None:
         interp = _run_and_capture('\\mathcode`\\A="0741 ')
@@ -211,7 +211,7 @@ class TestMathcodePrimitive:
 
 
 class TestDelcodePrimitive:
-    """ AC-12 — \\delcode parses 24-bit hex value."""
+    """\\delcode parses 24-bit hex value."""
 
     def test_delcode_set(self) -> None:
         # AC-12: \delcode`\(="028300 -> 164608 (decimal of 0x028300).
@@ -221,7 +221,7 @@ class TestDelcodePrimitive:
 
 
 class TestSfcodePrimitive:
-    """ AC-11 — \\sfcode set + \\the\\sfcode read."""
+    """\\sfcode set + \\the\\sfcode read."""
 
     def test_sfcode_set(self) -> None:
         # plain.tex line 118: \sfcode`\)=0 \sfcode`\']=0 …
@@ -239,7 +239,7 @@ class TestSfcodePrimitive:
 
 
 class TestLccodeUccodePrimitive:
-    """ AC-13 — \\lccode/\\uccode IniTeX defaults populated."""
+    """\\lccode/\\uccode IniTeX defaults populated."""
 
     def test_lccode_default_uppercase_to_lowercase(self) -> None:
         interp = _run_and_capture("")

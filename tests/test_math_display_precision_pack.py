@@ -71,7 +71,7 @@ def _dims(*formulas: str) -> list[tuple[int, int, int]]:
 
 
 # ---------------------------------------------------------------------------
-# — \delimiter as a math char and as a \left/\right delimiter
+# \delimiter as a math char and as a \left/\right delimiter
 # ---------------------------------------------------------------------------
 
 
@@ -173,7 +173,7 @@ class TestDelimiterSymbols:
 
 
 # ---------------------------------------------------------------------------
-# — the fraction bar and the \atop clearance use half() (§746-§748)
+# the fraction bar and the \atop clearance use half() (§746-§748)
 # ---------------------------------------------------------------------------
 
 
@@ -226,7 +226,7 @@ class TestFractionHalf:
 
 
 # ---------------------------------------------------------------------------
-# — a Bin turned Ord (§728) runs make_ord (§752)
+# a Bin turned Ord (§728) runs make_ord (§752)
 # ---------------------------------------------------------------------------
 
 
@@ -278,7 +278,7 @@ class TestBinTurnedOrdMakeOrd:
 
 
 # ---------------------------------------------------------------------------
-# — a void paragraph before $$ ships no line (§1145)
+# a void paragraph before $$ ships no line (§1145)
 # ---------------------------------------------------------------------------
 
 

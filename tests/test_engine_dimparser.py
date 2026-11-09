@@ -190,7 +190,7 @@ def test_parse_dimen_mu_unit():
 
 
 # ---------------------------------------------------------------------------
-# parse_dimen — true* units (FR-16 / AC-6)
+# parse_dimen — true* units (FR-16)
 # ---------------------------------------------------------------------------
 
 class _RegistryStub:
@@ -434,7 +434,7 @@ def test_parse_glue_fil_shrink():
 
 
 # ---------------------------------------------------------------------------
-# fil units are unity-scaled like \hfil's built-in glue (, TeX §454)
+# fil units are unity-scaled like \hfil's built-in glue (TeX §454)
 # ---------------------------------------------------------------------------
 
 class TestFilUnitsScaled:
@@ -513,7 +513,7 @@ class TestFilUnitsScaled:
 
 
 class TestFractionalFilUnits:
-    r"""``1.5fil`` attaches its fraction like ``1.5pt`` (§452, §454,)."""
+    r"""``1.5fil`` attaches its fraction like ``1.5pt`` (§452, §454)."""
 
     @pytest.mark.parametrize(
         ("spec", "stretch", "stretch_order", "shrink", "shrink_order"),
@@ -555,7 +555,7 @@ class TestFractionalFilUnits:
 
 
 # ---------------------------------------------------------------------------
-# em / ex read the current font (, TeX §455)
+# em / ex read the current font (TeX §455)
 # ---------------------------------------------------------------------------
 
 def _plain_widths(*boxes: str, preamble: str = "") -> list[int]:
@@ -645,7 +645,7 @@ class TestEmExUseCurrentFont:
 
 
 # ---------------------------------------------------------------------------
-# Fixed units round like TeX (, TeX §452/§457/§458)
+# Fixed units round like TeX (TeX §452/§457/§458)
 # ---------------------------------------------------------------------------
 
 class TestFixedUnitsRoundLikeTeX:
@@ -750,7 +750,7 @@ class TestFixedUnitsRoundLikeTeX:
 
 
 # ---------------------------------------------------------------------------
-# Scanners read with expansion — get_x_token (, TeX §380/§407/§440/§448)
+# Scanners read with expansion — get_x_token (TeX §380/§407/§440/§448)
 # ---------------------------------------------------------------------------
 
 def _plain_run(body: str):
@@ -798,7 +798,7 @@ class TestScannersExpandMacros:
     @pytest.mark.parametrize(
         ("body", "miktex"),
         [
-            # the six lines measured in
+            # the six lines measured
             (r"\def\x{5}\count1=\x \message{[\the\count1]}", "[5]"),
             (r"\def\x{5}\dimen1=\x pt \message{[\the\dimen1]}", "[5.0pt]"),
             (r"\def\x{0.5}\dimen1=\x pt \message{[\the\dimen1]}", "[0.5pt]"),
@@ -835,7 +835,7 @@ class TestScannersExpandMacros:
             (r"{\count5=5\global\count6=3 }\message{[\the\count5,\the\count6]}", "[0,3]"),
             (r"{\count7=5\def\w{}\global\count8=6 }\message{[\the\count7,\the\count8]}", "[0,6]"),
             (r"{\dimen1=2pt\global\dimen2=3pt }\message{[\the\dimen1,\the\dimen2]}", "[0.0pt,3.0pt]"),
-            # a \let alias is pushed back as itself ( open-group box)
+            # a \let alias is pushed back as itself (open-group box)
             (r"\setbox1\hbox to 20pt\bgroup\hfil x\egroup \dimen9=\wd1 \message{[\the\dimen9]}", "[20.0pt]"),
             (r"\let\q=\relax \count5=7\q \message{[\the\count5]}", "[7]"),
         ],
@@ -869,7 +869,7 @@ class TestScannersExpandMacros:
 
 
 # ---------------------------------------------------------------------------
-# A box dimension or \fontdimen used as a unit (, TeX §455)
+# A box dimension or \fontdimen used as a unit (TeX §455)
 # ---------------------------------------------------------------------------
 
 # \wd0 = 1.3in (6157186sp); box 1 is 2pt wide, 7pt high, 3pt deep.

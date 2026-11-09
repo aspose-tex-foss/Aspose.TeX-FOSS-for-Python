@@ -43,7 +43,7 @@ class MacroDefinition:
 
 @dataclasses.dataclass(frozen=True, slots=True)
 class PrimitiveMeaning:
-    r"""The built-in command originally named ``name`` ( D3).
+    r"""The built-in command originally named ``name``.
 
     ``\let\endgraf=\par`` stores ``PrimitiveMeaning("par")``: the alias keeps
     the primitive even after ``\def\par{…}`` (TeX copies ``eq_type/equiv``).
@@ -80,7 +80,7 @@ def active_char_key(char: str) -> str:
 
     Returns:
         The reserved key, distinct from the key ``char`` of the control
-        symbol ``\<char>`` (TeX §222,).
+        symbol ``\<char>`` (TeX §222).
 
     Example::
 

@@ -1,4 +1,4 @@
-r""" — `\endv` v-template injection for math `\halign` cells.
+r"""`\endv` v-template injection for math `\halign` cells.
 
 The real-TeX `\endv` model (TeX:The Program §324/§789/§1131) for math
 ``\halign`` cells built inside a math ``\vcenter`` body
@@ -13,7 +13,7 @@ The real-TeX `\endv` model (TeX:The Program §324/§789/§1131) for math
   the terminator), not ``EngineError: alignment tab outside \halign/\valign``.
 
 These assert grid *structure* (rows x cells via the contributed ``\vcenter``
-vlist); the MiKTeX glyph-position byte-compare lands downstream in.
+vlist); the MiKTeX glyph-position byte-compare lands downstream.
 """
 from __future__ import annotations
 
@@ -157,7 +157,7 @@ class TestNonRegression:
 
 
 # ---------------------------------------------------------------------------
-# C2/C3 — the preamble `$`-test raises _alignment_math_context off the
+# the preamble `$`-test raises _alignment_math_context off the
 # \vcenter path (regression pin for first_column_is_math).
 # ---------------------------------------------------------------------------
 

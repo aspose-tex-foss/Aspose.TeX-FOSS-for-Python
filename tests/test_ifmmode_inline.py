@@ -1,4 +1,4 @@
-r""" — `\ifmmode` is true inside inline `$…$` (mode-before-peek fix).
+r"""`\ifmmode` is true inside inline `$…$` (mode-before-peek fix).
 
 `\handle_math_shift` used to peek for the second `$` of `$$` BEFORE pushing math
 mode, so a leading expandable conditional in the formula (e.g. `\mathstrut`'s

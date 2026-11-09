@@ -196,12 +196,12 @@ class TestSeacComposite:
 
 
 # ---------------------------------------------------------------------------
-#: ligature slots 11..15 (ff, fi, fl, ffi, ffl)
+# ligature slots 11..15 (ff, fi, fl, ffi, ffl)
 # ---------------------------------------------------------------------------
 
 class TestLigatureCoverage:
     """CM fonts place the five ligatures at TeX-convention slots 11..15 and
-    duplicate them at PostScript slots 174..178.  Regression guard for:
+    duplicate them at PostScript slots 174..178.  Regression guard:
     the outline dict must carry non-empty entries for both slot ranges."""
 
     _LIGATURE_CODES: ClassVar[tuple[int, ...]] = (11, 12, 13, 14, 15)
@@ -259,11 +259,11 @@ class TestLigatureCoverage:
 
 
 # ---------------------------------------------------------------------------
-#: Type 1 Flex mechanism must not leak spurious moveto commands
+# Type 1 Flex mechanism must not leak spurious moveto commands
 # ---------------------------------------------------------------------------
 
-class TestFlexFixTEX41:
-    """Regression guard for: CM glyphs that use the Type 1 Flex
+class TestFlexFix:
+    """Regression guard: CM glyphs that use the Type 1 Flex
     mechanism (OtherSubr 0/1/2) were emitting one SVG `M` per rmoveto inside
     the flex sequence, producing orphan subpaths without matching `Z`.
 

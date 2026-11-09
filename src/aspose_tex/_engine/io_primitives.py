@@ -1,8 +1,9 @@
-r"""TeX I/O primitives for.
+r"""TeX I/O primitives.
 
-This module houses the M3-visible I/O surface: message logging, write-stream
-dispatch, deferred file-stream commands, ``\ifeof``, ``\immediate``, and
-``\dump``.  Real file-stream state is intentionally deferred to M5.
+This module houses the I/O surface: message logging, write-stream dispatch,
+the file-stream commands, ``\ifeof``, ``\immediate``, and ``\dump``.  File
+streams are not implemented: the file-stream commands parse their operands and
+raise ``NotImplementedError``.
 """
 from __future__ import annotations
 
@@ -18,7 +19,7 @@ if TYPE_CHECKING:
     from aspose_tex._engine.interpreter import TeXInterpreter
 
 _LOG: Final = logging.getLogger("aspose_tex")
-_FILE_STREAM_MESSAGE: Final = "requires file-stream I/O (deferred to M5)"
+_FILE_STREAM_MESSAGE: Final = "is not supported: file streams are not implemented"
 
 
 def exec_message(interp: TeXInterpreter) -> None:
@@ -32,7 +33,7 @@ def exec_write(interp: TeXInterpreter, *, immediate: bool = False) -> None:
     r"""Execute ``\write<n>{<balanced text>}``.
 
     The ``immediate`` flag is accepted for compatibility;
-    it has no observable M3 effect.
+    it has no observable effect.
     """
     del immediate
     stream = _read_stream_number(interp, minimum=-1, maximum=16)
@@ -45,12 +46,12 @@ def exec_write(interp: TeXInterpreter, *, immediate: bool = False) -> None:
         interp._messages.append(text)
         return
     raise NotImplementedError(
-        f"\\write to stream {stream} requires \\openout (deferred to M5)"
+        f"\\write to stream {stream} is not supported: file streams are not implemented"
     )
 
 
 def exec_errmessage(interp: TeXInterpreter) -> None:
-    r"""Execute ``\errmessage{<text>}`` in M3 batch-mode style."""
+    r"""Execute ``\errmessage{<text>}`` in batch-mode style."""
     text = _read_balanced_text(interp._expander)
     message = f"! {text}"
     log_line = message
@@ -102,11 +103,11 @@ def exec_immediate(interp: TeXInterpreter) -> None:
     if tok.name == "closeout":
         exec_closeout(interp, immediate=True)
         return
-    raise EngineError(f"\\immediate cannot prefix \\{interp._expander._diagnostic_cs_name(tok)} in M3")
+    raise EngineError(f"\\immediate cannot prefix \\{interp._expander._diagnostic_cs_name(tok)}")
 
 
 def exec_openin(interp: TeXInterpreter) -> None:
-    r"""Parse ``\openin<n>=<filename>`` then raise the M5 placeholder."""
+    r"""Parse ``\openin<n>=<filename>`` then raise ``NotImplementedError``."""
     stream = _read_stream_number(interp)
     _eat_optional_equals(interp._expander)
     _read_filename(interp._expander)
@@ -114,7 +115,7 @@ def exec_openin(interp: TeXInterpreter) -> None:
 
 
 def exec_openout(interp: TeXInterpreter, *, immediate: bool = False) -> None:
-    r"""Parse ``\openout<n>=<filename>`` then raise the M5 placeholder."""
+    r"""Parse ``\openout<n>=<filename>`` then raise ``NotImplementedError``."""
     del immediate
     stream = _read_stream_number(interp)
     _eat_optional_equals(interp._expander)
@@ -123,20 +124,20 @@ def exec_openout(interp: TeXInterpreter, *, immediate: bool = False) -> None:
 
 
 def exec_closein(interp: TeXInterpreter) -> None:
-    r"""Parse ``\closein<n>`` then raise the M5 placeholder."""
+    r"""Parse ``\closein<n>`` then raise ``NotImplementedError``."""
     stream = _read_stream_number(interp)
     _raise_deferred("closein", stream)
 
 
 def exec_closeout(interp: TeXInterpreter, *, immediate: bool = False) -> None:
-    r"""Parse ``\closeout<n>`` then raise the M5 placeholder."""
+    r"""Parse ``\closeout<n>`` then raise ``NotImplementedError``."""
     del immediate
     stream = _read_stream_number(interp)
     _raise_deferred("closeout", stream)
 
 
 def exec_read(interp: TeXInterpreter) -> None:
-    """Parse ``\read<n> to <CS>`` then raise the M5 placeholder."""
+    r"""Parse ``\read<n> to <CS>`` then raise ``NotImplementedError``."""
     stream = _read_stream_number(interp)
     from aspose_tex._engine.dimparser import _scan_keyword
 
@@ -151,7 +152,7 @@ def exec_read(interp: TeXInterpreter) -> None:
 
 
 def exec_ifeof(interp: TeXInterpreter) -> bool:
-    r"""Execute ``\ifeof<n>`` as always-false in M3."""
+    r"""Execute ``\ifeof<n>`` as always false: file streams are not implemented."""
     _read_stream_number(interp)
     return False
 

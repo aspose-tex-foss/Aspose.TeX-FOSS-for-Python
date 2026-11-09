@@ -142,7 +142,7 @@ def _next_meaning(expander: Expander):
     while isinstance(tok, CharToken) and tok.catcode == Catcode.SPACE:
         tok = expander._next_unexpandable()
     seen = set()
-    # A PrimitiveRefToken is already the primitive ( D3).
+    # A PrimitiveRefToken is already the primitive.
     while (isinstance(tok, ControlSequenceToken) and not isinstance(tok, PrimitiveRefToken)
            and tok.name not in seen):
         seen.add(tok.name)

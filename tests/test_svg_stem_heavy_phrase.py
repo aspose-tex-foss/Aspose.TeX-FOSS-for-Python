@@ -1,4 +1,4 @@
-"""Integration test for AC-7: stem-heavy phrase renders without
+"""Integration test: stem-heavy phrase renders without
 orphan movetos in any glyph path.
 
 The phrase "WAVE hiking pan" covers letters (W, A, V, E, h, i, k, n, g, p,
@@ -14,7 +14,7 @@ from tests._verification.svg_glyph_integrity import orphan_movetos, scan_svg
 
 def test_stem_heavy_phrase_has_no_orphan_movetos(tmp_path):
     """Rendering "WAVE hiking pan" produces no `g-*` path with
-    ``M_count - Z_count >= 2`` ( FR-4a)."""
+    ``M_count - Z_count >= 2``."""
     out = tmp_path / "stem_heavy"
     TeXJob(
         StringInputSource(r"WAVE hiking pan\bye"),

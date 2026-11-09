@@ -57,7 +57,7 @@ def test_output_minimal_user_routine_ships_box255() -> None:
     assert page_number == 1
     assert "X" in _chars(box)
     assert interp._box_regs.copybox(255) is None
-    #: this output ships but does not call plain's advancepageno.
+    # this output ships but does not call plain's advancepageno.
     assert interp._register_set.get_count(0) == 1
 
 

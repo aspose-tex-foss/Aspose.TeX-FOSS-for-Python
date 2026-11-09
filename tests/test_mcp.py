@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pytest
 
-pytest.importorskip("mcp", reason="mcp package not installed (install aspose-tex[mcp])")
+pytest.importorskip("mcp", reason="mcp package not installed (install aspose-tex-foss[mcp])")
 
 from aspose_tex import __version__
 from aspose_tex.mcp import compile_tex, tex_to_pdf, tex_to_svg, tex_version

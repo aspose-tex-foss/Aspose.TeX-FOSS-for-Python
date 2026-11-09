@@ -1,4 +1,4 @@
-r""" — non-``\vcenter`` math ``\halign`` end-to-end.
+r"""non-``\vcenter`` math ``\halign`` end-to-end.
 
 The two macro families carved out (their ``\halign`` runs WITHOUT a
 math ``\vcenter``, so ``_alignment_math_context == 0``):
@@ -12,7 +12,7 @@ math ``\vcenter``, so ``_alignment_math_context == 0``):
   (C5 raw cell-body assembly).
 
 These assert end-to-end build + grid/glyph structure via the DVI walker; the
-MiKTeX glyph-position byte-compare lands downstream in.
+MiKTeX glyph-position byte-compare lands downstream.
 """
 from __future__ import annotations
 
@@ -96,7 +96,7 @@ class TestNoRegressionHbox:
 
 
 class TestDisplaylinesHorizontalCentring:
-    r""" — a ``\displaylines`` row is centred once, not twice.
+    r"""a ``\displaylines`` row is centred once, not twice.
 
     The cell template is ``\hbox to\displaywidth{$\@lign\hfil\displaystyle##\hfil$}``
     (plain.tex:1127) — one ``\hfil`` on each side of the formula.  Both live
@@ -108,7 +108,7 @@ class TestDisplaylinesHorizontalCentring:
 
     # The reproducer verbatim.  Deliberately no \vsize: forcing a page
     # break through \plainoutput trips a pre-existing, unrelated
-    # "\prevdepth only valid in vertical mode" ( AC-6).
+    # "\prevdepth only valid in vertical mode".
     _SRC = (
         "\\nopagenumbers\n"
         "\\noindent\n"
@@ -175,7 +175,7 @@ class TestDisplaylinesHorizontalCentring:
 
 
 class TestEqalignnoStaysExact:
-    r""" AC-4 — ``\eqalignno``'s ``\hfil``s are OUTSIDE the ``$``.
+    r"""``\eqalignno``'s ``\hfil``s are OUTSIDE the ``$``.
 
     They are handled by the alignment cell's hbox scanner in written order and
     never reach the math list, which is why the family was already horizontally

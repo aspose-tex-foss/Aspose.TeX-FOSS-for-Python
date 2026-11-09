@@ -1,4 +1,4 @@
-"""Tests for TeX interpreter character processing ( / §4).
+"""Tests for TeX interpreter character processing (§4).
 
 Covers:
 - AC#1: Letter token in H mode creates CharNode with correct metrics
@@ -286,10 +286,10 @@ class TestSpacefactor:
             assert glue_normal[0].glue.width == normal_space
 
     def test_period_is_1000_under_initex_defaults(self) -> None:
-        r"""Without a format, ``.`` carries no sentence spacing ( FR-4).
+        r"""Without a format, ``.`` carries no sentence spacing.
 
         The complement of the test above, and the direct regression guard for
-        : ``\nonfrenchspacing`` is a plain.tex macro, so under IniTeX
+        ``\nonfrenchspacing`` is a plain.tex macro, so under IniTeX
         defaults ``a. b`` must produce a *plain* interword space. MiKTeX
         ``initex`` reports ``\sfcode`\. = 1000``; the pre- engine
         reported 3000 from a hardcoded dict that no assignment could reach.
@@ -397,7 +397,7 @@ class TestSpacefactor:
         Uses ``\spacefactor=500{}`` and then a space: ``{}`` ends the number,
         so the space is not absorbed as the assignment's terminator, and it
         leaves the space factor alone.  A control space ``\ `` would not do:
-        it ignores the space factor (§1045,).  MiKTeX 24.4 gives
+        it ignores the space factor (§1045).  MiKTeX 24.4 gives
         ``3.33333pt plus 0.83333pt minus 2.22223pt`` for this ``\lastskip``.
         """
         from aspose_tex._fonts.font_manager import FontManager
@@ -446,7 +446,7 @@ class TestSpacefactor:
 
 
 # ---------------------------------------------------------------------------
-#: \sfcode assignment must reach the space factor
+# \sfcode assignment must reach the space factor
 # ---------------------------------------------------------------------------
 
 class TestSfcodeAssignmentReachesSpaceFactor:

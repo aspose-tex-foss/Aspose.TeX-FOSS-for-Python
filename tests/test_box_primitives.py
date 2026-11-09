@@ -1,5 +1,5 @@
 r"""Interpreter-level tests for the ``\ht`` / ``\wd`` / ``\dp`` box-dimension
-primitives (, §F).
+primitives (§F).
 
 These cover the two halves of the contract:
 
@@ -8,7 +8,7 @@ These cover the two halves of the contract:
 * **write path** — ``\ht<reg>=<dimen>`` in command position, dispatched by the
   retired-stub interpreter handlers to ``BoxRegisterSet.set_*``.
 
-The M1 stubs (``_exec_wd_cmd`` / ``_exec_ht_cmd`` / ``_exec_dp_cmd``) used to
+The early stubs (``_exec_wd_cmd`` / ``_exec_ht_cmd`` / ``_exec_dp_cmd``) used to
 consume only the register index and return nothing, so a following dimen-scan
 read garbage; these tests pin the real semantics.
 """
@@ -71,7 +71,7 @@ class TestBoxDimensionWrite:
     def test_equals_less_assignment_scans_dimen(self) -> None:
         r"""Command-position ``\ht<reg>`` is ALWAYS an assignment: the ``=`` is
         optional but a ``<dimen>`` always follows (TeX:The Program §1244
-        ``set_box_dimen``;).  This is the ``\finph@nt`` form
+        ``set_box_dimen``).  This is the ``\finph@nt`` form
         ``\ht\tw@\ht\z@`` — copy box 1's height onto box 0 with no ``=``."""
         interp = _run(r"\setbox0=\hbox{Hello}\setbox1=\hbox{y}\ht0\ht1 \bye")
         # The equals-less assignment RAN: box 0's height now equals box 1's.
@@ -93,8 +93,8 @@ class TestBoxDimensionGroupScoping:
 
     def test_local_ht_change_persists_after_group(self) -> None:
         r"""Box DIMENSIONS are NOT group-scoped (TeX §1247-1248
-        ``alter_box_dimen`` writes the node field directly, no ``eq_save``;
-        ).  A ``\ht`` change inside ``{…}`` persists after the group —
+        ``alter_box_dimen`` writes the node field directly, no ``eq_save``)
+        A ``\ht`` change inside ``{…}`` persists after the group —
         unlike a scoped register write."""
         interp = _run(
             r"\setbox0=\hbox{Hello}"
@@ -105,7 +105,7 @@ class TestBoxDimensionGroupScoping:
         assert interp._register_set.get_dimen(0) == 100 * 65536
 
     def test_box_dim_write_does_not_corrupt_extracted_box(self) -> None:
-        r"""D-β regression (, non-math): a ``\ht``/``\dp`` write followed
+        r"""D-β regression (non-math): a ``\ht``/``\dp`` write followed
         by ``\box`` (which extracts the node) must not be reverted at group
         close — the old save/restore closure mutated the already-contributed
         node by reference.  This is the exact ``\finph@nt`` shape."""

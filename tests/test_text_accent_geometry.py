@@ -1,4 +1,4 @@
-r""": real-component geometry and bounded assignment scanner witnesses.
+r"""real-component geometry and bounded assignment scanner witnesses.
 
 Expected glyph positions are frozen MiKTeX 24.4 measurements, never computed
 from the implementation's formula. Font/node assertions cover invisible state.

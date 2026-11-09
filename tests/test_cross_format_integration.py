@@ -1,4 +1,4 @@
-"""Cross-format M2 integration tests.
+"""Cross-format integration tests.
 
 Validates that DVI, PDF, and SVG backends agree on output for the same
 TeX input: basic validity, multi-page page counts, file/memory I/O,
@@ -64,7 +64,7 @@ def _dvi_total_pages(dvi: bytes) -> int:
 def _dvi_first_set_char_h(dvi: bytes) -> int:
     """Walk the first page of a DVI stream and return ``h`` (sp) at the
     first ``set_char`` / ``set1`` opcode.  Only the opcode families the
-    M2 writers actually emit are handled.
+    writers actually emit are handled.
     """
     assert dvi[0] == _DVI_PRE
     k = dvi[14]
@@ -323,6 +323,6 @@ class TestCrossFormatPositionalConsistency:
         )
         h_svg = round((float(x_attr) - 72) * 65536)
 
-        # 65536 sp = 1 pt ( AC-5 / AC-5 tolerance).
+        # 65536 sp = 1 pt (tolerance).
         assert abs(h_dvi - h_pdf) <= 65536, f"DVI vs PDF: {h_dvi} vs {h_pdf} sp"
         assert abs(h_dvi - h_svg) <= 65536, f"DVI vs SVG: {h_dvi} vs {h_svg} sp"

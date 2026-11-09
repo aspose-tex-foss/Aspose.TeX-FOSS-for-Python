@@ -1,7 +1,7 @@
 """Math-family font assignment registry.
 
-Stores the M3 ``\\textfont`` / ``\\scriptfont`` / ``\\scriptscriptfont``
-family-to-font assignments for. Slots retain persistent loaded-font
+Stores the ``\\textfont`` / ``\\scriptfont`` / ``\\scriptscriptfont``
+family-to-font assignments. Slots retain persistent loaded-font
 keys; math typesetting resolves metrics through FontManager.
 """
 

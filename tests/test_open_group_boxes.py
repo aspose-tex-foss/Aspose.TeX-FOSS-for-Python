@@ -1,4 +1,4 @@
-r""" — open-group box construction (\hbox\bgroup…\egroup).
+r"""open-group box construction (\hbox\bgroup…\egroup).
 
 Real TeX builds every box "open-group": ``\hbox{`` opens a box whose matching
 ``}`` arrives later in the token stream.  Before this engine built boxes
@@ -8,7 +8,7 @@ macro or alignment-cell boundary — could not run.  adds a main-loop
 box-build stack: a box keyword followed by a ``\bgroup`` alias opens a deferred-
 close frame; the matching ``\egroup`` finalises and delivers the box.
 
-The eager literal-brace path (``\hbox{…}``) stays byte-identical ( Q4 /
+The eager literal-brace path (``\hbox{…}``) stays byte-identical (the
 5-MD5 gate); these tests drive only the ``\bgroup`` open-group path plus the
 pre-existing eager-nested ``\setbox`` case that AC-2 requires.
 """
@@ -80,7 +80,7 @@ class TestOpenGroupNested:
         assert [n.char for n in inner[0].list if isinstance(n, CharNode)] == [ord("y")]
 
     def test_eager_nested_setbox_in_literal_brace_hbox(self) -> None:
-        # AC-2: the pre-existing \setbox0=\hbox{\setbox1=\hbox{x}\box1}
+        # the pre-existing \setbox0=\hbox{\setbox1=\hbox{x}\box1}
         # (literal braces, eager path) now places the inner box.
         box = _box(r"\setbox0=\hbox{\setbox1=\hbox{x}\box1}")
         assert isinstance(box, HlistNode)

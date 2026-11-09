@@ -2,7 +2,7 @@
 
 Implements: \\vfil, \\vfill, \\vfilneg, \\vss,
 \\nointerlineskip, \\offinterlineskip, \\shipout. \\eject (FR-13) moved to
-interpreter.py per.
+interpreter.py.
 
 Follows the same pattern as par_primitives.py: stateless factory functions
 and exec functions that take PageBuilder as an explicit argument.

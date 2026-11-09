@@ -8,12 +8,12 @@ from aspose_tex._fonts.font_manager import FontManager, resolve_font_cs
 from tests.test_plain_tie import _run
 
 _DIR = Path(__file__).parents[1] / 'testdata/reference/font_reader'
-_REVIEW = json.loads((_DIR / 'reference.json').read_text())
+_BASE = json.loads((_DIR / 'reference.json').read_text())
 
 
-@pytest.mark.parametrize('name', list(_REVIEW))
-def test_exact_independent_review_witnesses(name):
-    row = _REVIEW[name]
+@pytest.mark.parametrize('name', list(_BASE))
+def test_exact_base_witnesses(name):
+    row = _BASE[name]
     assert [m for m in _run(row['source']).messages if m.startswith('R[')] == row['miktex']
 
 
@@ -31,11 +31,11 @@ def test_empty_font_identifier_is_printable_without_changing_binding_name():
     fonts.load_font('', 'cmr10')
     assert fonts.font_id_text(fonts.font_id('')) == 'FONT'
     assert not fonts.is_font('FONT')
-_REWORK = json.loads((_DIR / 'extended_reference.json').read_text())
+_EXTENDED = json.loads((_DIR / 'extended_reference.json').read_text())
 
 
-@pytest.mark.parametrize('name', [n for n in _REWORK if n not in _REVIEW])
+@pytest.mark.parametrize('name', [n for n in _EXTENDED if n not in _BASE])
 def test_adversarial_reader_and_printer_matrix(name):
-    row = _REWORK[name]
+    row = _EXTENDED[name]
     assert row['match'] and not row['errors']
     assert [m for m in _run(row['source']).messages if m.startswith('R[')] == row['miktex']

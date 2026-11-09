@@ -26,7 +26,7 @@ Currently contains:
   permitted as long as the file is not modified (per Knuth's preamble).
   Loaded by the engine to provide user-level macros (`\bf`, `\it`,
   `\centerline`, `\beginsection`, `\footnote`, etc.) on top of TeX
-  primitives. Required for M3.
+  primitives.
 
 - `hyphen.tex` — Knuth's US-English hyphenation patterns, the file MiKTeX's
   plain format loads at `\language=0` (4447 patterns, 14 exceptions).

@@ -25,11 +25,11 @@ _FOOTNOTERULE_HEIGHT_SP = 26214  # plain.tex `\footnoterule` = 0.4pt
 _TOL_1PT_SP = 65536  # AC #3 vertical tolerance for body/note text vs MiKTeX
 _V_UNCHECKED_SP = 0x3FFFFFFF  # MAX_DIMEN — disables the helper's v-axis (see below)
 
-# Folio v-position vs MiKTeX is now within ±0.5pt ( closed
+# Folio v-position vs MiKTeX is now within ±0.5pt (closed
 # cascade #1 — `\makefootline`'s `\baselineskip=24pt` is
 # honoured by the outer `\plainoutput` vbox interline-glue path).
 # Footnote note text h-position now matches MiKTeX within ±0.1pt
-# ( closed cascade #3 — `\indent`/`\noindent` in the
+# (closed cascade #3 — `\indent`/`\noindent` in the
 # vbox scanner now bootstrap a paragraph with a `\parindent`-wide
 # indent kern, so `\textindent{#1}\footstrut Note.` lands as a
 # single hlist line at h=`\parindent`=20pt instead of three
@@ -69,7 +69,7 @@ def test_footnote_basic_renders_separator_and_note(name: str) -> None:
       * `\\footnoterule` height = 26214 sp (0.4pt) and width matches
         MiKTeX within 1 sp (rounding noise).
       * Note text v matches MiKTeX within ±1pt (AC #3 tolerance).
-      * Note text h matches MiKTeX within ±0.1pt ( AC-6,
+      * Note text h matches MiKTeX within ±0.1pt (AC-6,
         closed by cascade #3).
       * Note text appears below the separator rule.
       * Separator rule appears below body text.
@@ -95,9 +95,9 @@ def test_footnote_basic_renders_separator_and_note(name: str) -> None:
         f"separator rule width {rule_width} sp differs from MiKTeX "
         f"{miktex_rule[3]} sp by more than rounding noise"
     )
-    # AC-6 / AC-1: separator-rule v-position matches
-    # MiKTeX baseline within ±1pt.  Empirically closed by
-    # ( cascade #3 side effect: rule_v dv collapsed from
+    # separator-rule v-position matches
+    # MiKTeX baseline within ±1pt.  Empirically closed
+    # (cascade #3 side effect: rule_v dv collapsed from
     # -1_507_305 sp / -23pt to +23 sp / <0.001pt on both fixtures).
     assert abs(rule_v - miktex_rule[1]) <= _TOL_1PT_SP, (
         f"separator rule baseline dv={rule_v - miktex_rule[1]} sp exceeds ±1pt"
@@ -126,9 +126,9 @@ def test_footnote_basic_renders_separator_and_note(name: str) -> None:
         f"note baseline dv={note_v_ours - note_v_miktex} sp exceeds ±1pt"
     )
 
-    # AC-6: per-char h-position of every footnote-text char
+    # per-char h-position of every footnote-text char
     # (footnote mark `*` + note body) must match MiKTeX within ±0.1pt
-    # ( cascade #3).  Without the fix, the note text
+    # (cascade #3).  Without the fix, the note text
     # appears at h=0 instead of h=`\parindent` (=20pt).
     our_below = [(ch, h, v) for ch, h, v in our_chars if v > rule_v]
     miktex_below = [(ch, h, v) for ch, h, v in miktex_chars if v > miktex_rule[1]]
@@ -184,7 +184,7 @@ def test_footnote_footins_box_voided_after_shipout() -> None:
 def test_footnote_line_depth_raises_its_baseline(
     note: str, note_v: int, page_v: list[int]
 ) -> None:
-    r""": a deep footnote line sits higher, by MiKTeX 24.4's exact v.
+    r"""a deep footnote line sits higher, by MiKTeX 24.4's exact v.
 
     The insertion counts the depth of the note's line, so a `\cases` or
     `\vcenter` in it moves the baseline up; `$(a)$` is the plain control.

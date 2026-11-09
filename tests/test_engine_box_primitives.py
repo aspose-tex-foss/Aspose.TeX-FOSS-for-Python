@@ -196,21 +196,21 @@ def test_exec_hbox_overfull_warning() -> None:
 
 
 def test_exec_hbox_insufficient_shrink_warns_overfull() -> None:
-    """: finite shrink that falls short is overfull (TeX §664), not badness 100."""
+    """finite shrink that falls short is overfull (TeX §664), not badness 100."""
     exp, fm, gs, regs = make_setup(r"{A\hskip 3pt minus 1pt}")
     with pytest.warns(OverfullBoxWarning, match=r"9\.5pt too wide"):
         exec_hbox(exp, fm, gs, regs, target_width=1)
 
 
 def test_exec_hbox_rigid_box_too_wide_target_is_underfull() -> None:
-    """: a rigid box asked to grow is underfull (badness 10000), not overfull."""
+    """a rigid box asked to grow is underfull (badness 10000), not overfull."""
     exp, fm, gs, regs = make_setup("{A}")
     with pytest.warns(UnderfullBoxWarning, match=r"Underfull \\hbox"):
         exec_hbox(exp, fm, gs, regs, target_width=100 * 65536)
 
 
 def test_exec_hbox_stretch_past_ratio_one_reports_tex_badness() -> None:
-    """: ratio 1.5 is underfull with TeX badness 336, not overfull 10000."""
+    """ratio 1.5 is underfull with TeX badness 336, not overfull 10000."""
     exp, fm, gs, regs = make_setup(r"{\hskip 0pt plus 2pt}")
     with pytest.warns(UnderfullBoxWarning, match=r"badness 336"):
         exec_hbox(exp, fm, gs, regs, target_width=3 * 65536)

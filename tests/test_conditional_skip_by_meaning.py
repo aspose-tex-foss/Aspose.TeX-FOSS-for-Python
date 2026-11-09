@@ -1,4 +1,4 @@
-r""" — conditional branches are skipped by meaning (TeX §494).
+r"""conditional branches are skipped by meaning (TeX §494).
 
 ``pass_text`` classifies the tokens of a skipped branch by ``cur_cmd``: a
 ``\let`` or ``\newif`` alias of a conditional nests, ``\let\myfi=\fi`` ends
@@ -116,7 +116,7 @@ class TestPlainInserts:
 
 
 class TestDeferredVboxRegressionPins:
-    r""" Testing 3:'s reported layers, delivered by."""
+    r""" Testing 3:'s reported layers, delivered."""
 
     @pytest.mark.parametrize(
         ("body", "miktex"),
@@ -171,17 +171,17 @@ class TestDeferredVboxRegressionPins:
             pytest.param(
                 r"\noindent x\setbox0\vbox\bgroup\noindent\begingroup y\endgroup\egroup\box0 z",
                 [(_X, 0, 655360), (_Y, 345886, 655360), (_Z, 31131749, 655360)],
-                id="tex352-implicit-par-vbox",
+                id="implicit-par-vbox",
             ),
             pytest.param(
                 r"\noindent x\setbox0\vtop\bgroup\noindent\begingroup y\endgroup\egroup\box0 z",
                 [(_X, 0, 655360), (_Y, 345886, 655360), (_Z, 31131749, 655360)],
-                id="tex352-implicit-par-vtop",
+                id="implicit-par-vtop",
             ),
             pytest.param(
                 r"\noindent x\setbox0\vbox{\noindent\begingroup y\endgroup}\box0 z",
                 [(_X, 0, 655360), (_Y, 345886, 655360), (_Z, 31131749, 655360)],
-                id="tex352-implicit-par-eager",
+                id="implicit-par-eager",
             ),
         ],
     )

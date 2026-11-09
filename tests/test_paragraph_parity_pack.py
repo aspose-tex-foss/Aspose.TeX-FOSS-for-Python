@@ -125,14 +125,14 @@ def test_context_glyph_oracle(name):
     assert json.loads(json.dumps(glyphs)) == case['glyphs']
 
 
-_REWORK_REFERENCE = json.loads(
+_EXTENDED_REFERENCE = json.loads(
     (Path(__file__).parents[1] / 'testdata/reference/paragraph_parity/extended_reference.json').read_text())
 
 
-@pytest.mark.parametrize('name', _REWORK_REFERENCE)
+@pytest.mark.parametrize('name', _EXTENDED_REFERENCE)
 def test_leaders_boundary_oracle(name):
     """Review return: leaders are glue at break and discard boundaries."""
-    case = _REWORK_REFERENCE[name]
+    case = _EXTENDED_REFERENCE[name]
     _, messages, payload = run(case['source'])
     glyphs = walk_chars_with_positions(payload, _tfm_width()) if payload else []
     assert json.loads(json.dumps(glyphs)) == case['glyphs']

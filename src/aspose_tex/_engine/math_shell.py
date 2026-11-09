@@ -1,7 +1,7 @@
-"""Math-mode shell primitive dispatcher for.
+"""Math-mode shell primitive dispatcher.
 
-The M3 math shell consumes operands for known math primitives and emits no
-nodes.  Real math atom construction and layout are deferred to M4.
+The math shell consumes the operands of known math primitives and emits no
+nodes; math atoms are built by :mod:`aspose_tex._engine.math_list`.
 """
 
 from __future__ import annotations
@@ -93,7 +93,7 @@ class MathShellRegistry:
     Args:
         expander: Active expander/token stream.
         code_arrays: Code arrays backing delimiter lookups.
-        math_family_registry: M3 family-font storage surface.
+        math_family_registry: Family-font storage surface.
         mode_provider: Callback returning the interpreter's current mode.
 
     Example:

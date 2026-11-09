@@ -11,7 +11,7 @@ Covers §B/§C/§D:
   - NFR-1: the successor-chain walk is bounded — a synthetic self-linked TFM
            glyph terminates and returns the best glyph seen.
 
-AC-2 (the \big-family) lands in (the deferred forced-class
+AC-2 (the \big-family) lands (the deferred forced-class
 group that executes a {…} math field through the main loop); it is exercised in
 ``TestBigFamily`` and ``TestForcedClassGroup`` below.
 """
@@ -304,7 +304,7 @@ def _captured_mlist(formula: str) -> list:
 
 
 # ---------------------------------------------------------------------------
-# AC-2 — \big-family (: {…} math-field execution)
+# AC-2 — \big-family ({…} math-field execution)
 # ---------------------------------------------------------------------------
 
 
@@ -345,7 +345,7 @@ class TestForcedClassGroup:
         # \mathopen{\hbox{x}}: the {…} group runs through the main loop, the
         # \hbox builds, and the atom is OPEN class.  The group's list is one
         # script-less Ord atom, so TeX §1186 hands its nucleus — the built
-        # \hbox — up as the OPEN atom's own nucleus ( amendment,).
+        # \hbox — up as the OPEN atom's own nucleus.
         mlist = _captured_mlist(r"$\mathopen{\hbox{x}}$")
         assert len(mlist) == 1
         atom = mlist[0]

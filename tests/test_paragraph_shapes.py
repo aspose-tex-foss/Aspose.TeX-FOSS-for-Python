@@ -1,7 +1,6 @@
-""": paragraph geometry and true display-entry boundary.
+"""paragraph geometry and true display-entry boundary.
 
-All numeric output expectations are fresh MiKTeX measurements; replay with
-a reference probe
+All numeric output expectations are MiKTeX measurements.
 """
 
 import dataclasses
@@ -75,7 +74,7 @@ def params(**kw):
     ],
 )
 def test_hanging_line_boxes(indent, after, expected):
-    # Width/shift values measured by architecture showbox, not glyph offsets.
+    # Width/shift values measured with \showbox, not glyph offsets.
     interp = _run(
         r"\setbox0\vbox{\hsize100pt\parindent0pt"
         + rf"\hangindent{indent}pt\hangafter{after}"
@@ -131,7 +130,7 @@ def test_dp_retains_geometry_and_fitness_histories(widths, shape, counts):
 
 
 def test_resumed_absolute_geometry_and_skip_inside_width():
-    # Architecture's void parshape display resumes at absolute line four.
+    # A display after a void \parshape resumes at absolute line four.
     p = dataclasses.replace(
         params(
             parshape=((65536, 91 * 65536), (2 * 65536, 82 * 65536), (3 * 65536, 73 * 65536), (4 * 65536, 64 * 65536))

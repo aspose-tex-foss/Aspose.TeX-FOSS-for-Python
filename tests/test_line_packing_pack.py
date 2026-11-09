@@ -1,4 +1,4 @@
-r""": line/box packing regressions measured with MiKTeX 24.4."""
+r"""line/box packing regressions measured with MiKTeX 24.4."""
 import warnings
 
 import pytest

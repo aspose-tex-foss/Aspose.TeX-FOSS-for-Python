@@ -1,4 +1,4 @@
-r""": scanner operands use existing meanings and binding owners."""
+r"""scanner operands use existing meanings and binding owners."""
 import json
 from pathlib import Path
 

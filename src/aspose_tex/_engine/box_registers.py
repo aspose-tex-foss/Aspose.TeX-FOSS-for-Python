@@ -4,7 +4,7 @@ Implements FR-14 and FR-15: ``\\setbox``, ``\\box``, ``\\copy``,
 ``\\wd``, ``\\ht``, ``\\dp``.
 
 Register indices are 0-255.  Group scoping uses the same save-on-first-write
-pattern as ``RegisterSet`` in (via ``GroupStack.save()``).
+pattern as ``RegisterSet`` (via ``GroupStack.save()``).
 
 See the project documentation for design rationale.
 """
@@ -148,7 +148,7 @@ class BoxRegisterSet:
     def set_ht(self, reg: int, value: int, *, global_: bool = False) -> None:
         r"""Set height of box *reg* in sp.  No-op if register is void.
 
-        Not group-scoped (TeX §1247-1248 ``alter_box_dimen``;) —
+        Not group-scoped (TeX §1247-1248 ``alter_box_dimen``) —
         ``global_`` is inert.  The write persists until the register is
         voided or rebuilt.
         """
@@ -161,7 +161,7 @@ class BoxRegisterSet:
     def set_dp(self, reg: int, value: int, *, global_: bool = False) -> None:
         r"""Set depth of box *reg* in sp.  No-op if register is void.
 
-        Not group-scoped (TeX §1247-1248 ``alter_box_dimen``;) —
+        Not group-scoped (TeX §1247-1248 ``alter_box_dimen``) —
         ``global_`` is inert.  The write persists until the register is
         voided or rebuilt.
         """

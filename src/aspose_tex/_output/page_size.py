@@ -28,7 +28,7 @@ PAGE_SIZE_PRESETS: dict[str, tuple[float, float]] = {
     "a5": (419.528, 595.276),
 }
 
-# The default paper size when page_size is omitted ( FR-8).  Kept as a
+# The default paper size when page_size is omitted.  Kept as a
 # name so the default and the "letter" preset can never drift apart.
 _DEFAULT_PRESET = "letter"
 

@@ -1,4 +1,4 @@
-r""" — MiKTeX 24.4 plain measurements, glyph positions in sp.
+r"""MiKTeX 24.4 plain measurements, glyph positions in sp.
 
 Vertical assertions intentionally leave the separately owned horizontal
 leqalignno placement to its full-coordinate tests; covers fil centring.
@@ -426,7 +426,7 @@ def test_display_vertical_positions(body: str, miktex: list) -> None:
     ],
 )
 def test_numbered_display_positions(body: str, miktex: list) -> None:
-    # The separate leqno long-skip defect is owned by;
+    # The separate leqno long-skip defect is owned;
     # this member pins centring and both flush equation-number positions.
     assert [(c, h) for c, h, _v in _page1(body)] == [(c, h) for c, h, _v in miktex]
 

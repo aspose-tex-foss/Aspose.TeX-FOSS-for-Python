@@ -1,4 +1,4 @@
-"""Tests for the noad data model + mlist builder ( / §A/§B/§F).
+"""Tests for the noad data model + mlist builder (§A/§B/§F).
 
 Covers the cascade #1 acceptance criteria:
   AC-1 (FR-1, AC-5)  \\mathcode routing + class-7 \\fam resolution
@@ -6,7 +6,7 @@ Covers the cascade #1 acceptance criteria:
   AC-3 (FR-3)        \\mathord… class routing
   AC-4 (FR-4)        scan_math_field: char vs {<mlist>}; absent → error
   AC-5 (FR-5)        \\fam selects family for class-7 atoms
-  AC-6 (FR-8)        noad field set complete for
+  AC-6 (FR-8)        noad field set complete
   AC-7               scripts parse+attach; double-script error
   AC-8               \\left/\\right depth contract preserved
 
@@ -158,7 +158,7 @@ class TestClassPrimitives:
         mlist = capture_mlist(rf"$\{prim}{{x}}$\bye")
         assert mlist[0].math_class == expected
         # TeX §1186: the {x} group is one script-less Ord, so its char is the
-        # nucleus itself ( amendment,)
+        # nucleus itself
         assert isinstance(mlist[0].nucleus, MathChar)
 
     def test_group_of_two_atoms_stays_a_sub_mlist(self) -> None:
@@ -209,7 +209,7 @@ class TestScanMathField:
 
 
 # ---------------------------------------------------------------------------
-# AC-6 (FR-8) — noad field set complete for
+# AC-6 (FR-8) — noad field set complete
 # ---------------------------------------------------------------------------
 
 
@@ -231,7 +231,7 @@ class TestNoadStructureComplete:
         assert frac.numerator.noads[0].nucleus.position == ord("a")
         assert isinstance(frac.denominator, MathList)
         assert frac.denominator.noads[0].nucleus.position == ord("b")
-        # \over → DEFAULT_FRACTION_THICKNESS sentinel (resolved in).
+        # \over → DEFAULT_FRACTION_THICKNESS sentinel (resolved).
         assert frac.thickness is not None
 
     def test_atop_has_none_thickness(self) -> None:
@@ -281,7 +281,7 @@ class TestNoadStructureComplete:
         assert all(isinstance(c, MathList) for c in noad.choices)
 
     def test_mathchoice_branches_execute_through_main_loop(self) -> None:
-        #: the four branches build through the main loop's
+        # the four branches build through the main loop's
         # begin_group/end_group (full dispatch), not the old symbol-only
         # _scan_choice_group.  Each branch mlist holds its own atoms.
         mlist = capture_mlist(r"$\mathchoice{a}{bb}{ccc}{dddd}$\bye")
@@ -290,7 +290,7 @@ class TestNoadStructureComplete:
         assert [len(c.noads) for c in noad.choices] == [1, 2, 3, 4]
 
     def test_mathchoice_incomplete_raises(self) -> None:
-        #: an armed capture that never sees four {…} branches is a
+        # an armed capture that never sees four {…} branches is a
         # runaway \mathchoice (TeX §1174) — take_mlist guards it.
         with pytest.raises(EngineError, match="four"):
             capture_mlist(r"$\mathchoice{a}{b}$\bye")
@@ -480,7 +480,7 @@ class TestPendingClass:
 
 
 class TestChoiceCapture:
-    """ — the deferred four-group \\mathchoice capture lifecycle."""
+    """the deferred four-group \\mathchoice capture lifecycle."""
 
     def test_add_mathchoice_arms_capture_without_scanning(self) -> None:
         # add_mathchoice sets _choice_capture = [] and does NOT consume the
@@ -510,7 +510,7 @@ class TestChoiceCapture:
         assert len(builder.mlist[0].choices) == 4
 
     def test_group_inside_a_branch_is_not_a_branch(self) -> None:
-        #: only a group closing back to the armed depth is a branch;
+        # only a group closing back to the armed depth is a branch;
         # the {x} inside the first branch stays an atom of that branch.
         builder = _bare_builder()
         builder.add_mathchoice()
@@ -530,7 +530,7 @@ class TestChoiceCapture:
         assert len(first) == 1 and first[0].kind is NoadKind.ATOM
 
     def test_nested_mathchoice_keeps_its_own_capture(self) -> None:
-        #: a \mathchoice inside a branch pushes its own entry and does
+        # a \mathchoice inside a branch pushes its own entry and does
         # not clobber the outer branches collected so far.
         builder = _bare_builder()
         builder.add_mathchoice()
@@ -594,7 +594,7 @@ class TestChoiceCapture:
 
 
 class TestOrdinaryGlueCarrier:
-    r""" — \hfil and friends enter the mlist as an ordinary glue noad."""
+    r"""\hfil and friends enter the mlist as an ordinary glue noad."""
 
     def test_add_glue_appends_ordinary_glue_noad(self) -> None:
         from aspose_tex._engine.registers import Glue, GlueOrder
@@ -613,7 +613,7 @@ class TestOrdinaryGlueCarrier:
         assert noad.glue_value == 0
 
     def test_mskip_carries_a_full_mu_glue(self) -> None:
-        #: \mskip scans a whole <muglue> (§1060) into `glue`, and
+        # \mskip scans a whole <muglue> (§1060) into `glue`, and
         # `mu_glue` marks it as mu so the translator still scales it per style.
         from aspose_tex._engine.registers import Glue, GlueOrder
 
@@ -637,7 +637,7 @@ class TestOrdinaryGlueCarrier:
 
 
 # ---------------------------------------------------------------------------
-# — a `{…}` math field runs through the main loop (TeX §1151/§1186)
+# a `{…}` math field runs through the main loop (TeX §1151/§1186)
 # ---------------------------------------------------------------------------
 
 

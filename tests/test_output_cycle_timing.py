@@ -1,4 +1,4 @@
-""" public-job regressions pinned to architecture MiKTeX measurements."""
+"""Public-job regressions pinned to MiKTeX measurements."""
 import json
 from pathlib import Path
 

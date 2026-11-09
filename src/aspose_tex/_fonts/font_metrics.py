@@ -251,7 +251,7 @@ class FontMetrics:
 
         Implements only the /LIG/ type (op_byte == 0): both input characters
         are consumed and replaced by the remainder character.  Other ligature
-        types (LIG/, /LIG/>, etc.) are NOT supported in M1 — return None.
+        types (LIG/, /LIG/>, etc.) are NOT supported here — return None.
 
         Args:
             code1: Left character code.
@@ -310,7 +310,7 @@ class FontMetrics:
                 if op_byte == 0:
                     # /LIG/ — both chars consumed, replaced by remainder
                     return ("lig", remainder)
-                # Other ligature type — not supported in M1
+                # Other ligature type — not supported here
                 return None
 
             if skip >= 128:

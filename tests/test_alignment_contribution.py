@@ -1,4 +1,4 @@
-r""" — `\halign` contribution model (splice vs pack).
+r"""`\halign` contribution model (splice vs pack).
 
 A top-level `\halign`/`\valign` in a real vertical list splices its rows
 individually into the enclosing list (the TeX `fin_align` §812 model), so the
@@ -70,7 +70,7 @@ class TestPackedPathIntact:
         )
         box = interp._box_regs.getbox(0)
         assert isinstance(box, VlistNode)
-        # Two rows + one inter-row interline GlueNode ( pre-glue).
+        # Two rows + one inter-row interline GlueNode (pre-glue).
         from aspose_tex._engine.nodes import GlueNode, HlistNode
         rows = [n for n in box.list if isinstance(n, HlistNode)]
         glues = [n for n in box.list if isinstance(n, GlueNode)]

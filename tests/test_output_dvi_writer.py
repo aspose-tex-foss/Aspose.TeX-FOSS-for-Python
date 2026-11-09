@@ -650,7 +650,7 @@ def test_vlist_down_movement():
 
 
 def test_vlist_rule_running_width_resolves_to_parent():
-    """: a vlist \\hrule with width==RUNNING_DIMEN emits the
+    """a vlist \\hrule with width==RUNNING_DIMEN emits the
     parent's concrete width, not the -2^30 running-dimension sentinel.
 
     Mirrors the hlist arm + PDF/SVG vlist arms. ``walk_rules`` returns
@@ -681,7 +681,7 @@ def test_vlist_rule_running_width_resolves_to_parent():
 
 
 def test_vlist_rule_running_height_resolves_to_parent():
-    """: locks "resolve all three" — a \\vrule-style RuleNode
+    """locks "resolve all three" — a \\vrule-style RuleNode
     with height==RUNNING_DIMEN inside a vlist resolves to ``parent.height``.
 
     set_rule's height operand is ``height + depth``; with a running height
@@ -711,7 +711,7 @@ def test_vlist_rule_running_height_resolves_to_parent():
 
 
 def test_zero_width_rule_suppressed_in_hlist():
-    """: a zero-width \\strut RuleNode in an hlist emits no
+    """a zero-width \\strut RuleNode in an hlist emits no
     set_rule (TeX §622 paints only when width>0 and height+depth>0), while
     the surrounding content keeps its position.
 
@@ -749,7 +749,7 @@ def test_zero_width_rule_suppressed_in_hlist():
 
 
 def test_zero_height_rule_suppressed_but_advances_reference_point():
-    """: a zero-height (height+depth==0) positive-width rule in
+    """a zero-height (height+depth==0) positive-width rule in
     an hlist emits no set_rule, but the reference point still advances by the
     rule width — the case ``width==0`` cannot exercise.
 
@@ -811,7 +811,7 @@ def test_painting_rule_still_emitted():
 
 
 def test_zero_width_rule_suppressed_in_vlist():
-    """: a zero-width RuleNode in a vlist emits no set_rule,
+    """a zero-width RuleNode in a vlist emits no set_rule,
     but v advances by height+depth so the following box lands unchanged
     (TeX §634).
 
@@ -848,7 +848,7 @@ def test_zero_width_rule_suppressed_in_vlist():
 
 
 def test_vlist_rule_emits_put_rule_no_h_advance():
-    """: a painting RuleNode in a vlist ships ``put_rule`` (137),
+    """a painting RuleNode in a vlist ships ``put_rule`` (137),
     not ``set_rule`` (132), and does NOT advance the horizontal reference point.
 
     Per TeX:The Program §624 (``vlist_out``) a vertically placed rule paints

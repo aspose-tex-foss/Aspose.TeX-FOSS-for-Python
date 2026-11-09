@@ -1,4 +1,4 @@
-"""Tests for TeX's fixed-point arithmetic helpers (, TeX §102-§107)."""
+"""Tests for TeX's fixed-point arithmetic helpers (TeX §102-§107)."""
 
 from __future__ import annotations
 

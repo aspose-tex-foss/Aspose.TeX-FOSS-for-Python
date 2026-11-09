@@ -133,7 +133,7 @@ class MathNode:
     The closing ``$`` frames the translated formula with a math-on and a
     math-off node (§1196), so the formula's last glue or kern is never the
     list tail: ``\lastskip`` reads zero after ``$\mskip2mu$`` and ``\unskip``
-    removes nothing ( D5).
+    removes nothing.
 
     Attributes:
         width: ``\mathsurround`` at the closing ``$``, in sp; 0 after a line
@@ -227,8 +227,7 @@ def iter_nobreak_nodes(nodes: Iterable[Node]) -> Iterator[Node]:
 class LeadersNode:
     """Repeated rule or box payload across a glue skip.
 
-    M3 stores the payload and treats the surrounding glue as the width shell.
-    Backend repetition is deferred to a future release.
+    Stores the payload and the surrounding glue that sets its width.
     """
 
     kind: LeadersKind

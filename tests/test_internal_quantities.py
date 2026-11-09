@@ -59,7 +59,7 @@ def test_read_only_quantities_reject_assignment() -> None:
 @pytest.mark.parametrize(
     ("source", "expected"),
     [
-        #, §1246 alter_integer: assignable and always global (a group
+        # §1246 alter_integer: assignable and always global (a group
         # does not restore them, as MiKTeX 24.4 prints for the same input).
         (r"{\deadcycles=3 }\message{R[\the\deadcycles]}\deadcycles=0 ", ["R[3]"]),
         (r"\global\deadcycles=4 \message{R[\the\deadcycles]}\deadcycles=0 ", ["R[4]"]),
@@ -81,7 +81,7 @@ def test_page_integers_are_not_arithmetic_registers() -> None:
 
 
 def test_page_builder_readers_return_live_values() -> None:
-    #: glue before the first box is discarded and glue waits on the
+    # glue before the first box is discarded and glue waits on the
     # contribution list until a trigger (\penalty) moves it; MiKTeX 24.4 prints
     # exactly this for the same input.
     messages = _run_messages(
@@ -112,9 +112,9 @@ def test_page_builder_fill_order_readers_and_counters_are_registered() -> None:
         r"\bye"
     )
 
-    # MiKTeX 24.4 prints 1.0pt / 2.0pt / 3.0pt: 1fil is unity (§454,);
+    # MiKTeX 24.4 prints 1.0pt / 2.0pt / 3.0pt: 1fil is unity (§454);
     # the sp spelling is.  The box comes first because glue at the
-    # top of an empty page never reaches page_so_far (§1000,).
+    # top of an empty page never reaches page_so_far (§1000).
     assert messages == ["fil=1.0ptfill=2.0ptfilll=3.0ptdead=0ins=0"]
 
 

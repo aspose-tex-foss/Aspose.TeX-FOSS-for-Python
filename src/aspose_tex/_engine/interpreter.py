@@ -115,22 +115,21 @@ from aspose_tex.exceptions import EngineError, InputError
 
 
 def _meaning_token(meaning):
-    """Token that stands for a non-macro meaning when it is re-read ( D3)."""
+    """Token that stands for a non-macro meaning when it is re-read."""
     if isinstance(meaning, PrimitiveMeaning):
         return PrimitiveRefToken(meaning.name)
     return meaning
 
 
 # ---------------------------------------------------------------------------
-# ModeKind enum ( FR-1)
+# ModeKind enum
 # ---------------------------------------------------------------------------
 
 class ModeKind(Enum):
-    """TeX processing modes ( FR-1, FR-1/FR-2).
+    """TeX processing modes.
 
-    Math modes are load-without-execute in M3: math-mode bodies parse through
-    the shell surface, emit no nodes, and leave real math typesetting
-    to M4.
+    Math modes build a math list that is converted to a horizontal
+    list when the formula ends.
 
     Example::
 
@@ -147,7 +146,7 @@ class ModeKind(Enum):
 
 
 # ---------------------------------------------------------------------------
-# ModeStack ( FR-1)
+# ModeStack
 # ---------------------------------------------------------------------------
 
 class ModeStack:
@@ -204,7 +203,7 @@ class ModeStack:
 
 @dataclasses.dataclass(slots=True)
 class _BoxBuildFrame:
-    """One open-group box under construction by the main loop ( Q1).
+    """One open-group box under construction by the main loop.
 
     Created when ``\\hbox``/``\\vbox``/``\\vtop`` (optionally with ``\\setbox``
     or ``to``/``spread``) is followed by a begin-group whose matching
@@ -230,7 +229,7 @@ class _BoxBuildFrame:
         saved_par_list: The ``_par_list`` swapped out on open (restored on close).
         restore_mode_depth: ``ModeStack`` depth to restore to on close — the
                       frame may have been opened on top of a delegated-cell
-                      ``RESTRICTED_HORIZONTAL`` push ( / alignment cells).
+                      ``RESTRICTED_HORIZONTAL`` push (alignment cells).
         saved_spacefactor: The enclosing list's ``\\spacefactor``; every frame
                       restores it on close, and a horizontal list starts at 1000
                       (§1083 push_nest / pop_nest).
@@ -254,7 +253,7 @@ class _BoxBuildFrame:
 
 
 # ---------------------------------------------------------------------------
-# Plain TeX defaults (hardcoded for M1)
+# Plain TeX defaults (hardcoded)
 # ---------------------------------------------------------------------------
 
 _HSIZE = 30_785_886          # 6.5 in
@@ -291,7 +290,7 @@ _NEW_GRAF_PRIMITIVES = frozenset({
 
 
 # ---------------------------------------------------------------------------
-# Math-mode primitive → MathListBuilder routing ( / §F)
+# Math-mode primitive → MathListBuilder routing (§F)
 # ---------------------------------------------------------------------------
 
 _CLASS_PRIMITIVE_NAMES = frozenset(
@@ -357,7 +356,7 @@ class _Count0PagenoRegister:
 
 
 # ---------------------------------------------------------------------------
-# TeXInterpreter ( FR-2, FR-7, FR-10)
+# TeXInterpreter
 # ---------------------------------------------------------------------------
 
 def _ends_in_rule(node: object) -> bool:
@@ -463,7 +462,7 @@ class TeXInterpreter:
         self._hyphenation = HyphenationStore()
         group_stack = GroupStack()
         # Catcodes share the group stack so \catcode changes are group-scoped
-        # ( FR-5).  Required for AC-1.
+        # Required.
         catcodes = CatcodeTable(group_stack=group_stack)
         font_manager = FontManager(
             extra_search_paths=self._extra_font_paths,
@@ -477,7 +476,7 @@ class TeXInterpreter:
         # \the\<named-param> resolves through the registry.  The Appendix A
         # catalog is populated later, after PageBuilderConfig exists, because
         # vsize/topskip/maxdepth need an on_set mirror onto it (
-        # §"Migration plan",).
+        # §"Migration plan").
         register_set._catcodes = catcodes
         register_set._code_arrays = code_arrays
         register_set._named_params = named_params
@@ -501,7 +500,7 @@ class TeXInterpreter:
         expander._register_set = register_set
         expander._named_params = named_params
         expander._interpreter = self
-        # D2: one binding per name across the four owners.
+        # one binding per name across the four owners.
         bindings = MeaningBindings(expander, register_set, font_manager, group_stack)
         expander._bindings = bindings
         register_set._bindings = bindings
@@ -517,7 +516,7 @@ class TeXInterpreter:
             lineskip=Glue(_LINESKIP, 0, GlueOrder.NORMAL, 0, GlueOrder.NORMAL),
             lineskiplimit=_LINESKIPLIMIT,
             max_dead_cycles=_MAX_DEAD_CYCLES,
-            hsize=_HSIZE,  #: \hsize mirror seed (page-box width).
+            hsize=_HSIZE,  # \hsize mirror seed (page-box width).
         )
 
         # \pageno is an alias for \count0, initialised to 1 (plain.tex line 1144).
@@ -527,9 +526,9 @@ class TeXInterpreter:
 
         # Populate the Appendix A catalog now that PageBuilderConfig exists,
         # so vsize / maxdepth / topskip can carry on_set mirror callbacks
-        # (§"Migration plan",).
+        # (§"Migration plan").
         _register_appendix_a(named_params, page_config=config)
-        # TeX §640: the DVI page counters are \count0..\count9 ( D1).
+        # TeX §640: the DVI page counters are \count0..\count9.
         set_counter_source = getattr(backend, "set_counter_source", None)
         if set_counter_source is not None:
             set_counter_source(
@@ -619,10 +618,10 @@ class TeXInterpreter:
         self._math_parent_mode_depth = 1
         self._math_eqno_kind: str | None = None       # §F.3
         self._math_eqno_equation: list | None = None
-        #: open-group boxes (\hbox\bgroup…\egroup) under construction
+        # open-group boxes (\hbox\bgroup…\egroup) under construction
         # by the main loop, innermost last.  Empty in the common eager path.
         self._box_construction_stack: list[_BoxBuildFrame] = []
-        # C1/C2: >0 while scanning an alignment cell, so a math $…$ cell
+        # >0 while scanning an alignment cell, so a math $…$ cell
         # opened via run_inline_math_in_box ends at a top-level &/\cr/\span (the
         # TeX \endv boundary) instead of pumping past the terminator. A counter
         # (not a bool) because alignment cells nest (a \halign inside a cell).
@@ -646,7 +645,7 @@ class TeXInterpreter:
         #       the \endv injection when its brace depth reaches this value, not
         #       0 (a genuine `{a&b}` body shield is deeper → stays literal).
         self._alignment_cell_ubrace: list[int] = []
-        # Q3: depth counter set around `build_math_vcenter_box`'s box
+        # depth counter set around `build_math_vcenter_box`'s box
         # execution; >0 ⇒ the `\halign` being built is a math `\vcenter` body
         # (\m@th/\ialign context), so its cells scan in MATH mode (bare
         # `\mathstrut`→`\mathchoice` is a legal atom) via `_scan_math_cell`.
@@ -654,11 +653,11 @@ class TeXInterpreter:
         self._spacefactor = 1000
         self._prev_depth = -65_536_000
         self._prev_graf = 0
-        #: the last line contributed by _end_paragraph, consumed at
+        # the last line contributed by _end_paragraph, consumed at
         # display entry to measure \predisplaysize and inherit its depth.
         self._last_paragraph_line: HlistNode | None = None
         self._display_resume_paragraph: bool = False
-        # Component 5: the \prevdepth a display's alignment must start
+        # the \prevdepth a display's alignment must start
         # from.  TeX ends and contributes the preceding paragraph BEFORE the
         # display's \halign collects its rows, so that alignment's leading
         # \everycr firing sees the last pre-display line's depth.  Our
@@ -666,11 +665,11 @@ class TeXInterpreter:
         # preserve the entry depth across intervening nested-box work.
         # Read-and-cleared by `alignment._collect_rows`; None ⇒ inherit.
         self._pending_display_prev_depth: int | None = None
-        # Component 4: §1146 adds 2·quad(cur_font) — the text font in
+        # §1146 adds 2·quad(cur_font) — the text font in
         # force when `$$` opens, not the family-2 symbol font — captured at
         # display entry because the formula may change the current font.
         self._display_entry_quad = 0
-        # Component 4: when a display's body IS an alignment, its rows
+        # when a display's body IS an alignment, its rows
         # and \noalign material are handed over here rather than packed into a
         # box, so `_emit_display` can splice them into the vertical list §812
         # style — between \abovedisplayskip and \belowdisplayskip.  Read-and-
@@ -691,11 +690,11 @@ class TeXInterpreter:
         # \hsize is read live from named-param slot 258 at \par time via
         # _current_hsize() — no stale instance cache.
         # \hangindent / \hangafter live in their named-parameter slots
-        # ( D4); \parshape keeps its own owner here.
+        # \parshape keeps its own owner here.
         self._parshape: list[tuple[int, int]] | None = None
-        # §1095 \par insertions since the last paragraph end ( D3).
+        # §1095 \par insertions since the last paragraph end.
         self._head_for_vmode_count = 0
-        # The open \output routine's nest ( Component 5).
+        # The open \output routine's nest.
         self._output_frame: _BoxBuildFrame | None = None
         self._split_capture_callback = self._marks.capture_split
         self._internal_quantities = self._build_internal_quantities()
@@ -795,7 +794,7 @@ class TeXInterpreter:
         raise InputError(f"cannot resolve input file '{filename}'")
 
     # ------------------------------------------------------------------
-    # Primitive registry ( FR-7)
+    # Primitive registry
     # ------------------------------------------------------------------
 
     def _build_primitives(self) -> dict[str, object]:
@@ -814,7 +813,7 @@ class TeXInterpreter:
             # Private output-cycle sentinel; unreachable from TeX source
             # because the control-sequence name starts with NUL.
             SENTINEL_FINISH_OUTPUT_CS: self._end_output_routine,
-            # Group commands (moved from Expander per)
+            # Group commands (moved from Expander)
             "begingroup": self._exec_begingroup,
             "endgroup": self._exec_endgroup,
             "aftergroup": self._exec_aftergroup,
@@ -895,7 +894,7 @@ class TeXInterpreter:
             "penalty": self._exec_penalty_cmd,
             "vadjust": self._exec_vadjust,
             # \vsize / \topskip / \maxdepth: dispatched through
-            # NamedParameterRegistry as of; their on_set mirrors keep
+            # NamedParameterRegistry as; their on_set mirrors keep
             # PageBuilderConfig in sync (§"Migration plan").
             # Code-array primitives (§5b —)
             "catcode":  self._exec_catcode,
@@ -904,13 +903,13 @@ class TeXInterpreter:
             "sfcode":   self._exec_sfcode,
             "lccode":   self._exec_lccode,
             "uccode":   self._exec_uccode,
-            # Font commands ( — stubs for now)
+            # Font commands (— stubs for now)
             "font": self._exec_font,
             "nullfont": self._exec_nullfont,
             # Document end
             "bye": self._exec_bye,
             "end": self._exec_end,
-            # I/O primitives ( —)
+            # I/O primitives (—)
             "message": lambda: exec_message(self),
             "write": lambda: exec_write(self),
             "immediate": lambda: exec_immediate(self),
@@ -928,7 +927,7 @@ class TeXInterpreter:
         return primitives
 
     # ------------------------------------------------------------------
-    # Main dispatch ( FR-2)
+    # Main dispatch
     # ------------------------------------------------------------------
 
     def _dispatch(self, token: Token) -> None:
@@ -957,7 +956,7 @@ class TeXInterpreter:
                 raise EngineError("Extra } at global level")
             if self._group_stack._frames[-1].kind != GroupKind.BRACE:
                 raise EngineError("} cannot close a \\begingroup")
-            #: an \egroup/} that closes an open-group box-build frame
+            # an \egroup/} that closes an open-group box-build frame
             # finalises the box and delivers it (the frame opened the paired
             # BRACE save-frame, closed here via _close_group_box).
             frame = self._current_box_frame()
@@ -1019,10 +1018,10 @@ class TeXInterpreter:
             self._dispatch_active_char(token)
             return
 
-        # Other catcodes are still outside the M3 text-mode surface.
+        # Other catcodes are outside the text-mode surface.
 
     def _handle_math_shift(self, token: CharToken) -> None:
-        """Open or close inline/display math on ``$`` ( cascade #1)."""
+        """Open or close inline/display math on ``$`` (cascade #1)."""
         mode = self._mode_stack.current
 
         if mode in (ModeKind.OUTER_VERTICAL, ModeKind.INTERNAL_VERTICAL):
@@ -1030,7 +1029,7 @@ class TeXInterpreter:
             return
 
         if mode == ModeKind.HORIZONTAL:
-            #: raw lookahead must not run a leading global or conditional
+            # raw lookahead must not run a leading global or conditional
             # before the formula's local fam initialization and save frame.
             self._math_group_base = self._group_stack.depth
             self._math_parent_mode_depth = self._mode_stack.depth
@@ -1038,7 +1037,7 @@ class TeXInterpreter:
             if self._peek_opening_math_shift():
                 self._expander._next_raw()
                 self._mode_stack.pop()  # was the tentative MATH
-                #: contribute text with its entry snapshot, before any
+                # contribute text with its entry snapshot, before any
                 # body/everydisplay assignments or the display's math nest.
                 shape = self._linebreak_params()
                 metrics = self._font_manager.current_metrics
@@ -1048,7 +1047,7 @@ class TeXInterpreter:
                 self._end_paragraph(normal=False, build=False)
                 self._math_parent_mode_depth = self._mode_stack.depth
                 self._mode_stack.push(ModeKind.MATH_DISPLAY)
-                # §1145 ( Component 1): \displaywidth / \displayindent
+                # §1145: \displaywidth / \displayindent
                 # must be live BEFORE the formula body is scanned — the plain.tex
                 # \displ@y families expand to `\halign to\displaywidth{…}`, so a
                 # zero here silently packs the rows at their natural width.
@@ -1212,7 +1211,7 @@ class TeXInterpreter:
                 return
             # §1196: math-on and math-off nodes frame every inline formula,
             # an empty or deleted one included, so the formula's last glue or
-            # kern is never the list tail ( D5).  \mathsurround is
+            # kern is never the list tail.  \mathsurround is
             # read inside the formula's scope.
             surround = self._register_set.get_dimen(268, _internal=True)  # \mathsurround
             self._append_to_hlist(MathNode(width=surround, after=False))
@@ -1274,7 +1273,7 @@ class TeXInterpreter:
         resume_paragraph = self._display_resume_paragraph
         self._display_resume_paragraph = False
 
-        # Component 4: a display whose body IS an alignment contributes
+        # a display whose body IS an alignment contributes
         # its rows individually (§812) instead of as one packed box, so the
         # first row attracts its own \baselineskip and the \everycr \noalign
         # glue reaches the vertical list.  Taken (and cleared) before the
@@ -1292,10 +1291,10 @@ class TeXInterpreter:
             display_width=display_width, display_indent=display_indent,
         )
 
-        # §1203 verbatim ( Component 4): long skips iff d+s <= pre or the
+        # §1203 verbatim: long skips iff d+s <= pre or the
         # number is a \leqno.  A void paragraph needs no case of its own — its
         # \predisplaysize is -\maxdimen.  §1206 fin_align never reaches §1203:
-        # a display alignment always takes the long skips ( amendment).
+        # a display alignment always takes the long skips.
         pre = self._get_named_dimen("predisplaysize")
         short = spliced is None and not leqno and pre < display_indent + d
         above = self._get_named_skip("abovedisplayshortskip" if short else "abovedisplayskip")
@@ -1321,7 +1320,7 @@ class TeXInterpreter:
             # (§679) exactly as it does for a top-level \halign.
             for node in spliced:
                 if isinstance(node, _NoalignRecord):
-                    #: body glue is already computed; replay it raw.
+                    # body glue is already computed; replay it raw.
                     self._splice_vertical_nodes(
                         indent_display_rules(node.nodes, display_indent)
                     )
@@ -1446,7 +1445,7 @@ class TeXInterpreter:
         to its own line); ``d`` is the formula's displacement from
         ``\displayindent``: ``half(z - w)``, or ``half(z - w - e)`` when a number
         would come closer than ``2e`` — and 0 if the formula then starts with
-        glue ( Component 4).
+        glue.
 
         Args:
             eq_box: The packed formula.
@@ -1620,7 +1619,7 @@ class TeXInterpreter:
         """Route a character token in math mode to the noad builder (§F).
 
         A math-active (``\\mathcode = 0x8000``) char defers to its active macro
-        ( contract preserved); every other char builds a symbol noad via
+        (contract preserved); every other char builds a symbol noad via
         :meth:`MathListBuilder.add_char` (the class-7/``\\fam`` resolution lives
         in the builder).
         """
@@ -1725,7 +1724,7 @@ class TeXInterpreter:
         if isinstance(token, FontRefToken):
             self._font_manager.select_font_id(token.name)
             return
-        # A PrimitiveRefToken is a resolved built-in, never a binding ( D3).
+        # A PrimitiveRefToken is a resolved built-in, never a binding.
         if not isinstance(token, PrimitiveRefToken) and self._dispatch_binding(token):
             return
 
@@ -1744,7 +1743,7 @@ class TeXInterpreter:
             handler()
             return
 
-        # Math-mode primitive dispatch ( / §F): math-mode-only
+        # Math-mode primitive dispatch (§F): math-mode-only
         # primitives such as \over / \mathopen / \mathaccent are consulted ONLY
         # when the current mode is MATH or MATH_DISPLAY; outside math mode they
         # fall through so the standard "Undefined control sequence" path runs.
@@ -1785,7 +1784,7 @@ class TeXInterpreter:
         )
 
     def _dispatch_binding(self, token: ControlSequenceToken) -> bool:
-        """Dispatch a register alias, constant or font binding ( D2).
+        """Dispatch a register alias, constant or font binding.
 
         A binding outranks the built-in of the same name, so this runs before
         the primitive registry.  Returns ``True`` if *token* had a binding.
@@ -1835,7 +1834,7 @@ class TeXInterpreter:
         self._handle_char(synthetic)
 
     # ------------------------------------------------------------------
-    # Group commands (moved from Expander per)
+    # Group commands (moved from Expander)
     # ------------------------------------------------------------------
 
     def _exec_begingroup(self) -> None:
@@ -1848,7 +1847,7 @@ class TeXInterpreter:
             raise EngineError("Extra \\endgroup at global level")
         if self._group_stack._frames[-1].kind != GroupKind.SEMI_SIMPLE:
             raise EngineError("\\endgroup cannot close a box or brace group")
-        #: only the formula's dollar close may restore its owned
+        # only the formula's dollar close may restore its owned
         # frame. Reject before mutation so fatal cleanup can discard deferred
         # tokens and leave every enclosing frame intact.
         if (self._math_group_base is not None
@@ -1980,7 +1979,7 @@ class TeXInterpreter:
         r"""Process a space token in H mode: insert inter-word GlueNode.
 
         The glue goes through :meth:`_append_horizontal_glue`, so a control
-        space in math mode lands on the math list (§1045,).
+        space in math mode lands on the math list (§1045).
 
         Every space token that reaches H mode is appended (TeX §1041): runs of
         input spaces are already collapsed by the tokenizer's state S (§347),
@@ -1989,7 +1988,7 @@ class TeXInterpreter:
 
         Args:
             normal: Ignore the space factor, as for control space ``\ ``
-                (§1045 ``append_normal_space``,): the font's plain
+                (§1045 ``append_normal_space``): the font's plain
                 interword glue, with no sentence extra space or stretch.
         """
         glue = self._interword_glue(normal=normal)
@@ -2065,7 +2064,7 @@ class TeXInterpreter:
             self._spacefactor = sfcode
 
     def _get_sfcode(self, char_code: int) -> int:
-        r"""Return the space factor code for a character ( FR-4).
+        r"""Return the space factor code for a character.
 
         Reads the same group-scoped ``CodeArrays`` table that ``\sfcode``
         assignments write, so a user (or format) assignment actually reaches
@@ -2213,7 +2212,7 @@ class TeXInterpreter:
             # TeX:The Program §679 (contribute_rule):
             #   prev_depth <- ignore_depth (-1000 pt sentinel)
             # Mirrors PageBuilder._prev_depth update inside contribute()
-            # ( v5 Component 6) and matches exec_vbox's in-vbox
+            # and matches exec_vbox's in-vbox
             # _track_rule / _track_splice convention so the
             # \prevdepth named-parameter registry read returns -1000 pt
             # after a vertical-mode \hrule regardless of whether the
@@ -2230,7 +2229,7 @@ class TeXInterpreter:
         """Run ``build_page`` when the current list is the main vertical list.
 
         TeX calls ``build_page`` only at fixed places, and only in outer
-        vertical mode ( Component 2).  It must be the last thing its
+        vertical mode.  It must be the last thing its
         caller does: a token-list ``\\output`` may open its nest inside it.
         """
         if self._receives_outer_vlist():
@@ -2242,7 +2241,7 @@ class TeXInterpreter:
         TeX's ``fire_up`` does ``push_nest; mode:=-vmode;
         prev_depth:=ignore_depth``: what the routine contributes is collected
         apart from the interrupted list and handed back to the page builder
-        when the routine ends ( Component 5).
+        when the routine ends.
         """
         from aspose_tex._engine.box_builder import VBoxBuilder
         from aspose_tex._engine.box_primitives import _badness_sink
@@ -2347,7 +2346,7 @@ class TeXInterpreter:
         # mode, so a paragraph after a display sees the lines so far.
         registry.register("prevgraf", QuantityKind.INT, getter=lambda: self._prev_graf)
         # \parshape is assigned by its primitive; this entry only reads the
-        # live owner's line count ( D4, §423).
+        # live owner's line count (§423).
         registry.register(
             "parshape", QuantityKind.INT,
             getter=lambda: len(self._parshape or ()),
@@ -2454,7 +2453,7 @@ class TeXInterpreter:
 
         A vertical command met in a paragraph is read again after ``\par``,
         so a redefined ``\par`` (plain's ``\endgraf`` idiom) runs exactly as
-        in TeX ( D3).
+        in TeX.
 
         Raises:
             EngineError: if ``\par`` keeps failing to end the paragraph.
@@ -2602,7 +2601,7 @@ class TeXInterpreter:
                 if penalty != 0:
                     self._contribute(PenaltyNode(penalty))
 
-        #: record the paragraph's last line box so a display that
+        # record the paragraph's last line box so a display that
         # interrupts the paragraph (`\emit_display`) can measure \predisplaysize
         # (§1146) from it.  Cleared by the reader after use.
         self._last_paragraph_line = lines[-1] if lines else None
@@ -2625,7 +2624,7 @@ class TeXInterpreter:
         ``cur_line`` counts on from ``\prevgraf`` (still its value before this
         paragraph's lines are added), so the first line after a display —
         which leaves ``\prevgraf`` at lines + 3 — gets ``\clubpenalty`` too
-        ( Component 3).
+        
 
         Args:
             index: Zero-based line index within this paragraph piece.
@@ -2715,7 +2714,7 @@ class TeXInterpreter:
         if mode in (ModeKind.MATH, ModeKind.MATH_DISPLAY) and self._math_builder is not None:
             # TeX §1061 append_kern: in mmode the kern joins the current math
             # list, in place among the atoms (same reasoning as
-            # _append_horizontal_glue /).
+            # _append_horizontal_glue).
             self._math_builder.add_kern(amount)
             return
         if mode in (ModeKind.HORIZONTAL, ModeKind.RESTRICTED_HORIZONTAL):
@@ -2898,7 +2897,7 @@ class TeXInterpreter:
     def _exec_hbox_cmd(self) -> None:
         """\\hbox — build an hbox and add to current list.
 
-        Q2: if the box keyword (and any ``to``/``spread``) is followed
+        if the box keyword (and any ``to``/``spread``) is followed
         by a begin-group (``{`` or ``\\bgroup``), open a deferred-close box-build
         frame; the eager ``exec_hbox`` scanner stays the fast path otherwise.
         """
@@ -2925,7 +2924,7 @@ class TeXInterpreter:
         self._build_page_if_outer()  # §1076: build only after the adjustments.
 
     def _exec_vbox_cmd(self) -> None:
-        """\\vbox — build a vbox and add to current list ( Q2 open-group)."""
+        """\\vbox — build a vbox and add to current list (open-group)."""
         from aspose_tex._engine.box_primitives import _scan_box_keyword, exec_vbox
         th, sp = _scan_box_keyword(self._expander)
         if self._peek_box_begin_group():
@@ -2940,7 +2939,7 @@ class TeXInterpreter:
         self._add_box_to_current_list(box)
 
     def _exec_vtop_cmd(self) -> None:
-        """\\vtop — build a vtop and add to current list ( Q2 open-group)."""
+        """\\vtop — build a vtop and add to current list (open-group)."""
         from aspose_tex._engine.box_primitives import _scan_box_keyword, exec_vtop
         th, sp = _scan_box_keyword(self._expander)
         if self._peek_box_begin_group():
@@ -2957,7 +2956,7 @@ class TeXInterpreter:
     def _exec_setbox_cmd(self) -> None:
         """\\setbox<n>=<box> — assign a box register.
 
-        Q3/Q4: ``\\setbox<n>=\\hbox\\bgroup`` (begin-group after the box
+        ``\\setbox<n>=\\hbox\\bgroup`` (begin-group after the box
         keyword) opens a deferred-close box-build frame whose destination writes
         register *n*; the eager ``_scan_box_value`` path stays for literal-brace
         ``\\setbox<n>=\\hbox{…}`` and ``\\box``/``\\copy``/``\\vsplit`` values.
@@ -3120,7 +3119,7 @@ class TeXInterpreter:
         self._append_horizontal_glue(GlueNode(parse_glue(self._expander)))
 
     def _exec_hglue_cmd(self) -> None:
-        """\\hglue<glue> — M3 top-level horizontal glue approximation."""
+        """\\hglue<glue> — top-level horizontal glue approximation."""
         self._exec_hskip_cmd()
 
     def _exec_vglue_cmd(self) -> None:
@@ -3286,7 +3285,7 @@ class TeXInterpreter:
             self._register_set.set_skip(entry.slot, value, _internal=True)
 
     def _set_named_dimen(self, name: str, value: int, *, unbounded: bool = False) -> None:
-        """Write a named DIMEN parameter slot (; symmetric to the getter).
+        """Write a named DIMEN parameter slot (symmetric to the getter).
 
         Used by the engine to set quantities TeX computes internally (e.g.
         ``\\predisplaysize`` at display time, §1146).  A no-op when the name is
@@ -3450,7 +3449,7 @@ class TeXInterpreter:
             self._begin_paragraph()
 
     def _exec_parshape_cmd(self) -> None:
-        """\\parshape<n><indent><length>... — parse and store M3 state."""
+        """\\parshape<n><indent><length>... — parse and store the shape."""
         from aspose_tex._engine.dimparser import parse_dimen, parse_integer
         self._eat_optional_equals()
         count = parse_integer(self._expander)
@@ -3476,7 +3475,7 @@ class TeXInterpreter:
 
         ``\looseness``, ``\hangindent``, ``\hangafter`` and ``\parshape``
         return to 0, 0, 1 and empty, each only when it differs and always as a
-        local assignment through its owner's save path ( D4).  A
+        local assignment through its owner's save path.  A
         pending ``\global`` prefix belongs to the next assignment and is kept.
         """
         gs = self._group_stack
@@ -3554,7 +3553,7 @@ class TeXInterpreter:
         reg = parse_integer(self._expander, allow_negative=False)
         global_ = self._group_stack.is_global_pending
         self._group_stack.consume_global()
-        self._eat_optional_equals_bool()  #: '=' is optional; a dimen always follows.
+        self._eat_optional_equals_bool()  # '=' is optional; a dimen always follows.
         setter(reg, parse_dimen(self._expander), global_=global_)
         self._expander.fire_after_assignment()
 
@@ -3765,7 +3764,7 @@ class TeXInterpreter:
 
     def _add_box_to_current_list(self, box: HlistNode | VlistNode) -> None:
         """Add a completed box to the appropriate list based on current mode."""
-        #: an open-group \vbox\bgroup receives contributed boxes
+        # an open-group \vbox\bgroup receives contributed boxes
         # directly into its builder.  (An open-group \hbox\bgroup installs a
         # ParagraphList as _par_list, so its boxes route via _append_to_hlist.)
         frame = self._current_box_frame()
@@ -3832,7 +3831,7 @@ class TeXInterpreter:
         from aspose_tex._engine.par_primitives import ParagraphList
 
         in_cell = self._alignment_cell_depth > 0
-        # Q6: the brace depth at which a top-level &/\cr fires the \endv
+        # the brace depth at which a top-level &/\cr fires the \endv
         # injection.  0 for a non-straddling template (\matrix `\hfil$…$\hfil`);
         # >0 for a u-template that opens a brace closed only by V (\eqalign
         # `$\displaystyle{##}$`).  A deeper brace is a genuine `{a&b}` shield.
@@ -3854,7 +3853,7 @@ class TeXInterpreter:
         saved_math_builder = self._math_builder
         saved_tail_depth = len(self._tail_providers)
         saved_math_tail_depth = len(self._math_tail_depths)
-        #: a cell `$…$` is its own \left/\right scope.  \pmatrix is
+        # a cell `$…$` is its own \left/\right scope.  \pmatrix is
         # `\left(\matrix{…}\right)`; the outer \left has already bumped the
         # shared math-shell _left_right_depth, so without isolating it each cell
         # would see depth>0 and raise "missing \right".  Save/restore around the
@@ -3888,7 +3887,7 @@ class TeXInterpreter:
                         # mirror the MATH-mode $-close (_handle_math_shift) — pop
                         # the MATH push, check \left/\right balance, translate +
                         # append the formula, hand the terminator back to the cell
-                        # scanner ( C1 simple path; TeX \endv §1131).
+                        # scanner (simple path; TeX \endv §1131).
                         self._math_shell.check_left_right_balanced()
                         self._close_math_builder()
                         self._expander.push_tokens([token])
@@ -3979,7 +3978,7 @@ class TeXInterpreter:
         return self._box_construction_stack[-1] if self._box_construction_stack else None
 
     def _current_box_builder(self):
-        """Return the innermost open-group box builder, or None ( Q1)."""
+        """Return the innermost open-group box builder, or None."""
         frame = self._current_box_frame()
         return frame.builder if frame is not None else None
 
@@ -3996,7 +3995,7 @@ class TeXInterpreter:
     def _peek_box_begin_group(self) -> bool:
         """Return whether the box keyword is followed by a ``\\bgroup`` alias.
 
-        Q2/Q4: the open-group (deferred-close) path triggers ONLY for a
+        the open-group (deferred-close) path triggers ONLY for a
         ``\\bgroup``-style begin-group — a control sequence whose meaning is a
         begin-group char (``\\let\\bgroup={``).  A literal ``{`` keeps the eager
         ``exec_hbox`` / ``exec_vbox`` scanner (byte-identical, Q4), so
@@ -4031,7 +4030,7 @@ class TeXInterpreter:
         spread: int | None,
         destination,
     ) -> None:
-        """Open a deferred-close box ( Q1/Q2).
+        """Open a deferred-close box.
 
         Consumes the begin-group already confirmed by :meth:`_peek_box_begin_group`,
         opens a paired ``BRACE`` save-frame, installs the builder, and returns to
@@ -4095,7 +4094,7 @@ class TeXInterpreter:
             self._push_toks_if_any(260)  # §1083: \everyhbox in the new box group
 
     def _close_group_box(self, *, max_depth: int | None) -> None:
-        """Finalise the innermost open-group box and deliver it ( Q1/Q3)."""
+        """Finalise the innermost open-group box and deliver it."""
         from aspose_tex._engine.box_builder import append_overfull_rule
         from aspose_tex._engine.box_primitives import _warn_badness
 
@@ -4231,7 +4230,7 @@ class TeXInterpreter:
             raise EngineError("Unexpected end of input inside \\vbox")
 
     def build_math_vcenter_box(self) -> HlistNode | VlistNode:
-        r"""Build a math ``\vcenter`` field as an executed box ( C3/C4).
+        r"""Build a math ``\vcenter`` field as an executed box.
 
         ``\vcenter`` takes a ``<box>``; plain.tex uses the implicit-vbox form
         ``\vcenter{…}`` (`\matrix`/`\eqalign`/`\cases`).  Building the field
@@ -4239,7 +4238,7 @@ class TeXInterpreter:
         — makes the inner ``\ialign``→``\halign`` execute as
         ``exec_halign``, so the alignment grid is actually built.  The finished
         box becomes the VCENTER atom's nucleus (``mlist_to_hlist`` axis-centres
-        it,).
+        it).
 
         Three accepted field forms (peek after ``\vcenter``):
           * ``{…}``        → implicit ``\vbox`` (``exec_vbox`` reads the ``{``).
@@ -4258,7 +4257,7 @@ class TeXInterpreter:
             exec_vbox,
         )
 
-        # Q3: mark that the \halign built inside this \vcenter body is a
+        # mark that the \halign built inside this \vcenter body is a
         # math alignment (\m@th/\ialign context), so its cells scan in MATH mode
         # (alignment._scan_cell routes through `scan_math_cell`).  Balanced in the
         # finally so an exception cannot strand the flag.
@@ -4321,7 +4320,7 @@ class TeXInterpreter:
             _scan_keyword,
             parse_dimen,
         )
-        # TeX's get_r_token: the name is read raw, never expanded ( D2),
+        # TeX's get_r_token: the name is read raw, never expanded,
         # so plain's \big macro can be redefined as a font.
         cs_tok = self._expander._next_raw()
         while isinstance(cs_tok, CharToken) and cs_tok.catcode == Catcode.SPACE:

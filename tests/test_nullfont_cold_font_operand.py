@@ -1,5 +1,5 @@
-r"""Tests for cold ``\nullfont`` as a ``<font>`` operand (, follow-up
-to §E /).
+r"""Tests for cold ``\nullfont`` as a ``<font>`` operand
+
 
 ``\nullfont`` is TeX font 0 and is always defined.  Previously it was only
 registered into the :class:`FontManager` the first time ``\nullfont`` was

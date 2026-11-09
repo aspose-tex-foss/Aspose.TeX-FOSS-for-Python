@@ -1,4 +1,4 @@
-r""" C1 — ``\let`` primitive-meaning capture (alias self-cycle).
+r"""``\let`` primitive-meaning capture (alias self-cycle).
 
 ``\let`` stores its right-hand side as a by-name token, not a captured
 primitive meaning.  ``\let\endline=\cr`` then ``\global\let\cr\endline`` (the

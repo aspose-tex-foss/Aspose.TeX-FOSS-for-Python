@@ -14,8 +14,8 @@ Implements TeX's two-pass ``\\halign`` algorithm (TeX:The Program §768-§812):
   result vlist.
 
 This module's body replaced the load-without-execute stubs; the
-import path stays at ``aspose_tex._engine.alignment`` (no rename) per
-Q3.  ``\\valign`` ( cascade b) is the vertical mirror: cells are
+import path stays at ``aspose_tex._engine.alignment`` (no rename)
+Q3.  ``\\valign`` (cascade b) is the vertical mirror: cells are
 wrapped as vboxes, columns measured by max natural height, and the result is an
 hlist of column vboxes (the transpose of ``\\halign``'s vlist of row hboxes).
 
@@ -79,7 +79,7 @@ _TERM_CR = "cr"
 _TERM_CRCR = "crcr"
 
 # Sentinel control-sequence pushed after an ``\everycr`` token list so the
-# recursion guard ( Q5) can detect when that list is fully consumed and
+# recursion guard can detect when that list is fully consumed and
 # re-enable firing.  The name starts with NUL so it can never collide with a
 # user control sequence (matching the SENTINEL_FINISH_OUTPUT_CS idiom).
 _EVERYCR_SENTINEL = "\x00endeverycr"
@@ -103,7 +103,7 @@ class _ColumnTemplate:
 
 @dataclasses.dataclass(slots=True)
 class _CellRecord:
-    """One rendered cell plus its column placement ( Q8).
+    """One rendered cell plus its column placement.
 
     ``box`` is an hbox for ``\\halign`` and a vbox for ``\\valign``.
     """
@@ -148,7 +148,7 @@ class _AlignmentState:
     baselineskip: Glue = _ZERO_GLUE
     lineskip: Glue = _ZERO_GLUE
     lineskiplimit: int = 0
-    # Component 2: the optional `to <dimen>` / `spread <dimen>` width
+    # the optional `to <dimen>` / `spread <dimen>` width
     # spec.  Both None ⇒ rows keep their natural width, which is what every
     # spec-less `\halign` in the corpus does — so the default is byte-identical
     # to the pre- behaviour.  `\halign to\displaywidth` (the plain.tex
@@ -307,7 +307,7 @@ def _parse_preamble(interpreter: TeXInterpreter, state: _AlignmentState) -> None
 
         if isinstance(tok, ControlSequenceToken):
             # Classify by meaning so a \let-alias of \cr/\crcr (e.g. \endline)
-            # closes the preamble too (§Component 1).  \span is not a
+            # closes the preamble too.  \span is not a
             # preamble terminator, so only cr/crcr count here.
             resolved = _resolve_terminator_name(tok.name, interpreter)
             if resolved in (_TERM_CR, _TERM_CRCR):
@@ -350,7 +350,7 @@ def _scan_cell(
 
     Consumes a leading ``\\omit`` (suppresses the column template).  Pushes the
     column ``u`` template, scans the segment body into *builder* (the list owned
-    by :func:`_scan_horizontal_cell` for the whole ``\\span`` chain,)
+    by :func:`_scan_horizontal_cell` for the whole ``\\span`` chain)
     until a top-level ``&`` / ``\\span`` / ``\\cr`` / ``\\crcr`` terminator,
     and pushes the ``v`` template.  The caller packages the list.
 
@@ -374,11 +374,11 @@ def _scan_cell(
     box_regs = interpreter._box_regs
 
     # The TeX §791 cell group is opened by :func:`_collect_one_row` around the
-    # whole `\span` chain ( Component 1), not here — see the comment at
+    # whole `\span` chain, not here — see the comment at
     # that call site for why the boundary is the logical cell, not the segment.
     omit, template = _consume_omit_and_template(interpreter, state, col_index)
 
-    # C5 /: a column whose u-template opens an argument brace
+    # a column whose u-template opens an argument brace
     # before its `$` (\leqalignno's `\rlap{$\@lign##$}`) is a macro-arg straddle
     # — the macro would grab its `{…}` argument past the cell terminator and
     # double-consume the cell's `$…$`. Text hboxes need the same balanced body:
@@ -398,17 +398,17 @@ def _scan_cell(
 
     inner_depth = 0
     pushed_v = False
-    #: open-group box frames opened by THIS cell (e.g. \settabs's
+    # open-group box frames opened by THIS cell (e.g. \settabs's
     # \t@bbox \setbox\z@\hbox\bgroup) are detected by a rise above this baseline.
     base_box_depth = len(interpreter._box_construction_stack)
 
-    # C2 /: mark that we are scanning an alignment cell so a math
+    # mark that we are scanning an alignment cell so a math
     # $…$ cell ends at a top-level &/\cr/\span (the \endv boundary), and stash
-    # this column's v-template for the math pump's \endv injection ( Q2).
+    # this column's v-template for the math pump's \endv injection.
     # The three pushes are popped together in the finally so an exception cannot
     # strand them.
     v_tokens = None if omit or template is None else (template.v_tokens or None)
-    # Q6: a math u-template may open a brace that only the v-template
+    # a math u-template may open a brace that only the v-template
     # closes (\eqalign's `$\displaystyle{##}$` → U=`…$\displaystyle{`).  The
     # user's row `&`/\cr then arrives while the math pump's brace_depth equals
     # that straddling open count, NOT 0.  Stash the count of u-template braces
@@ -557,7 +557,7 @@ def _scan_cell_assembled(
     )
     # No group is opened here: this function is reached only via
     # :func:`_scan_math_macro_arg_cell`, which runs inside :func:`_scan_cell`'s
-    # §791 cell group ( Component 1) — so the u-template's assignments are
+    # §791 cell group — so the u-template's assignments are
     # already rolled back at cell end.  Opening a second group would nest
     # needlessly.
     try:
@@ -592,7 +592,7 @@ def _scan_cell_body(
     base_box_depth: int,
 ) -> str:
     """Cell-scan loop body, split out so ``_scan_cell`` can bracket it with the
-    ``_alignment_cell_depth`` guard ( C2); returns the terminator."""
+    ``_alignment_cell_depth`` guard; returns the terminator."""
     while True:
         tok = expander._next_unexpandable()
         if tok is None:
@@ -619,7 +619,7 @@ def _scan_cell_body(
         if inner_depth == 0:
             term = _terminator_kind(tok, interpreter)
             if term is not None:
-                #: in a math cell the v-template is injected by the math
+                # in a math cell the v-template is injected by the math
                 # pump (run_inline_math_in_box._inject_cell_vtemplate) so its
                 # `}$` closes the cell's `$`+braces before the terminator; that
                 # consumes _alignment_cell_pushed_v.  Don't re-push it here.
@@ -642,7 +642,7 @@ def _scan_cell_body(
                 # once, after its last segment.
                 return term
 
-        #: a cell that opened an open-group box (\setbox\z@\hbox\bgroup
+        # a cell that opened an open-group box (\setbox\z@\hbox\bgroup
         # via \settabs's \t@bbox) routes ALL subsequent tokens through the
         # interpreter's main dispatch so chars/boxes flow into the box frame and
         # the deferred \egroup closes it — until the frame stack drains back to
@@ -666,7 +666,7 @@ def _scan_cell_body(
             group_stack.close_group()
             continue
 
-        # Recursive alignment inside a cell ( Q6): build a fresh
+        # Recursive alignment inside a cell: build a fresh
         # _AlignmentState and add the result vlist as a box node.
         if isinstance(tok, ControlSequenceToken) and tok.name in ("halign", "valign"):
             nested = _run_nested_alignment(interpreter, vertical=tok.name == "valign")
@@ -730,7 +730,7 @@ def _delegate_cell_primitive(
     opened_frame = False
     try:
         interpreter._dispatch_cs(tok)
-        #: \setbox\z@\hbox\bgroup opens a deferred-close box frame that
+        # \setbox\z@\hbox\bgroup opens a deferred-close box frame that
         # OWNS the mode + _par_list it installed (saving cell_list to restore on
         # \egroup).  Leave that frame's context in place — tearing it down here
         # would strand the open box.  Re-point the frame's restore targets at
@@ -770,7 +770,7 @@ def _consume_omit_and_template(
     raw = interpreter._alignment_math_context > 0
     tok = _peek_non_space(interpreter)
     if not raw:
-        #: peek() parks the token in the one-slot `_peeked` cache, which
+        # peek() parks the token in the one-slot `_peeked` cache, which
         # `_next_raw` drains BEFORE `_stack` — so the u-template that _scan_cell
         # pushes next would land AFTER this cell's first token, putting the
         # template's `\quad` between the first two glyphs (10pt displacement +
@@ -817,7 +817,7 @@ def _u_template_pre_math_open_braces(template: _ColumnTemplate) -> int:
 def _u_template_open_braces(template: _ColumnTemplate) -> int:
     r"""Net begin-group braces left open by a math u-template after its ``$``.
 
-    Q6: for a math column whose u-template opens math and then an
+    for a math column whose u-template opens math and then an
     unbalanced brace (``\eqalign``: ``\strut\hfil$\displaystyle{`` → one open
     ``{`` after the ``$``), the cell's ``&``/``\cr`` arrives while the math
     pump's brace depth equals this count, not 0.  Counting only braces AFTER
@@ -858,7 +858,7 @@ def _template_for(state: _AlignmentState, col_index: int) -> _ColumnTemplate | N
 
 
 def first_column_is_math(state: _AlignmentState) -> bool:
-    r"""Return whether the first column's u-template opens math ( C2/C3).
+    r"""Return whether the first column's u-template opens math.
 
     A math ``\halign`` (``\bordermatrix``'s eager ``\setbox\vbox{…\ialign{$##$…}}``,
     or the top-level display family ``\displaylines``/``\eqalignno``/``\leqalignno``
@@ -944,7 +944,7 @@ def _terminator_kind(tok, interpreter: TeXInterpreter) -> str | None:
     Classifies by *meaning*, not by name: a ``\\let``-alias of ``\\cr`` /
     ``\\crcr`` / ``\\span`` (such as plain.tex's ``\\let\\endline=\\cr``)
     resolves to its underlying primitive via :func:`_resolve_terminator_name`
-    (§Component 1).
+    
     """
     if isinstance(tok, CharToken) and tok.catcode == Catcode.ALIGNMENT:
         return _TERM_TAB
@@ -973,13 +973,13 @@ def _collect_rows(interpreter: TeXInterpreter, state: _AlignmentState) -> None:
     expander = interpreter._expander
     prev_was_cr = False
 
-    # TeX §791/§812 ( Component 2): the alignment keeps its OWN
+    # TeX §791/§812: the alignment keeps its OWN
     # \prevdepth chain while rows are collected.  The two-pass model
     # collects rows into `state.rows` and contributes nothing until pass 2, so
     # without the save/restore the per-row values would escape into the
     # enclosing list.
     #
-    # Component 5: the chain STARTS from the inherited value — TeX does
+    # the chain STARTS from the inherited value — TeX does
     # not reset \prevdepth at an alignment.  Measured in MiKTeX 24.4 at the
     # leading \everycr firing: -1000pt for a \halign at the head of a fresh
     # \vbox (the *\vbox* seeds that, not the \halign), but 0.0pt after an
@@ -992,7 +992,7 @@ def _collect_rows(interpreter: TeXInterpreter, state: _AlignmentState) -> None:
         interpreter._pending_display_prev_depth = None
         interpreter._prev_depth = pending
     try:
-        # TeX §785 ( Component 3): `align_peek` runs before EVERY attempt
+        # TeX §785: `align_peek` runs before EVERY attempt
         # to read a row — including the attempt that finds the closing `}` — and
         # each run fires \everycr.  The count is therefore `1 + rows`, with the
         # material interleaved as
@@ -1018,7 +1018,7 @@ def _fire_everycr_leading(
     the row loop pick the resulting ``\noalign`` up.  Nothing consumes the
     stream before the loop starts, so the leading firing instead scans its own
     material here and appends it to ``state.rows`` as the first entry — leaving
-    the recursion guard clear for the loop that follows ( Component 3).
+    the recursion guard clear for the loop that follows.
 
     Args:
         interpreter: Owning interpreter; its ``\prevdepth`` is at the alignment
@@ -1067,7 +1067,7 @@ def _collect_rows_body(
                 )
 
             # End-of-\everycr sentinel at the row boundary — clear the guard so
-            # the next genuine row break may fire \everycr again ( Q5).
+            # the next genuine row break may fire \everycr again.
             if (
                 isinstance(tok, ControlSequenceToken)
                 and tok.name == _EVERYCR_SENTINEL
@@ -1086,9 +1086,9 @@ def _collect_rows_body(
             # Otherwise a math \halign whose cell template opens an \hbox
             # (\displaylines's `\hbox to\displaywidth{$…$}`) would build a
             # spurious empty trailing cell for the wrapper `\crcr`, and that
-            # hbox would swallow the alignment's own closing `}` ( C4).
+            # hbox would swallow the alignment's own closing `}`.
             # Classified by meaning so a \let-alias of \crcr is recognised
-            #.
+            #
             if (
                 prev_was_cr
                 and _terminator_kind(tok, interpreter) == _TERM_CRCR
@@ -1121,7 +1121,7 @@ def _collect_rows_body(
         # \crcr right after a \cr produces an empty no-op row.
         if not (last_term == _TERM_CRCR and prev_was_cr and not row):
             state.rows.append(row)
-            # Component 2: the row just finished is the box \prevdepth
+            # the row just finished is the box \prevdepth
             # must report to the `\everycr` body fired below.  The row hbox is
             # assembled in pass 2, so its depth is taken from the cells that
             # will form it — for an hbox that is exactly max(cell depth), which
@@ -1135,7 +1135,7 @@ def _row_depth(row: list) -> int:
     """Depth in sp of the row hbox that *row*'s cells will be packed into.
 
     An hbox's depth is the maximum depth of its contents, so the row's depth is
-    known from the cell boxes before pass 2 assembles them ( Component 2).
+    known from the cell boxes before pass 2 assembles them.
 
     Args:
         row: The row's ``_CellRecord`` list.
@@ -1159,8 +1159,8 @@ def _collect_one_row(
         state:       The alignment's collection state.
         preopened_group: When True, the caller has already opened the §791 group
             for the row's FIRST logical cell (``_collect_rows_body`` does this so
-            the row-boundary classification expands inside the cell's scope —
-            ) and owns closing it.  Later cells in the same row still open
+            the row-boundary classification expands inside the cell's scope)
+            and owns closing it.  Later cells in the same row still open
             and close their own group here.
 
     Returns:
@@ -1171,7 +1171,7 @@ def _collect_one_row(
     first_cell = True
 
     while True:
-        # TeX §791 ( Component 1): one LOGICAL cell is one group, so a
+        # TeX §791: one LOGICAL cell is one group, so a
         # template's assignment is rolled back at cell end.  The group spans the
         # whole `\span` chain, because `\span`-merged segments are a single
         # logical cell: MiKTeX shows a `\def` in segment 1 is still visible in
@@ -1322,7 +1322,7 @@ def _peek_non_space(interpreter: TeXInterpreter):
 
 
 def _fire_everycr(interpreter: TeXInterpreter, state: _AlignmentState) -> None:
-    """Push ``\\everycr`` tokens onto the stream at a row break ( Q5).
+    """Push ``\\everycr`` tokens onto the stream at a row break.
 
     Guards against infinite recursion: while one ``\\everycr`` token list is
     still being consumed (``state.firing_everycr`` set), a subsequent row break
@@ -1571,10 +1571,10 @@ def _emit_rows(
     if state.vertical:
         return _emit_columns(state, interpreter._font_manager)
 
-    #: stack the row hboxes with §807/§679 interline glue (the same
+    # stack the row hboxes with §807/§679 interline glue (the same
     # \baselineskip/\lineskip mechanism exec_vbox uses), tracking prev_depth
     # across rows.  \noalign material is spliced verbatim and resets the
-    # interline chain per.
+    # interline chain.
     out_nodes: list = []
     prev_depth = IGNORE_PREV_DEPTH
     for row in state.rows:
@@ -1605,7 +1605,7 @@ def _emit_rows(
 def _contributes_to_vertical_list(interpreter: TeXInterpreter) -> bool:
     """True iff a ``\\halign`` result lands directly in a real vertical list.
 
-    : a top-level ``\\halign`` in outer/internal vertical mode with no
+    a top-level ``\\halign`` in outer/internal vertical mode with no
     open box-construction frame is contributed row-by-row to the enclosing
     vertical list (the page builder then owns interline glue + ``\\topskip``);
     otherwise (restricted-horizontal / math mode, or an open ``\\hbox\\bgroup`` /
@@ -1625,7 +1625,7 @@ def _contributes_to_vertical_list(interpreter: TeXInterpreter) -> bool:
 def _is_display_top_level_alignment(interpreter: TeXInterpreter) -> bool:
     r"""True iff this ``\halign`` IS the display's top-level material (§812).
 
-    Component 4 / Component 3.  A ``$$…$$`` whose body is an
+    A ``$$…$$`` whose body is an
     alignment — the plain.tex ``\displ@y`` families ``\eqalignno``,
     ``\leqalignno`` and ``\displaylines`` — must have its rows **spliced** into
     the enclosing vertical list individually, so the first row attracts its own
@@ -1685,7 +1685,7 @@ def _emit_row(state: _AlignmentState, row: list) -> HlistNode:
     """Assemble one row hbox: tabskip, cell, tabskip, cell, ..., tabskip.
 
     When the alignment carried a ``to`` / ``spread`` width spec the finished row
-    is set to that target ( Component 2), so the inter-column
+    is set to that target, so the inter-column
     ``\\tabskip`` glue absorbs the difference — this is what makes
     ``\\eqalignno``'s ``\\centering`` tabskip push the equation number out to
     the right edge of ``\\displaywidth``.  Applied here, the single site both
@@ -1711,7 +1711,7 @@ def _emit_row(state: _AlignmentState, row: list) -> HlistNode:
         reached = last + 1
     # §803/§807: a short row takes the full alignment's extent and glue setting
     # from the prototype row, but its list ends at its last real cell's tabskip
-    #. Missing columns are measured, then dropped, so
+    # Missing columns are measured, then dropped, so
     # \lastbox and \unskip see the same tail as in TeX.
     real_tail = len(nodes)
     for j in range(reached, ncols):
@@ -1865,14 +1865,14 @@ def exec_halign(interpreter: TeXInterpreter):
             position.
     """
     state = _run_alignment(interpreter, vertical=False)
-    #: a top-level \halign in a real vertical list splices its rows
+    # a top-level \halign in a real vertical list splices its rows
     # individually so the page builder owns interline glue + \topskip (the
     # fin_align §812 model); a \halign consumed as a box (\setbox / \vbox /
     # \vcenter / RH / math) keeps the packed-with-glue vlist.
     if _contributes_to_vertical_list(interpreter):
         _contribute_rows_to_vlist(interpreter, state)
         return None
-    # Component 4: a display whose body IS an alignment splices too, but
+    # a display whose body IS an alignment splices too, but
     # the rows must land INSIDE the \abovedisplayskip … \belowdisplayskip frame
     # that `_emit_display` builds — so hand them over rather than contributing
     # here.  See `_is_display_top_level_alignment` for why the predicate is
@@ -1976,7 +1976,7 @@ def _run_alignment(interpreter: TeXInterpreter, *, vertical: bool) -> _Alignment
     """Open the alignment group, parse the preamble, and collect all rows."""
     expander = interpreter._expander
 
-    # Optional ``to <dimen>`` / ``spread <dimen>`` ( Component 2) — the
+    # Optional ``to <dimen>`` / ``spread <dimen>`` — the
     # parsed target is carried on the state and applied per row in _emit_row.
     target_width, spread_width = _scan_alignment_spec(interpreter)
 
@@ -1998,7 +1998,7 @@ def _run_alignment(interpreter: TeXInterpreter, *, vertical: bool) -> _Alignment
         spread_width=spread_width,
     )
     _parse_preamble(interpreter, state)
-    # C2/C3: a non-\vcenter math \halign (\bordermatrix eager
+    # a non-\vcenter math \halign (\bordermatrix eager
     # \setbox\vbox, or the display family) signals its cells are math cells via
     # a top-level `$` in the first column's u-template.  Raise the math-context
     # counter for the row collection so the cell-math shielding engages.
@@ -2012,7 +2012,7 @@ def _run_alignment(interpreter: TeXInterpreter, *, vertical: bool) -> _Alignment
     finally:
         if is_math:
             interpreter._alignment_math_context -= 1
-    #: snapshot the interline-glue parameters WHILE the alignment group
+    # snapshot the interline-glue parameters WHILE the alignment group
     # is still open, so \openup\jot's in-group \advance\baselineskip\jot (the
     # \eqalign / display family) is visible — the group close below rolls it
     # back before pass 2 (_assemble_result) would otherwise read it.
@@ -2066,7 +2066,7 @@ def _capture_interline_params(
 ) -> None:
     """Snapshot live ``\\baselineskip`` / ``\\lineskip`` / ``\\lineskiplimit``.
 
-    Called inside the open alignment group ( Component 2) so any
+    Called inside the open alignment group so any
     ``\\openup`` advance applied in the alignment body is captured before the
     group close reverts it.
     """

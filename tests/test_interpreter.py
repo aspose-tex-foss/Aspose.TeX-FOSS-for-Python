@@ -20,7 +20,7 @@ from aspose_tex.exceptions import EngineError
 # ---------------------------------------------------------------------------
 
 class TestModeStack:
-    """Unit tests for ModeStack ( FR-1)."""
+    """Unit tests for ModeStack."""
 
     def test_initial_mode_is_outer_vertical(self) -> None:
         ms = ModeStack()
@@ -65,7 +65,7 @@ class TestModeStack:
 # ---------------------------------------------------------------------------
 
 class TestInterpreterSkeleton:
-    """: skeleton & mode machine acceptance criteria."""
+    """skeleton & mode machine acceptance criteria."""
 
     def test_empty_input_returns_valid_dvi(self) -> None:
         """AC-5: run() on empty input produces valid DVI bytes."""

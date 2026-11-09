@@ -276,7 +276,7 @@ def exec_lastbox(target, mode) -> HlistNode | VlistNode | None:
     classic "you can't use ``\\lastbox`` in the main vertical list" error.  When
     a box has just been contributed to the contribution list (e.g. plain.tex's
     ``\\m@ketabbox`` does ``\\unvbox\\z@\\lastbox`` to re-extract the ``\\settabs``
-    row,), the trailing box IS removable and is popped — matching real
+    row), the trailing box IS removable and is popped — matching real
     TeX, which only errors at the genuinely-empty main vertical list.  The
     removed box loses any ``\\raise``/``\\moveright`` shift (§1081).
     """
@@ -407,7 +407,7 @@ def _scan_vbox_text_line(
                     group_stack.open_group(GroupKind.BRACE)
                 elif tok.catcode == Catcode.MATH_SHIFT:
                     # A $…$ formula in a vbox text line (e.g. \matrix inside a
-                    # \footnote body, AC-12).  Mirror the eager-\hbox
+                    # \footnote body).  Mirror the eager-\hbox
                     # math barrier (dispatch_hbox_token / §C): the vbox text
                     # line is already a restricted hbox, so delegate to the
                     # interpreter to open a fresh math builder and splice the
@@ -425,7 +425,7 @@ def _scan_vbox_text_line(
                 if name == "par":
                     break
                 if name == " ":
-                    # \  is the font's normal interword glue (§1045,).
+                    # \  is the font's normal interword glue (§1045).
                     # No `continue`: this loop reads the next token at the bottom.
                     builder.add_glue(_interword_glue(font_manager, expander, normal=True))
                 elif name in ("relax", "ignorespaces", "noboundary"):
@@ -440,7 +440,7 @@ def _scan_vbox_text_line(
                     if name == "indent":
                         _append_indent_box(expander, builder)
                 elif name == "/":
-                    # \/ italic correction ( / §1112) — a vbox text line is
+                    # \/ italic correction (§1112) — a vbox text line is
                     # itself a restricted hbox, so the same rule applies here.
                     builder.add_italic_correction()
                 elif name == "hskip":
@@ -516,7 +516,7 @@ def exec_vsplit(
     splittopskip: Glue,
     split_capture_callback=None,
 ) -> VlistNode | None:
-    """Execute simplified ``\\vsplit<n> to <dimen>`` for M3."""
+    """Execute simplified ``\\vsplit<n> to <dimen>``."""
     idx = parse_integer(expander)
     if not _scan_keyword(expander, "to"):
         raise EngineError("\\vsplit: expected 'to'")
@@ -856,7 +856,7 @@ def _read_discretionary_branch(
                 if tok.name == "char":
                     exec_char(expander, font_manager, builder)
                 elif tok.name == " ":
-                    # \  is the font's normal interword glue (§1045,).
+                    # \  is the font's normal interword glue (§1045).
                     builder.add_glue(_interword_glue(font_manager))
                 elif tok.name == "kern":
                     # §1121 allows kerns in a discretionary list; \kern is explicit.
@@ -912,7 +912,7 @@ def _list_tail_scope(expander, builder):
         yield
         return
     # A fresh horizontal list starts at sf=1000; brace groups within the
-    # list keep it. Nested lists restore their parent (§1083 /).
+    # list keep it. Nested lists restore their parent (§1083).
     horizontal = isinstance(builder, HBoxBuilder)
     saved_sf = interp._spacefactor
     saved_mode_depth = interp._mode_stack.depth
@@ -1027,7 +1027,7 @@ def dispatch_hbox_token(tok, ctx: _HBoxDispatchContext) -> None:
         elif name == "par":
             # TeX §1094 `hmode+par_end` calls `end_graf`, which acts only when
             # `mode=hmode`: in RESTRICTED horizontal mode \par does nothing
-            #.  This is what makes a blank line legal in an \halign:
+            # This is what makes a blank line legal in an \halign:
             # §785 `align_peek` does NOT skip \par — it starts a new row and
             # becomes the cell's first token, then vanishes here.  MiKTeX 24.4:
             # `\hbox{a\par b}` is `ab`; a blank line before `}` is
@@ -1042,7 +1042,7 @@ def dispatch_hbox_token(tok, ctx: _HBoxDispatchContext) -> None:
             sp = parse_dimen(expander)
             builder.add_kern(sp, explicit=True)
         elif name == "/":
-            # \/ italic correction ( / §1112) — the eager \hbox scanner
+            # \/ italic correction (§1112) — the eager \hbox scanner
             # is a second horizontal-list path, so it needs the same rule the
             # interpreter applies to the paragraph list.
             builder.add_italic_correction()
@@ -1140,7 +1140,7 @@ def dispatch_hbox_token(tok, ctx: _HBoxDispatchContext) -> None:
         elif name in _DELEGATED_HBOX_CS and _delegate_hbox_primitive(
             expander, builder, tok,
         ):
-            # AC-2: box-register machinery (\setbox / \box / \copy /
+            # box-register machinery (\setbox / \box / \copy /
             # \global / \wd / \ht / \dp) inside a literal-brace \hbox{…} is
             # delegated to the interpreter with the builder installed as the
             # live hlist, so \setbox0=\hbox{\setbox1=\hbox{x}\box1} works.
@@ -1188,7 +1188,7 @@ def _delegate_hbox_primitive(expander: Expander, builder, tok) -> bool:
     saved_par_list = interp._par_list
     saved_mode_depth = interp._mode_stack.depth
     cell_list = ParagraphList()
-    #: a delegated box value (notably \lastbox) reads and mutates
+    # a delegated box value (notably \lastbox) reads and mutates
     # the list already built by the eager scanner, not an empty scratch list.
     cell_list._nodes = builder._nodes
     interp._par_list = cell_list
@@ -1270,7 +1270,7 @@ def exec_hbox(
                     continue
                 tok = _accent_meaning_token(expander, tok)
 
-            #: a delegated \setbox may open a deferred box. Its own
+            # a delegated \setbox may open a deferred box. Its own
             # closing brace belongs to the interpreter, not this eager scanner.
             if interp is not None and len(interp._box_construction_stack) > base_box_depth:
                 kind = group_stack._frames[-1].kind
@@ -1303,7 +1303,7 @@ def exec_hbox(
                 group_stack.open_group(GroupKind.BRACE)
                 continue
 
-            # C4: cross-scanner \endv terminator propagation.  The display
+            # cross-scanner \endv terminator propagation.  The display
             # family (\displaylines/\eqalignno/\leqalignno) wraps its math cell in an
             # \hbox (`\hbox to\displaywidth{$…##…$}`), so when the math pump injects
             # the v-template and returns the row terminator, that terminator surfaces
@@ -1333,7 +1333,7 @@ def exec_hbox(
 
     box = builder.build(target_width=target_width, spread=spread)
 
-    # Warn if overfull or underfull (see error handling)
+    # Warn if overfull or underfull (error handling)
     _warn_badness(box, builder.last_badness, expander=expander, font_manager=font_manager)
     append_overfull_rule(
         box, builder.last_badness, font_manager,
@@ -1464,7 +1464,7 @@ def exec_vbox(
         """Insert interline glue before a non-first box per TeX §679.
 
         The §679 computation lives in ``box_builder.compute_interline_glue``
-        (shared with the alignment row-stacker,); this closure owns the
+        (shared with the alignment row-stacker); this closure owns the
         live named-param reads + the ``vbuilder.add_glue`` side effect.
         """
         if interp is None:
@@ -1568,7 +1568,7 @@ def exec_vbox(
                         Catcode.MATH_SHIFT,
                     ):
                         # A vbox line may begin with a $…$ formula (e.g. a \footnote
-                        # body whose text is wholly math, AC-12).  Real TeX
+                        # body whose text is wholly math).  Real TeX
                         # starts a paragraph here; the text-line scanner handles the
                         # MATH_SHIFT token via run_inline_math_in_box.
                         _add_hbox(_scan_vbox_text_line(
@@ -1593,7 +1593,7 @@ def exec_vbox(
                         ))
                         continue
                     if name in ("halign", "valign"):
-                        #: an alignment in internal vertical mode (e.g.
+                        # an alignment in internal vertical mode (e.g.
                         # \ialign\bgroup…\crcr inside \settabs's \vbox). \halign
                         # contributes a vlist of row hboxes spliced verbatim; \valign
                         # an hlist of column vboxes added as one box.

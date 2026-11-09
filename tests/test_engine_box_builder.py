@@ -312,7 +312,7 @@ class TestBadnessMatchesMiktex:
     @pytest.mark.parametrize(
         ("box", "miktex"),
         [
-            # The four lines measured in.
+            # The four lines measured.
             (r"\hbox to 20pt{a\hskip 109224sp plus 218448sp b}", "1270"),
             (r"\hbox to 10pt{a\hskip 5pt minus 3.33pt b}", "1000000"),
             (r"\hbox to 20pt{$a\mskip 3mu plus 6mu b$}", "1810"),

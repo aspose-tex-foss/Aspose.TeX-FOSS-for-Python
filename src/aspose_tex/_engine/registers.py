@@ -64,7 +64,7 @@ MAX_DIMEN: Final[int] = 0x3FFFFFFF  # 2^30 - 1 sp ~= 16383.99999pt
 
 
 # ---------------------------------------------------------------------------
-# Arithmetic operand resolution (§Component 2)
+# Arithmetic operand resolution
 # ---------------------------------------------------------------------------
 
 # ParamKind (named_parameters.py) int value -> arithmetic register family.
@@ -84,7 +84,7 @@ class _Operand:
 
     ``internal`` selects the 256-319 named-parameter slot path; ``entry`` is the
     resolved ``NamedParameterRegistry`` entry (or None) for the post-write
-    ``on_set`` mirror ( Q5-Q7).
+    ``on_set`` mirror (Q5-Q7).
     """
     internal: bool
     entry: object | None = None
@@ -107,7 +107,7 @@ _NUM_REGISTERS: Final[int] = 320
 class RegisterBank:
     """320-slot arrays for all five TeX register families.
 
-    Array-based for O(1) access ( NFR-1).  No logic lives here.
+    Array-based for O(1) access.  No logic lives here.
 
     User-facing API exposes slots 0..255 (TeX contract).  Slots 256..319 are
     reserved for ``NamedParameterRegistry`` (§3a) and only reachable
@@ -154,7 +154,7 @@ class RegisterSet:
     The ``_aliases`` dict maps CS names to ``(family, index)`` tuples for
     ``\\countdef`` et al.  The clock values ``\\year`` … ``\\time`` are
     integer parameters of ``NamedParameterRegistry``, not count registers
-    ( D1), so ``\\count0..9`` start at zero as in IniTeX.
+    so ``\\count0..9`` start at zero as in IniTeX.
 
     Args:
         group_stack: Shared GroupStack for save/restore, or ``None``.
@@ -197,7 +197,7 @@ class RegisterSet:
         self._catcodes = None
         self._code_arrays = None
         self._named_params = None
-        # D2: set by the interpreter; None keeps standalone behaviour.
+        # set by the interpreter; None keeps standalone behaviour.
         self._bindings = None
 
     # ------------------------------------------------------------------
@@ -227,7 +227,7 @@ class RegisterSet:
             raise EngineError("\\the: cannot take the value of a character token")
 
         name = token.name
-        # D2: a register or constant owner outranks the built-in its
+        # a register or constant owner outranks the built-in its
         # name spells; a frozen primitive reference (D3) never reaches an owner.
         owned = not isinstance(token, PrimitiveRefToken)
         if owned:
@@ -321,7 +321,7 @@ class RegisterSet:
             if entry is not None:
                 return internal.dispatch_the(entry, expander)
 
-        # NamedParameterRegistry fallback (§5d /).
+        # NamedParameterRegistry fallback (§5d).
         if self._named_params is not None:
             entry = self._named_params.lookup(name)
             if entry is not None:
@@ -357,7 +357,7 @@ class RegisterSet:
             cs_name:   Control sequence name without backslash.
             expander:  The active expander.
             primitive: ``True`` when the name comes from a frozen primitive
-                reference ( D3), which never resolves to an alias.
+                reference, which never resolves to an alias.
 
         Returns:
             ``True`` if the command was consumed; ``False`` if not a register command.
@@ -372,7 +372,7 @@ class RegisterSet:
         )
 
         # Alias assignment: \pageno=42  (where \pageno was defined by \countdef).
-        # Checked first: an owner named \count outranks the family ( D2).
+        # Checked first: an owner named \count outranks the family.
         alias = None if primitive else self._aliases.get(cs_name)
         if alias is not None:
             family, idx = alias
@@ -629,7 +629,7 @@ class RegisterSet:
             _check_index(idx)
             return name, idx, _DIRECT_OPERAND
         # Named parameter (\lineskip, \baselineskip, …): arithmetic targets the
-        # backing 256-319 slot.  \openup relies on this (§Component 2).
+        # backing 256-319 slot.  \openup relies on this.
         if self._named_params is not None:
             entry = self._named_params.lookup(name)
             if entry is not None:
@@ -643,7 +643,7 @@ class RegisterSet:
 
         TeX treats ``\\advance\\baselineskip`` as an assignment to
         ``\\baselineskip``; a mirror that fires on ``\\baselineskip=`` must
-        fire here too ( Q7).  No-op for direct-family operands.
+        fire here too.  No-op for direct-family operands.
         """
         entry = operand.entry
         if entry is None or entry.on_set is None:
@@ -894,7 +894,7 @@ class RegisterSet:
         self._aliases[cs_name] = (family, index)
 
     def _release_binding(self, cs_name: str, kind: str, *, is_global: bool | None = None) -> None:
-        """Clear *cs_name*'s other bindings before defining it here ( D2)."""
+        """Clear *cs_name*'s other bindings before defining it here."""
         bindings = self._bindings
         if bindings is None:
             return

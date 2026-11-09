@@ -1,4 +1,4 @@
-r"""Tests for language whatsits and ``\setlanguage`` (§7, FR-7, AC-5).
+r"""Tests for language whatsits and ``\setlanguage`` (§7).
 
 Every expected list and message is MiKTeX 24.4 (``tex``, plain, nonstopmode,
 2026-10-21), read from ``\showbox`` of the same material.  Lists are written
@@ -138,7 +138,7 @@ class TestIllegalModes:
 
 
 class TestHyphenationFollowsWhatsits:
-    """ AC-5: each case is MiKTeX's ``\\showbox`` of the probe body."""
+    """each case is MiKTeX's ``\\showbox`` of the probe body."""
 
     _DIFFICULTIES = "d i {f -|[fi]|[ffi]} {-||} c u l {-||} t i e s"
     _PLAIN = "d i [ffi] c u l t i e s"

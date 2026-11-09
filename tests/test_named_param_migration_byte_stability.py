@@ -18,7 +18,7 @@ SAME commit that introduces the change and document the reason in the
 commit message and CHANGELOG — this file is the canonical guard against
 silent regressions.
 
-Re-baselined under ** v4** (, 2026-05-25): the three
+Re-baselined (2026-05-25): the three
 ``smoke_m2`` constants (``_SMOKE_DVI_MD5``, ``_SMOKE_PDF_MD5``,
 ``_SMOKE_SVG_MD5``) capture the §679-correct rule-then-paragraph
 interline arithmetic on smoke_m2.tex (`\\hrule` mid-page now sets
@@ -26,8 +26,8 @@ interline arithmetic on smoke_m2.tex (`\\hrule` mid-page now sets
 node that pre-cascade emitted between a descender-bearing prior line
 and the post-rule paragraph).
 
-Re-baselined **again** under ** v5 Component 6** (,
-2026-05-27): the SAME three ``smoke_m2`` constants are updated to
+Re-baselined **again** on 2026-05-27:
+the SAME three ``smoke_m2`` constants are updated to
 capture the TeX:The Program §679 sentinel write
 (``_prev_depth := ignore_depth = -1000 pt``) on both ``\\hrule`` arms
 of ``PageBuilder.contribute`` + the TeXbook §253 sentinel guard in
@@ -35,14 +35,14 @@ of ``PageBuilder.contribute`` + the TeXbook §253 sentinel guard in
 suppresses the spurious 5.056 pt interline glue between the
 ``\\hrule`` and the following hbox on ``smoke_m2.tex`` page 1 (AVAST
 line) and page 2 ('End...' line), closing the joint residual
-that Revision 4 explicitly routed to.
+that Revision 4 explicitly routed.
 
 The two non-smoke_m2 constants (``_HELLO_DVI_MD5``,
 ``_EJECT_DVI_MD5``) are unchanged across both v4 and v5
 re-baselines — neither fixture contains a main-vertical-list
 ``\\hrule`` contribution, so the sentinel fix is a no-op for them.
 
-Re-baselined **once more** under **** (2026-05-29): ONLY the
+Re-baselined **once more** (2026-05-29): ONLY the
 ``_SMOKE_SVG_MD5`` constant changes.  encodes the font at-size
 into every SVG glyph id (``g-{tfm}-{code}`` → ``g-{tfm}-{at_size_int}-{code}``;
 e.g. ``g-cmr10-49`` → ``g-cmr10-10-49``) so a TFM loaded at multiple sizes
@@ -54,7 +54,7 @@ are unaffected.  ``smoke_m2.tex`` uses cmr10 at a single size, so the engine
 output is otherwise byte-identical to the v5 baseline — verified by reverting
 the ``svg_writer.py`` change and re-capturing the old hash.
 
-Re-baselined **once more** under **** (2026-05-30): ONLY the
+Re-baselined **once more** (2026-05-30): ONLY the
 ``_SMOKE_DVI_MD5`` constant changes (``1567698f…`` → ``badeff8a…``).  The
 ``DviWriter._traverse_vlist`` rule arm now resolves the ``RUNNING_DIMEN``
 sentinel against the enclosing box (mirroring the hlist arm + PDF/SVG writers),
@@ -66,7 +66,7 @@ case); it touches the DVI rule-width opcode only, so the PDF / SVG baselines
 the sentinel — and the two non-smoke DVI constants (``_HELLO_DVI_MD5`` /
 ``_EJECT_DVI_MD5``) carry no main-vertical-list ``\\hrule`` so they are no-ops.
 
-Re-baselined **once more** under **** (2026-05-31): ONLY the
+Re-baselined **once more** (2026-05-31): ONLY the
 ``_SMOKE_DVI_MD5`` constant changes (``badeff8a…`` → ``319e61d…``).  The
 ``DviWriter._traverse_vlist`` rule arm now ships a vertically placed rule with
 ``put_rule`` (opcode 137) instead of ``set_rule`` (132), per TeX:The Program
@@ -92,7 +92,7 @@ SVG hash, DVI/PDF stayed green.  FR-9 (exact ``at_size_sp`` through the DVI
 ``fnt_def``) is verified DVI-byte-stable — the path was already exact, no DVI
 movement.
 
-Re-baselined **once more** under **** (2026-07-29): ALL THREE
+Re-baselined **once more** (2026-07-29): ALL THREE
 ``smoke_m2`` constants change (DVI ``319e61d2…`` → ``abddb61f…``, PDF
 ``051d8a8d…`` → ``28983efe…``, SVG ``924fab00…`` → ``6870b062…``).
 unifies the split ``\\sfcode`` store: ``_exec_sfcode`` wrote ``CodeArrays``
@@ -133,13 +133,13 @@ from aspose_tex.presentation import (
 
 # Pre-migration MD5 baselines (captured 2026-05-07 with the legacy
 # ``_exec_vsize`` / ``_exec_topskip`` / ``_exec_maxdepth`` handlers active).
-# The three ``_SMOKE_*`` constants were re-baselined under v4
-# (, 2026-05-25) and AGAIN under v5 Component 6 (,
-# 2026-05-27) — see the module docstring above.
+# The three ``_SMOKE_*`` constants were re-baselined
+# on 2026-05-25 and AGAIN on 2026-05-27 — see the module
+# docstring above.
 _HELLO_DVI_MD5 = "cd55caa1125f71ca4e03341b9358788d"
-_SMOKE_DVI_MD5 = "9c9eb5845882227a5d160dd82582f5d2"  #: cumulative binary32 glue setting
-_SMOKE_PDF_MD5 = "60667094b1189f2b51dd150a3d1cbcb2"  #: TeX pt -> bp, PDF side
-_SMOKE_SVG_MD5 = "596921618c7f6f1d473d52053b42525f"  #: TeX pt -> bp, SVG side
+_SMOKE_DVI_MD5 = "9c9eb5845882227a5d160dd82582f5d2"  # cumulative binary32 glue setting
+_SMOKE_PDF_MD5 = "60667094b1189f2b51dd150a3d1cbcb2"  # TeX pt -> bp, PDF side
+_SMOKE_SVG_MD5 = "596921618c7f6f1d473d52053b42525f"  # TeX pt -> bp, SVG side
 _EJECT_DVI_MD5 = "9c92abccb7b6d19f9ffd5d8741fdf439"
 
 _FROZEN_PDF_DATE = b"D:20260101000000Z"

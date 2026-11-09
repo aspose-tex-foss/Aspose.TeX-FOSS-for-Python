@@ -1,4 +1,4 @@
-"""End-to-end integration tests for the TeX interpreter ( / §5).
+"""End-to-end integration tests for the TeX interpreter (§5).
 
 Covers acceptance criteria:
 - AC#1: "Hello World\\bye" produces valid DVI with one page containing the chars
@@ -11,7 +11,7 @@ Covers acceptance criteria:
 Plus supplementary §§5a-5f coverage: \\hbox in V-mode, \\par no-op in
 V-mode, \\hrule, mode-aware \\kern, \\end as alternate terminator.
 
-: ``\\eject`` is ``\\par\\penalty-10000`` with no implicit
+``\\eject`` is ``\\par\\penalty-10000`` with no implicit
 ``\\vfil``; the regression suite at the bottom of this file pins the contract.
 """
 from __future__ import annotations
@@ -220,7 +220,7 @@ class TestAcceptanceHelloWorld:
         assert _count_bops(dvi) == 1
         chars = _extract_char_codes(dvi)
         # "Hello World" followed by line-end → trailing space glue; no extra chars.
-        #: folio glyph '1' trails the body on page 1.
+        # folio glyph '1' trails the body on page 1.
         assert [ord(c) for c in "HelloWorld"] + [ord("1")] == chars
 
 
@@ -577,12 +577,12 @@ class TestDviSanity:
 
 
 # ---------------------------------------------------------------------------
-#: \eject is \par\penalty-10000 (no implicit \vfil)
+# \eject is \par\penalty-10000 (no implicit \vfil)
 # ---------------------------------------------------------------------------
 
-_TEX46_FIXTURE_DIR = Path(__file__).parent.parent / "testdata" / "fixtures" / "eject"
-_TEX46_FIXTURE_TEX = _TEX46_FIXTURE_DIR / "three_paragraph_eject.tex"
-_TEX46_MIKTEX_DVI = _TEX46_FIXTURE_DIR / "three_paragraph_eject.miktex.dvi"
+_EJECT_FIXTURE_DIR = Path(__file__).parent.parent / "testdata" / "fixtures" / "eject"
+_EJECT_FIXTURE_TEX = _EJECT_FIXTURE_DIR / "three_paragraph_eject.tex"
+_EJECT_MIKTEX_DVI = _EJECT_FIXTURE_DIR / "three_paragraph_eject.miktex.dvi"
 
 _ONE_POINT_SP = 65_536  # 1 pt tolerance for DVI y-coordinate parity
 
@@ -593,7 +593,7 @@ class TestEjectSemantics:
     def test_eject_does_not_inject_vfil(self, monkeypatch) -> None:
         """No FIL/FILL/FILLL stretch reaches the body box on \\eject pages.
 
-        The architect's RCA: the bug was a spurious ``make_vfil_glue()`` in
+        Root cause: the bug was a spurious ``make_vfil_glue()`` in
         ``exec_eject``.  After, the only stretch the page builder
         contributes is from explicit author glue (none here) and from the
         plain-TeX parskip glue (NORMAL order).  This test pins the contract
@@ -655,7 +655,7 @@ class TestEjectSemantics:
         """Three short paragraphs on an \\eject-terminated page distribute
         across ``\\vsize`` within ±1 pt of the MiKTeX baseline.
 
-        Canonical regression for AC-3 / AC-5.  The fixture sets
+        Canonical regression.  The fixture sets
         ``\\vsize=300pt``; without the body would collapse to its
         natural 6-line height and paragraphs 2-3 would land tens of points
         too high (clustered at top).  With the only stretch in the
@@ -663,9 +663,9 @@ class TestEjectSemantics:
         ``\\vsize - nat_h`` deficit across the parskips just as MiKTeX does
         (with a finite, high glue-set ratio of ~133x).
         """
-        tex_source = _TEX46_FIXTURE_TEX.read_text(encoding="utf-8")
+        tex_source = _EJECT_FIXTURE_TEX.read_text(encoding="utf-8")
         ours_dvi = _run(tex_source)
-        miktex_dvi = _TEX46_MIKTEX_DVI.read_bytes()
+        miktex_dvi = _EJECT_MIKTEX_DVI.read_bytes()
 
         ours_lines = walk_line_starts(ours_dvi)
         miktex_lines = walk_line_starts(miktex_dvi)
@@ -689,14 +689,14 @@ class TestEjectSemantics:
 
 
 # ---------------------------------------------------------------------------
-# v4: rule-first baseline contract on rule_then_para.tex
+# rule-first baseline contract on rule_then_para.tex
 # ---------------------------------------------------------------------------
 
-_TEX54_FIXTURE_DIR = Path(__file__).parent.parent / "testdata" / "fixtures" / "rule_then_para"
-_TEX54_FIXTURE_TEX = _TEX54_FIXTURE_DIR / "rule_then_para.tex"
-_TEX54_MIKTEX_DVI = _TEX54_FIXTURE_DIR / "rule_then_para.miktex.dvi"
+_RULE_THEN_PARA_FIXTURE_DIR = Path(__file__).parent.parent / "testdata" / "fixtures" / "rule_then_para"
+_RULE_THEN_PARA_FIXTURE_TEX = _RULE_THEN_PARA_FIXTURE_DIR / "rule_then_para.tex"
+_RULE_THEN_PARA_MIKTEX_DVI = _RULE_THEN_PARA_FIXTURE_DIR / "rule_then_para.miktex.dvi"
 
-_HALF_POINT_SP = 32_768  # ±0.5 pt tolerance for v4 AC-8 / AC-9
+_HALF_POINT_SP = 32_768  # ±0.5 pt tolerance
 
 
 def _rule_then_para_baselines(dvi: bytes) -> dict[str, int]:
@@ -719,7 +719,7 @@ def _rule_then_para_baselines(dvi: bytes) -> dict[str, int]:
 
 
 class TestRuleThenParaBaseline:
-    """ v4 AC-8 / AC-9: rule-first baseline contract.
+    """rule-first baseline contract.
 
     The fixture ``testdata/fixtures/rule_then_para/rule_then_para.tex`` is a minimal
     `\\hrule`-then-two-paragraphs document at `\\vsize=120pt`.  Per
@@ -727,14 +727,14 @@ class TestRuleThenParaBaseline:
     655_360 sp``, with subsequent paragraph + folio baselines at fixed
     `v` values.  Under Revision 4, our cascade hits rule + para-2 + folio
     byte-for-byte; para-1 stays off by ~+2.528 pt (the joint defect
-    routed to).
+    routed).
     """
 
     def test_rule_then_para_baseline_matches_miktex(self) -> None:
-        """Rule + para-2 + folio baselines within ±0.5 pt of MiKTeX ( v4 AC-8)."""
-        tex_source = _TEX54_FIXTURE_TEX.read_text(encoding="utf-8")
+        """Rule + para-2 + folio baselines within ±0.5 pt of MiKTeX."""
+        tex_source = _RULE_THEN_PARA_FIXTURE_TEX.read_text(encoding="utf-8")
         ours_dvi = _run(tex_source)
-        miktex_dvi = _TEX54_MIKTEX_DVI.read_bytes()
+        miktex_dvi = _RULE_THEN_PARA_MIKTEX_DVI.read_bytes()
 
         ours = _rule_then_para_baselines(ours_dvi)
         miktex = _rule_then_para_baselines(miktex_dvi)
@@ -748,19 +748,19 @@ class TestRuleThenParaBaseline:
                 f"by {delta / 65536:+.3f} pt (tolerance: ±0.5 pt)"
             )
 
-    def test_rule_then_para_para1_baseline_pending_tex110(self) -> None:
-        """Para-1 baseline within ±0.5 pt vs MiKTeX 4_094_180 sp ( v5 AC-9).
+    def test_rule_then_para_para1_baseline(self) -> None:
+        """Para-1 baseline within ±0.5 pt vs MiKTeX 4_094_180 sp.
 
         Previously xfailed (strict=True) under Revision 4 with diff ≈+2.528 pt.
         v5 Component 6 closes the joint residual via the
         §679 sentinel `_prev_depth` write + §253 sentinel guard in the
         interline-glue prelude — the spurious 5.056 pt glue between the rule
         and the post-rule paragraph is suppressed.  The xfail decorator
-        has been removed: this test must now pass green per AC-5 of.
+        has been removed: this test must now pass green per AC-5.
         """
-        tex_source = _TEX54_FIXTURE_TEX.read_text(encoding="utf-8")
+        tex_source = _RULE_THEN_PARA_FIXTURE_TEX.read_text(encoding="utf-8")
         ours_dvi = _run(tex_source)
-        miktex_dvi = _TEX54_MIKTEX_DVI.read_bytes()
+        miktex_dvi = _RULE_THEN_PARA_MIKTEX_DVI.read_bytes()
 
         ours = _rule_then_para_baselines(ours_dvi)
         miktex = _rule_then_para_baselines(miktex_dvi)
@@ -773,23 +773,23 @@ class TestRuleThenParaBaseline:
 
 
 # ---------------------------------------------------------------------------
-# v5 Component 6 — three split-probe fixtures from
+# three split-probe fixtures
 # ---------------------------------------------------------------------------
 
-_TEX110_FIXTURE_DIR = Path(__file__).parent.parent / "testdata" / "fixtures" / "rule_split_probes"
-_TEX110_PROBES = (
+_RULE_SPLIT_FIXTURE_DIR = Path(__file__).parent.parent / "testdata" / "fixtures" / "rule_split_probes"
+_RULE_SPLIT_PROBES = (
     "probe_rule_first_then_para",
     "probe_rule_midpage_then_para",
     "probe_two_rules_then_para",
 )
-_HUNDRED_SP = 100  # Tolerance for the probe baseline comparisons ( AC-4).
+_HUNDRED_SP = 100  # Tolerance for the probe baseline comparisons.
 
 
-@pytest.mark.parametrize("probe_name", _TEX110_PROBES)
-def test_tex110_probe_baseline_matches_miktex(probe_name: str) -> None:
-    """ v5 Component 6 / AC-4: probe baselines ≤100 sp vs MiKTeX.
+@pytest.mark.parametrize("probe_name", _RULE_SPLIT_PROBES)
+def test_rule_split_probe_baseline_matches_miktex(probe_name: str) -> None:
+    """probe baselines ≤100 sp vs MiKTeX.
 
-    Three split-probe fixtures committed by the architect spike under
+    Three split-probe fixtures under
     ``testdata/fixtures/rule_split_probes/`` isolate the rule-first arm, the mid-page
     rule arm, and consecutive mid-page rules.  Each pairs a ``.tex`` source
     with a MiKTeX-pdfTeX 4.19 ``.miktex.dvi`` baseline.  Under v5
@@ -798,14 +798,14 @@ def test_tex110_probe_baseline_matches_miktex(probe_name: str) -> None:
     corresponding ours-page v-coordinate within 100 sp (= 0.00153 pt, three
     orders below's ±0.5 pt tolerance).  Our engine may ship one
     additional trailing folio-only page on ``\\eject\\bye`` (a known
-    engine-vs-MiKTeX divergence orthogonal to v5); that trailing
+    engine-vs-MiKTeX divergence orthogonal); that trailing
     page is not part of the body baseline contract and is ignored here.
 
     Args:
         probe_name: Bare basename of the probe fixture (no extension).
     """
-    tex_path = _TEX110_FIXTURE_DIR / f"{probe_name}.tex"
-    miktex_path = _TEX110_FIXTURE_DIR / f"{probe_name}.miktex.dvi"
+    tex_path = _RULE_SPLIT_FIXTURE_DIR / f"{probe_name}.tex"
+    miktex_path = _RULE_SPLIT_FIXTURE_DIR / f"{probe_name}.miktex.dvi"
     tex_source = tex_path.read_text(encoding="utf-8")
     ours_dvi = _run(tex_source)
     miktex_dvi = miktex_path.read_bytes()
@@ -842,7 +842,7 @@ def test_tex110_probe_baseline_matches_miktex(probe_name: str) -> None:
 
 
 def test_interp_prev_depth_sentinel_after_vmode_hrule() -> None:
-    """ v6 §Component 2 / AC-11: interpreter mirror sentinel.
+    """interpreter mirror sentinel.
 
     After a vertical-mode ``\\hrule`` contribution, both ``_prev_depth``
     shadows (``interp._prev_depth`` — the named-parameter registry source
@@ -850,7 +850,7 @@ def test_interp_prev_depth_sentinel_after_vmode_hrule() -> None:
     ``interp._page_builder._prev_depth`` — the page builder's own copy
     consulted by ``_interline_glue``) must equal the TeXbook
     §253 ``ignore_depth`` sentinel (``-1000 pt`` = ``_PREVDEPTH_SENTINEL``).
-    The integrator's reproducer (1002 pt shadow drift after
+    A reproducer (1002 pt shadow drift after
     ``\\hrule height1pt depth2pt``) was the regression this AC pins.
     """
     interp = TeXInterpreter()
@@ -871,7 +871,7 @@ def test_interp_prev_depth_sentinel_after_vmode_hrule() -> None:
 
 
 # ---------------------------------------------------------------------------
-# — \hsize wiring to the line-breaker and the page box
+# \hsize wiring to the line-breaker and the page box
 # ---------------------------------------------------------------------------
 
 # A paragraph long enough to wrap at narrow \hsize but fit in two lines at the
@@ -889,7 +889,7 @@ def _line_counts(dvi: bytes) -> list[int]:
 
 
 class TestHsizeWiring:
-    r""": ``\hsize`` reaches break selection and the page box.
+    r"""``\hsize`` reaches break selection and the page box.
 
     Before the fix the line-breaker and the page box used a stale ``_HSIZE``
     constant set once at construction, so paragraphs broke at 6.5in at every
@@ -980,7 +980,7 @@ class TestHsizeWiring:
 
 
 # ---------------------------------------------------------------------------
-# — one LinebreakParams source for the real break and the look-ahead
+# one LinebreakParams source for the real break and the look-ahead
 # ---------------------------------------------------------------------------
 
 _TWO_INCH_SP = round(2 * 72.27 * 65536)
@@ -1019,7 +1019,7 @@ def _probe(tex: str) -> _SnapshotProbe:
 
 
 class TestLinebreakParamsSingleSource:
-    r""": a live immutable snapshot matches actual paragraph packing.
+    r"""a live immutable snapshot matches actual paragraph packing.
 
     Only the test evaluates the snapshot independently; production breaks
     once at the true paragraph/display boundary.

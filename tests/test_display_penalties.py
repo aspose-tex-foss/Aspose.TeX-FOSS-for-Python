@@ -1,4 +1,4 @@
-r""" Component 4: §1203/§1205/§1206 display penalties.
+r"""§1203/§1205/§1206 display penalties.
 
 Every display contributes ``\penalty\predisplaypenalty`` directly before the
 above-display glue and ``\penalty\postdisplaypenalty`` directly before the

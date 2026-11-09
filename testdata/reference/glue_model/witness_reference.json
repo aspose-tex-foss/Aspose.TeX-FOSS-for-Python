@@ -1,5 +1,5 @@
 {
- "tex223_d_o": {
+ "dot_under_o": {
   "source": "\\nopagenumbers \\noindent\\d o\n\\bye\n",
   "glyphs": [
    [
@@ -27,7 +27,7 @@
    ]
   ]
  },
- "tex223_tex219_line": {
+ "dot_and_bar_under_line": {
   "source": "\\noindent\\d o \\b o {\\it \\d o \\b a}\n\\bye\n",
   "glyphs": [
    [
@@ -118,7 +118,7 @@
    ]
   ]
  },
- "tex321_over": {
+ "math_over": {
   "source": "\\nopagenumbers \\noindent $x\\over y$ $$x\\over y$$\n\\bye\n",
   "glyphs": [
    [
@@ -177,7 +177,7 @@
    ]
   ]
  },
- "tex321_sqrt": {
+ "math_sqrt": {
   "source": "\\nopagenumbers \\noindent $\\sqrt{x\\over y}$\n\\bye\n",
   "glyphs": [
    [
@@ -227,7 +227,7 @@
    ]
   ]
  },
- "tex321_atop": {
+ "math_atop": {
   "source": "\\nopagenumbers \\noindent $x\\atop{\\displaystyle\\int}$\n\\bye\n",
   "glyphs": [
    [
@@ -255,7 +255,7 @@
    ]
   ]
  },
- "tex443_folio": {
+ "folio": {
   "source": "\\hsize=1in x\\par\n\\bye\n",
   "glyphs": [
    [
@@ -283,7 +283,7 @@
    ]
   ]
  },
- "tex376_display_brace": {
+ "display_overbrace": {
   "source": "\\nopagenumbers x\\par $$\\overbrace{a+b+c}^{3}$$ x\n\\bye\n",
   "glyphs": [
    [
@@ -414,7 +414,7 @@
    ]
   ]
  },
- "tex400_left_right": {
+ "left_right_fraction": {
   "source": "\\nopagenumbers \\setbox0\\hbox{$\\left(x\\over y\\right)$}\\box0\n\\bye\n",
   "glyphs": [
    [
@@ -467,7 +467,7 @@
    ]
   ]
  },
- "tex372_23pt": {
+ "fil_glue_23pt": {
   "source": "\\shipout\\hbox to23pt{a\\hskip0pt plus1fil b\\hskip0pt plus1fil c\\hskip0pt plus1fil d}\n\\bye\n",
   "glyphs": [
    [
@@ -513,7 +513,7 @@
    ]
   ]
  },
- "tex372_24pt": {
+ "fil_glue_24pt": {
   "source": "\\shipout\\hbox to24pt{a\\hskip0pt plus1fil b\\hskip0pt plus1fil c\\hskip0pt plus1fil d}\n\\bye\n",
   "glyphs": [
    [
@@ -559,7 +559,7 @@
    ]
   ]
  },
- "tex372_25pt": {
+ "fil_glue_25pt": {
   "source": "\\shipout\\hbox to25pt{a\\hskip0pt plus1fil b\\hskip0pt plus1fil c\\hskip0pt plus1fil d}\n\\bye\n",
   "glyphs": [
    [
@@ -605,7 +605,7 @@
    ]
   ]
  },
- "tex372_26pt": {
+ "fil_glue_26pt": {
   "source": "\\shipout\\hbox to26pt{a\\hskip0pt plus1fil b\\hskip0pt plus1fil c\\hskip0pt plus1fil d}\n\\bye\n",
   "glyphs": [
    [
@@ -651,7 +651,7 @@
    ]
   ]
  },
- "tex372_27pt": {
+ "fil_glue_27pt": {
   "source": "\\shipout\\hbox to27pt{a\\hskip0pt plus1fil b\\hskip0pt plus1fil c\\hskip0pt plus1fil d}\n\\bye\n",
   "glyphs": [
    [
@@ -697,7 +697,7 @@
    ]
   ]
  },
- "tex372_28pt": {
+ "fil_glue_28pt": {
   "source": "\\shipout\\hbox to28pt{a\\hskip0pt plus1fil b\\hskip0pt plus1fil c\\hskip0pt plus1fil d}\n\\bye\n",
   "glyphs": [
    [
@@ -743,7 +743,7 @@
    ]
   ]
  },
- "tex306_composed_floats": {
+ "composed_floats": {
   "source": "\\hsize=4in \\vsize=3in \\hyphenpenalty=10000\n\\topinsert \\hbox{Figure one}\\endinsert\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nFirst paragraph ends.\\footnote*{First note.}\n\\par\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nThe system $$\\eqalign{x+y&=1\\cr x-y&=2\\cr}$$ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\\par\n\\midinsert \\hbox{Figure two}\\endinsert\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nSecond.\\footnote{\\dag}{Second note with $a^2+b^2$.}\n\\par\n\\halign{#\\hfil&&\\quad#\\hfil\\cr a&b\\cr c&d\\cr}\n\\pageinsert \\hbox{Full page}\\endinsert\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\\eject\\eject\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\\mark{end}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\\bye\n",
   "glyphs": [
    [

@@ -1,8 +1,8 @@
-r""": page-state ownership pinned to MiKTeX 24.4 ``tex``.
+r"""page-state ownership pinned to MiKTeX 24.4 ``tex``.
 
 Each row is one line of the context probe: the plain-TeX source, the
 ``\message`` output and every glyph ``(code, h, v)`` per page as MiKTeX sets
-them (``tex`` + ``dvi_walker``). All positions match exactly after.
+them (``tex`` + ``dvi_walker``). All positions match exactly.
 """
 from __future__ import annotations
 
@@ -107,7 +107,7 @@ _CASES = [
                 (122, 1310720, 655360), (50, 15229091, 43725786),
             ],
         ],
-        id='tex332_vfil',
+        id='last_depth_vfil',
     ),
     pytest.param(  # \parskip fil
         (
@@ -122,7 +122,7 @@ _CASES = [
                 (122, 1310720, 655360), (50, 15229091, 43725786),
             ],
         ],
-        id='tex332_parskip',
+        id='last_depth_parskip',
     ),
     pytest.param(  # \parskip 5pt plus 1fil
         (
@@ -137,7 +137,7 @@ _CASES = [
                 (122, 1310720, 655360), (50, 15229091, 43725786),
             ],
         ],
-        id='tex332_parskip5',
+        id='last_depth_parskip5',
     ),
     pytest.param(  # \box255 packed to the insertion-adjusted goal
         (
@@ -151,7 +151,7 @@ _CASES = [
                 (49, 15229091, 43725786),
             ],
         ],
-        id='tex373_ins',
+        id='insert_page_goal',
     ),
     pytest.param(  # \pageinsert floats to the next page
         (
@@ -167,7 +167,7 @@ _CASES = [
                 (97, 1310720, 282168), (50, 15229091, 43725786),
             ],
         ],
-        id='tex379_pageinsert',
+        id='pageinsert',
     ),
     pytest.param(  # \eject on a box-less page ships nothing
         (
@@ -185,7 +185,7 @@ _CASES = [
                 (99, 1310720, 655360), (51, 15229091, 11045437),
             ],
         ],
-        id='tex397_eject',
+        id='eject',
     ),
     pytest.param(  # \lastskip reads the last moved glue
         (

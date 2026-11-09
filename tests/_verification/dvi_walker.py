@@ -6,7 +6,7 @@ stream per TeX: The Program §583..§605, tracking (h, v) state across
 push/pop frames so the first ``set_char`` at each new v-value can be
 reported as the start of a new "line".
 
-Factored out of ``tests/test_interpreter_output_routine.py`` per
+Factored out of ``tests/test_interpreter_output_routine.py``
 so that ``tests/test_interpreter_integration.py`` can reuse the same
 walker for the ``\\eject`` regression check.
 """
@@ -199,7 +199,7 @@ def walk_chars_with_positions(
     Tracks (h, v) state across push/pop/down/right/y/z opcodes so each
     typeset character is reported at its absolute page coordinates (sp).
     Used by tests that need character-level position equivalence between
-    output paths (e.g. M2 fast-path vs plain.tex `\\plainoutput`).
+    output paths (e.g. the built-in fast-path vs plain.tex `\\plainoutput`).
 
     ``set_char``/``set1..4`` also move h right by the character's width,
     which the DVI does not carry.  Pass ``char_width(font_name, code)`` (sp)
@@ -213,7 +213,7 @@ def walk_chars_with_positions(
     ``rule_events`` optionally collects painted ``(h, v, height, width)``
     rectangles using the same font and cursor state as the glyph walk.
     ``scaled_char_width(name, code, at_sp)`` optionally replaces ``char_width``
-    for documents selecting the same TFM at several sizes ( corpus).
+    for documents selecting the same TFM at several sizes (corpus).
     """
     i = _skip_preamble(dvi)
     n = len(dvi)

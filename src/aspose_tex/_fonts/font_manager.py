@@ -82,7 +82,7 @@ class FontManager:
         # \nullfont is font number 0 in TeX and is ALWAYS defined (TeXbook §16,
         # tex.web §552).  Register it eagerly so a <font> read (e.g.
         # ``\the\fontdimen1\nullfont``) succeeds before \nullfont is ever
-        # selected as a command.  See (follow-up to §E).
+        # selected as a command.
         self._register_nullfont()
         # Preserve font 0's identity across aliases or a redefined CS spelling.
         # A real loaded font at size zero still has character slots.
@@ -297,7 +297,7 @@ class FontManager:
         return cs_name in self._font_bindings
 
     def alias_font(self, target: str, source: str, *, is_global: bool | None = None) -> None:
-        r"""Bind *target* to the font of *source* (``\let\a=\tenrm``, D2).
+        r"""Bind *target* to the font of *source* (``\let\a=\tenrm``).
 
         Both names share one :class:`FontMetrics`, so ``\fontdimen`` changes
         through either are seen by both.

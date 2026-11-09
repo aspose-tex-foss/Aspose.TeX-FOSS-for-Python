@@ -3,7 +3,7 @@
 Tests the full pipeline: StringInputSource → InputReader → CatcodeTable →
 Tokenizer → Expander(group_stack=...) + RegisterSet(group_stack=...).
 
-Covers all acceptance criteria in.
+Covers all acceptance criteria.
 """
 import pytest
 
@@ -42,7 +42,7 @@ def run(text: str) -> tuple[list[Token], RegisterSet, GroupStack]:
     exp, regs, gs = make_env(text)
     tokens: list[Token] = []
     for t in exp:
-        # Group open/close tokens (: now pass through expander)
+        # Group open/close tokens (now pass through expander)
         if isinstance(t, CharToken) and t.catcode == Catcode.BEGIN_GROUP:
             gs.open_group(GroupKind.BRACE)
             continue
@@ -53,7 +53,7 @@ def run(text: str) -> tuple[list[Token], RegisterSet, GroupStack]:
             if aftergroup_tokens:
                 exp.push_tokens(aftergroup_tokens)
             continue
-        # Group CS commands (: now pass through expander)
+        # Group CS commands (now pass through expander)
         if isinstance(t, ControlSequenceToken):
             if t.name == "begingroup":
                 gs.open_group(GroupKind.SEMI_SIMPLE)
@@ -357,7 +357,7 @@ def test_global_def_persists() -> None:
 
 
 # ---------------------------------------------------------------------------
-#: \global\gdef must consume the global flag (regression)
+# \global\gdef must consume the global flag (regression)
 # ---------------------------------------------------------------------------
 
 def test_global_gdef_consumes_global_flag() -> None:

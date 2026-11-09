@@ -1,4 +1,4 @@
-r"""Short alignment rows and row-sized cells ( amendments,).
+r"""Short alignment rows and row-sized cells (amendments).
 
 Every expected value is the MiKTeX 24.4 ``ref`` record of
 ``testdata/reference/alignment_short_rows/results.json`` (probe.py); none is computed.

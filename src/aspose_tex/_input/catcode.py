@@ -1,7 +1,7 @@
 """Catcode table: the 16 TeX character categories and a mutable lookup table.
 
 Implements FR-4, FR-5, FR-6.
-Catcode changes are group-scoped ( FR-5 /): when a ``GroupStack``
+Catcode changes are group-scoped: when a ``GroupStack``
 is provided, ``set()`` saves the old catcode before writing.
 
 See and for design rationale.

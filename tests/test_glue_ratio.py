@@ -1,4 +1,4 @@
-"""Measured binary32 glue arithmetic (, MiKTeX §109)."""
+"""Measured binary32 glue arithmetic (MiKTeX §109)."""
 import json
 from pathlib import Path
 

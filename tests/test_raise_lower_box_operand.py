@@ -1,4 +1,4 @@
-r""" — interpreter \raise / \lower accept the full <box> operand grammar.
+r"""interpreter \raise / \lower accept the full <box> operand grammar.
 
 `TeXInterpreter._exec_raise_cmd` / `_exec_lower_cmd` previously called
 `exec_hbox` directly, so they only accepted the `\raise<dimen>{…}` brace form

@@ -1,4 +1,4 @@
-"""MiKTeX 24.4 measured integer/dimension/glue witnesses for."""
+"""MiKTeX 24.4 measured witnesses for scanning internal integers, dimensions and glue."""
 
 from __future__ import annotations
 
@@ -12,12 +12,12 @@ from aspose_tex.presentation import DviDevice, TeXJob, TeXOptions
 
 
 def messages(source: str) -> list[str]:
-    source = source.replace(r"\message{", r"\message{TEX261:")
+    source = source.replace(r"\message{", r"\message{SCAN:")
     job = TeXJob(StringInputSource(source + r"\bye"), DviDevice(), options=TeXOptions())
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         job.run()
-    return [message.removeprefix("TEX261:") for message in job.messages if message.startswith("TEX261:")]
+    return [message.removeprefix("SCAN:") for message in job.messages if message.startswith("SCAN:")]
 
 
 @pytest.mark.parametrize(

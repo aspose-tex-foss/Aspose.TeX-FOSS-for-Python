@@ -1,6 +1,6 @@
-"""TeX math-font sigma /xi parameter provider (, §A/B/C).
+"""TeX math-font sigma /xi parameter provider (§A/B/C).
 
-Promotes the M3 "stored CS only" :class:`MathFamilyRegistry` into a
+Promotes the "stored CS only" :class:`MathFamilyRegistry` into a
 real metrics provider.  Reads the 22 math-symbol parameters (sigma 1…sigma 22, family 2)
 and the 6 math-extension parameters (xi 8…xi 13, family 3) by name, selecting the
 ``\\textfont`` / ``\\scriptfont`` / ``\\scriptscriptfont`` slot by the current
@@ -101,7 +101,7 @@ class MathFontParameters:
 
     FR-4 validation is lazy: a too-small or unset family-2/3 font raises an
     :class:`EngineError` only when a sigma /xi value is actually requested — never at
-    assignment time (the M3 load-without-execute contract of is
+    assignment time (the load-without-execute contract of is
     preserved).
 
     Example::

@@ -112,7 +112,7 @@ class TestRegisterSetConstantStorage:
 # ---------------------------------------------------------------------------
 
 class TestChardefDefine:
-    """ AC-2 — \\chardef defines a CS as a frozen char-code constant."""
+    """\\chardef defines a CS as a frozen char-code constant."""
 
     def test_chardef_define_and_use(self) -> None:
         # plain.tex line 19: \chardef\active=13.
@@ -154,7 +154,7 @@ class TestChardefDefine:
 
 
 class TestMathchardefDefine:
-    """ AC-10 — \\mathchardef defines + \\the returns decimal."""
+    """\\mathchardef defines + \\the returns decimal."""
 
     def test_mathchardef_define_and_the(self) -> None:
         # AC-10: \mathchardef\foo="010B  =>  \the\foo  ->  "267".
@@ -177,7 +177,7 @@ class TestMathchardefDefine:
 
 
 class TestMuskipdefAlias:
-    """ AC-7 — \\muskipdef completes the alias family."""
+    """\\muskipdef completes the alias family."""
 
     def test_muskipdef_alias_then_assign(self) -> None:
         # AC-7: \muskipdef\testmuskip=42 \testmuskip=3mu writes muskip[42].

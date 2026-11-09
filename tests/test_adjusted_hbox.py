@@ -1,4 +1,4 @@
-""": measured MiKTeX adjusted/stored hbox ownership regressions."""
+"""measured MiKTeX adjusted/stored hbox ownership regressions."""
 import json
 from pathlib import Path
 

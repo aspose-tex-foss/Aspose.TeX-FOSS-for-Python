@@ -1,4 +1,4 @@
-""": abort paths preserve enclosing save/list ownership."""
+"""abort paths preserve enclosing save/list ownership."""
 
 import pytest
 

@@ -6,7 +6,7 @@ Implements FR-2 through FR-6.  Catcode storage stays in
 Each array is a 256-entry ``list[int]`` with IniTeX defaults
 (TeXbook Chapter 7 + plain.tex 49-51 comment block).  Group save/restore
 reuses the existing ``GroupStack`` save-on-first-write machinery
-, with namespace keys ``("mathcode", char)``, ``("delcode", char)``,
+with namespace keys ``("mathcode", char)``, ``("delcode", char)``,
 etc., distinct from ``("count", n)`` / ``("catcode", char)``.
 
 See the project documentation for design rationale.
@@ -116,7 +116,7 @@ class CodeArrays:
     Args:
         group_stack: Optional ``GroupStack``.  When provided, ``set_<name>``
                      methods save the old value to the current group frame on
-                     first write per, mirroring ``CatcodeTable`` and
+                     first write, mirroring ``CatcodeTable`` and
                      ``RegisterSet`` patterns.
 
     Example::

@@ -1,4 +1,4 @@
-""" — interword space after an inline ``$…$`` formula.
+"""interword space after an inline ``$…$`` formula.
 
 The space *after* the closing ``$`` of an inline formula was dropped whenever a
 space also *preceded* the opening ``$``: ``_handle_space``'s ``_after_space``
@@ -21,7 +21,7 @@ from aspose_tex import DviDevice, StringInputSource, TeXJob, TeXOptions
 
 # Load the DVI position walker the e2e suite uses (shared verification helper).
 _WALKER_PATH = Path(__file__).parent / "_verification" / "dvi_walker.py"
-_spec = importlib.util.spec_from_file_location("_dvi_walker_tex179", _WALKER_PATH)
+_spec = importlib.util.spec_from_file_location("_dvi_walker_trailing_space", _WALKER_PATH)
 assert _spec and _spec.loader
 _dvi_walker = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_dvi_walker)

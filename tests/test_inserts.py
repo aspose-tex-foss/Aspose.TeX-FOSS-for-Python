@@ -54,7 +54,7 @@ def _find_inserts(node) -> list[InsertNode]:
 
 
 def test_insert_primitive_in_vmode_moves_into_its_box() -> None:
-    #: \end flushes the insertion-only page (§1054) and fire_up moves
+    # \end flushes the insertion-only page (§1054) and fire_up moves
     # the insertion into \box254 (§1018-§1021).
     interp, _device = _run(r"\insert254{\hbox{N}}\end")
 
@@ -113,7 +113,7 @@ def test_insertpenalties_is_zero_after_the_output_routine() -> None:
     interp, _device = _run(
         r"\output={\shipout\box255}\insert254{\hbox{N}}X\eject"
     )
-    #: \insertpenalties is now owned by InternalQuantityRegistry — the
+    # \insertpenalties is now owned by InternalQuantityRegistry — the
     # Appendix A placeholder was retired since InternalQuantityRegistry
     # supersedes it in both _dispatch_cs and \the dispatch.
     entry = interp._internal_quantities.lookup("insertpenalties")

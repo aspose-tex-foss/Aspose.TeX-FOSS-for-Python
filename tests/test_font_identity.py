@@ -15,7 +15,9 @@ from tests.test_plain_tie import _run, _tfm_width
 
 _REFERENCE = json.loads((Path(__file__).parents[1] / 'testdata/reference/assignment_scope/baseline.json').read_text())
 _CASES = [k for k in _REFERENCE if k.startswith('font_')]
-_DEVELOPER = json.loads((Path(__file__).parents[1] / 'testdata/reference/assignment_scope/reference.json').read_text())
+_READER_REFERENCE = json.loads(
+    (Path(__file__).parents[1] / 'testdata/reference/assignment_scope/reference.json').read_text()
+)
 
 
 @pytest.mark.parametrize('name', _CASES)
@@ -28,9 +30,9 @@ def test_measured_font_context(name):
         assert json.loads(json.dumps(actual)) == row['miktex_glyphs']
 
 
-@pytest.mark.parametrize('name', [k for k in _DEVELOPER if not k.startswith(('scope_', 'inline_'))])
+@pytest.mark.parametrize('name', [k for k in _READER_REFERENCE if not k.startswith(('scope_', 'inline_'))])
 def test_frozen_readers_and_composed_glyphs(name):
-    row = _DEVELOPER[name]
+    row = _READER_REFERENCE[name]
     job = _run(row['source'])
     assert [m for m in job.messages if m.startswith('R[')] == row['miktex']
     if 'miktex_glyphs' in row:
@@ -61,7 +63,7 @@ def test_lazy_resources_survive_two_pages_of_name_reuse(backend):
 
     from aspose_tex import PdfDevice, StringInputSource, SvgDevice, TeXJob, TeXOptions
     from tests.test_output_pdf_writer import _find_page_objects, _parse_pdf_objects, _read_content_stream
-    row = _DEVELOPER['glyph_boxes_pages']
+    row = _READER_REFERENCE['glyph_boxes_pages']
     device = PdfDevice() if backend == 'pdf' else SvgDevice()
     data = TeXJob(StringInputSource(row['source']), device, options=TeXOptions()).run()
     if backend == 'pdf':

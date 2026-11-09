@@ -1,4 +1,4 @@
-r""": scanner delegation and math scope; MiKTeX 24.4 measurements."""
+r"""scanner delegation and math scope; MiKTeX 24.4 measurements."""
 import warnings
 
 import pytest
@@ -59,14 +59,14 @@ def test_messages_and_supported_write_use_existing_handlers(wrap, command, expec
 
 @pytest.mark.parametrize("wrap", CONTEXTS)
 def test_write_keeps_existing_file_stream_boundary(wrap):
-    with pytest.raises(NotImplementedError, match="requires"):
+    with pytest.raises(NotImplementedError, match="file streams are not implemented"):
         run(r"\setbox0=" + wrap % r"\write0{x}")
 
 
 @pytest.mark.parametrize("wrap", CONTEXTS)
 def test_immediate_keeps_existing_invalid_prefix_error(wrap):
     from aspose_tex.exceptions import EngineError
-    with pytest.raises(EngineError, match="cannot prefix"):
+    with pytest.raises(EngineError, match=r"^\\immediate cannot prefix \\kern$"):
         run(r"\setbox0=" + wrap % r"\immediate\kern1pt")
 
 

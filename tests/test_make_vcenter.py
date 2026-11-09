@@ -1,4 +1,4 @@
-r""" / §C2 — `\vcenter` §735 axis-centring (`_make_vcenter`).
+r"""`\vcenter` §735 axis-centring (`_make_vcenter`).
 
 `mlist_to_hlist._translate_nucleus` now has a `MathClass.VCENTER` branch that
 centres a `\vcenter` box on the math axis (TeX:The Program §735 `make_vcenter`):

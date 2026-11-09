@@ -1,4 +1,4 @@
-r""" Component 3: TeX §890 inter-line penalties.
+r"""TeX §890 inter-line penalties.
 
 Expected sequences are MiKTeX 24.4 ``\showbox`` measurements of the same
 ``\vbox`` paragraphs (plain: ``\clubpenalty=\widowpenalty=150``,

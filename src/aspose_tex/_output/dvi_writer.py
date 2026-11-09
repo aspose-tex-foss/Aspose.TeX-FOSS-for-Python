@@ -194,7 +194,7 @@ class DviWriter:
         """Read the ten ``bop`` page counters from *source* at each shipout.
 
         TeX §640 writes ``\\count0`` … ``\\count9`` into every ``bop``
-        ( D1).  Without a source the writer keeps ``page_number`` as
+        Without a source the writer keeps ``page_number`` as
         c0 and zero for c1..c9.
 
         Args:
@@ -507,7 +507,7 @@ class DviWriter:
                 pass  # skip
 
             elif isinstance(node, InsertNode):
-                pass  # \holdinginserts M3 pass-through: silent no-op.
+                pass  # \holdinginserts pass-through: silent no-op.
 
             elif isinstance(node, RuleNode):
                 # Resolve RUNNING_DIMEN against the enclosing box, mirroring the
@@ -519,7 +519,7 @@ class DviWriter:
                 width = node.width if node.width != RUNNING_DIMEN else parent.width
                 # TeX §634: ship a vlist rule only when it paints; the
                 # reference point still advances by height+depth either way
-                #.
+                #
                 if _rule_paints(width, height, depth):
                     v_cursor += height
                     delta_v = v_cursor - dvi_v
@@ -727,7 +727,7 @@ class DviWriter:
                 # TeX §622: ship the rule only when it paints; the reference
                 # point (h_cursor) still advances by width either way, but the
                 # DVI h register advances only when a set_rule is emitted
-                #.
+                #
                 if _rule_paints(width, height, depth):
                     # set_rule's reference point is the bottom of the rule,
                     # whereas hlist traversal keeps v on the baseline.

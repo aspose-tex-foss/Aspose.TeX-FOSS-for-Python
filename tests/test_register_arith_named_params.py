@@ -1,4 +1,4 @@
-""" / §Component 2 — named-parameter arithmetic operands.
+"""named-parameter arithmetic operands.
 
 `\\advance` / `\\multiply` / `\\divide` must accept named parameters
 (`\\lineskip`, `\\baselineskip`, `\\lineskiplimit`, …) as operands so plain.tex's

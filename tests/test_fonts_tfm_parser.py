@@ -286,7 +286,7 @@ def test_parse_tfm_checksum_value() -> None:
     assert tfm.checksum > 0  # bundled cmr10 has a non-zero checksum
 
 
-#: all bundled TFM files must parse without error
+# all bundled TFM files must parse without error
 _NEW_CM_FILES = [
     "cmbcsc10.tfm", "cmbxsl10.tfm", "cmbxti10.tfm", "cmdunh10.tfm",
     "cmff10.tfm", "cmfi10.tfm", "cmfib8.tfm", "cminch.tfm", "cmitt10.tfm",
@@ -299,7 +299,7 @@ _NEW_CM_FILES = [
 
 @pytest.mark.parametrize("name", _NEW_CM_FILES)
 def test_all_bundled_cm_tfm_parse(name: str) -> None:
-    """: every newly added CM TFM file parses successfully."""
+    """every newly added CM TFM file parses successfully."""
     import importlib.resources
     pkg = importlib.resources.files("aspose_tex") / "data" / "fonts"
     raw = (pkg / name).read_bytes()

@@ -56,7 +56,7 @@ class GroupStack:
     Manages group nesting, save/restore of scoped assignments, the ``\\global``
     prefix flag, and ``\\aftergroup`` token insertion.
 
-    Design ( NFR-1, NFR-2): save-on-first-write — each item is saved
+    Design: save-on-first-write — each item is saved
     at most once per group level.  Restoration is O(number of local assignments).
 
     See for full design rationale.

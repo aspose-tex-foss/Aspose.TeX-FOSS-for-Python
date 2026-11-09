@@ -121,7 +121,7 @@ class TestRegisterAndLookup:
 
 
 # ---------------------------------------------------------------------------
-# Post-construction on_set wiring ( / §Component 4c)
+# Post-construction on_set wiring (§Component 4c)
 # ---------------------------------------------------------------------------
 
 class TestSetOnSet:
@@ -330,7 +330,7 @@ _APPENDIX_A_ALL = _appendix_a_entries()
 
 
 def test_appendix_a_count_is_98() -> None:
-    """Appendix A catalog covers 98 named scalar parameters after.
+    """Appendix A catalog covers 98 named scalar parameters.
 
     The baseline was 109 (53 INT, 29 DIMEN, 15 SKIP, 3 MUSKIP, 9 TOKS).
     retired 11 placeholders shadowed by InternalQuantityRegistry:
@@ -339,11 +339,11 @@ def test_appendix_a_count_is_98() -> None:
     """
     assert len(_APPENDIX_A_ALL) == 98
     names = {entry[0] for entry in _APPENDIX_A_ALL}
-    # vsize / maxdepth / topskip migrated into the registry by.
+    # vsize / maxdepth / topskip migrated into the registry.
     assert "vsize" in names
     assert "maxdepth" in names
     assert "topskip" in names
-    #: shadowed entries are no longer in the catalog.
+    # shadowed entries are no longer in the catalog.
     for retired in (
         "deadcycles",
         "insertpenalties",

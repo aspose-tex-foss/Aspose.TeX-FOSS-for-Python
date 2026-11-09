@@ -6,7 +6,7 @@ JSON-serialisable dict; it adds no TeX processing logic of its own.
 
 The ``mcp`` package is an optional dependency::
 
-    pip install aspose-tex[mcp]
+    pip install "aspose-tex-foss[mcp]"
 """
 
 from __future__ import annotations
@@ -17,7 +17,7 @@ try:
     from mcp.server.fastmcp import FastMCP
 except ImportError as exc:  # pragma: no cover - exercised only without the extra
     raise ImportError(
-        "aspose_tex MCP server requires the 'mcp' package: pip install aspose-tex[mcp]"
+        "aspose_tex MCP server requires the 'mcp' package: pip install \"aspose-tex-foss[mcp]\""
     ) from exc
 
 from aspose_tex import (

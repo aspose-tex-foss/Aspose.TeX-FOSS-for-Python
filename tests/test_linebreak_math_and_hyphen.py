@@ -156,7 +156,7 @@ def test_automatic_disc_precedes_real_font_kern(monkeypatch):
 
 
 def test_font_takes_defaulthyphenchar():
-    #: defaults initialize a newly allocated font, not a reused one.
+    # defaults initialize a newly allocated font, not a reused one.
     interp = _run(r"\defaulthyphenchar=`\! \font\x=cmr10 at11pt \relax")
     assert interp._font_manager.hyphenchar("x") == ord("!")
     assert interp._font_manager.hyphenchar("tenrm") == ord("-")

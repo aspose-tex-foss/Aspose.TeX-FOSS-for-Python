@@ -222,7 +222,7 @@ class TestHalignAlgorithm:
 
 
 class TestEverycrRecursionGuard:
-    """ Q5 — \\everycr whose body ends in \\cr must not loop forever."""
+    """\\everycr whose body ends in \\cr must not loop forever."""
 
     def test_everycr_with_bare_cr_terminates(self) -> None:
         # Before the firing_everycr guard this looped forever (the everycr-pushed
@@ -406,7 +406,7 @@ class TestMacroLetCr:
 
 
 # ---------------------------------------------------------------------------
-# \valign now executes ( cascade b /) — full coverage lives
+# \valign now executes (cascade b) — full coverage lives
 # in tests/test_alignment_valign.py. A smoke check here guards the dispatch
 # wiring shared with \halign.
 # ---------------------------------------------------------------------------
@@ -419,7 +419,7 @@ class TestValignExecutes:
 
 
 # ---------------------------------------------------------------------------
-# — the column u-template must precede the cell body
+# the column u-template must precede the cell body
 # ---------------------------------------------------------------------------
 
 class TestUTemplateOrdering:
@@ -493,7 +493,7 @@ class TestUTemplateOrdering:
 
 
 # ---------------------------------------------------------------------------
-# Component 2 — the `to` / `spread` width spec
+# the `to` / `spread` width spec
 # ---------------------------------------------------------------------------
 
 class TestAlignmentWidthSpec:
@@ -547,7 +547,7 @@ class TestAlignmentWidthSpec:
 
 
 # ---------------------------------------------------------------------------
-# Component 1 — the alignment cell is a group (TeX §791)
+# the alignment cell is a group (TeX §791)
 # ---------------------------------------------------------------------------
 
 class TestCellGroup:
@@ -598,7 +598,7 @@ class TestCellGroup:
     def test_tabskip_in_a_preamble_is_read_at_preamble_time(self) -> None:
         r"""``\tabskip`` in a preamble is NOT subject to the cell group (§778).
 
-        Deliberately pinned as a boundary of: ``\tabskip`` is scanned
+        Deliberately pinned as a boundary: ``\tabskip`` is scanned
         while the *preamble* is parsed, not while a cell runs, so an assignment
         written into a column template sets every following gap and is never
         rolled back.  MiKTeX 24.4 `\showbox` for this input gives
@@ -655,7 +655,7 @@ class TestCellGroup:
 
 
 # ---------------------------------------------------------------------------
-# Component 2 — \prevdepth tracks rows during collection
+# \prevdepth tracks rows during collection
 # ---------------------------------------------------------------------------
 
 class TestPrevdepthDuringRowCollection:
@@ -733,7 +733,7 @@ class TestPrevdepthDuringRowCollection:
 
 
 # ---------------------------------------------------------------------------
-# — the row-boundary classification runs INSIDE the cell group
+# the row-boundary classification runs INSIDE the cell group
 # ---------------------------------------------------------------------------
 
 def _row_texts(vlist: VlistNode) -> list[str]:
@@ -921,7 +921,7 @@ class TestDisplayHandsOverPrevdepth:
     which is what plain.tex ``\displ@y``'s ``\ifdim\prevdepth>-1000\p@`` guard
     tests before emitting its ``\vskip`` pair.  Our two-pass model
     collects the rows first, so the value is handed over explicitly
-    ( Component 5).
+    
     """
 
     @staticmethod
@@ -1043,7 +1043,7 @@ class TestRowBoundaryClassificationScope:
         assert _row_texts(vlist) == ["a", "x"]
 
     def test_let_aliased_noalign_is_still_recognised(self) -> None:
-        r"""``\let\na=\noalign`` at the boundary still works (AC-4,)."""
+        r"""``\let\na=\noalign`` at the boundary still works (AC-4)."""
         vlist = _halign_result(
             r"#\cr a\cr \na{\kern3pt}b\cr", preamble_prefix=r"\let\na=\noalign",
         )
@@ -1106,7 +1106,7 @@ class TestRowBoundaryClassificationScope:
 
 
 # ---------------------------------------------------------------------------
-# — a blank line / \par inside an alignment is a no-op, as in TeX
+# a blank line / \par inside an alignment is a no-op, as in TeX
 # ---------------------------------------------------------------------------
 
 def _shape(node) -> tuple:
@@ -1252,7 +1252,7 @@ def _read_code(interp: TeXInterpreter, prim: str) -> int:
 class TestCodeArrayAssignmentInBoxScanners:
     r"""``\catcode`` and the other code arrays execute inside box scanners.
 
-    : the shared restricted-horizontal dispatcher, and both vbox
+    the shared restricted-horizontal dispatcher, and both vbox
     scanners, had no arm for the code-array primitives, so
     ``\halign{#\cr \catcode`\@=11 a\cr}`` raised "Unexpected token in hbox" —
     and so did a plain ``\hbox{\catcode`\@=11 }`` (the cell symptom is the
@@ -1324,7 +1324,7 @@ class TestCodeArrayAssignmentInBoxScanners:
 
 
 # ---------------------------------------------------------------------------
-# — spaces after & / \span are skipped before the cell starts (§791)
+# spaces after & / \span are skipped before the cell starts (§791)
 # ---------------------------------------------------------------------------
 
 _SP = 65536
@@ -1371,7 +1371,7 @@ class TestSpacesAfterTabAreSkipped:
         assert _shape(spaced) == _shape(_halign_result(r"#&#&#\cr a&b&c\cr"))
 
     def test_space_after_tab_precedes_the_u_template(self) -> None:
-        r""": the u-template still leads — ``\hfil`` first, then ``b``."""
+        r"""the u-template still leads — ``\hfil`` first, then ``b``."""
         spaced = _halign_result(r"#&\hfil#\cr a& b\cr")
         assert _shape(spaced) == _shape(_halign_result(r"#&\hfil#\cr a&b\cr"))
 

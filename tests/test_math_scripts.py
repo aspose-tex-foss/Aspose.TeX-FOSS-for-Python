@@ -1,4 +1,4 @@
-r"""Tests for cascade #1 — make_scripts ( / §A/§B/§E.1).
+r"""Tests for cascade #1 — make_scripts (§A/§B/§E.1).
 
 Covers the cascade-#1 acceptance criteria:
   AC-1  $x^2$ → superscript at script size, raised per the §758 sup-shift;

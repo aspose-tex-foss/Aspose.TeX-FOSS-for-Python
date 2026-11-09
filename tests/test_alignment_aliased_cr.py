@@ -1,11 +1,11 @@
-""" / §Component 1 — by-meaning alignment-terminator classification.
+"""by-meaning alignment-terminator classification.
 
 `alignment._resolve_terminator_name` must classify a `\\let`-alias of
 `\\cr` / `\\crcr` / `\\span` (e.g. plain.tex's `\\let\\endline=\\cr`) by its
 underlying primitive meaning, not by control-sequence name.
 
 NOTE (return scope): these unit tests cover the by-meaning *classification*
-helper that landed in.  The end-to-end `\\bordermatrix` /
+helper that landed.  The end-to-end `\\bordermatrix` /
 `\\displaylines` integration is NOT covered here — that path needs a separate
 architectural fix (math `$…$` cells inside an eager-`\\vbox` `\\halign` consume
 the `&`/`\\cr` terminator); see the return note.

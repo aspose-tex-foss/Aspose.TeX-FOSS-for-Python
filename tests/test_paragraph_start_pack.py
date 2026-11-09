@@ -27,7 +27,7 @@ def _page1(body: str) -> list[tuple[int, int, int]]:
 
 
 # ---------------------------------------------------------------------------
-# — §1090: horizontal commands in vertical mode start an indented
+# §1090: horizontal commands in vertical mode start an indented
 # paragraph (back_input; new_graf(true)); plain's \leavevmode is \unhbox
 # ---------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ class TestNewGrafFromVerticalMode:
 
 
 # ---------------------------------------------------------------------------
-# — §1091: new_graf inserts \everypar after the indent box (not on the
+# §1091: new_graf inserts \everypar after the indent box (not on the
 # resume after a display)
 # ---------------------------------------------------------------------------
 
@@ -131,7 +131,7 @@ class TestEverypar:
 
 
 # ---------------------------------------------------------------------------
-# — §1091: new_graf resets \prevgraf; §1200: a display adds 3
+# §1091: new_graf resets \prevgraf; §1200: a display adds 3
 # ---------------------------------------------------------------------------
 
 

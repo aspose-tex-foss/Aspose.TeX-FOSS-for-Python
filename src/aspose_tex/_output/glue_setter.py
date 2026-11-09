@@ -1,4 +1,4 @@
-"""Per-list cumulative set-glue rounding (, TeX §625/§634)."""
+"""Per-list cumulative set-glue rounding (TeX §625/§634)."""
 from __future__ import annotations
 
 from aspose_tex._engine.nodes import GlueSign, HlistNode, VlistNode

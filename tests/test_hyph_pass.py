@@ -1,4 +1,4 @@
-r"""Tests for the hyphenation step of the second pass (§4-§6,).
+r"""Tests for the hyphenation step of the second pass (§4-§6).
 
 Every expected node sequence is MiKTeX 24.4 (``tex``, plain, nonstopmode,
 2026-10-21): each probe body ran as
@@ -113,7 +113,7 @@ _PROBES: list[tuple[str, str, str]] = [
     # §1091: the minima recorded at the paragraph start apply.
     ("minima", r"\lefthyphenmin=4 \righthyphenmin=4 \noindent\hskip0pt difficulties",
      "d i [14/ffi] {-||} c u l {-||} t i e s"),
-    # AC-4: exceptions of language 1, and a language with no data.
+    # exceptions of language 1, and a language with no data.
     ("language-1", r"\language=1 \hyphenation{tea-pot}\noindent\hskip0pt teapot",
      "t e a {-||} p <k0.27779> o t"),
     ("language-empty", r"\language=2 \noindent\hskip0pt teapot difficulties",

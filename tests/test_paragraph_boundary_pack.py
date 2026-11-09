@@ -49,7 +49,7 @@ def _page1(body: str) -> list[tuple[int, int]]:
 
 
 # ---------------------------------------------------------------------------
-# — \parskip is the register value taken at paragraph start (§1091)
+# \parskip is the register value taken at paragraph start (§1091)
 # ---------------------------------------------------------------------------
 
 
@@ -122,7 +122,7 @@ class TestParskipRegister:
 
 
 # ---------------------------------------------------------------------------
-# — vertical glue in a paragraph ends it first (§1094 head_for_vmode)
+# vertical glue in a paragraph ends it first (§1094 head_for_vmode)
 # Needed for the \vfill row: the glue went in ahead of the lines.
 # ---------------------------------------------------------------------------
 
@@ -157,7 +157,7 @@ class TestHeadForVmode:
 
 
 # ---------------------------------------------------------------------------
-# — a non-void paragraph is line-broken even with no content (§1096)
+# a non-void paragraph is line-broken even with no content (§1096)
 # ---------------------------------------------------------------------------
 
 
